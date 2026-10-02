@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[23998d0dfab8108e0151d001082ca5b8c2774b35334d4d04df655094f99facb6]]></content_sha256>
+  <content_sha256><![CDATA[294f602db2036c9b1a52501de8a0567216e36c72e46f4b50c3aa560e0fb739a4]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -669,8 +669,8 @@
         <div class="paf-wt-row paf-wt-light" role="row">
           <div class="paf-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="paf-wt-flights">4 international arrivals &middot; Moderate</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="paf-wt-num" style="color:#8B6914 !important;">43&ndash;57 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:58% !important; background:#8B6914 !important;"></span></span>
+            <span class="paf-wt-num" style="color:#A8541A !important;">43&ndash;57 min</span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:58% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
@@ -685,16 +685,16 @@
         <div class="paf-wt-row paf-wt-busy" role="row">
           <div class="paf-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="paf-wt-flights">8 international arrivals &middot; Busy</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="paf-wt-num" style="color:#8B1A1A !important;">53&ndash;73 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:74% !important; background:#8B1A1A !important;"></span></span>
+            <span class="paf-wt-num" style="color:#C1272D !important;">53&ndash;73 min</span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:74% !important; background:#C1272D !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="paf-wt-row paf-wt-busy" role="row">
           <div class="paf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="paf-wt-flights">7 international arrivals &middot; Busy</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="paf-wt-num" style="color:#8B1A1A !important;">65&ndash;98 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:100% !important; background:#8B1A1A !important;"></span></span>
+            <span class="paf-wt-num" style="color:#C1272D !important;">65&ndash;98 min</span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:100% !important; background:#C1272D !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
