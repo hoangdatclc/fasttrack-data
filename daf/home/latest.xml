@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[bfb0cc5ea9600c85aa3ef499eca18c61b7122317313bf497595fe42ae0e306e0]]></content_sha256>
+  <content_sha256><![CDATA[6b29ecd5b977e55dbcdda89ef66acab221a06b54750d7c2c85954c6dec284c0b]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -421,7 +421,7 @@
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">58&ndash;79 min</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">68&ndash;79 min</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing 20:00&ndash;24:00 &mdash; from touchdown to leaving immigration</span>
         </div>
 
@@ -656,7 +656,7 @@
       <span class="daf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 2 October 2026</span>
       <h2 id="daf-h2-wait">How Long Is the Immigration Queue at Da Nang Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="daf-wt-lead">In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong>58&ndash;79 minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). Flights landing 16:00&ndash;20:00 clear in 37&ndash;45 minutes. With Fast Track it is about 10 minutes, or 10&ndash;15 at the busiest hours.</p>
+      <p class="daf-wt-lead">In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong>68&ndash;79 minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). Flights landing 16:00&ndash;20:00 clear in 40&ndash;45 minutes. With Fast Track it is about 10 minutes, or 10&ndash;15 at the busiest hours.</p>
     </div>
 
     <div class="daf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Da Nang Airport by arrival time, October 2026">
@@ -668,7 +668,7 @@
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>00:00&ndash;06:00</strong><span class="daf-wt-flights">2 international arrivals &middot; Moderate</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#A8541A !important;">40&ndash;62 min</span>
+            <span class="daf-wt-num" style="color:#A8541A !important;">52&ndash;62 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:78% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
@@ -676,7 +676,7 @@
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="daf-wt-flights">9 international arrivals &middot; Moderate</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#A8541A !important;">41&ndash;60 min</span>
+            <span class="daf-wt-num" style="color:#A8541A !important;">49&ndash;60 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:76% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
@@ -684,7 +684,7 @@
         <div class="daf-wt-row daf-wt-busy" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Busy</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#C1272D !important;">37&ndash;77 min</span>
+            <span class="daf-wt-num" style="color:#C1272D !important;">50&ndash;77 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:97% !important; background:#C1272D !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
@@ -692,7 +692,7 @@
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="daf-wt-flights">10 international arrivals &middot; Moderate</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#A8541A !important;">40&ndash;66 min</span>
+            <span class="daf-wt-num" style="color:#A8541A !important;">44&ndash;66 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:84% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
@@ -700,7 +700,7 @@
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="daf-wt-flights">6 international arrivals &middot; Usually quick</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#8B6914 !important;">37&ndash;45 min</span>
+            <span class="daf-wt-num" style="color:#8B6914 !important;">40&ndash;45 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:57% !important; background:#8B6914 !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
@@ -708,7 +708,7 @@
         <div class="daf-wt-row daf-wt-busy" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Busy</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#C1272D !important;">58&ndash;79 min</span>
+            <span class="daf-wt-num" style="color:#C1272D !important;">68&ndash;79 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:100% !important; background:#C1272D !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
@@ -1787,7 +1787,7 @@
           </button>
           <div class="daf-faq-body" id="daf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong style="color:#0B1F3A; font-weight:600;">58&ndash;79 minutes</strong> from touchdown to leaving immigration. Flights landing 16:00&ndash;20:00 clear in 37&ndash;45 minutes.</p>
+            <p>In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong style="color:#0B1F3A; font-weight:600;">68&ndash;79 minutes</strong> from touchdown to leaving immigration. Flights landing 16:00&ndash;20:00 clear in 40&ndash;45 minutes.</p>
             <p style="margin-top:10px !important;">With Fast Track it is about 10 minutes, and 10&ndash;15 even at the busiest hours. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
             </div>
           </div>
