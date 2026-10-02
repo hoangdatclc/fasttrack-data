@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[6b29ecd5b977e55dbcdda89ef66acab221a06b54750d7c2c85954c6dec284c0b]]></content_sha256>
+  <content_sha256><![CDATA[c2261ab119e71191de83426fca2feaf7377817770d5c0d02fb4b2032480b3120]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -730,7 +730,7 @@
 
     <div class="daf-wt-cta">
       <button type="button" class="daf-pick-btn daf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-      <a class="daf-wt-link" href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20check%20the%20immigration%20queue%20for%20my%20flight%20to%20Phu%20Quoc." target="_blank" rel="noopener">Send us your flight number &mdash; we will tell you if you need it</a>
+      <a class="daf-wt-link" href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20check%20the%20immigration%20queue%20for%20my%20flight%20to%20Da%20Nang." target="_blank" rel="noopener">Send us your flight number &mdash; we will tell you if you need it</a>
     </div>
 <!--/dat:zone:wait-section-->
   </div>
