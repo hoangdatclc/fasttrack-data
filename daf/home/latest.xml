@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[6b3d0e130a29c319b921ac857eaf1547b66ce03ea6685a37198bc2f9449f3564]]></content_sha256>
+  <content_sha256><![CDATA[f624f0355cd0ed76bd833f453556c233bc717a11333283579f79e377fab75042]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -311,13 +311,13 @@
         max-width: 500px;
         margin: 0 0 24px 0;
         padding: 0;
-      ">Da Nang International Airport is usually quick — but when the late-evening Korean bank lands, or during Tet, summer and the fireworks festival, immigration can back up for well over an hour. Our Fast Track service gets you through in 15–20 minutes, every time.</p>
+      ">Da Nang International Airport is usually quick — but when the late-evening Korean bank lands, or during Tet, summer and the fireworks festival, immigration can back up for well over an hour. Our Fast Track service gets you through in 10–15 minutes, every time.</p>
 
       <!-- Feature list — DAD pain points -->
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Beat the queue when Korean flight banks land — through in 15–20 min
+          Beat the queue when Korean flight banks land — through in 10–15 min
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -429,7 +429,7 @@
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">15&ndash;20 min</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">10&ndash;15 min</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service &mdash; every flight, every hour</span>
         </div>
 
@@ -656,7 +656,7 @@
       <span class="daf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 2 October 2026</span>
       <h2 id="daf-h2-wait">How Long Is the Immigration Queue at Da Nang Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="daf-wt-lead">In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong>64&ndash;76 minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). Flights landing 00:00&ndash;06:00 and 13:00&ndash;20:00 clear in 30&ndash;46 minutes. With Fast Track it is 15&ndash;20 minutes, whenever you land.</p>
+      <p class="daf-wt-lead">In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong>64&ndash;76 minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). Flights landing 00:00&ndash;06:00 and 13:00&ndash;20:00 clear in 30&ndash;46 minutes. With Fast Track it is about 10 minutes, or 10&ndash;15 at the busiest hours.</p>
     </div>
 
     <div class="daf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Da Nang Airport by arrival time, October 2026">
@@ -668,10 +668,10 @@
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>00:00&ndash;06:00</strong><span class="daf-wt-flights">3 international arrivals &middot; Usually quick</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#8B6914 !important;">30&ndash;34 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:45% !important; background:#8B6914 !important;"></span></span>
+            <span class="daf-wt-num" style="color:#1F6E7A !important;">30&ndash;34 min</span>
+            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:45% !important; background:#1F6E7A !important;"></span></span>
           </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
+          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="daf-wt-flights">9 international arrivals &middot; Moderate</span></div>
@@ -679,7 +679,7 @@
             <span class="daf-wt-num" style="color:#8B6914 !important;">39&ndash;54 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:71% !important; background:#8B6914 !important;"></span></span>
           </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
+          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Moderate</span></div>
@@ -687,23 +687,23 @@
             <span class="daf-wt-num" style="color:#8B6914 !important;">36&ndash;61 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:80% !important; background:#8B6914 !important;"></span></span>
           </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
+          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="daf-wt-flights">10 international arrivals &middot; Usually quick</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#8B6914 !important;">36&ndash;46 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:61% !important; background:#8B6914 !important;"></span></span>
+            <span class="daf-wt-num" style="color:#1F6E7A !important;">36&ndash;46 min</span>
+            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:61% !important; background:#1F6E7A !important;"></span></span>
           </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
+          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="daf-wt-row daf-wt-light" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="daf-wt-flights">6 international arrivals &middot; Usually quick</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#8B6914 !important;">36&ndash;43 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:57% !important; background:#8B6914 !important;"></span></span>
+            <span class="daf-wt-num" style="color:#1F6E7A !important;">36&ndash;43 min</span>
+            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:57% !important; background:#1F6E7A !important;"></span></span>
           </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
+          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="daf-wt-row daf-wt-busy" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="daf-wt-flights">12 international arrivals &middot; Busy</span></div>
@@ -711,7 +711,7 @@
             <span class="daf-wt-num" style="color:#8B1A1A !important;">64&ndash;76 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:100% !important; background:#8B1A1A !important;"></span></span>
           </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
+          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
         </div>
     </div>
 
@@ -791,7 +791,7 @@
         <h2 id="daf-h2-what">What Is Airport Fast Track?</h2>
         <div style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
         <p style="font-size:1rem !important; color:#5A5A72 !important; max-width:640px; margin:0 auto !important; line-height:1.75 !important;">
-          Da Nang International Airport (DAD) is Central Vietnam's gateway to Hoi An, Ba Na Hills and the coast — its Terminal 2 earned a Skytrax 5-Star rating in 2024 and 2025. On a quiet day you'll clear immigration in minutes. But when Korean and Chinese flights land together, queues build fast. Fast Track is a licensed airport assistance service that keeps you to 15–20 minutes, whatever the crowd.
+          Da Nang International Airport (DAD) is Central Vietnam's gateway to Hoi An, Ba Na Hills and the coast — its Terminal 2 earned a Skytrax 5-Star rating in 2024 and 2025. On a quiet day you'll clear immigration in minutes. But when Korean and Chinese flights land together, queues build fast. Fast Track is a licensed airport assistance service that keeps you to 10–15 minutes, whatever the crowd.
         </p>
       </div>
 
@@ -846,7 +846,7 @@
           </div>
         </div>
 
-        <!-- Card 3: Through in 15-20 Minutes -->
+        <!-- Card 3: Through in 10-15 Minutes -->
         <div style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #E8E4DE; display:flex; flex-direction:column;">
           <div style="position:relative; height:220px; overflow:hidden;">
             <img width="800" height="600" loading="lazy" decoding="async" src="http://danangairportfasttrack.com/wp-content/uploads/2026/06/Airport_staff_guiding_travelers.jpeg"
@@ -862,7 +862,7 @@
               <div style="width:36px; height:36px; background:#F5EDD8; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
-              <h3 style="margin:0 !important;">Through in 15–20 Minutes</h3>
+              <h3 style="margin:0 !important;">Through in 10–15 Minutes</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
               We guide you through the priority immigration lane, handle the paperwork, and escort you straight to the exit. While the regular line is still halfway through the hall, you're already on the road to Hoi An or your beach resort.
@@ -944,7 +944,7 @@
           <div style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Walk straight to the priority lane — clear immigration in <strong style="color:#0B1F3A; font-weight:600;">15–20 minutes</strong>, however many flights just landed</p>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Walk straight to the priority lane — clear immigration in <strong style="color:#0B1F3A; font-weight:600;">10–15 minutes</strong>, however many flights just landed</p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -1028,7 +1028,7 @@
           </div>
           <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 04</div>
           <h4 style="margin-bottom:10px !important;">Straight Through</h4>
-          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, all paperwork handled, out in 15–20 minutes — and on your way to Hoi An while the queue is still building.</p>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, all paperwork handled, out in 10–15 minutes — and on your way to Hoi An while the queue is still building.</p>
         </div>
 
       </div><!-- /steps -->
@@ -1136,7 +1136,7 @@
         </div>
         <h3 style="font-size:1.7rem !important; color:#F9F7F3 !important; margin-bottom:6px !important;">Fast Track Arrival</h3>
         <p style="font-size:0.85rem !important; color:rgba(255,255,255,0.6) !important; line-height:1.6 !important; margin-bottom:20px !important;">
-          Skip the immigration queue at Da Nang Airport — through in 15–20 minutes with a dedicated assistant, even when the Korean flight banks land.
+          Skip the immigration queue at Da Nang Airport — through in 10–15 minutes with a dedicated assistant, even when the Korean flight banks land.
         </p>
         <!-- Price -->
         <div style="display:flex; align-items:baseline; gap:5px; margin-bottom:6px;">
@@ -1788,7 +1788,7 @@
           <div class="daf-faq-body" id="daf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
             <p>In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong style="color:#0B1F3A; font-weight:600;">64&ndash;76 minutes</strong> from touchdown to leaving immigration. Flights landing 00:00&ndash;06:00 and 13:00&ndash;20:00 clear in 30&ndash;46 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is 15&ndash;20 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
+            <p style="margin-top:10px !important;">With Fast Track it is about 10 minutes, and 10&ndash;15 even at the busiest hours. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
             </div>
           </div>
         </div>
@@ -1801,7 +1801,7 @@
           </button>
           <div class="daf-faq-body" id="daf-faq-a2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([daf_price service="fast_track_arrival"]/person) — our assistant meets you at Terminal 2 on landing, guides you through the priority immigration lane and handles the paperwork. You clear immigration in 15–20 minutes. Baggage Assistance (+$15/person) and VIP Lane (+$20/person) are available as optional add-ons.</p>
+            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([daf_price service="fast_track_arrival"]/person) — our assistant meets you at Terminal 2 on landing, guides you through the priority immigration lane and handles the paperwork. You clear immigration in 10–15 minutes. Baggage Assistance (+$15/person) and VIP Lane (+$20/person) are available as optional add-ons.</p>
             <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Departure</strong> ([daf_price service="fast_track_departure"]/person) — we meet you at the Terminal 2 departure entrance and guide you through the priority exit immigration lane, so you skip the passport-control queue. Priority Security Screening (+$15/person) or Priority Security + Check-in (+$35/person) can be added.</p>
             </div>
           </div>
@@ -2009,7 +2009,7 @@ function dafFaqToggle(btn) {
       <h2>Don't Wait in Line.<br><em style="font-style:italic; color:#C9A84C;">Your Escape Starts Here.</em></h2>
       <div style="width:44px; height:3px; background:#C9A84C; margin:22px auto 24px;"></div>
       <p style="font-size:1.05rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.8 !important; max-width:580px; margin:0 auto 40px !important;">
-        Skytrax 5-Star Terminal 2 — but when the Korean flight banks land, immigration can stretch past an hour. With Fast Track you're through in 15–20 minutes, and on your way to Hoi An or the beach while everyone else is still in line. Book now and we confirm within 10 minutes.
+        Skytrax 5-Star Terminal 2 — but when the Korean flight banks land, immigration can stretch past an hour. With Fast Track you're through in 10–15 minutes, and on your way to Hoi An or the beach while everyone else is still in line. Book now and we confirm within 10 minutes.
       </p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;" class="daf-cta-btns">
         <a href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Fast%20Track%20service%20at%20Da%20Nang%20Airport."
