@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[7f4ea9a3083faa1f559c7bbe3a8a2e9ce69fe9cc8dc22041e3a4daa7b45191e9]]></content_sha256>
+  <content_sha256><![CDATA[37565a281cecf79dc0ed98099fa6afc00871b4059f9219a6167a1dcb677c66fc]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -170,6 +170,7 @@
            onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C'">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Book Fast Track Now
+          <svg class="caf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <a href="#services" style="
           display: inline-flex;
@@ -268,7 +269,9 @@
         justify-content: center;
         gap: 8px;
         width: 100%;
-        padding: 15px 24px;
+        /* 18px chu khong phai 24px nhu DAF: the info card cua CAF hep hon, voi 24px
+           thi chu + chevron bi xuong hai dong. Day la gia tri goc cua CAF. */
+        padding: 15px 18px;
         margin: 0;
         background: #C9A84C;
         color: #0B1F3A;
@@ -285,6 +288,7 @@
         cursor: pointer;
       " onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
         Book Now — Response in 10 min
+        <svg class="caf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
       </button>
 
       <p style="text-align:center !important; font-family:'DM Sans',sans-serif !important; font-size:0.78rem !important; line-height:1.6 !important; color:#5A5A72 !important; margin:0 !important; padding:0 !important">Or reach us: <a href="https://wa.me/84368938081" style="color:#1a7a42 !important; font-weight:600 !important; text-decoration:none !important; font-family:'DM Sans',sans-serif !important">WhatsApp</a> · <a href="mailto:support@nhatrangairportfasttrack.com" style="color:#0B1F3A !important; font-weight:600 !important; text-decoration:none !important; font-family:'DM Sans',sans-serif !important">Email</a></p>
