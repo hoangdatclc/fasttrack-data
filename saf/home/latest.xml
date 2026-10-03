@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[f8efd4480a300809eb3ccd9e1f54cf07538894fbc0c7fda95fd7399b098aaf3c]]></content_sha256>
+  <content_sha256><![CDATA[be4fc1102c440d55b6064bea09f2ede4e396c3c7b81e70903315a8b652ca8d13]]></content_sha256>
   <post_content><![CDATA[[ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -459,8 +459,8 @@
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">93&ndash;113 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing 16:00&ndash;20:00 &mdash; from touchdown to leaving immigration</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">78&ndash;113 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours &mdash; from touchdown to leaving immigration</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -693,7 +693,7 @@
       <span class="sgn-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 3 October 2026</span>
       <h2 id="sgn-h2-wait">How Long Is the Immigration Queue at Tan Son Nhat Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="sgn-wt-lead">In October 2026, the last passengers off a flight landing between 16:00 and 20:00 need an estimated <strong>93&ndash;113 minutes</strong> from touchdown to leaving immigration at Tan Son Nhat International Airport (SGN). Flights landing 00:00&ndash;13:00 clear in 51&ndash;58 minutes. With Fast Track it is under 20 minutes at any hour.</p>
+      <p class="sgn-wt-lead">In October 2026, the last passengers off a flight landing between 16:00 and 20:00 need an estimated <strong>93&ndash;113 minutes</strong> from touchdown to leaving immigration at Tan Son Nhat International Airport (SGN). Flights landing 00:00&ndash;13:00 clear in 51&ndash;58 minutes. With Fast Track it is about 10 minutes when the hall is lighter, and under 20 at the busiest hours.</p>
     </div>
 
     <div class="sgn-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Tan Son Nhat Airport by arrival time, October 2026">
@@ -708,7 +708,7 @@
             <span class="sgn-wt-num" style="color:#8B6914 !important;">52&ndash;55 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:49% !important; background:#8B6914 !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">Under 20 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="sgn-wt-flights">18 international arrivals &middot; Lighter</span></div>
@@ -716,7 +716,7 @@
             <span class="sgn-wt-num" style="color:#8B6914 !important;">51&ndash;55 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:49% !important; background:#8B6914 !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">Under 20 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="sgn-wt-flights">19 international arrivals &middot; Lighter</span></div>
@@ -724,7 +724,7 @@
             <span class="sgn-wt-num" style="color:#8B6914 !important;">56&ndash;58 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:51% !important; background:#8B6914 !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">Under 20 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="sgn-wt-flights">27 international arrivals &middot; Moderate</span></div>
@@ -732,7 +732,7 @@
             <span class="sgn-wt-num" style="color:#A8541A !important;">70&ndash;77 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:68% !important; background:#A8541A !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">Under 20 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~15 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-busy" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="sgn-wt-flights">30 international arrivals &middot; Busy</span></div>
@@ -759,7 +759,7 @@
       </div>
       <div class="sgn-wt-card">
         <h3>October 2026 notes</h3>
-        <p>Long Thanh took its first commercial flight on 2 September, but Tan Son Nhat still handles almost every international arrival this month. The first routes due to move &#8212; Africa, the Middle East, South Asia and Central Asia &#8212; go when the winter schedule starts on the 25th, roughly eight flights a day out of 145. Everything else still clears through Terminal 2, and the heaviest stretch runs from late afternoon into the evening.</p>
+        <p>From the 25th the winter schedule moves about eight flights a day to the new Long Thanh airport &#8212; the Middle East, South Asia and Central Asia routes. The other 137 still clear through Terminal 2.</p>
       </div>
     </div>
 
@@ -2174,7 +2174,7 @@
           <div class="sgn-faq-body" id="sgn-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
             <p>In October 2026, the last passengers off a flight landing between 16:00 and 20:00 need an estimated <strong style="color:#0B1F3A; font-weight:600;">93&ndash;113 minutes</strong> from touchdown to leaving immigration. Flights landing 00:00&ndash;13:00 clear in 51&ndash;58 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under 20 minutes &mdash; the same at the busiest hour as at the quietest. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 3 October 2026).</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under 20 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 3 October 2026).</p>
             </div>
           </div>
         </div>
