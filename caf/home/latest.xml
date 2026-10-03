@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[07809d6603e79a657220ba3f653ed08dd983698b1ec354233a36b20d95ffa4c5]]></content_sha256>
+  <content_sha256><![CDATA[9d15b1526ded3ed6654fe5229bb28935bd15704bf90c69c374b0788c69455a35]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -147,10 +147,9 @@
       </ul>
 
       <div style="display:flex !important; flex-wrap:wrap !important; gap:14px !important; margin:0 0 26px 0 !important">
-        <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="flex:0 1 auto !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; padding:16px 30px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; font-weight:700 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; text-align:center !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.2 !important cursor:pointer !important;" onmouseover="this.style.setProperty('background','#E2C07A','important');this.style.setProperty('border-color','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important');this.style.setProperty('border-color','#C9A84C','important')">
+        <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="flex:0 1 auto !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; padding:16px 30px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; font-weight:700 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; text-align:center !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.2 !important" onmouseover="this.style.setProperty('background','#E2C07A','important');this.style.setProperty('border-color','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important');this.style.setProperty('border-color','#C9A84C','important')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0 !important"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Book Fast Track Now
-          <svg class="caf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="flex-shrink:0 !important"><polyline points="6 9 12 15 18 9"></polyline></svg>
         </button>
         <a href="#services" style="flex:0 1 auto !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; padding:16px 28px !important; background:transparent !important; color:#ffffff !important; font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; font-weight:600 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; text-align:center !important; text-decoration:none !important; border-radius:3px !important; border:2px solid rgba(255,255,255,0.5) !important; box-sizing:border-box !important; line-height:1.2 !important" onmouseover="this.style.setProperty('border-color','#ffffff','important');this.style.setProperty('background','rgba(255,255,255,0.1)','important')" onmouseout="this.style.setProperty('border-color','rgba(255,255,255,0.5)','important');this.style.setProperty('background','transparent','important')">
           View Services &amp; Pricing
@@ -184,7 +183,7 @@
         CXR Immigration &mdash; October 2026
       </div>
 
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">Estimated from the flights scheduled into Cam Ranh in October 2026, including the Russian charter programme, and checked against the airport's published passenger throughput. Not an official measurement.</p>
+      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">Estimated from the October 2026 flight schedule, Russian charters included, and checked against the airport's published passenger numbers.</p>
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
@@ -226,8 +225,7 @@
         </div>
       </div>
 
-      <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="display:flex !important; align-items:center !important; justify-content:center !important; text-align:center !important; padding:15px 18px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.78rem !important; font-weight:700 !important; letter-spacing:0.06em !important; text-transform:uppercase !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.3 !important cursor:pointer !important;" onmouseover="this.style.setProperty('background','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important')">Book Now — Response in 10 min
-          <svg class="caf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true" style="flex-shrink:0 !important"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="display:flex !important; align-items:center !important; justify-content:center !important; text-align:center !important; padding:15px 18px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.78rem !important; font-weight:700 !important; letter-spacing:0.06em !important; text-transform:uppercase !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.3 !important" onmouseover="this.style.setProperty('background','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important')">Book Now — Response in 10 min
         </button>
 
       <p style="text-align:center !important; font-family:'DM Sans',sans-serif !important; font-size:0.78rem !important; line-height:1.6 !important; color:#5A5A72 !important; margin:0 !important; padding:0 !important">Or reach us: <a href="https://wa.me/84368938081" style="color:#1a7a42 !important; font-weight:600 !important; text-decoration:none !important; font-family:'DM Sans',sans-serif !important">WhatsApp</a> · <a href="mailto:support@nhatrangairportfasttrack.com" style="color:#0B1F3A !important; font-weight:600 !important; text-decoration:none !important; font-family:'DM Sans',sans-serif !important">Email</a></p>
