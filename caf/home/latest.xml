@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[37565a281cecf79dc0ed98099fa6afc00871b4059f9219a6167a1dcb677c66fc]]></content_sha256>
+  <content_sha256><![CDATA[69897b98c6262dcbfd0cb4d1f52f3564a94824d5b9205535d6ac6001f4b31bc4]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -453,11 +453,11 @@
       </div>
       <div class="caf-wt-card">
         <h3>October 2026 notes</h3>
-        <p>October is Nha Trang's wettest month, but it is also when the airport's two winter markets start moving. The Russian charter programme builds through the month, and from 25 October the winter schedule puts eleven Korean flights on the ground between 20:20 and 00:35 — the airport's heaviest stretch of the day happens late at night.</p>
+        <p>Nha Trang&#8217;s wettest month, but both winter markets are starting. Russian charters build through October, and from the 25th the winter schedule lands eleven Korean flights between 20:20 and 00:35 — the day&#8217;s heaviest stretch is late at night.</p>
       </div>
     </div>
 
-    <p class="caf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 28 international arrivals on a representative October day, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements &mdash; season by season in our <a href="https://nhatrangairportfasttrack.com/nha-trang-airport-guide/" style="color:#8B6914 !important; font-weight:600 !important; border-bottom:1px solid rgba(201,168,76,0.4) !important;">Cam Ranh Airport arrivals guide</a>.</p>
+    <p class="caf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 28 international arrivals on a representative October day, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements.</p>
 
     <div class="caf-wt-cta">
       <button type="button" class="caf-pick-btn caf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="caf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
@@ -486,7 +486,7 @@
         <span style="display:block !important; font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; letter-spacing:0.18em !important; text-transform:uppercase !important; color:#C9A84C !important; margin:0 0 14px 0 !important">What We Offer</span>
         <h2 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:clamp(1.7rem,4.8vw,2.8rem) !important; font-weight:700 !important; line-height:1.15 !important; color:#0B1F3A !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important; text-shadow:none !important">What Is Airport Fast Track?</h2>
         <div style="width:44px !important; height:3px !important; background:#C9A84C !important; margin:14px auto 20px !important"></div>
-        <p style="font-family:'DM Sans',sans-serif !important; font-size:clamp(0.92rem,2.6vw,1rem) !important; color:#5A5A72 !important; max-width:660px !important; margin:0 auto !important; padding:0 !important; line-height:1.75 !important">Cam Ranh International Airport (CXR) — listed in most booking systems as Nha Trang Airport — is the coastal gateway to Bai Dai, Nha Trang, Ninh Van Bay and Vinh Hy. It is the only airport in Vietnam handling more international than domestic passengers, and Terminal 2 has a limited number of immigration counters. Fast Track is a licensed airport assistance service that keeps you to 10–15 minutes, whatever the crowd.</p>
+        <p style="font-family:'DM Sans',sans-serif !important; font-size:clamp(0.92rem,2.6vw,1rem) !important; color:#5A5A72 !important; max-width:660px !important; margin:0 auto !important; padding:0 !important; line-height:1.75 !important">Cam Ranh International Airport (CXR) — booked as Nha Trang in most systems — serves Bai Dai, Nha Trang, Ninh Van Bay and Vinh Hy. It is Vietnam&#8217;s only airport with more international than domestic passengers, and Terminal 2 has few immigration counters. Fast Track keeps you to 10–15 minutes, whatever the crowd.</p>
       </div>
 
       <div style="display:flex !important; flex-wrap:wrap !important; gap:24px !important; align-items:stretch !important">
@@ -506,7 +506,7 @@
               </div>
               <h3 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.4rem !important; font-weight:700 !important; line-height:1.15 !important; color:#0B1F3A !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important">When the Charters Land</h3>
             </div>
-            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important">Cam Ranh is a small terminal serving big aircraft. When two Russian wide-bodies arrive within the hour, or the Korean evening flights land one after another, the T2 hall fills within minutes — and at the peak of the winter charter season the queue runs well over an hour.</p>
+            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important">A small terminal taking big aircraft. Two Russian wide-bodies within the hour, or the Korean evening flights back to back, and the T2 hall fills in minutes. In peak charter season the queue runs well over an hour.</p>
           </div>
         </div>
 
@@ -525,7 +525,7 @@
               </div>
               <h3 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.4rem !important; font-weight:700 !important; line-height:1.15 !important; color:#ffffff !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important">We're Already Waiting</h3>
             </div>
-            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important">Step off the aircraft and our assistant is already there — holding a sign with your name, before the immigration counters. No guessing which line is which after an overnight flight. Just follow and relax.</p>
+            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important">Our assistant is waiting before the immigration counters, holding a sign with your name. No guessing which line is which after an overnight flight.</p>
           </div>
         </div>
 
@@ -544,7 +544,7 @@
               </div>
               <h3 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.4rem !important; font-weight:700 !important; line-height:1.15 !important; color:#0B1F3A !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important">Through in 10–15 Minutes</h3>
             </div>
-            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important">We guide you through the priority immigration lane, handle the entry paperwork, and walk you out to arrivals. While the regular line is still building, you're already in the car — twenty minutes from Bai Dai, forty-five from Nha Trang.</p>
+            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important">Priority lane, paperwork handled, escorted out to arrivals. While the regular line is still building you are in the car — twenty minutes to Bai Dai, forty-five to Nha Trang.</p>
           </div>
         </div>
 
