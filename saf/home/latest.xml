@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[be4fc1102c440d55b6064bea09f2ede4e396c3c7b81e70903315a8b652ca8d13]]></content_sha256>
+  <content_sha256><![CDATA[79ec747b8c6bd4c2eefa383b61a66780edc3992f69b9f4a882ec3c4749e4fd97]]></content_sha256>
   <post_content><![CDATA[[ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -627,7 +627,8 @@
   .sgn-cta-row {
     flex-direction: column !important;
   }
-  .sgn-cta-row a {
+  .sgn-cta-row a,
+  .sgn-cta-row button {
     justify-content: center !important;
   }
 }
