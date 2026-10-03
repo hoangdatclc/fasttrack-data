@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[9d15b1526ded3ed6654fe5229bb28935bd15704bf90c69c374b0788c69455a35]]></content_sha256>
+  <content_sha256><![CDATA[4d7112bb004dd3edc4c61d5aa9f0376164f1e68a4fd37444b49d92b176a13cd3]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -146,7 +146,22 @@
         </li>
       </ul>
 
-      <div style="display:flex !important; flex-wrap:wrap !important; gap:14px !important; margin:0 0 26px 0 !important">
+      <style>
+/* Hang nut CTA o hero. Khoi nay la LOP CHAN, khong phai trang tri.
+   Van de that tren site: the <a> "View Services & Pricing" cao 68px trong khi nut
+   <button> ben canh cao 52px. Do la vi <button> da duoc .caf-pick-btn (khoi Booking
+   Picker) go min-height/height cua theme, con the <a> thi khong co gi chan -> theme
+   bom them chieu cao vao rieng no.
+   Dung ID nen do uu tien cao hon moi luat cua theme. align-items:stretch de du co
+   chuyen gi xay ra thi hai nut cung KHONG BAO GIO lech nhau duoc nua. */
+#caf-hero-cta { display:flex !important; flex-wrap:wrap !important; gap:14px !important;
+                align-items:stretch !important; margin:0 0 26px 0 !important; }
+#caf-hero-cta > a, #caf-hero-cta > button {
+                min-height:0 !important; max-height:none !important; height:auto !important;
+                line-height:1.2 !important; -webkit-appearance:none !important;
+                appearance:none !important; box-shadow:none !important; }
+</style>
+      <div id="caf-hero-cta" style="display:flex !important; flex-wrap:wrap !important; gap:14px !important; margin:0 0 26px 0 !important">
         <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="flex:0 1 auto !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; padding:16px 30px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; font-weight:700 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; text-align:center !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.2 !important" onmouseover="this.style.setProperty('background','#E2C07A','important');this.style.setProperty('border-color','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important');this.style.setProperty('border-color','#C9A84C','important')">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0 !important"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Book Fast Track Now
