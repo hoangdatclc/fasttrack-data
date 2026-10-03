@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[b94bc510b7117ad22c0114b2b65928bd91ceb02c37f2ac5225aea2145771ffb3]]></content_sha256>
+  <content_sha256><![CDATA[6d134719f0779b2b848dbe170838a2f167d73e5666ba3a4426d9be53b9831862]]></content_sha256>
   <post_content><![CDATA[[ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -741,7 +741,7 @@
             <span class="sgn-wt-num" style="color:#C1272D !important;">93&ndash;113 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:100% !important; background:#C1272D !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">Under 20 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-busy" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="sgn-wt-flights">29 international arrivals &middot; Busy</span></div>
@@ -749,7 +749,7 @@
             <span class="sgn-wt-num" style="color:#C1272D !important;">78&ndash;97 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:86% !important; background:#C1272D !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">Under 20 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
         </div>
     </div>
 
