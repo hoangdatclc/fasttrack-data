@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[4d7112bb004dd3edc4c61d5aa9f0376164f1e68a4fd37444b49d92b176a13cd3]]></content_sha256>
+  <content_sha256><![CDATA[7f4ea9a3083faa1f559c7bbe3a8a2e9ce69fe9cc8dc22041e3a4daa7b45191e9]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -146,31 +146,53 @@
         </li>
       </ul>
 
-      <style>
-/* Hang nut CTA o hero. Khoi nay la LOP CHAN, khong phai trang tri.
-   Van de that tren site: the <a> "View Services & Pricing" cao 68px trong khi nut
-   <button> ben canh cao 52px. Do la vi <button> da duoc .caf-pick-btn (khoi Booking
-   Picker) go min-height/height cua theme, con the <a> thi khong co gi chan -> theme
-   bom them chieu cao vao rieng no.
-   Dung ID nen do uu tien cao hon moi luat cua theme. align-items:stretch de du co
-   chuyen gi xay ra thi hai nut cung KHONG BAO GIO lech nhau duoc nua. */
-#caf-hero-cta { display:flex !important; flex-wrap:wrap !important; gap:14px !important;
-                align-items:stretch !important; margin:0 0 26px 0 !important; }
-#caf-hero-cta > a, #caf-hero-cta > button {
-                min-height:0 !important; max-height:none !important; height:auto !important;
-                line-height:1.2 !important; -webkit-appearance:none !important;
-                appearance:none !important; box-shadow:none !important; }
-</style>
-      <div id="caf-hero-cta" style="display:flex !important; flex-wrap:wrap !important; gap:14px !important; margin:0 0 26px 0 !important">
-        <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="flex:0 1 auto !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; gap:8px !important; padding:16px 30px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; font-weight:700 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; text-align:center !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.2 !important" onmouseover="this.style.setProperty('background','#E2C07A','important');this.style.setProperty('border-color','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important');this.style.setProperty('border-color','#C9A84C','important')">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0 !important"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 26px;" class="caf-cta-row">
+        <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 15px 32px;
+          margin: 0;
+          background: #C9A84C;
+          color: #0B1F3A;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          text-decoration: none;
+          border-radius: 3px;
+          border: 2px solid #C9A84C;
+          box-sizing: border-box;
+          line-height: 1;
+          cursor: pointer;
+        " onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A'"
+           onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Book Fast Track Now
         </button>
-        <a href="#services" style="flex:0 1 auto !important; display:inline-flex !important; align-items:center !important; justify-content:center !important; padding:16px 28px !important; background:transparent !important; color:#ffffff !important; font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; font-weight:600 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; text-align:center !important; text-decoration:none !important; border-radius:3px !important; border:2px solid rgba(255,255,255,0.5) !important; box-sizing:border-box !important; line-height:1.2 !important" onmouseover="this.style.setProperty('border-color','#ffffff','important');this.style.setProperty('background','rgba(255,255,255,0.1)','important')" onmouseout="this.style.setProperty('border-color','rgba(255,255,255,0.5)','important');this.style.setProperty('background','transparent','important')">
+        <a href="#services" style="
+          display: inline-flex;
+          align-items: center;
+          padding: 15px 28px;
+          margin: 0;
+          background: transparent;
+          color: #ffffff;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.82rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          text-decoration: none;
+          border-radius: 3px;
+          border: 2px solid rgba(255,255,255,0.5);
+          box-sizing: border-box;
+          line-height: 1;
+        " onmouseover="this.style.borderColor='#fff';this.style.background='rgba(255,255,255,0.1)'"
+           onmouseout="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='transparent'">
           View Services &amp; Pricing
         </a>
       </div>
-
       <div style="display:flex !important; align-items:center !important; gap:10px !important; flex-wrap:wrap !important">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0 !important"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
         <span style="font-family:'DM Sans',sans-serif !important; font-size:0.85rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.6 !important">Trusted by travellers arriving from <a href="#reviews" style="color:#C9A84C !important; font-weight:600 !important; text-decoration:underline !important; text-underline-offset:3px !important; font-family:'DM Sans',sans-serif !important">Moscow, Seoul, Almaty and Guangzhou</a></span>
@@ -240,8 +262,30 @@
         </div>
       </div>
 
-      <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="display:flex !important; align-items:center !important; justify-content:center !important; text-align:center !important; padding:15px 18px !important; background:#C9A84C !important; color:#0B1F3A !important; font-family:'DM Sans',sans-serif !important; font-size:0.78rem !important; font-weight:700 !important; letter-spacing:0.06em !important; text-transform:uppercase !important; text-decoration:none !important; border-radius:3px !important; border:2px solid #C9A84C !important; box-sizing:border-box !important; line-height:1.3 !important" onmouseover="this.style.setProperty('background','#E2C07A','important')" onmouseout="this.style.setProperty('background','#C9A84C','important')">Book Now — Response in 10 min
-        </button>
+      <button type="button" class="caf-pick-btn" aria-haspopup="true" aria-expanded="false" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        width: 100%;
+        padding: 15px 24px;
+        margin: 0;
+        background: #C9A84C;
+        color: #0B1F3A;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 2px solid #C9A84C;
+        box-sizing: border-box;
+        line-height: 1;
+        cursor: pointer;
+      " onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+        Book Now — Response in 10 min
+      </button>
 
       <p style="text-align:center !important; font-family:'DM Sans',sans-serif !important; font-size:0.78rem !important; line-height:1.6 !important; color:#5A5A72 !important; margin:0 !important; padding:0 !important">Or reach us: <a href="https://wa.me/84368938081" style="color:#1a7a42 !important; font-weight:600 !important; text-decoration:none !important; font-family:'DM Sans',sans-serif !important">WhatsApp</a> · <a href="mailto:support@nhatrangairportfasttrack.com" style="color:#0B1F3A !important; font-weight:600 !important; text-decoration:none !important; font-family:'DM Sans',sans-serif !important">Email</a></p>
 
