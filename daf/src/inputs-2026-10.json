@@ -1,0 +1,32 @@
+{
+  "month": "2026-10",
+  "month_label": "October 2026",
+  "updated": "2026-10-02",
+  "month_notes": "October is Da Nang's wettest month, and from 25 October the winter schedule starts — the late-evening Korean bank from Seoul, Busan, Daegu and Cheongju grows again. Seven of those flights now land between 23:00 and 01:10.",
+  "empty_band_note": "Two late Korean arrivals land after midnight",
+  "context": {
+    "text": "Da Nang International Airport handled 13.1 million passengers in the first nine months of 2026; Terminal 2 carried 6.8 million in 2025 against a design capacity of 4 million.",
+    "source": "congluan.vn 27 Sep 2026; VnExpress 19 May 2026"
+  },
+  "basis": "Estimated from the flights scheduled at DAD in October 2026 and the queue times reported at the airport in 2025–2026.",
+  "cities": {
+    "ICN": "Seoul",
+    "PUS": "Busan",
+    "TAE": "Daegu",
+    "CJJ": "Cheongju",
+    "TPE": "Taipei",
+    "KHH": "Kaohsiung",
+    "HKG": "Hong Kong",
+    "MFM": "Macau",
+    "SIN": "Singapore",
+    "KUL": "Kuala Lumpur",
+    "BKK": "Bangkok",
+    "DMK": "Bangkok",
+    "MNL": "Manila",
+    "NRT": "Tokyo",
+    "KIX": "Osaka",
+    "PNH": "Phnom Penh",
+    "SAI": "Siem Reap"
+  },
+  "guide": "https://danangairportfasttrack.com/da-nang-airport-immigration-wait-time/"
+}
