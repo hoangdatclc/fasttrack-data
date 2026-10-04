@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[d0852c2eaab577e9826bf49b925e88e63f513416100b3534279203a6d6115a3f]]></content_sha256>
+  <content_sha256><![CDATA[3c18c5c84c0ce5b4cdf7b50c4009d297103855685e80a9b2be19ba76c06b51a7]]></content_sha256>
   <post_content><![CDATA[[ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -481,7 +481,7 @@
 
       </div>
 
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated 3 October 2026 &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
+      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated 4 October 2026 &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
 <!--/dat:zone:wait-hero-->
 
       <!-- Service mini tiles -->
@@ -663,7 +663,7 @@
 #wait-times .sgn-wt-track { display: block !important; height: 8px !important; background: #EFE9DD !important; border-radius: 4px !important; margin-top: 10px !important; overflow: hidden !important; max-width: 320px !important; }
 #wait-times .sgn-wt-fill { display: block !important; height: 8px !important; border-radius: 4px !important; }
 #wait-times .sgn-wt-cell { font-size: 0.95rem !important; color: #2a3a50 !important; }
-#wait-times .sgn-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a5c2e !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
+#wait-times .sgn-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a7a42 !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
 #wait-times .sgn-wt-cards { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; max-width: 900px !important; margin: 24px auto 0 !important; }
 #wait-times .sgn-wt-card { background: #F9F7F3 !important; border: 1px solid #E8E4DE !important; border-radius: 10px !important; padding: 20px 22px !important; }
 #wait-times .sgn-wt-card-gold { border-left: 4px solid #C9A84C !important; }
@@ -690,7 +690,7 @@
   <div style="max-width:1100px; margin:0 auto;">
 <!--dat:zone:wait-section-->
     <div class="sgn-wt-head">
-      <span class="sgn-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 3 October 2026</span>
+      <span class="sgn-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 4 October 2026</span>
       <h2 id="sgn-h2-wait">How Long Is the Immigration Queue at Tan Son Nhat Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
       <p class="sgn-wt-lead">In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong>78&ndash;113 minutes</strong> from touchdown to leaving immigration at Tan Son Nhat International Airport (SGN). At quieter hours it is 51&ndash;58 minutes. With Fast Track it is about 10 minutes, and under 20 even at peak.</p>
@@ -737,16 +737,16 @@
         <div class="sgn-wt-row sgn-wt-busy" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="sgn-wt-flights">30 international arrivals &middot; Busy</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#C1272D !important;">93&ndash;113 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:100% !important; background:#C1272D !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#C9281C !important;">93&ndash;113 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:100% !important; background:#C9281C !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-busy" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="sgn-wt-flights">29 international arrivals &middot; Busy</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#C1272D !important;">78&ndash;97 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:86% !important; background:#C1272D !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#C9281C !important;">78&ndash;97 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:86% !important; background:#C9281C !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
         </div>
@@ -2173,7 +2173,7 @@
           <div class="sgn-faq-body" id="sgn-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
             <p>In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">78&ndash;113 minutes</strong> from touchdown to leaving immigration. At quieter hours it is 51&ndash;58 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under 20 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 3 October 2026).</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under 20 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 4 October 2026).</p>
             </div>
           </div>
         </div>
