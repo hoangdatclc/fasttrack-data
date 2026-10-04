@@ -7,8 +7,9 @@ Hoc tu SAF (port_page.py muc 2c).
 """
 import io, re, sys
 
-SRC = "page-live-2026-10.txt"
-DST = "page-in.txt"
+# Nhan tham so, KHONG ghim ten file theo thang (thang sau se sai).
+SRC = sys.argv[1] if len(sys.argv) > 1 else "page-live.txt"
+DST = sys.argv[2] if len(sys.argv) > 2 else "page-in.txt"
 
 s = io.open(SRC, encoding="utf-8").read()
 before = len(s)
