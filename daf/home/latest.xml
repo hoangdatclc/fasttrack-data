@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[c2261ab119e71191de83426fca2feaf7377817770d5c0d02fb4b2032480b3120]]></content_sha256>
+  <content_sha256><![CDATA[1bdcb86077b21361016edfca177fca93c55da4727e60d8c21fa515c65c9320ed]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -422,14 +422,14 @@
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">68&ndash;79 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing 20:00&ndash;24:00 &mdash; from touchdown to leaving immigration</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours &mdash; from touchdown to leaving immigration</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">10&ndash;15 min</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Under 15 min</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service &mdash; every flight, every hour</span>
         </div>
 
@@ -443,7 +443,7 @@
 
       </div>
 
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated 2 October 2026 &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
+      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated 4 October 2026 &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
 <!--/dat:zone:wait-hero-->
 
       <!-- Service mini tiles -->
@@ -589,7 +589,8 @@
   .daf-cta-row {
     flex-direction: column !important;
   }
-  .daf-cta-row a {
+  .daf-cta-row a,
+  .daf-cta-row button {
     justify-content: center !important;
   }
 }
@@ -625,7 +626,7 @@
 #wait-times .daf-wt-track { display: block !important; height: 8px !important; background: #EFE9DD !important; border-radius: 4px !important; margin-top: 10px !important; overflow: hidden !important; max-width: 320px !important; }
 #wait-times .daf-wt-fill { display: block !important; height: 8px !important; border-radius: 4px !important; }
 #wait-times .daf-wt-cell { font-size: 0.95rem !important; color: #2a3a50 !important; }
-#wait-times .daf-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a5c2e !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
+#wait-times .daf-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a7a42 !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
 #wait-times .daf-wt-cards { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; max-width: 900px !important; margin: 24px auto 0 !important; }
 #wait-times .daf-wt-card { background: #F9F7F3 !important; border: 1px solid #E8E4DE !important; border-radius: 10px !important; padding: 20px 22px !important; }
 #wait-times .daf-wt-card-gold { border-left: 4px solid #C9A84C !important; }
@@ -633,11 +634,10 @@
 #wait-times .daf-wt-method { max-width: 900px !important; margin: 22px auto 0 !important; font-size: 0.78rem !important; line-height: 1.7 !important; color: #5A5A72 !important; }
 #wait-times .daf-wt-method strong { color: #0B1F3A !important; font-weight: 600 !important; }
 #wait-times .daf-wt-cta { display: flex !important; flex-wrap: wrap !important; align-items: center !important; justify-content: center !important; gap: 12px 24px !important; margin-top: 28px !important; }
-#wait-times .daf-wt-btn { display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 15px 30px !important; background: #C9A84C !important; background-image: none !important; color: #0B1F3A !important; font-family: 'DM Sans', sans-serif !important; font-size: 0.8rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; border: none !important; border-radius: 3px !important; margin: 0 !important; height: auto !important; min-height: 0 !important; line-height: 1.2 !important; cursor: pointer !important; box-shadow: none !important; text-shadow: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; }
+#wait-times .daf-wt-btn { display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 18px 46px !important; background: #C9A84C !important; background-image: none !important; color: #0B1F3A !important; font-family: 'DM Sans', sans-serif !important; font-size: 0.86rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; border: none !important; border-radius: 3px !important; margin: 0 !important; height: auto !important; min-height: 0 !important; line-height: 1.2 !important; cursor: pointer !important; box-shadow: none !important; text-shadow: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; }
 #wait-times .daf-wt-btn:hover, #wait-times .daf-wt-btn:focus, #wait-times .daf-wt-btn:active { background: #E2C07A !important; color: #0B1F3A !important; }
 #wait-times .daf-pick-chev { transition: transform 0.25s ease !important; }
 #wait-times .daf-pick-btn[aria-expanded="true"] .daf-pick-chev { transform: rotate(180deg) !important; }
-#wait-times .daf-wt-link { font-size: 0.86rem !important; font-weight: 600 !important; color: #8B6914 !important; border-bottom: 1px solid rgba(201,168,76,0.4) !important; }
 #wait-times a:focus-visible { outline: 2px solid #0B1F3A !important; outline-offset: 3px !important; }
 @media (max-width: 820px) {
   #wait-times .daf-wt-header { display: none !important; }
@@ -653,10 +653,10 @@
   <div style="max-width:1100px; margin:0 auto;">
 <!--dat:zone:wait-section-->
     <div class="daf-wt-head">
-      <span class="daf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 2 October 2026</span>
+      <span class="daf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 4 October 2026</span>
       <h2 id="daf-h2-wait">How Long Is the Immigration Queue at Da Nang Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="daf-wt-lead">In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong>68&ndash;79 minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). Flights landing 16:00&ndash;20:00 clear in 40&ndash;45 minutes. With Fast Track it is about 10 minutes, or 10&ndash;15 at the busiest hours.</p>
+      <p class="daf-wt-lead">In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong>68&ndash;79 minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). At quieter hours it is 40&ndash;45 minutes. With Fast Track it is about 10 minutes, and under 15 even at the busiest hours.</p>
     </div>
 
     <div class="daf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Da Nang Airport by arrival time, October 2026">
@@ -684,8 +684,8 @@
         <div class="daf-wt-row daf-wt-busy" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Busy</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#C1272D !important;">50&ndash;77 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:97% !important; background:#C1272D !important;"></span></span>
+            <span class="daf-wt-num" style="color:#C9281C !important;">50&ndash;77 min</span>
+            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:97% !important; background:#C9281C !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
         </div>
@@ -698,7 +698,7 @@
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="daf-wt-row daf-wt-light" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="daf-wt-flights">6 international arrivals &middot; Usually quick</span></div>
+          <div class="daf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="daf-wt-flights">6 international arrivals &middot; Lighter</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
             <span class="daf-wt-num" style="color:#8B6914 !important;">40&ndash;45 min</span>
             <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:57% !important; background:#8B6914 !important;"></span></span>
@@ -708,8 +708,8 @@
         <div class="daf-wt-row daf-wt-busy" role="row">
           <div class="daf-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Busy</span></div>
           <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#C1272D !important;">68&ndash;79 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:100% !important; background:#C1272D !important;"></span></span>
+            <span class="daf-wt-num" style="color:#C9281C !important;">68&ndash;79 min</span>
+            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:100% !important; background:#C9281C !important;"></span></span>
           </div>
           <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
         </div>
@@ -718,7 +718,7 @@
     <div class="daf-wt-cards">
       <div class="daf-wt-card daf-wt-card-gold">
         <h3>When Fast Track matters most</h3>
-        <p>Flights landing 10:00&ndash;13:00 and 20:00&ndash;24:00, when arrivals from Busan, Seoul, Kuala Lumpur and Singapore land minutes apart. Land 16:00&ndash;20:00 &mdash; you may not need us, and we will say so.</p>
+        <p>Flights landing 10:00&ndash;13:00 and 20:00&ndash;24:00, when arrivals from Seoul, Busan, Kuala Lumpur and Bangkok land minutes apart. Land 16:00&ndash;20:00 &mdash; the line is shorter, though rarely short.</p>
       </div>
       <div class="daf-wt-card">
         <h3>October 2026 notes</h3>
@@ -726,11 +726,10 @@
       </div>
     </div>
 
-    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 53 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements &mdash; season by season in our <a href="https://danangairportfasttrack.com/da-nang-airport-immigration-wait-time/" style="color:#8B6914 !important; font-weight:600 !important; border-bottom:1px solid rgba(201,168,76,0.4) !important;">Da Nang Airport wait-time guide</a>.</p>
+    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 53 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements.</p>
 
     <div class="daf-wt-cta">
       <button type="button" class="daf-pick-btn daf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-      <a class="daf-wt-link" href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20check%20the%20immigration%20queue%20for%20my%20flight%20to%20Da%20Nang." target="_blank" rel="noopener">Send us your flight number &mdash; we will tell you if you need it</a>
     </div>
 <!--/dat:zone:wait-section-->
   </div>
@@ -1787,8 +1786,8 @@
           </button>
           <div class="daf-faq-body" id="daf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, the last passengers off a flight landing between 20:00 and 24:00 need an estimated <strong style="color:#0B1F3A; font-weight:600;">68&ndash;79 minutes</strong> from touchdown to leaving immigration. Flights landing 16:00&ndash;20:00 clear in 40&ndash;45 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is about 10 minutes, and 10&ndash;15 even at the busiest hours. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
+            <p>In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">68&ndash;79 minutes</strong> from touchdown to leaving immigration. At quieter hours it is 40&ndash;45 minutes.</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under 15 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 4 October 2026).</p>
             </div>
           </div>
         </div>
@@ -2395,7 +2394,6 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function () { if (current) { closePicker(); } });
 })();
 </script>
-[/ux_html]
-]]></post_content>
+[/ux_html]]]></post_content>
  </item>
 </data>
