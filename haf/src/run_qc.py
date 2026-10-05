@@ -34,6 +34,9 @@ COUNTS = {
     r'#1a5c2e': 0, r'#C1272D': 0,
     # Luat 7: media query phai phu ca <button>.
     r'\.haf-cta-row button': 1,
+    # Tieu de the hero giu nguyen nhu trang goc (chu site chot 05/10/2026) va nam
+    # NGOAI vung zone -> quy trinh hang thang khong duoc lam mat no.
+    r'Why Choose Fast Track\?': 1,
 }
 
 ZONES = ["wait-hero", "wait-section", "wait-faq"]

@@ -100,18 +100,23 @@ print("Booking Picker:", len(pick), "bytes")
 # ---------------------------------------------------------------- 3. Hero Banner
 hero = hb["Hero Banner"]
 
-# 3a. Khoanh vung wait-hero: thay dau the "Why Choose Fast Track?" + 3 dong chi so
-#     (Save / From / 24/7) bang vung may ghi. Giu nguyen cac o dich vu ben duoi.
+# 3a. Khoanh vung wait-hero: thay BA DONG CHI SO (Save / From / 24/7) bang vung may ghi.
+#     GIU NGUYEN tieu de the "Why Choose Fast Track?" lam phan TINH, ngoai vung --
+#     chu site chot 05/10/2026 giu nguyen cau nay nhu trang goc. Vi the nam ngoai vung,
+#     quy trinh hang thang khong cham toi, va `patch_static.py` kiem no con nguyen.
+#     Thang va ngay cap nhat van co trong vung: cau `basis` neu ten thang, dong cuoi
+#     ghi "Updated <ngay> - Hour by hour". Khong mat thong tin nao.
 k = hero.index("Why Choose Fast Track?")
-start = hero.rindex('      <div style="', 0, k)
+start = hero.index("</div>", k) + len("</div>")       # ngay SAU the tieu de
 end = hero.index('      <div style="display: flex; gap: 8px;">')
 cut = hero[start:end]
 assert cut.count("1 - 3 hours") == 1, "khong tim thay dong 'Save 1 - 3 hours'"
 assert cut.count('[haf_price service="fast_track"]') == 1
 assert "24/7" in cut and "Support" in cut
+assert "Why Choose Fast Track?" not in cut, "tieu de the bi nuot vao vung"
 assert hero.count('      <div style="display: flex; gap: 8px;">') == 1
 hero = hero[:start] + (
-    "<!--dat:zone:wait-hero-->\n"
+    "\n\n<!--dat:zone:wait-hero-->\n"
     "      <!-- May ghi. Dung sua tay: update_zones.py se ghi de moi thang. -->\n"
     "<!--/dat:zone:wait-hero-->\n\n"
 ) + hero[end:]
@@ -192,6 +197,7 @@ for a, b in [
 assert "1–3 hour" not in hero and "1 - 3 hours" not in hero, "con sot '1-3 hour' trong hero"
 assert hero.count("haf-pick-btn") == 1
 assert hero.count("<!--dat:zone:wait-hero-->") == 1
+assert hero.count("Why Choose Fast Track?") == 1, "mat tieu de the hero"
 print("Hero Banner: ok,", len(hero), "bytes")
 
 

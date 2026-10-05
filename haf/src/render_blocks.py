@@ -79,23 +79,7 @@ def render_hero(d, updated):
     # bang se dep hon ma sai: khach ha luc 21:00 that su cho ngang khach ha luc 14:00.
     busy = h["busy"]
     return f'''
-      <div style="
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #0B1F3A;
-        padding-bottom: 10px;
-      ">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        HAN Immigration &mdash; {d["month_label"]}
-      </div>
-
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">{d["basis"]}</p>
+<p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">{d["basis"]}</p>
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
