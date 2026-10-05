@@ -91,30 +91,44 @@ Doc cho dung: KHONG phai "thang 11 cho 71 phut". Hang 1.158 nguoi khong lot vao 
    Ham `hall_overflow()` se bao; dung bo qua.
 
 ======================================================================
-(C) OBSERVED_PEAK = (30, 60) -- VA VI SAO KHONG LAY "1-3 HOUR" CUA TRANG
+(C) OBSERVED_PEAK = (60, 90) -- QUAN SAT CUA CHU SITE, 05/10/2026
 ======================================================================
-Trang haf hien in "1-3 hour" nam lan. Khong tim duoc nguon nao do ra con so do, va
-no choi voi hai nguon co that:
+Chu site van hanh dich vu tai HAN hang ngay, bao: khach co the mat TOI 2 TIENG de
+hoan thanh nhap canh -- dai cu cua mo hinh (toi 91 phut) ngan hon thuc te.
 
-  - Bao Chinh phu 19/08/2026, dan Cong an cua khau: TRUOC phan luong, cao diem cho
-    "khoang 28-30 phut"; SAU phan luong, cong dan Viet con "khoang 15-17 phut".
-  - VnExpress 02/08/2026, khach phan anh: truoc day xep chung "30 phut den gan mot
-    tieng"; sau phan luong con "5-10 phut" (cau nay noi ve KHACH VIET).
+Day la bang chung TOT NHAT hien co cho LAN KHACH NUOC NGOAI, va no tot hon moi
+nguon da cong bo, vi moi con so bao chi dang co deu la cua LAN KHACH VIET:
+  - Bao Chinh phu 19/08/2026: truoc phan luong cao diem 28-30 phut; sau phan luong
+    cong dan Viet con 15-17 phut.
+  - VnExpress 02/08/2026: khach phan anh truoc day xep chung "30 phut den gan mot
+    tieng"; sau phan luong con 5-10 phut (cau nay noi ve KHACH VIET).
+Khong to nao cong bo thoi gian cua lan khach ngoai. Ban dau mo hinh phai suy tu dai
+chung do, va suy ra THAP.
 
-Khong nguon nao cong bo thoi gian cua LAN KHACH NUOC NGOAI sau phan luong. Nen:
-  - Can duoi 30 phut: lay dung con so cao diem truoc phan luong cua don vi van hanh.
-  - Can tren 60 phut: khach ngoai la nhom CHAM nhat trong hang chung do (khong dung
-    duoc autogate, phai quet PAI, nhieu ho so e-visa lan dau). Truoc phan luong ho
-    keo trung binh len; sau phan luong ho khong con duoc khach Viet keo xuong nua.
-    => dat dinh cua lan ngoai o nua tren dai "30 phut - gan mot tieng" ma khach
-    phan anh, khong phai nua duoi.
+Quy doi sang con so mo hinh: 120 phut hien thi - WALK toi da 30 - TAXI 5 = 85 phut
+XEP HANG. Dai (60, 90) om lay con so do. Cong ap dung ×0,7…×1,6 = 42-144 phut.
 
-Cong them WALK (10-30) va TAXI (5), con so HIEN THI tren trang se la ~45-95 phut tuy
-khung -- tuc cau "1-3 hour" cu la noi qua, va luat 5 (khong viet cung khung gio/con so
-trong van xuoi) se don no di.
+CANH BAO: neu sau nay co phep do cua co quan chuc nang cho rieng lan khach ngoai,
+no se thay the quan sat nay. Sua OBSERVED_PEAK TRUOC roi moi chinh PROC_SEC.
 
-CANH BAO: neu Cong an cua khau cong bo so cua rieng lan khach nuoc ngoai, SUA
-OBSERVED_PEAK TRUOC roi moi chinh PROC_SEC/BASE_DAY cho khop -- dung chinh nguoc lai.
+======================================================================
+(D) TRAN PHONG CHO: tu BO LOC CUNG thanh TRAN CO DO TRAN
+======================================================================
+Ban dau cong tran phong cho la bo loc cung o 1,00x (1.100 cho). Luc do chua co du
+lieu thuc dia nao nen no la thu duy nhat chan mo hinh chay hoang.
+
+Quan sat cua chu site (2 tieng cao diem) chung minh hang THUC SU tran ra khoi phong
+duoc thiet ke -- hang 1.100 nguoi khong the cho ra 2 tieng cho. Nen tran cung o
+1,00x chinh la thu giu mo hinh lac quan.
+
+HALL_SPILL = 1,35 -- hang duoc phep dai toi 1,35x suc chua phong, tuc tran ra hanh
+lang dan vao khu nhap canh. 1,35 LA MOT UOC LUONG, khong phai so do: khong co nguon
+nao cong bo dien tich hanh lang do. Ket qua cong bo NHAY voi con so nay:
+    1,00x -> 19/27 kich ban bi loai, dai hep gia tao
+    1,35x -> 8/27 bi loai,  dai 90-110 phut   <- dang dung
+    2,00x -> 2/27 bi loai,  dai 73-137 phut, rong den muc vo dung
+Do tran nay van can: khong co no, luoi nhan ca nhung kich ban hang dai vo han.
+
 """
 import json
 from collections import deque
@@ -123,7 +137,7 @@ from han_flights import FLIGHTS
 LOAD, FOREIGN = 0.85, 0.70
 MONTH_UPLIFT = 1.00   # thang 10 = moc. Xem BANG HE SO MUA cuoi file.
 WALK = (10, 30)        # T2 200.164 m2 sau mo rong 19/12/2025 -- nha ga LON NHAT mang luoi
-PROC_SEC = 125         # xem muc (A)
+PROC_SEC = 138         # xem muc (A). 125 -> 138 ngay 05/10/2026, theo quan sat cua chu site.
 BASE_DAY, BASE_NIGHT, SURGE = 28, 24, 5
 SURGE_PAX = 1500       # khach ngoai vua ha trong 45 phut gan nhat -> mo them lan. ~7 chuyen HAN.
 SURGE_AT = 400         # chot chan theo do dai hang. Tran phong cho ~1.100 cho (xem (6)).
@@ -135,16 +149,17 @@ TAXI = 5
 # lan TACH HAN: khach ngoai dong hon du tinh thi quay cua lan Viet khong do sang duoc.
 # => ty le khach ngoai la rui ro THAT su va phai nam trong luoi.
 GRID_FOREIGN = (0.65, 0.70, 0.75)
-GRID_COUNTERS, GRID_PROC = (27, 28, 29), (115, 125, 135)
+GRID_COUNTERS, GRID_PROC = (27, 28, 29), (128, 138, 148)
 BAND_Q = (0.50, 0.75)
 # Nguong bac. Phan bo cua HAN rat phang nen de nguong SAT nhau se lam moi khung cung
 # mot bac. Dat theo chinh hinh dang bang (xem ghi chu khi hieu chuan).
 TIER_MOD, TIER_BUSY = 60, 80
 
-OBSERVED_PEAK = (30, 60)   # xem muc (C)
+OBSERVED_PEAK = (60, 90)   # xem muc (C) -- quan sat cua chu site, 05/10/2026
 
 # Tran phong cho -- rang buoc rieng cua HAN
 HALL_CAPACITY = 1100
+HALL_SPILL = 1.35      # hang duoc phep tran ra hanh lang bao nhieu -- xem muc (D)
 
 def quiet_hours():
     """Gio NAO san bay thuc su rut bot lan -- suy TU LICH BAY, khong dat cung theo dong ho.
@@ -319,15 +334,15 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
     """month='2026-10', month_label='October 2026'."""
     import itertools
     central_rows, _, central_pax, central_queue = simulate()
-    if central_queue > HALL_CAPACITY:
+    if central_queue > HALL_CAPACITY * HALL_SPILL:
         raise SystemExit(
             f"KICH BAN TRUNG TAM VO TRAN PHONG CHO: hang dai nhat {central_queue:.0f} nguoi "
-            f"> suc chua {HALL_CAPACITY}. San bay se mo them quay chu khong de hang tran ra "
+            f"> {HALL_SPILL:.2f}x suc chua {HALL_CAPACITY}. San bay se mo them quay chu khong de "
             "ngoai phong. NANG BASE_DAY cho toi khi lot roi chay lai -- dung giao so nay.")
     grid_all = [(simulate(proc_sec=p, base_day=c, foreign=fo), (p, c, fo))
                 for p, c, fo in itertools.product(GRID_PROC, GRID_COUNTERS, GRID_FOREIGN)]
-    grid = [g for g, _k in grid_all if g[3] <= HALL_CAPACITY]
-    dropped = [k for g, k in grid_all if g[3] > HALL_CAPACITY]
+    grid = [g for g, _k in grid_all if g[3] <= HALL_CAPACITY * HALL_SPILL]
+    dropped = [k for g, k in grid_all if g[3] > HALL_CAPACITY * HALL_SPILL]
     if len(grid) < len(grid_all) // 2:
         raise SystemExit(
             f"LUOI HONG: {len(grid)}/{len(grid_all)} kich ban lot tran phong cho. "

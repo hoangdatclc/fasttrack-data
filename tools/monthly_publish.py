@@ -125,8 +125,8 @@ PROFILE = {
         #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
         "hero_title": 'Why Choose HAN Fast Track?',
         "musts": [
-                  'Through immigration in the busiest hours &middot;',
-                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
+                  'Against a standard queue of',
+                  'Why Choose HAN Fast Track?','add-to-cart=311', 'add-to-cart=313',
                   '[haf_price service="fast_track"]',
                   '[haf_price service="vip_departure"]',
                   '[haf_price service="connection"]',

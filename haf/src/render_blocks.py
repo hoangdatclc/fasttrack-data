@@ -19,6 +19,32 @@ rng   = lambda p: (f"{p[0]}" if p[0] == p[1] else f"{p[0]}&ndash;{p[1]}")
 #   ngay duoi lam yeu tuong phan "dai va bap benh" vs "ngan va chac". "Under 15" la
 #   tran, dung o MOI khung, khop dong phu "every flight, every hour".
 ftcell = lambda v: (f"{v[0]}&ndash;{v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
+def saved(busy, ft):
+    """Muc tiet kiem: hang thuong TRU Fast Track, o khung ban nhat.
+
+    Can duoi = dai hang NGAN NHAT trong cum ban tru TRAN Fast Track (truong hop it
+    loi nhat cho minh). Can tren = dai DAI NHAT tru SAN Fast Track.
+
+    Doi sang GIO khi can duoi >= 60 phut -- "1 - 2 hours" doc to hon "75 - 100 min"
+    va dung voi cach the hero goc cua HAF viet. Duoi 60 phut thi giu phut: lam tron
+    len gio se cho ra "0 - 2 hours", vo nghia.
+
+    CONG CHAN: can duoi phai >= 15 phut. Day la con so SUY RA, khong co trong du
+    lieu; thang nao do khung ban tut xuong gan tran Fast Track thi no se ra so be
+    hoac am va the hero se noi doi. Dung luon, dung giao trang.
+    """
+    cap = ft["peak"][1] if isinstance(ft.get("peak"), (list, tuple)) else ft["peak"]
+    lo, hi = busy["range"][0] - cap, busy["range"][1] - ft["base"]
+    if lo < 15:
+        raise SystemExit(
+            f"MUC TIET KIEM VO LY: {lo}-{hi} phut. Can duoi phai >= 15 phut. "
+            "Khung ban da tut xuong gan tran Fast Track -- xem lai mo hinh, "
+            "dung dang the hero voi con so nay.")
+    if lo >= 60:
+        return f"{lo // 60}&ndash;{-(-hi // 60)} hours"
+    return f"{lo}&ndash;{hi} min"
+
+
 ftword = lambda v: (f"Under {v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
 ftcap  = lambda c: (c["peak"][1] if isinstance(c.get("peak"), (list, tuple)) else c["peak"]) if isinstance(c, dict) else c
 # Fast Track doi theo bac: khung thuong ~10 phut, khung cao diem 10-15.
@@ -106,17 +132,9 @@ def render_hero(d, updated):
       <div style="display: flex; flex-direction: column; gap: 0;">
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration in the busiest hours &middot; {d["month_label"]} estimate</span>
-        </div>
-
-        <div style="height:1px; background:#E8E4DE;"></div>
-
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{ftword(ft_of(busy.get("tier","busy"), h["fast_track"]))} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Against a standard queue of {rng(busy["range"])} min &middot; {d["month_label"]} estimate</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -125,6 +143,14 @@ def render_hero(d, updated):
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">[haf_price service="fast_track"]</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
+        </div>
+
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>
         </div>
 
       </div>

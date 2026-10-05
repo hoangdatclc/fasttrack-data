@@ -37,12 +37,11 @@ COUNTS = {
     # Tieu de the hero giu nguyen nhu trang goc (chu site chot 05/10/2026) va nam
     # NGOAI vung zone -> quy trinh hang thang khong duoc lam mat no.
     r'Why Choose HAN Fast Track\?': 1,
-    # Dong phu cua hang QUEUE mang CA thang LAN chu "estimate" -- the hero khong con
-    # doan `basis` rieng, nen neu mat dong nay thi con so 69-91 phut dung tran, khong
-    # co gi noi no la uoc tinh cua thang nao.
-    r'Through immigration in the busiest hours &middot; [A-Za-z]+ \d{4} estimate': 1,
-    # Dong phu hang FAST TRACK phai GIU "Through immigration" de song song voi hang tren.
-    r'Through immigration with our service': 1,
+    # The hero HAF la Save / From / 24-7 (ba ly do khac nhau), khong phai bang so sanh.
+    # Dong phu hang SAVE phai mang CA phep so LAN thang -- mat no thi con so tiet kiem
+    # dung tran, khong biet so voi cai gi va cua thang nao.
+    r'Against a standard queue of \d+&ndash;\d+ min &middot; [A-Za-z]+ \d{4} estimate': 1,
+    r'>Save</span>': 1, r'>24/7</span>': 1,
 }
 
 ZONES = ["wait-hero", "wait-section", "wait-faq"]

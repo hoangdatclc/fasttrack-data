@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<data>
- <item>
-  <ID>15</ID>
-  <post_type>page</post_type>
-  <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[2b2ea72a703d472b2320ae1c17cb9ee3809f7a0651880af7722a875628824de5]]></content_sha256>
-  <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
+<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -2959,6 +2952,4 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 [/ux_html]
 
-<!-- /wp:flatsome/uxbuilder -->]]></post_content>
- </item>
-</data>
+<!-- /wp:flatsome/uxbuilder -->
