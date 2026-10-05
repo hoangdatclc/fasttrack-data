@@ -31,7 +31,7 @@ if "#C9281C" not in s:
 
 # Tieu de the hero la phan TINH, phai nam NGOAI vung wait-hero. Lot vao trong thi thang
 # sau update_zones.py xoa mat ma khong ai bao.
-TITLE = "SGN Immigration &mdash; The Real Numbers"
+TITLE = "Why Choose SGN Fast Track?"
 z = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->", s, re.S)
 if not z:
     err.append("khong tim thay vung wait-hero")

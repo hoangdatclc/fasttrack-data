@@ -15,7 +15,7 @@ PROFILE = {
         # Form the hero gop (chot 05/10/2026, chung ca 5 site):
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
         #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
-        "hero_title": 'PQC Immigration &mdash; The Real Numbers',
+        "hero_title": 'Why Choose PQC Fast Track?',
         "musts": [
                   'Through immigration in the busiest hours &middot;',
                   'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
@@ -36,7 +36,7 @@ PROFILE = {
         # Form the hero gop (chot 05/10/2026, chung ca 5 site):
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
         #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
-        "hero_title": 'DAD Immigration &mdash; The Real Numbers',
+        "hero_title": 'Why Choose DAD Fast Track?',
         "musts": [
                   'Through immigration in the busiest hours &middot;',
                   'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
@@ -57,7 +57,7 @@ PROFILE = {
         # Form the hero gop (chot 05/10/2026, chung ca 5 site):
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
         #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
-        "hero_title": 'CXR Immigration &mdash; The Real Numbers',
+        "hero_title": 'Why Choose CXR Fast Track?',
         "musts": [
                   'Through immigration in the busiest hours &middot;',
                   'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
@@ -88,7 +88,7 @@ PROFILE = {
         # Form the hero gop (chot 05/10/2026, chung ca 5 site):
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
         #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
-        "hero_title": 'SGN Immigration &mdash; The Real Numbers',
+        "hero_title": 'Why Choose SGN Fast Track?',
         "musts": [
                   'Through immigration in the busiest hours &middot;',
                   'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
@@ -123,7 +123,7 @@ PROFILE = {
         # Form the hero gop (chot 05/10/2026, chung ca 5 site):
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
         #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
-        "hero_title": 'Why Choose Fast Track?',
+        "hero_title": 'Why Choose HAN Fast Track?',
         "musts": [
                   'Through immigration in the busiest hours &middot;',
                   'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',

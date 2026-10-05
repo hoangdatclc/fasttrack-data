@@ -41,16 +41,16 @@ need(r"#wait-times \.haf-wt-link", 0, "quy tac chet .haf-wt-link")
 # Thieu dong nay thi nut vang cua hero lech trai tren dien thoai. Do bang probe.py.
 need(r"\.haf-cta-row a,\s*\n\s*\.haf-cta-row button \{", 1, "media query .haf-cta-row a, button")
 
-# Tieu de the hero "Why Choose Fast Track?" la phan TINH, phai nam NGOAI vung
+# Tieu de the hero "Why Choose HAN Fast Track?" la phan TINH, phai nam NGOAI vung
 # wait-hero. Neu no lot vao trong vung thi thang sau update_zones.py se xoa mat.
 z = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->", s, re.S)
 if not z:
     err.append("khong tim thay vung wait-hero")
-elif "Why Choose Fast Track?" in z.group(1):
-    err.append("tieu de 'Why Choose Fast Track?' lot VAO TRONG vung wait-hero -- "
+elif "Why Choose HAN Fast Track?" in z.group(1):
+    err.append("tieu de 'Why Choose HAN Fast Track?' lot VAO TRONG vung wait-hero -- "
                "thang sau update_zones.py se xoa mat no")
-elif s.count("Why Choose Fast Track?") != 1:
-    err.append(f"'Why Choose Fast Track?' xuat hien {s.count('Why Choose Fast Track?')} lan, can 1")
+elif s.count("Why Choose HAN Fast Track?") != 1:
+    err.append(f"'Why Choose HAN Fast Track?' xuat hien {s.count('Why Choose HAN Fast Track?')} lan, can 1")
 
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:

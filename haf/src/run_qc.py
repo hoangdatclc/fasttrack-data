@@ -36,7 +36,7 @@ COUNTS = {
     r'\.haf-cta-row button': 1,
     # Tieu de the hero giu nguyen nhu trang goc (chu site chot 05/10/2026) va nam
     # NGOAI vung zone -> quy trinh hang thang khong duoc lam mat no.
-    r'Why Choose Fast Track\?': 1,
+    r'Why Choose HAN Fast Track\?': 1,
     # Dong phu cua hang QUEUE mang CA thang LAN chu "estimate" -- the hero khong con
     # doan `basis` rieng, nen neu mat dong nay thi con so 69-91 phut dung tran, khong
     # co gi noi no la uoc tinh cua thang nao.
