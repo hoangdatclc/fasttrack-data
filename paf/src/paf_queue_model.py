@@ -39,8 +39,28 @@ LOAD, FOREIGN = 0.85, 0.85
 MONTH_UPLIFT = 1.05                      # hệ số mùa của tháng cần tính (xem bảng dưới)
 WALK = (8, 20)                           # phút từ lúc đỗ chèn tới lúc vào hàng
 PROC_SEC = 70                            # giây xử lý mỗi khách (quét QR PAI + đóng dấu + kiểm vé đi tiếp)
-BASE_DAY, BASE_NIGHT, SURGE, SURGE_AT = 7, 5, 2, 200   # so quay mo (DA HIEU CHUAN); +2 khi hang >= 200
-FT = 10                                  # cam kết Fast Track: ~10 phút, mọi khung
+BASE_DAY, BASE_NIGHT, SURGE, SURGE_AT = 7, 5, 2, 200   # so quay mo (DA HIEU CHUAN)
+# Tang lan theo LICH BAY, khong cho hang dai roi moi mo (port tu DAF 05/10/2026).
+# San bay BIET TRUOC cum nao sap toi va bo tri nguoi tu dau ca. SURGE_AT giu lai
+# lam chot chan cho chuyen bat ngo.
+#
+#
+# BAT 05/10/2026, nguong chon tu PHAN BO TAI HA CANH cua chinh PQC -- khong phai do khop so.
+#   Ba can cu doc lap cung chi ve 350:
+#   1. Thong le nganh (ACI EUROPE, "Monitoring of Passenger Flows"): san bay cung du bao
+#      khach cho bien phong de ho len LICH TRUC toi uu, dieu chinh o briefing dau ngay;
+#      phan ung theo hang chi la tinh chinh trong ca. Dung hinh dang `SURGE_PAX or SURGE_AT`.
+#   2. Phan bo tai cua lich PQC: dinh 617, trung vi 166. Nguong 250 kich 5,2 gio/ngay
+#      (tuc gan nhu luon bat -> khong con la "surge"); 450 chi bat 0,4 gio, bo sot bon cum
+#      that. 350 kich 1,8 gio/ngay dung tren NAM cum co that: 09:40 / 13:45 / 15:35 /
+#      15:55 / 18:05. Do la cho phan bo tu tach.
+#   3. Cong hieu chuan: peak_queue 47 phut, van trong dai quan sat thuc dia 45-60 (truoc 51).
+SURGE_PAX = 350       # khach ngoai vua ha trong 45 phut gan nhat -> mo them lan
+RUNWAY_GAP = 3        # phut toi thieu giua hai luot ha canh -- PQC MOT duong bang
+# Fast Track HAI BAC tu 05/10/2026 (chu site chot) -- truoc do la 10 phang moi khung.
+# Dinh cua PQC la 98 phut, xau nhat trong bon site, nen mot cam ket 10 phut phang o
+# moi khung la hua qua tay. Giong DAF/CAF: ~10 khung thuong, 10-15 khung cao diem.
+FT = {"base": 10, "peak": [10, 15]}
 TAXI = 5                                 # cham banh -> do chen. Con so tren trang do tu CHAM BANH,
                                          # con gio trong lich bay la gio vao bai. Phan di bo da nam
                                          # trong WALK roi, KHONG cong them lan nua.
@@ -69,6 +89,65 @@ def minute(hhmm):
     return h * 60 + m
 
 
+
+def quiet_hours():
+    """Gio NAO san bay thuc su rut bot lan -- suy TU LICH BAY, khong dat cung theo dong ho.
+
+    Port tu DAF 05/10/2026. Chu site xac nhan 02/10/2026: san bay KHONG cat quay khi
+    biet chac khach con dong. Dat cung "truoc 6h sang la dem" se cat quay dung luc ton
+    hang cua cum 20:00-22:xx dang nang nhat. Gio chi la VANG khi khong co chuyen nao ha
+    trong 2 tieng TRUOC va 1 tieng TOI.
+
+    Voi lich S2026 cua PQC ket qua la {1,2,3,4,5} -- tuc gio 00 giu nguyen so lan ban ngay,
+    khac ban cu (coi 00 la dem).
+    """
+    land = {minute(f[0]) // 60 for f in FLIGHTS}
+    out = set()
+    for h in range(24):
+        near = {(h - 2) % 24, (h - 1) % 24, h, (h + 1) % 24}
+        if not (land & near):
+            out.add(h)
+    return out
+
+
+def sim_minutes(gap=RUNWAY_GAP):
+    """Gio ha canh dung cho MO PHONG, tach khoi gio dung de xep khung.
+
+    Nguon lich bay lam tron nen nhieu chuyen co the cung ghi mot phut. Mot duong bang
+    khong the nhan hai may bay cung luc. Gian cac luot ha ra toi thieu `gap` phut.
+    KHUNG GIO van xep theo GIO TRONG LICH.
+
+    Lich thang 10/2026 cua PQC khong co gio trung va khoang cach nho nhat la 5 phut,
+    nen ham nay hien KHONG doi gi -- no la bao hiem cho lich dong va cho nguon lam tron.
+    """
+    order = sorted(range(len(FLIGHTS)), key=lambda i: minute(FLIGHTS[i][0]))
+    out, last = {}, None
+    for i in order:
+        t = minute(FLIGHTS[i][0])
+        if last is not None and t < last + gap:
+            t = last + gap
+        out[i] = t
+        last = t
+    return out
+
+
+def landing_load(window=45):
+    """Khach HA CANH trong `window` phut gan nhat, theo tung phut cua ngay."""
+    DAY = 24 * 60
+    load = [0.0] * DAY
+    for f in FLIGHTS:
+        pax = seats_of(f[1]) * LOAD * FOREIGN
+        at = minute(f[0])
+        for m in range(window):
+            load[(at + m) % DAY] += pax
+    return load
+
+
+SIM_MINUTE = sim_minutes()
+QUIET_HOURS = quiet_hours()
+LANDING_LOAD = landing_load()
+
+
 def simulate(proc_sec=None, base_day=None, surge=None, uplift=None, foreign=None):
     # Giai tri mac dinh phai lay LUC GOI, khong phai luc dinh nghia ham. Viet
     # uplift=MONTH_UPLIFT trong chu ky ham se dong bang gia tri tai thoi diem import,
@@ -78,13 +157,24 @@ def simulate(proc_sec=None, base_day=None, surge=None, uplift=None, foreign=None
     surge = SURGE if surge is None else surge
     uplift = MONTH_UPLIFT if uplift is None else uplift
     foreign = FOREIGN if foreign is None else foreign
-    horizon = 30 * 60
+    # Mo phong HAI ngay lien tiep giong het nhau, doc ket qua tu ngay THU HAI.
+    # Bat dau voi hang RONG luc 00:00 lam khung dau ngay bi tinh THIEU -- o DAD da do
+    # duoc 58 phut. PQC thang 10/2026 khong co chuyen nao ha 00:00-06:00 nen hien
+    # KHONG doi gi, nhung tu 25/10 lich dong them chuyen dem Han/Nga/Trung A vao PQC
+    # thi bo mot ngay se cho so sai ma khong cong nao bat duoc. (Port tu DAF 05/10/2026.)
+    DAY, DAYS = 24 * 60, 2
+    horizon = DAYS * DAY + 6 * 60
     arrivals = [[] for _ in range(horizon)]
-    for i, (t, fl, _) in enumerate(FLIGHTS):
-        pax = seats_of(fl) * LOAD * foreign * uplift
-        a, b = WALK
-        for m in range(a, b):                      # khách rải đều ra trong khoảng đi bộ
-            arrivals[minute(t) + m].append((i, pax / (b - a)))
+    sched = []                                   # (gio theo LICH tuyet doi, chi so chuyen, ngay)
+    for d in range(DAYS):
+        for k, (t, fl, _) in enumerate(FLIGHTS):
+            st = d * DAY + SIM_MINUTE[k]          # gio DA GIAN -> xep vao hang
+            i = len(sched)
+            sched.append((d * DAY + minute(t), k, d))
+            pax = seats_of(fl) * LOAD * foreign * uplift
+            a, b = WALK
+            for m in range(a, b):                 # khách rải đều ra trong khoảng đi bộ
+                arrivals[st + m].append((i, pax / (b - a)))
     queue = deque()
     wait_sum = [0.0] * len(FLIGHTS)
     pax_sum = [0.0] * len(FLIGHTS)
@@ -94,20 +184,23 @@ def simulate(proc_sec=None, base_day=None, surge=None, uplift=None, foreign=None
             queue.append([f, t, n])
         qlen = sum(c[2] for c in queue)
         hour = (t // 60) % 24
-        counters = base_day if 6 <= hour < 24 else max(2, base_day - 2)
-        if qlen >= SURGE_AT:
+        counters = max(2, base_day - 2) if hour in QUIET_HOURS else base_day
+        # Tang lan theo LICH BAY (biet truoc), chot chan bang do dai hang (bat ngo).
+        if (SURGE_PAX is not None
+                and LANDING_LOAD[t % (24 * 60)] * uplift >= SURGE_PAX) or qlen >= SURGE_AT:
             counters += surge
         cap = counters * 60.0 / proc_sec
         while cap > 1e-9 and queue:
             f, joined, n = queue[0]
             take = min(n, cap)
-            w = t - joined
-            wait_sum[f] += take * w
-            pax_sum[f] += take
-            # Do từ GIỜ TRONG LỊCH BAY, không phải từ lúc vào hàng. Khách cuối cùng
-            # vào hàng ở phút thứ 19 sau khi hạ cánh, nên đo từ lúc vào hàng rồi cộng
-            # một BUFFER 15 phẳng là thiếu đúng 4 phút, và đếm hai lần phần đi bộ.
-            worst[f] = max(worst[f], t - minute(FLIGHTS[f][0]))
+            st, k, d = sched[f]
+            if d == DAYS - 1:                    # chi ghi nhan ngay CUOI
+                wait_sum[k] += take * (t - joined)
+                pax_sum[k] += take
+                # Do từ GIỜ TRONG LỊCH BAY, không phải từ lúc vào hàng. Khách cuối cùng
+                # vào hàng ở phút thứ 19 sau khi hạ cánh, nên đo từ lúc vào hàng rồi cộng
+                # một BUFFER 15 phẳng là thiếu đúng 4 phút, và đếm hai lần phần đi bộ.
+                worst[k] = max(worst[k], t - st)
             cap -= take
             if take >= n - 1e-9:
                 queue.popleft()

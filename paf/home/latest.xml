@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[294f602db2036c9b1a52501de8a0567216e36c72e46f4b50c3aa560e0fb739a4]]></content_sha256>
+  <content_sha256><![CDATA[9a2d738d4198976c5de809b8d243a59e20d2577d8500986bd9fe953d95dea27d]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -310,7 +310,7 @@
         max-width: 500px;
         margin: 0 0 24px 0;
         padding: 0;
-      ">Visa-free doesn't mean no queue. Every passenger still lines up for the exemption stamp, and when Korean, Chinese and Russian charters land together the single terminal backs up fast. Fast Track takes you through in about 10 minutes.</p>
+      ">Visa-free doesn't mean no queue. Every passenger still lines up for the exemption stamp, and when Korean, Chinese and Russian charters land together the single terminal backs up fast. Fast Track takes you through in about 10 minutes, and under 15 even at the busiest hours.</p>
 
       <!-- Feature list — PQC pain points -->
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
@@ -420,15 +420,15 @@
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">65&ndash;98 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing 16:00&ndash;20:00 &mdash; from touchdown to leaving immigration</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">59&ndash;94 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours &mdash; from touchdown to leaving immigration</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">~10 min</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Under 15 min</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service &mdash; every flight, every hour</span>
         </div>
 
@@ -586,7 +586,8 @@
   .paf-cta-row {
     flex-direction: column !important;
   }
-  .paf-cta-row a {
+  .paf-cta-row a,
+  .paf-cta-row button {
     justify-content: center !important;
   }
 }
@@ -621,7 +622,7 @@
 #wait-times .paf-wt-track { display: block !important; height: 8px !important; background: #EFE9DD !important; border-radius: 4px !important; margin-top: 10px !important; overflow: hidden !important; max-width: 320px !important; }
 #wait-times .paf-wt-fill { display: block !important; height: 8px !important; border-radius: 4px !important; }
 #wait-times .paf-wt-cell { font-size: 0.95rem !important; color: #2a3a50 !important; }
-#wait-times .paf-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a5c2e !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
+#wait-times .paf-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a7a42 !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
 #wait-times .paf-wt-cards { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; max-width: 900px !important; margin: 24px auto 0 !important; }
 #wait-times .paf-wt-card { background: #F9F7F3 !important; border: 1px solid #E8E4DE !important; border-radius: 10px !important; padding: 20px 22px !important; }
 #wait-times .paf-wt-card-gold { border-left: 4px solid #C9A84C !important; }
@@ -629,11 +630,10 @@
 #wait-times .paf-wt-method { max-width: 900px !important; margin: 22px auto 0 !important; font-size: 0.78rem !important; line-height: 1.7 !important; color: #5A5A72 !important; }
 #wait-times .paf-wt-method strong { color: #0B1F3A !important; font-weight: 600 !important; }
 #wait-times .paf-wt-cta { display: flex !important; flex-wrap: wrap !important; align-items: center !important; justify-content: center !important; gap: 12px 24px !important; margin-top: 28px !important; }
-#wait-times .paf-wt-btn { display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 15px 30px !important; background: #C9A84C !important; background-image: none !important; color: #0B1F3A !important; font-family: 'DM Sans', sans-serif !important; font-size: 0.8rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; border: none !important; border-radius: 3px !important; margin: 0 !important; height: auto !important; min-height: 0 !important; line-height: 1.2 !important; cursor: pointer !important; box-shadow: none !important; text-shadow: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; }
+#wait-times .paf-wt-btn { display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 18px 46px !important; background: #C9A84C !important; background-image: none !important; color: #0B1F3A !important; font-family: 'DM Sans', sans-serif !important; font-size: 0.86rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; border: none !important; border-radius: 3px !important; margin: 0 !important; height: auto !important; min-height: 0 !important; line-height: 1.2 !important; cursor: pointer !important; box-shadow: none !important; text-shadow: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; }
 #wait-times .paf-wt-btn:hover, #wait-times .paf-wt-btn:focus, #wait-times .paf-wt-btn:active { background: #E2C07A !important; color: #0B1F3A !important; }
 #wait-times .paf-pick-chev { transition: transform 0.25s ease !important; }
 #wait-times .paf-pick-btn[aria-expanded="true"] .paf-pick-chev { transform: rotate(180deg) !important; }
-#wait-times .paf-wt-link { font-size: 0.86rem !important; font-weight: 600 !important; color: #8B6914 !important; border-bottom: 1px solid rgba(201,168,76,0.4) !important; }
 #wait-times a:focus-visible { outline: 2px solid #0B1F3A !important; outline-offset: 3px !important; }
 @media (max-width: 820px) {
   #wait-times .paf-wt-header { display: none !important; }
@@ -652,7 +652,7 @@
       <span class="paf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 2 October 2026</span>
       <h2 id="paf-h2-wait">How Long Is the Immigration Queue at Phu Quoc Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="paf-wt-lead">In October 2026, the last passengers off a flight landing between 16:00 and 20:00 need an estimated <strong>65&ndash;98 minutes</strong> from touchdown to leaving immigration at Phu Quoc International Airport (PQC). Flights landing 10:00&ndash;13:00 and 20:00&ndash;24:00 clear in 37&ndash;46 minutes. With Fast Track it is about 10 minutes, whenever you land.</p>
+      <p class="paf-wt-lead">In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong>59&ndash;94 minutes</strong> from touchdown to leaving immigration at Phu Quoc International Airport (PQC). At quieter hours it is 37&ndash;46 minutes. With Fast Track it is about 10 minutes, and under 15 even at the busiest hours.</p>
     </div>
 
     <div class="paf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Phu Quoc Airport by arrival time, October 2026">
@@ -669,40 +669,40 @@
         <div class="paf-wt-row paf-wt-light" role="row">
           <div class="paf-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="paf-wt-flights">4 international arrivals &middot; Moderate</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="paf-wt-num" style="color:#A8541A !important;">43&ndash;57 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:58% !important; background:#A8541A !important;"></span></span>
+            <span class="paf-wt-num" style="color:#A8541A !important;">42&ndash;56 min</span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:60% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="paf-wt-row paf-wt-light" role="row">
-          <div class="paf-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="paf-wt-flights">1 international arrival &middot; Usually quick</span></div>
+          <div class="paf-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="paf-wt-flights">1 international arrival &middot; Lighter</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
             <span class="paf-wt-num" style="color:#8B6914 !important;">38&ndash;46 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:47% !important; background:#8B6914 !important;"></span></span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:49% !important; background:#8B6914 !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
-        <div class="paf-wt-row paf-wt-busy" role="row">
-          <div class="paf-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="paf-wt-flights">8 international arrivals &middot; Busy</span></div>
+        <div class="paf-wt-row paf-wt-light" role="row">
+          <div class="paf-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="paf-wt-flights">8 international arrivals &middot; Moderate</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="paf-wt-num" style="color:#C1272D !important;">53&ndash;73 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:74% !important; background:#C1272D !important;"></span></span>
+            <span class="paf-wt-num" style="color:#A8541A !important;">48&ndash;69 min</span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:73% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="paf-wt-row paf-wt-busy" role="row">
           <div class="paf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="paf-wt-flights">7 international arrivals &middot; Busy</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="paf-wt-num" style="color:#C1272D !important;">65&ndash;98 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:100% !important; background:#C1272D !important;"></span></span>
+            <span class="paf-wt-num" style="color:#C9281C !important;">59&ndash;94 min</span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:100% !important; background:#C9281C !important;"></span></span>
           </div>
-          <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
+          <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
         </div>
         <div class="paf-wt-row paf-wt-light" role="row">
-          <div class="paf-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="paf-wt-flights">5 international arrivals &middot; Usually quick</span></div>
+          <div class="paf-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="paf-wt-flights">5 international arrivals &middot; Lighter</span></div>
           <div class="paf-wt-queue" role="cell" data-label="Standard queue">
             <span class="paf-wt-num" style="color:#8B6914 !important;">37&ndash;44 min</span>
-            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:45% !important; background:#8B6914 !important;"></span></span>
+            <span class="paf-wt-track" aria-hidden="true"><span class="paf-wt-fill" style="width:47% !important; background:#8B6914 !important;"></span></span>
           </div>
           <div class="paf-wt-cell paf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
@@ -711,7 +711,7 @@
     <div class="paf-wt-cards">
       <div class="paf-wt-card paf-wt-card-gold">
         <h3>When Fast Track matters most</h3>
-        <p>Flights landing 13:00&ndash;20:00, when arrivals from Bangkok, Kuala Lumpur, Singapore and Seoul land minutes apart. Land 10:00&ndash;13:00 and 20:00&ndash;24:00 &mdash; you may not need us, and we will say so.</p>
+        <p>Flights landing 16:00&ndash;20:00, when arrivals from Hong Kong, Taipei, Bangkok and Singapore land minutes apart. Land 10:00&ndash;13:00 and 20:00&ndash;24:00 &mdash; the line is shorter, though rarely short.</p>
       </div>
       <div class="paf-wt-card">
         <h3>October 2026 notes</h3>
@@ -719,11 +719,10 @@
       </div>
     </div>
 
-    <p class="paf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 25 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements &mdash; season by season in our <a href="https://phuquocairportfasttrack.com/phu-quoc-airport-immigration-wait-time/" style="color:#8B6914 !important; font-weight:600 !important; border-bottom:1px solid rgba(201,168,76,0.4) !important;">Phu Quoc Airport wait-time guide</a>.</p>
+    <p class="paf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 25 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report. Estimates, not measurements.</p>
 
     <div class="paf-wt-cta">
       <button type="button" class="paf-pick-btn paf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="paf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-      <a class="paf-wt-link" href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20check%20the%20immigration%20queue%20for%20my%20flight%20to%20Phu%20Quoc." target="_blank" rel="noopener">Send us your flight number &mdash; we will tell you if you need it</a>
     </div>
 <!--/dat:zone:wait-section-->
   </div>
@@ -784,7 +783,7 @@
         <h2 id="paf-h2-what">What Is Airport Fast Track?</h2>
         <div style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
         <p style="font-size:1rem !important; color:#5A5A72 !important; max-width:640px; margin:0 auto !important; line-height:1.75 !important;">
-          Phu Quoc (PQC) is Vietnam's only visa-free gateway — 30 days, every nationality. But it is a single terminal with few counters: quiet days clear in minutes, three charters at once do not. Fast Track is a licensed airport assistance service that keeps you to about 10 minutes, whatever the crowd.
+          Phu Quoc (PQC) is Vietnam's only visa-free gateway — 30 days, every nationality. But it is a single terminal with few counters: quiet days clear in minutes, three charters at once do not. Fast Track is a licensed airport assistance service that keeps you under 15 minutes, whatever the crowd.
         </p>
       </div>
 
@@ -1021,7 +1020,7 @@
           </div>
           <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 04</div>
           <h4 style="margin-bottom:10px !important;">Straight Through</h4>
-          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, paperwork handled, out in about 10 minutes — on your way to the resort while the queue is still building.</p>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, paperwork handled, out in about 10 minutes — under 15 at peak — on your way to the resort while the queue is still building.</p>
         </div>
 
       </div><!-- /steps -->
@@ -1127,7 +1126,7 @@
         </div>
         <h3 style="font-size:1.7rem !important; color:#F9F7F3 !important; margin-bottom:6px !important;">Fast Track Arrival</h3>
         <p style="font-size:0.85rem !important; color:rgba(255,255,255,0.6) !important; line-height:1.6 !important; margin-bottom:20px !important;">
-          Skip the immigration queue at Phu Quoc Airport — through in about 10 minutes with a dedicated assistant, even when the charters land together.
+          Skip the immigration queue at Phu Quoc Airport — through in about 10 minutes with a dedicated assistant — under 15 even when the charters land together.
         </p>
         <!-- Price -->
         <div style="display:flex; align-items:baseline; gap:5px; margin-bottom:6px;">
@@ -1718,7 +1717,7 @@
           </button>
           <div class="paf-faq-body" id="paf-faq-a1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style="color:#0B1F3A; font-weight:600;">30-day visa exemption to every nationality</strong>, but you still line up to have it stamped, and officers may ask for your onward ticket. When several charters land in the same hour at the single terminal, that line builds fast. Fast Track takes you through the priority lane in about 10 minutes.</p>
+            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style="color:#0B1F3A; font-weight:600;">30-day visa exemption to every nationality</strong>, but you still line up to have it stamped, and officers may ask for your onward ticket. When several charters land in the same hour at the single terminal, that line builds fast. Fast Track takes you through the priority lane in about 10 minutes, under 15 at peak.</p>
             </div>
           </div>
         </div>
@@ -1731,8 +1730,8 @@
           </button>
           <div class="paf-faq-body" id="paf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, the last passengers off a flight landing between 16:00 and 20:00 need an estimated <strong style="color:#0B1F3A; font-weight:600;">65&ndash;98 minutes</strong> from touchdown to leaving immigration. Flights landing 10:00&ndash;13:00 and 20:00&ndash;24:00 clear in 37&ndash;46 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is about 10 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
+            <p>In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">59&ndash;94 minutes</strong> from touchdown to leaving immigration. At quieter hours it is 37&ndash;46 minutes.</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under 15 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
             </div>
           </div>
         </div>
@@ -1777,7 +1776,7 @@
           </button>
           <div class="paf-faq-body" id="paf-faq-a4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([paf_price service="fast_track_arrival"]/person) — our assistant meets you in the arrival hall, takes you through the priority immigration lane, handles your PAI and visa-exemption paperwork, and gets you out in about 10 minutes.</p>
+            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([paf_price service="fast_track_arrival"]/person) — our assistant meets you in the arrival hall, takes you through the priority immigration lane, handles your PAI and visa-exemption paperwork, and gets you out in about 10 minutes, under 15 at peak.</p>
             <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Departure</strong> ([paf_price service="fast_track_departure"]/person) — we meet you at the departures entrance and take you through the priority exit lane, skipping the passport-control queue.</p>
             <p style="margin-top:10px !important;">Many guests book <strong style="color:#0B1F3A; font-weight:600;">both</strong> ends of the trip.</p>
             </div>
@@ -1964,7 +1963,7 @@ function pafFaqToggle(btn) {
       <h2>Don't Wait in Line.<br><em style="font-style:italic; color:#C9A84C;">Your Island Escape Starts Here.</em></h2>
       <div style="width:44px; height:3px; background:#C9A84C; margin:22px auto 24px;"></div>
       <p style="font-size:1.05rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.8 !important; max-width:580px; margin:0 auto 40px !important;">
-        Phu Quoc is visa-free for every nationality, but you still queue for the stamp — and when the charters land together that line runs over an hour. With Fast Track you are through in about 10 minutes and on your way to Long Beach or Sunset Town. We confirm within 10 minutes.
+        Phu Quoc is visa-free for every nationality, but you still queue for the stamp — and when the charters land together that line runs over an hour. With Fast Track you are through in about 10 minutes — under 15 even at peak — and on your way to Long Beach or Sunset Town. We confirm within 10 minutes.
       </p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;" class="paf-cta-btns">
         <a href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Fast%20Track%20service%20at%20Phu%20Quoc%20Airport."
