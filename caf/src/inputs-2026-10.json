@@ -1,0 +1,41 @@
+{
+  "month": "2026-10",
+  "month_label": "October 2026",
+  "updated": "2026-10-02",
+  "month_notes": "Nha Trang&#8217;s wettest month, but both winter markets are starting. Russian charters build through October, and from the 25th the winter schedule lands eleven Korean flights between 20:20 and 00:35 — the day&#8217;s heaviest stretch is late at night.",
+  "empty_band_note": "Only one international arrival all afternoon",
+  "context": {
+    "text": "Cam Ranh handled 6.8 million passengers in 2024, of whom 4.2 million were international, and international traffic grew again to roughly 4.69 million in 2025. Terminal 2 takes all international arrivals.",
+    "source": "Bao Khanh Hoa, Dec 2024; Aviation Week, 2026"
+  },
+  "basis": "Estimated from the October 2026 flight schedule, Russian charters included, and checked against the airport's published passenger numbers.",
+  "cities": {
+    "ICN": "Seoul",
+    "PUS": "Busan",
+    "TAE": "Daegu",
+    "CJJ": "Cheongju",
+    "CAN": "Guangzhou",
+    "TFU": "Chengdu",
+    "HFE": "Hefei",
+    "BKK": "Bangkok",
+    "DMK": "Bangkok",
+    "KUL": "Kuala Lumpur",
+    "SIN": "Singapore",
+    "PNH": "Phnom Penh",
+    "SVO": "Moscow",
+    "DME": "Moscow",
+    "VKO": "Moscow",
+    "OVB": "Novosibirsk",
+    "IKT": "Irkutsk",
+    "SVX": "Yekaterinburg",
+    "VVO": "Vladivostok",
+    "MRV": "Mineralnye Vody",
+    "TJM": "Tyumen",
+    "ALA": "Almaty",
+    "NQZ": "Astana",
+    "TAS": "Tashkent",
+    "FRU": "Bishkek",
+    "MSQ": "Minsk"
+  },
+  "guide": "https://nhatrangairportfasttrack.com/nha-trang-airport-guide/"
+}
