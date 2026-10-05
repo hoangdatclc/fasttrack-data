@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[995bc01ec308542b479943cfc27e686db80b6e7ee433db2ebaef3c3d44c6cae7]]></content_sha256>
+  <content_sha256><![CDATA[8d7d519f78dff9472a20205ed03d683f4be597c7839514d3a9b3ac43b6c44cde]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -416,21 +416,12 @@
 
 <!--dat:zone:wait-hero-->
 
-
       <div style="display: flex; flex-direction: column; gap: 0;">
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">59&ndash;94 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration in the busiest hours &middot; October 2026 estimate</span>
-        </div>
-
-        <div style="height:1px; background:#E8E4DE;"></div>
-
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Under 15 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">44&ndash;84 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;59&ndash;94&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;15&nbsp;minutes.</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -441,9 +432,17 @@
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
         </div>
 
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>
+        </div>
+
       </div>
 
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated 2 October 2026 &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
+      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated 5 October 2026 &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
 <!--/dat:zone:wait-hero-->
 
       <!-- Service mini tiles -->
@@ -650,7 +649,7 @@
   <div style="max-width:1100px; margin:0 auto;">
 <!--dat:zone:wait-section-->
     <div class="paf-wt-head">
-      <span class="paf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 2 October 2026</span>
+      <span class="paf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 5 October 2026</span>
       <h2 id="paf-h2-wait">How Long Is the Immigration Queue at Phu Quoc Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
       <p class="paf-wt-lead">In October 2026, based on flight schedules and queue times reported at the airport in 2025&ndash;2026, passengers landing during the busiest hours at Phu Quoc International Airport (PQC) could spend <strong>59&ndash;94 minutes</strong> completing immigration procedures. With Fast Track, this time is under 15 minutes at any hour.</p>
@@ -1732,7 +1731,7 @@
           <div class="paf-faq-body" id="paf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
             <p>In October 2026, based on flight schedules and queue times reported at the airport in 2025&ndash;2026, passengers landing during the busiest hours at Phu Quoc Airport could spend <strong style="color:#0B1F3A; font-weight:600;">59&ndash;94 minutes</strong> completing immigration procedures, and 37&ndash;46 minutes at quieter hours.</p>
-            <p style="margin-top:10px !important;">With Fast Track, this time is under 15 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
+            <p style="margin-top:10px !important;">With Fast Track, this time is under 15 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 5 October 2026).</p>
             </div>
           </div>
         </div>

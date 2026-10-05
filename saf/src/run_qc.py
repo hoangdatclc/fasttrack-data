@@ -14,7 +14,7 @@ MUSTS = ['add-to-cart=311', 'add-to-cart=313',
          'https://schema.org/FAQPage',
          # SAF cong bo "under 20 minutes" -- khac quy uoc ~10 / 10-15 cua ba site kia.
          # Neu renderer bi be ve quy uoc kia thi chuoi nay bien mat va QC bat duoc.
-         'Under 20 min', 'under 20 minutes']
+         'in under&nbsp;20&nbsp;minutes.', 'under 20 minutes']
 
 COUNTS = {
     r'<img': 15,

@@ -57,22 +57,82 @@ def cities(d, window):
 
 
 
-def render_hero(d, updated):
-    """Khac ban dau tien o HAI cho (chot 05/10/2026, ap chung ca 5 site):
+def ft_floor_cap(ft):
+    """San va tran cua Fast Track, nhan ca hai hinh dang cau hinh dang dung:
 
-    1. KHONG in the tieu de. Tieu de la phan TINH nam NGOAI vung, khong mang ten thang.
-       Vung wait-hero bat dau ngay SAU the tieu de.
-    2. KHONG in doan `basis`. Dung mot minh ngay duoi tieu de, no doc nhu loi dan khong
-       co ngu canh -- giai thich cach tinh truoc khi nguoi doc thay con so nao.
-       `basis` chuyen xuong DOAN DAN duoi H2 (xem render_section).
+      hai bac  {"base": 10, "peak": [10, 15]}            -> (10, 15)   PAF/DAF/CAF/HAF
+      ba bac   {"quick": 10, "moderate": 15, "busy": 20} -> (10, 20)   SAF
+      mot so   10                                        -> (10, 10)
 
-    Dong phu cua hang QUEUE va hang FAST TRACK PHAI SONG SONG nhau:
-        QUEUE      -> "Through immigration in the busiest hours - {thang} estimate"
-        FAST TRACK -> "Through immigration with our service"
-    Ca the nay ton tai de nguoi ta so hai con so; phep so chi dung neu chung cung do MOT
-    thu. Chu "Through immigration" lap o hai dong la CO Y -- dung "gon" bang cach bo mot.
+    Mot ham dung chung ca 5 site de the hero khong lech nhau khi mot site doi so bac.
     """
+    if isinstance(ft, dict):
+        if "base" in ft:
+            peak = ft.get("peak", ft["base"])
+            return ft["base"], (peak[1] if isinstance(peak, (list, tuple)) else peak)
+        vals = [v for v in ft.values() if isinstance(v, (int, float))]
+        return min(vals), max(vals)
+    return ft, ft
 
+
+def saved(busy, ft):
+    """Muc tiet kiem: hang thuong TRU Fast Track, o khung ban nhat.
+
+    Can duoi = dai hang NGAN NHAT trong cum ban tru TRAN Fast Track (truong hop it
+    loi nhat cho minh). Can tren = dai DAI NHAT tru SAN Fast Track.
+
+    Doi sang GIO khi can duoi >= 60 phut -- "1 - 2 hours" doc to hon "75 - 100 min".
+    Duoi 60 phut thi giu phut: lam tron len gio se cho ra "0 - 2 hours", vo nghia.
+
+    CONG CHAN: can duoi phai >= 15 phut. Day la con so SUY RA, khong co trong du
+    lieu; thang nao do khung ban tut xuong gan tran Fast Track thi no se ra so be
+    hoac am va the hero se noi doi. Dung luon, dung giao trang.
+    """
+    base, cap = ft_floor_cap(ft)
+    lo, hi = busy["range"][0] - cap, busy["range"][1] - base
+    if lo < 15:
+        raise SystemExit(
+            f"MUC TIET KIEM VO LY: {lo}-{hi} phut. Can duoi phai >= 15 phut. "
+            "Khung ban da tut xuong gan tran Fast Track -- xem lai mo hinh, "
+            "dung dang the hero voi con so nay.")
+    if lo >= 60:
+        return f"{lo // 60}&ndash;{-(-hi // 60)} hours"
+    return f"{lo}&ndash;{hi} min"
+
+
+def render_hero(d, updated):
+    """The hero: BA HANG LA BA LY DO -- Save / From / 24-7. Chot 05/10/2026, chung ca 5 site.
+
+    Ban truoc la the SO SANH (Queue / Fast Track / From). Bo vi no tieu HAI trong ba
+    hang cho CUNG MOT THU (thoi gian, do hai lan), nen the chi con hai ly do, va hang
+    24/7 khong co cho -- tren mot cai the ten la "Why Choose ... Fast Track?" thi bot
+    mot ly do la bot dung thu no di ban.
+
+    1. Tieu de the la phan TINH, nam NGOAI vung wait-hero. render_hero() KHONG sinh
+       tieu de; no bat dau thang bang ba hang chi so.
+
+    2. Hang SAVE chi in MOT con so -- muc tiet kiem -- de khach khong phai tru nham.
+       Nhung mot con so tiet kiem dung tran trui thi khach khong biet no tru tu dau,
+       nen dong phu PHAI noi ca HAI dau. Cau do CHU SITE viet (ban tieng Viet:
+       "Hang cho nhap canh tieu chuan uoc tinh co the len toi X phut. Fast Track giup
+       ban hoan thanh duoi Y phut."):
+
+         The standard immigration queue is estimated to reach {X} minutes.
+         Fast Track gets you through in under {Y} minutes.
+
+       Hai dong, ngat bang <br>, moi dong mot dau cua phep tru.
+       Hai chu bat buoc giu trong moi lan viet lai sau nay:
+       a. "estimated" -- cong bo bat buoc, bo di la trang noi mot con so DO duoc.
+       b. "reach" -- chinh chu nay ganh ve "o luc cao diem" ("len toi" ban tieng Viet).
+          Dong phu KHONG co cum "in the busiest hours", nen doi "reach" thanh
+          "is"/"takes" la the hero tuyen bo dai do la hang chuan CA NGAY, trong khi
+          khung vang ngan hon nhieu va doan dan ngay duoi van ghi "landing during
+          the busiest hours". Doi chu nay la trang tu mau thuan voi chinh no.
+
+    3. KHONG in thang trong the: dong "Updated {ngay}" ngay duoi da noi ky hon.
+    4. KHONG in doan `basis`: no la menh de mo dau cua doan dan ben duoi (render_section).
+    5. Hai cum so noi bang &nbsp; de khong bao gio bi ngat khoi dong cua no.
+    """
     h = d["headline"]
     # Con so: khung BAN NHAT. Text: KHONG ghi ten khung ra trang.
     # PQC dung peak (khong dung ca cum) vi san cum busy la 53, THAP HON tran cua
@@ -80,21 +140,12 @@ def render_hero(d, updated):
     busy = h.get("peak") or h["busy"]
     return f'''
 
-
       <div style="display: flex; flex-direction: column; gap: 0;">
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration in the busiest hours &middot; {d["month_label"]} estimate</span>
-        </div>
-
-        <div style="height:1px; background:#E8E4DE;"></div>
-
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{ftword(ft_of(busy.get("tier","busy"), h["fast_track"]))} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;{rng(busy["range"])}&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;minutes.</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -103,6 +154,14 @@ def render_hero(d, updated):
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">[paf_price service="fast_track_arrival"]</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
+        </div>
+
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>
         </div>
 
       </div>

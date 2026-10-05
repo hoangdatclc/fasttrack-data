@@ -20,7 +20,10 @@ COUNTS = {
     r'https://schema\.org/Question': 12,     # 11 viet tay + 1 trong vung wait-faq
     r'https://schema\.org/Answer': 12,
     r'class="haf-faq-item"': 12,
-    r'class="haf-pick-btn[" ]': 2,           # 1 hero + 1 cuoi muc Wait Times
+    # 3 nut picker: 1 o cot trai hero, 1 trong THE hero (nut vang "Book Now - Response
+    # in 10 min" -- doi tu <a href="#services"> sang picker 05/10/2026), 1 cuoi muc
+    # Wait Times. Tut ve 2 nghia la mot nut da bi doi lai thanh link.
+    r'class="haf-pick-btn[" ]': 3,
     r'add-to-cart=311': 3,                   # Services + Footer + Booking Picker
     r'add-to-cart=313': 3,
     # Bang review chay bang translateX(-50%) -> PHAI la so CHAN va hai nua giong het.

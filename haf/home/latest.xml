@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[f9552f4a12dbed7b92383f96b1b7aa4c0ac4a091ebd4c7e789995b12a5c1b210]]></content_sha256>
+  <content_sha256><![CDATA[731916ca20ac6dec762c6d31f6818bacb537db10504acf0100dc8f342804bc5f]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -509,11 +509,17 @@ function hafCloseMenu() {
         </div>
       </div>
 
-      <a href="#services" style="
+      <!-- Nut nay la PICKER, khong phai link. Class haf-pick-btn mo #haf-pick-panel
+           (element "Booking Picker"). Doi lai thanh <a href="#services"> la bo mot
+           buoc chon dich vu va day khach xuong cuoi trang. -->
+      <button type="button" class="haf-pick-btn" aria-haspopup="true" aria-expanded="false" style="
         display: flex;
         align-items: center;
         justify-content: center;
+        gap: 8px;
+        width: 100%;
         padding: 15px 24px;
+        margin: 0;
         background: #C9A84C;
         color: #0B1F3A;
         font-family: 'DM Sans', sans-serif;
@@ -527,9 +533,12 @@ function hafCloseMenu() {
         transition: all 0.3s ease;
         box-sizing: border-box;
         line-height: 1;
-      " onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+        cursor: pointer;
+      " onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A'"
+         onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C'">
         Book Now — Response in 10 min
-      </a>
+        <svg class="haf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+      </button>
 
       <p style="text-align:center; font-family:'DM Sans',sans-serif; font-size:0.78rem; color:#5A5A72; margin:0; padding:0;">
         Or reach us:

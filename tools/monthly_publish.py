@@ -12,13 +12,14 @@ PROFILE = {
                    'Mobile Book Now', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
 
-        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
+        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose PQC Fast Track?',
         "musts": [
-                  'Through immigration in the busiest hours &middot;',
-                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
+                  'The standard immigration queue is estimated to reach&nbsp;',
+                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[paf_price service="fast_track_arrival"]',
                   '[paf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="paf-pick-tpl"', '#wait-times .paf-wt-num',
@@ -33,13 +34,14 @@ PROFILE = {
                    'Mobile Book Now', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
 
-        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
+        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose DAD Fast Track?',
         "musts": [
-                  'Through immigration in the busiest hours &middot;',
-                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
+                  'The standard immigration queue is estimated to reach&nbsp;',
+                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[daf_price service="fast_track_arrival"]',
                   '[daf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="daf-pick-tpl"', '#wait-times .daf-wt-num',
@@ -54,13 +56,14 @@ PROFILE = {
                    'Mobile Book Now', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
 
-        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
+        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose CXR Fast Track?',
         "musts": [
-                  'Through immigration in the busiest hours &middot;',
-                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
+                  'The standard immigration queue is estimated to reach&nbsp;',
+                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[caf_price service="fast_track_arrival"]',
                   '[caf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="caf-pick-tpl"', '#wait-times .caf-wt-num',
@@ -85,13 +88,14 @@ PROFILE = {
                    'Book Now Button', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
 
-        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
+        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose SGN Fast Track?',
         "musts": [
-                  'Through immigration in the busiest hours &middot;',
-                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
+                  'The standard immigration queue is estimated to reach&nbsp;',
+                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[saf_price service="fast_track_arrival"]',
                   '[saf_price service="fast_track_departure"]',
                   '[saf_price service="connection"]',
@@ -99,11 +103,13 @@ PROFILE = {
                   '#wait-times .sgn-wt-ft', '#wait-times .sgn-wt-btn', '.sgn-pick-btn',
                   '#sgn-pick-panel', 'id="sgn-carousel-track"',
                   # Fast Track o SAF co BA bac: Lighter ~10 · Moderate ~15 · Busy.
-                  # Bac Busy hien HAI kieu: hero "Under 20 min", bang "15&ndash;20 min"
-                  # (cot bang hep, tren dien thoai "Under 20 min" xuong hai dong).
+                  # SAF cong bo tran 20 phut, khac quy uoc 15 cua bon site kia.
+                  # Hero: "in under&nbsp;20&nbsp;minutes." -- bang: "15&ndash;20 min"
+                  # (cot bang hep, tren dien thoai mot cau day se xuong hai dong).
+                  # Mat mot trong hai nghia la renderer da bi be ve quy uoc 15.
                   # Thang nao cung co khung Busy nen ca hai chuoi luon phai co mat;
                   # mat chung = hieu chuan da troi. Bat bien day du nam o saf/run_qc.py.
-                  'Under 20 min', '15&ndash;20 min', '~10 min'],
+                  'in under&nbsp;20&nbsp;minutes.', '15&ndash;20 min', '~10 min'],
         "counts": {r'<img ': 15, r'schema\.org/Question': 12,
                    r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3},
     },
@@ -141,7 +147,7 @@ PROFILE = {
         # Bang review HAF: 32 the = 16 goc + 16 ban sao aria-hidden. So LE hoac hai nua
         # khac nhau se lam bang giat moi vong (animation chay translateX(-50%)).
         "counts": {r'<img ': 17, r'schema\.org/Question': 12,
-                   r'class="haf-review-card': 32, r'class="haf-pick-btn': 2},
+                   r'class="haf-review-card': 32, r'class="haf-pick-btn': 3},
     },
 }
 

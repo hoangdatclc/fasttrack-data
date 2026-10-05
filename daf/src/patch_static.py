@@ -40,10 +40,15 @@ elif TITLE in z.group(1):
 elif s.count(TITLE) != 1:
     err.append(f"tieu de {TITLE!r} xuat hien {s.count(TITLE)} lan, can 1")
 
-# Hai dong phu cua hai hang thoi gian phai SONG SONG nhau -- xem ghi chu trong render_hero.
-need(r"Through immigration in the busiest hours &middot; [A-Za-z]+ \d{4} estimate", 1,
-     "dong phu hang QUEUE")
-need(r"Through immigration with our service", 1, "dong phu hang FAST TRACK")
+# Dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong --
+# xem ghi chu trong render_hero. Hai chu "estimated" va "reach" khong duoc mat:
+#   estimated -> day la uoc tinh, khong phai so do duoc
+#   reach     -> dai nay la luc CAO DIEM, khong phai hang chuan ca ngay
+need(r"The standard immigration queue is estimated to reach&nbsp;\d+(?:&ndash;\d+)?&nbsp;minutes\.<br>", 1,
+     "dong 1 hang SAVE (hang thuong)")
+need(r"Fast Track gets you through in under&nbsp;\d+&nbsp;minutes\.", 1,
+     "dong 2 hang SAVE (Fast Track)")
+need(r"queue is estimated to reach&nbsp;", 1, "hai chu 'estimated' va 'reach'")
 
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:
