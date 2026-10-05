@@ -407,7 +407,9 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
         "month_label": month_label, "status": "estimate",
         "metric": "minutes from landing to clearing immigration, last passengers off a flight",
         "lane": "foreign passport holders, standard immigration queue",
-        # peak = CHI MOT khung te nhat -> hero + doan dan + FAQ. Con so de khach quyet dinh.
+        # peak = CHI MOT khung te nhat. O HAF no KHONG len hero (khac SAF): render_blocks.py
+        #        dung h["busy"] vi cum busy cua HAN tach bach khoi cac bac duoi (san 69 >
+        #        tran Moderate 65). Giu peak lai de doi chieu hang thang.
         # busy = toan bo cum bac cao nhat -> the "When Fast Track matters most". Cua so de biet
         #        khi nao can dich vu. Thang cao diem co the co 3-4 khung Busy roi rac; gop het
         #        vao hero se ra kieu "44-136 min, 06:00-24:00", rong gap ba va vo nghia.

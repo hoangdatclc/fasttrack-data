@@ -38,7 +38,7 @@ def main(path, labels, musts, counts, zones):
         # BOC COMMENT TRUOC, roi moi boc script/style. Nguoc lai la sai: mot chu "<style>"
         # nam trong comment (vi du ghi chu "100% inline, khong <style>") se bat cap voi
         # the </style> that o phia duoi va NUOT tron phan markup o giua -> QC mu ca mang.
-        # Da dinh that o Hero Banner cua HAF: mat 8.663 byte khoi tam nhin cua QC.
+        # Da dinh that o Hero Banner cua CAF: mat 8.663 byte khoi tam nhin cua QC.
         clean = re.sub(r"<!--.*?-->", "", html, flags=re.S)
         clean = re.sub(r"<(script|style)\b.*?</\1>", "", clean, flags=re.S)
         p = P(); p.feed(clean)
