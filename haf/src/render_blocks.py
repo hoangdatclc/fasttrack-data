@@ -96,7 +96,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">{d["month_label"]} estimate &middot; last passengers off a flight in the busiest hours</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">{d["month_label"]} estimate &middot; passengers landing in the busiest hours</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -124,14 +124,13 @@ def render_hero(d, updated):
 def render_section(d, updated):
     """Doan dan cua HAF khac bon site kia o HAI cho (chot 05/10/2026):
 
-    1. `d["basis"]` la MOT MENH DE, khong phai mot cau. No duoc noi bang gach dai vao
-       cuoi cau dau, o CA doan dan LAN FAQ. The hero khong in no nua.
-       => viet thuong o chu dau, KHONG cham cuoi, KHONG nhac lai ten thang (cau da mo
-          dau bang "In {thang}"). Mau dat:
-          "estimated from the month's flight schedule and the airport's own 2025-2026 figures"
-       Vi sao bat buoc co: khach doc thay "69-91 minutes" in dam se tuong do la so DO
-       duoc. Phai noi ngay trong cung cau rang day la uoc tinh -- chu site chot
-       05/10/2026. Noi bang menh de thay vi cau rieng tiet kiem ~18 tu.
+    1. `d["basis"]` la MENH DE MO DAU, chen ngay sau "In {thang}," va TRUOC con so.
+       Chu site chot 05/10/2026: khach phai biet day la can cu uoc tinh TRUOC khi doc
+       con so, khong phai sau. Dat sau (dang gach dai o cuoi cau) thi nguoi doc da
+       kip tin "69-91 minutes" la so DO duoc roi moi thay lo i giai thich.
+       => viet thuong o chu dau, KHONG cham cuoi, KHONG nhac lai ten thang.
+          Mau dat: "based on flight schedules and official airport data from 2025-2026"
+       Dung chung cho CA doan dan LAN FAQ. The hero khong in no nua.
 
     2. Fast Track chi neu MOT nguong: "under {tran} minutes at any hour".
        Ban cu neu hai con so ("about 10 ... and under 15 even at the busiest hours")
@@ -171,7 +170,7 @@ def render_section(d, updated):
       <span class="haf-wt-eyebrow">Immigration wait times &middot; {d["month_label"]} &middot; updated {fmt_date(updated)}</span>
       <h2 id="haf-h2-wait">How Long Is the Immigration Queue at Noi Bai Airport in {d["month_label"]}?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="haf-wt-lead">In {d["month_label"]}, the last passengers off a busy-hour flight at Noi Bai International Airport (HAN) can expect <strong>{rng(busy["range"])} minutes</strong> from touchdown to clearing immigration &mdash; {d["basis"]}. With Fast Track it is under {ftcap(ft)} minutes at any hour.</p>
+      <p class="haf-wt-lead">In {d["month_label"]}, {d["basis"]}, passengers landing during the busiest hours at Noi Bai International Airport (HAN) could spend <strong>{rng(busy["range"])} minutes</strong> completing immigration procedures. With Fast Track, this time is under {ftcap(ft)} minutes at any hour.</p>
     </div>
 
     <div class="haf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Noi Bai Airport by arrival time, {d["month_label"]}">
@@ -219,8 +218,8 @@ def render_faq(d, updated, faq_id="haf-faq-a12"):
           </button>
           <div class="haf-faq-body" id="{faq_id}" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In {d["month_label"]}, the last passengers off a busy-hour flight at Noi Bai Airport can expect <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> from touchdown to clearing immigration, and {rng(quiet["range"])} minutes at quieter hours &mdash; {d["basis"]}.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under {ftcap(ft)} minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
+            <p>In {d["month_label"]}, {d["basis"]}, passengers landing during the busiest hours at Noi Bai Airport could spend <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> completing immigration procedures, and {rng(quiet["range"])} minutes at quieter hours.</p>
+            <p style="margin-top:10px !important;">With Fast Track, this time is under {ftcap(ft)} minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
             </div>
           </div>
         </div>

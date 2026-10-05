@@ -40,7 +40,7 @@ COUNTS = {
     # Dong phu cua hang QUEUE mang CA thang LAN chu "estimate" -- the hero khong con
     # doan `basis` rieng, nen neu mat dong nay thi con so 69-91 phut dung tran, khong
     # co gi noi no la uoc tinh cua thang nao.
-    r'estimate &middot; last passengers off a flight in the busiest hours': 1,
+    r'estimate &middot; passengers landing in the busiest hours': 1,
 }
 
 ZONES = ["wait-hero", "wait-section", "wait-faq"]
