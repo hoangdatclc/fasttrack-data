@@ -271,6 +271,13 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
                 runs[-1][1] = z
             else:
                 runs.append([a, z])
+        # Noi vong qua nua dem (port tu DAF/CAF 05/10/2026). Tu 25/10 lich dong them
+        # chuyen dem Han/Nga/Trung A vao PQC; khi do mot cum lien tuc 20:00 -> qua 01:xx
+        # se bi cat lam hai, doc ra thanh hai cum roi rac. Hien KHONG doi gi vi khung
+        # 00:00-06:00 cua thang 10 khong co chuyen nao.
+        if len(runs) > 1 and runs[0][0] == "00:00" and runs[-1][1] == "24:00":
+            runs[-1][1] = runs[0][1]
+            runs.pop(0)
         return {"window": "|".join(f"{a}-{z}" for a, z in runs),
                 "range": [min(b["standard"][0] for b in picked),
                           max(b["standard"][1] for b in picked)],
