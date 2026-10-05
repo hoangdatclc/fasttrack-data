@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[90ee1478141d0d8a270c3a0bbeae8d605b987231d935bd7f0738dfad33596763]]></content_sha256>
+  <content_sha256><![CDATA[7e55100c35874b0df943f4d9d03925626ad005333451e485c5cdfaaa0c980771]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -694,7 +694,7 @@ function hafCloseMenu() {
       <span class="haf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 5 October 2026</span>
       <h2 id="haf-h2-wait">How Long Is the Immigration Queue at Noi Bai Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="haf-wt-lead">In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong>69&ndash;91 minutes</strong> from touchdown to leaving immigration at Noi Bai International Airport (HAN). At quieter hours it is 35&ndash;50 minutes. With Fast Track it is about 10 minutes, and under 15 even at the busiest hours.</p>
+      <p class="haf-wt-lead">In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong>69&ndash;91 minutes</strong> from touchdown to leaving immigration at Noi Bai International Airport (HAN), and 35&ndash;50 minutes at quieter hours. Both figures are modelled from the month&#8217;s arrival schedule and the daily immigration volume Noi Bai publishes &mdash; estimates, not measurements. With Fast Track it is under 15 minutes at any hour.</p>
     </div>
 
     <div class="haf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Noi Bai Airport by arrival time, October 2026">
@@ -764,7 +764,7 @@ function hafCloseMenu() {
       </div>
     </div>
 
-    <p class="haf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 120 international arrivals on a representative October day, counting deplaning and the walk to the hall. Checked three ways: against the daily immigration volume Noi Bai publishes, against the measured time a manual counter takes per passenger, and against the capacity of the arrivals hall itself. Estimates, not measurements.</p>
+    <p class="haf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 120 international arrivals on a representative October day, counting deplaning and the walk to the hall. Checked three ways: against the daily immigration volume Noi Bai publishes, against the measured time a manual counter takes per passenger, and against the capacity of the arrivals hall itself.</p>
 
     <div class="haf-wt-cta">
       <button type="button" class="haf-pick-btn haf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="haf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
@@ -2361,8 +2361,8 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">69&ndash;91 minutes</strong> from touchdown to leaving immigration. At quieter hours it is 35&ndash;50 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under 15 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 5 October 2026).</p>
+            <p>In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">69&ndash;91 minutes</strong> from touchdown to leaving immigration, and 35&ndash;50 minutes at quieter hours. These are modelled from the month&rsquo;s arrival schedule and Noi Bai&rsquo;s published immigration volume, not measured times.</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under 15 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 5 October 2026).</p>
             </div>
           </div>
         </div>

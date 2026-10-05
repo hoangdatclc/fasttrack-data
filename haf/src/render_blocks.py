@@ -122,6 +122,22 @@ def render_hero(d, updated):
 
 
 def render_section(d, updated):
+    """Doan dan cua HAF khac bon site kia o HAI cho (chot 05/10/2026):
+
+    1. NO LA CHO DUY NHAT IN `d["basis"]`. The hero khong in nua (xem render_hero).
+       => `basis` phai la MOT CAU HOAN CHINH, tha thang vao giua doan van la doc duoc,
+          va KHONG duoc nhac lai ten thang (cau da mo dau bang "In {thang}").
+          Vi du dat: "Both figures are modelled from the month's arrival schedule and
+          the daily immigration volume Noi Bai publishes - estimates, not measurements."
+       Vi sao bat buoc: khach doc thay "69-91 minutes" in dam se tuong do la so DO
+       duoc. Phai noi thang trong cung doan van rang day la mo hinh hoa, khong phai
+       phep do -- chu site chot 05/10/2026.
+
+    2. Fast Track chi neu MOT nguong: "under {tran} minutes at any hour".
+       Ban cu neu hai con so ("about 10 ... and under 15 even at the busiest hours")
+       -- dai hon ma khong ro hon, va dat canh dai 69-91 thi hai con so lam loang
+       chinh diem manh. Mot tran dung cho moi khung la cau ngan nhat ma van dung.
+    """
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
     # doan dan dung CA CUM, giong hero. The vang van ghi khung gio (ngoai le).
     busy = h["busy"]                     # the vang: toan bo cum cao diem
@@ -155,7 +171,7 @@ def render_section(d, updated):
       <span class="haf-wt-eyebrow">Immigration wait times &middot; {d["month_label"]} &middot; updated {fmt_date(updated)}</span>
       <h2 id="haf-h2-wait">How Long Is the Immigration Queue at Noi Bai Airport in {d["month_label"]}?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="haf-wt-lead">In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong>{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration at Noi Bai International Airport (HAN). At quieter hours it is {rng(quiet["range"])} minutes. With Fast Track it is about {ft_of("quick", ft)} minutes, and under {ftcap(ft)} even at the busiest hours.</p>
+      <p class="haf-wt-lead">In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong>{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration at Noi Bai International Airport (HAN), and {rng(quiet["range"])} minutes at quieter hours. {d["basis"]} With Fast Track it is under {ftcap(ft)} minutes at any hour.</p>
     </div>
 
     <div class="haf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Noi Bai Airport by arrival time, {d["month_label"]}">
@@ -177,7 +193,7 @@ def render_section(d, updated):
       </div>
     </div>
 
-    <p class="haf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the {h["intl_arrivals_per_day"]} international arrivals on a representative {d["month_label"].split()[0]} day, counting deplaning and the walk to the hall. Checked three ways: against the daily immigration volume Noi Bai publishes, against the measured time a manual counter takes per passenger, and against the capacity of the arrivals hall itself. Estimates, not measurements.</p>
+    <p class="haf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the {h["intl_arrivals_per_day"]} international arrivals on a representative {d["month_label"].split()[0]} day, counting deplaning and the walk to the hall. Checked three ways: against the daily immigration volume Noi Bai publishes, against the measured time a manual counter takes per passenger, and against the capacity of the arrivals hall itself.</p>
 
     <div class="haf-wt-cta">
       <button type="button" class="haf-pick-btn haf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="haf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
@@ -186,6 +202,12 @@ def render_section(d, updated):
 
 
 def render_faq(d, updated, faq_id="haf-faq-a12"):
+    """Khoi de bi AI trich nguyen van nhat tren ca trang -> phai TU DUNG MOT MINH.
+
+    Nen no nhac lai viec day la UOC TINH bang cau ngan cua rieng no, khong dung lai
+    `d["basis"]` cua doan dan: hai cho dung cung mot cau se doc nhu loi dan lap.
+    Va Fast Track chi neu MOT nguong, giong doan dan.
+    """
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
     busy = h["busy"]   # FAQ bam theo hero: ca cum, khong ten khung
     return f'''
@@ -196,8 +218,8 @@ def render_faq(d, updated, faq_id="haf-faq-a12"):
           </button>
           <div class="haf-faq-body" id="{faq_id}" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration. At quieter hours it is {rng(quiet["range"])} minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under {ftcap(ft)} minutes even at the busiest hours, and about {ft_of("quick", ft)} when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
+            <p>In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration, and {rng(quiet["range"])} minutes at quieter hours. These are modelled from the month&rsquo;s arrival schedule and Noi Bai&rsquo;s published immigration volume, not measured times.</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under {ftcap(ft)} minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
             </div>
           </div>
         </div>
