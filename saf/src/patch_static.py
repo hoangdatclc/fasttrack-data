@@ -50,6 +50,14 @@ need(r"Fast Track gets you through in under&nbsp;\d+&nbsp;minutes\.", 1,
      "dong 2 hang SAVE (Fast Track)")
 need(r"queue is estimated to reach&nbsp;", 1, "hai chu 'estimated' va 'reach'")
 
+# LUAT 8 -- ba cum chu da bo hang khoi the hero, cong chan de khong ai them lai.
+# Truoc 05/10/2026 KHONG cong nao kiem ba cum nay nen chung troi im lang mot vong.
+# Dung cum DAY DU "Through immigration with our service": grep "Through immigration"
+# tran se bat nham review khach ("Through immigration in no time") o DAF/CAF/SAF.
+need(r"touchdown", 0, "cum '- from touchdown to leaving immigration' da bo")
+need(r"every flight, every hour", 0, "cum '- every flight, every hour' da bo")
+need(r"Through immigration with our service", 0, "dong phu hang FAST TRACK cu da bo")
+
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:
     print(" -", e)

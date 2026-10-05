@@ -52,6 +52,22 @@ elif "Why Choose HAN Fast Track?" in z.group(1):
 elif s.count("Why Choose HAN Fast Track?") != 1:
     err.append(f"'Why Choose HAN Fast Track?' xuat hien {s.count('Why Choose HAN Fast Track?')} lan, can 1")
 
+# Dong phu hang SAVE phai noi CA HAI dau cua phep tru -- xem ghi chu trong render_hero.
+# run_qc.py cung kiem, nhung runbook co buoc chay rieng patch_static.py nen de o ca hai.
+need(r"The standard immigration queue is estimated to reach&nbsp;\d+(?:&ndash;\d+)?&nbsp;minutes\.<br>", 1,
+     "dong 1 hang SAVE (hang thuong)")
+need(r"Fast Track gets you through in under&nbsp;\d+&nbsp;minutes\.", 1,
+     "dong 2 hang SAVE (Fast Track)")
+need(r"queue is estimated to reach&nbsp;", 1, "hai chu 'estimated' va 'reach'")
+
+# LUAT 8 -- ba cum chu da bo hang khoi the hero, cong chan de khong ai them lai.
+# Truoc 05/10/2026 KHONG cong nao kiem ba cum nay nen chung troi im lang mot vong.
+# Dung cum DAY DU "Through immigration with our service": grep "Through immigration"
+# tran se bat nham review khach ("Through immigration in no time") o DAF/CAF/SAF.
+need(r"touchdown", 0, "cum '- from touchdown to leaving immigration' da bo")
+need(r"every flight, every hour", 0, "cum '- every flight, every hour' da bo")
+need(r"Through immigration with our service", 0, "dong phu hang FAST TRACK cu da bo")
+
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:
     print(" -", e)

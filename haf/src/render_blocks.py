@@ -19,6 +19,26 @@ rng   = lambda p: (f"{p[0]}" if p[0] == p[1] else f"{p[0]}&ndash;{p[1]}")
 #   ngay duoi lam yeu tuong phan "dai va bap benh" vs "ngan va chac". "Under 15" la
 #   tran, dung o MOI khung, khop dong phu "every flight, every hour".
 ftcell = lambda v: (f"{v[0]}&ndash;{v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
+def ft_floor_cap(ft):
+    """San va tran cua Fast Track, nhan ca hai hinh dang cau hinh dang dung:
+
+      hai bac  {"base": 10, "peak": [10, 15]}            -> (10, 15)   PAF/DAF/CAF/HAF
+      ba bac   {"quick": 10, "moderate": 15, "busy": 20} -> (10, 20)   SAF
+      mot so   10                                        -> (10, 10)
+
+    Mot ham dung chung ca 5 site (luat 9). Ban cu cua HAF tu tay lay ft["peak"][1]
+    va ft["base"]: thang 10/2026 ra ket qua y het, nhung neu HAN doi sang ba bac kieu
+    SAF thi no KeyError thay vi tinh dung.
+    """
+    if isinstance(ft, dict):
+        if "base" in ft:
+            peak = ft.get("peak", ft["base"])
+            return ft["base"], (peak[1] if isinstance(peak, (list, tuple)) else peak)
+        vals = [v for v in ft.values() if isinstance(v, (int, float))]
+        return min(vals), max(vals)
+    return ft, ft
+
+
 def saved(busy, ft):
     """Muc tiet kiem: hang thuong TRU Fast Track, o khung ban nhat.
 
@@ -33,8 +53,8 @@ def saved(busy, ft):
     lieu; thang nao do khung ban tut xuong gan tran Fast Track thi no se ra so be
     hoac am va the hero se noi doi. Dung luon, dung giao trang.
     """
-    cap = ft["peak"][1] if isinstance(ft.get("peak"), (list, tuple)) else ft["peak"]
-    lo, hi = busy["range"][0] - cap, busy["range"][1] - ft["base"]
+    base, cap = ft_floor_cap(ft)
+    lo, hi = busy["range"][0] - cap, busy["range"][1] - base
     if lo < 15:
         raise SystemExit(
             f"MUC TIET KIEM VO LY: {lo}-{hi} phut. Can duoi phai >= 15 phut. "
@@ -142,7 +162,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;{rng(busy["range"])}&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;{ftcap(h["fast_track"])}&nbsp;minutes.</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;{rng(busy["range"])}&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;minutes.</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
