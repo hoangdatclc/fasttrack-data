@@ -68,6 +68,17 @@ def cities(d, window):
 
 
 def render_hero(d, updated):
+    """Khac bon site kia: KHONG in the tieu de va KHONG in doan `basis`.
+
+    1. Tieu de the ("Why Choose Fast Track?") la phan TINH nam ngoai vung -- chu site
+       chot 05/10/2026 giu nguyen nhu trang goc. Xem SKILL.md muc 3b.
+    2. Bo doan `basis`: dung mot minh ngay duoi tieu de no doc nhu loi dan khong co
+       ngu canh -- chua noi so nao da giai thich cach tinh so. Gop phan can thiet
+       (thang + chu "estimate") vao dong phu cua hang QUEUE, ngay canh con so no
+       mo ta. The ngan di ba dong.
+       `d["basis"]` van nam trong JSON de ghi lai phuong phap cua thang, va ban day
+       du cua no la cau "How we estimate" ngay duoi bang -- KHONG mat thong tin.
+    """
     h = d["headline"]
     # HAN: cum busy TACH BACH khoi cac bac duoi (san 69 > tran Moderate 65) nen
     # cong bo CA CUM (h["busy"]) theo chuan SAF/CAF. Khac DAF -- o DAD cum busy co mot
@@ -79,14 +90,13 @@ def render_hero(d, updated):
     # bang se dep hon ma sai: khach ha luc 21:00 that su cho ngang khach ha luc 14:00.
     busy = h["busy"]
     return f'''
-<p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">{d["basis"]}</p>
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">{d["month_label"]} estimate &middot; last passengers off a flight in the busiest hours</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
