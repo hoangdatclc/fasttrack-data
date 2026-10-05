@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[1bdcb86077b21361016edfca177fca93c55da4727e60d8c21fa515c65c9320ed]]></content_sha256>
+  <content_sha256><![CDATA[41b90f3ae4fbc2790b9d9b57cfc43003b0943ccf7750a9ba0fcfbcc39f58226b]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -726,7 +726,7 @@
       </div>
     </div>
 
-    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 53 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements.</p>
+    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 53 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report. Estimates, not measurements.</p>
 
     <div class="daf-wt-cta">
       <button type="button" class="daf-pick-btn daf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
