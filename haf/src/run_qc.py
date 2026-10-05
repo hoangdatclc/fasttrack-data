@@ -40,7 +40,9 @@ COUNTS = {
     # Dong phu cua hang QUEUE mang CA thang LAN chu "estimate" -- the hero khong con
     # doan `basis` rieng, nen neu mat dong nay thi con so 69-91 phut dung tran, khong
     # co gi noi no la uoc tinh cua thang nao.
-    r'estimate &middot; passengers landing in the busiest hours': 1,
+    r'Through immigration in the busiest hours &middot; [A-Za-z]+ \d{4} estimate': 1,
+    # Dong phu hang FAST TRACK phai GIU "Through immigration" de song song voi hang tren.
+    r'Through immigration with our service': 1,
 }
 
 ZONES = ["wait-hero", "wait-section", "wait-faq"]

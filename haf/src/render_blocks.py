@@ -72,6 +72,18 @@ def render_hero(d, updated):
 
     1. Tieu de the ("Why Choose Fast Track?") la phan TINH nam ngoai vung -- chu site
        chot 05/10/2026 giu nguyen nhu trang goc. Xem SKILL.md muc 3b.
+    2b. HAI DONG PHU CUA HAI HANG THOI GIAN PHAI SONG SONG NHAU.
+       hang QUEUE      -> "Through immigration in the busiest hours - {thang} estimate"
+       hang FAST TRACK -> "Through immigration with our service"
+       Ca the nay ton tai de nguoi ta so 69-91 voi duoi 15. Phep so chi dung neu hai
+       con so cung do MOT thu. Ban cu ghi "{thang} estimate - passengers landing in the
+       busiest hours": no tra loi AI va KHI NAO, khong tra loi "69-91 phut cua CAI GI",
+       nen doc canh dong duoi (co tra loi) thi hai hang nhu do hai thu khac nhau.
+       Chu "Through immigration" lap lai o hai dong la CO Y -- chinh no lam phep so
+       doc duoc trong mot nhip mat. Dung "gon" bang cach bo mot trong hai.
+       Luu y nhan "QUEUE" hep hon con so that (69-91 da gom xuong may bay va di bo),
+       nen dong phu PHAI noi "through immigration" de bu lai.
+
     2. Bo doan `basis`: dung mot minh ngay duoi tieu de no doc nhu loi dan khong co
        ngu canh -- chua noi so nao da giai thich cach tinh so. Gop phan can thiet
        (thang + chu "estimate") vao dong phu cua hang QUEUE, ngay canh con so no
@@ -96,7 +108,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">{d["month_label"]} estimate &middot; passengers landing in the busiest hours</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration in the busiest hours &middot; {d["month_label"]} estimate</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
