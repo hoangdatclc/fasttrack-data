@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[7f91faf44589250ec660f13b53c4e370025cef29e2bf8f3617ad0dd27390dead]]></content_sha256>
+  <content_sha256><![CDATA[ee9a9acd3ffe70ff7e5c3db25c54f3d1838ab80aa46af3d94b2aed8f4b28b3c8]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -397,7 +397,6 @@
     ">
 
       <!-- Card header + monthly figures — vung tu cap nhat, khong sua tay -->
-<!--dat:zone:wait-hero-->
       <div style="
         display: flex;
         align-items: center;
@@ -408,20 +407,22 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #0B1F3A;
-        padding-bottom: 10px;
+        border-bottom: 1px solid #E8E4DE;
+        padding-bottom: 14px;
       ">
         <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        PQC Immigration &mdash; October 2026
+        PQC Immigration &mdash; The Real Numbers
       </div>
 
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">Estimated from the flights scheduled at PQC in October 2026 and queue times reported at the airport in 2025–2026.</p>
+<!--dat:zone:wait-hero-->
+
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">59&ndash;94 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration in the busiest hours &middot; October 2026 estimate</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -652,7 +653,7 @@
       <span class="paf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 2 October 2026</span>
       <h2 id="paf-h2-wait">How Long Is the Immigration Queue at Phu Quoc Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="paf-wt-lead">In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong>59&ndash;94 minutes</strong> from touchdown to leaving immigration at Phu Quoc International Airport (PQC). At quieter hours it is 37&ndash;46 minutes. With Fast Track it is about 10 minutes, and under 15 even at the busiest hours.</p>
+      <p class="paf-wt-lead">In October 2026, based on flight schedules and queue times reported at the airport in 2025&ndash;2026, passengers landing during the busiest hours at Phu Quoc International Airport (PQC) could spend <strong>59&ndash;94 minutes</strong> completing immigration procedures. With Fast Track, this time is under 15 minutes at any hour.</p>
     </div>
 
     <div class="paf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Phu Quoc Airport by arrival time, October 2026">
@@ -719,7 +720,7 @@
       </div>
     </div>
 
-    <p class="paf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 25 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report. Estimates, not measurements.</p>
+    <p class="paf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 25 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report.</p>
 
     <div class="paf-wt-cta">
       <button type="button" class="paf-pick-btn paf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="paf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
@@ -1730,8 +1731,8 @@
           </button>
           <div class="paf-faq-body" id="paf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">59&ndash;94 minutes</strong> from touchdown to leaving immigration. At quieter hours it is 37&ndash;46 minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under 15 minutes even at the busiest hours, and about 10 when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
+            <p>In October 2026, based on flight schedules and queue times reported at the airport in 2025&ndash;2026, passengers landing during the busiest hours at Phu Quoc Airport could spend <strong style="color:#0B1F3A; font-weight:600;">59&ndash;94 minutes</strong> completing immigration procedures, and 37&ndash;46 minutes at quieter hours.</p>
+            <p style="margin-top:10px !important;">With Fast Track, this time is under 15 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 2 October 2026).</p>
             </div>
           </div>
         </div>

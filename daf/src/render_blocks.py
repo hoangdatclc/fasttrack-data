@@ -61,6 +61,21 @@ def cities(d, window):
 
 
 def render_hero(d, updated):
+    """Khac ban dau tien o HAI cho (chot 05/10/2026, ap chung ca 5 site):
+
+    1. KHONG in the tieu de. Tieu de la phan TINH nam NGOAI vung, khong mang ten thang.
+       Vung wait-hero bat dau ngay SAU the tieu de.
+    2. KHONG in doan `basis`. Dung mot minh ngay duoi tieu de, no doc nhu loi dan khong
+       co ngu canh -- giai thich cach tinh truoc khi nguoi doc thay con so nao.
+       `basis` chuyen xuong DOAN DAN duoi H2 (xem render_section).
+
+    Dong phu cua hang QUEUE va hang FAST TRACK PHAI SONG SONG nhau:
+        QUEUE      -> "Through immigration in the busiest hours - {thang} estimate"
+        FAST TRACK -> "Through immigration with our service"
+    Ca the nay ton tai de nguoi ta so hai con so; phep so chi dung neu chung cung do MOT
+    thu. Chu "Through immigration" lap o hai dong la CO Y -- dung "gon" bang cach bo mot.
+    """
+
     h = d["headline"]
     # Con so: khung BAN NHAT (h["peak"]). Text: KHONG ghi ten khung ra trang.
     # Khac SAF, va co ly do: cum busy cua DAD gom mot khung DAO DONG MANH
@@ -69,30 +84,14 @@ def render_hero(d, updated):
     # Chu site chot 04/10/2026: lay khung ban nhat, giu cach noi chung.
     busy = h.get("peak") or h["busy"]
     return f'''
-      <div style="
-        display: flex;
-        align-items: center;
-        gap: 9px;
-        font-family: 'DM Sans', sans-serif;
-        font-size: 0.7rem;
-        font-weight: 700;
-        letter-spacing: 0.12em;
-        text-transform: uppercase;
-        color: #0B1F3A;
-        padding-bottom: 10px;
-      ">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-        DAD Immigration &mdash; {d["month_label"]}
-      </div>
 
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; line-height:1.55; color:#5A5A72; margin:0; padding:0 0 14px; border-bottom:1px solid #E8E4DE;">{d["basis"]}</p>
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration in the busiest hours &middot; {d["month_label"]} estimate</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -118,6 +117,17 @@ def render_hero(d, updated):
 
 
 def render_section(d, updated):
+    """`d["basis"]` la MENH DE MO DAU, chen ngay sau "In {thang}," va TRUOC con so.
+
+    Khach phai biet day la can cu uoc tinh TRUOC khi doc con so. Dat sau (kieu gach dai
+    cuoi cau) thi nguoi doc da kip tin con so la so DO duoc roi moi thay loi giai thich.
+    => `basis` viet thuong o chu dau, KHONG cham cuoi, KHONG nhac lai ten thang.
+
+    Fast Track chi neu MOT nguong ("under N minutes at any hour"). Neu hai con so thi dai
+    hon ma khong ro hon, va dat canh dai hang thuong thi chung lam loang chinh diem manh.
+    Bang ben duoi van hien day du cac bac -- do moi la cho phan bac.
+    """
+
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
     peak = h.get("peak") or h["busy"]   # doan dan: con so cua khung ban nhat
     busy = h["busy"]                     # the vang: ca cum, va the vang DUOC ghi khung gio
@@ -151,7 +161,7 @@ def render_section(d, updated):
       <span class="daf-wt-eyebrow">Immigration wait times &middot; {d["month_label"]} &middot; updated {fmt_date(updated)}</span>
       <h2 id="daf-h2-wait">How Long Is the Immigration Queue at Da Nang Airport in {d["month_label"]}?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="daf-wt-lead">In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong>{rng(peak["range"])} minutes</strong> from touchdown to leaving immigration at Da Nang International Airport (DAD). At quieter hours it is {rng(quiet["range"])} minutes. With Fast Track it is about {ft_of("quick", ft)} minutes, and under {ftcap(ft)} even at the busiest hours.</p>
+      <p class="daf-wt-lead">In {d["month_label"]}, {d["basis"]}, passengers landing during the busiest hours at Da Nang International Airport (DAD) could spend <strong>{rng(peak["range"])} minutes</strong> completing immigration procedures. With Fast Track, this time is under {ftcap(ft)} minutes at any hour.</p>
     </div>
 
     <div class="daf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Da Nang Airport by arrival time, {d["month_label"]}">
@@ -173,7 +183,7 @@ def render_section(d, updated):
       </div>
     </div>
 
-    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the {h["intl_arrivals_per_day"]} international arrivals on a typical {d["month_label"].split()[0]} weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report. Estimates, not measurements.</p>
+    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the {h["intl_arrivals_per_day"]} international arrivals on a typical {d["month_label"].split()[0]} weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report.</p>
 
     <div class="daf-wt-cta">
       <button type="button" class="daf-pick-btn daf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
@@ -182,6 +192,13 @@ def render_section(d, updated):
 
 
 def render_faq(d, updated, faq_id="daf-faq-a12"):
+    """Khoi de bi AI trich nguyen van nhat -> phai TU DUNG MOT MINH.
+
+    Dung chung menh de `d["basis"]` voi doan dan. KHAC doan dan dung mot cho: FAQ GIU
+    con so khung vang, vi no la cau tra loi day du; doan dan la tieu diem nen chi neu
+    con so te nhat.
+    """
+
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
     busy = h.get("peak") or h["busy"]   # FAQ bam theo hero
     return f'''
@@ -192,8 +209,8 @@ def render_faq(d, updated, faq_id="daf-faq-a12"):
           </button>
           <div class="daf-faq-body" id="{faq_id}" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration. At quieter hours it is {rng(quiet["range"])} minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is under {ftcap(ft)} minutes even at the busiest hours, and about {ft_of("quick", ft)} when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
+            <p>In {d["month_label"]}, {d["basis"]}, passengers landing during the busiest hours at Da Nang Airport could spend <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> completing immigration procedures, and {rng(quiet["range"])} minutes at quieter hours.</p>
+            <p style="margin-top:10px !important;">With Fast Track, this time is under {ftcap(ft)} minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
             </div>
           </div>
         </div>

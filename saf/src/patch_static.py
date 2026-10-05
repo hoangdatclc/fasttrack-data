@@ -9,11 +9,11 @@ TRUOC 05/10/2026 file nay la bo VA mot lan (doi #1a5c2e -> #1a7a42...). Va xong 
 no luon bao loi vi khong con gi de va, trong khi runbook van bao chay va phai PASS --
 tuc mot canh bao gia moi thang. Gio no lam viec nguoc lai: NO KIEM.
 
-Chay:  python3 patch_static.py out/daf-home-YYYY-MM.txt
+Chay:  python3 patch_static.py out/sgn-home-YYYY-MM.txt
 """
 import io, re, sys
 
-PAGE = sys.argv[1] if len(sys.argv) > 1 else "out/daf-home-2026-10.txt"
+PAGE = sys.argv[1] if len(sys.argv) > 1 else "out/sgn-home-2026-10.txt"
 s = io.open(PAGE, encoding="utf-8").read()
 err = []
 
@@ -23,7 +23,7 @@ def need(pat, n, why):
         err.append(f"{why}: khop {got} lan, can {n}  [{pat}]")
 
 # LUAT 1 -- bang dung dung hai ma mau cua hero, khong phai ma cu cua ban dau tien.
-need(r"#wait-times \.daf-wt-ft \{[^}]*color: #1a7a42 !important;", 1, "mau Fast Track trong bang")
+need(r"#wait-times \.sgn-wt-ft \{[^}]*color: #1a7a42 !important;", 1, "mau Fast Track trong bang")
 need(r"#1a5c2e", 0, "ma xanh cu con sot")
 need(r"#C1272D", 0, "ma do cu con sot")
 if "#C9281C" not in s:
@@ -31,7 +31,7 @@ if "#C9281C" not in s:
 
 # Tieu de the hero la phan TINH, phai nam NGOAI vung wait-hero. Lot vao trong thi thang
 # sau update_zones.py xoa mat ma khong ai bao.
-TITLE = "DAD Immigration &mdash; The Real Numbers"
+TITLE = "SGN Immigration &mdash; The Real Numbers"
 z = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->", s, re.S)
 if not z:
     err.append("khong tim thay vung wait-hero")

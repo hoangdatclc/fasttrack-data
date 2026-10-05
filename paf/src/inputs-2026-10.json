@@ -8,8 +8,16 @@
     "text": "Phu Quoc International Airport handled 4.48 million passengers in January–July 2026, up almost 38% year on year.",
     "source": "Tap chi Hang khong, 3 Aug 2026"
   },
-  "basis": "Estimated from the flights scheduled at PQC in October 2026 and queue times reported at the airport in 2025–2026.",
-  "cities": {"ICN": "Seoul", "PUS": "Busan", "KUL": "Kuala Lumpur", "BKK": "Bangkok",
-             "DMK": "Bangkok", "SIN": "Singapore", "HKG": "Hong Kong", "TPE": "Taipei"},
+  "basis": "based on flight schedules and queue times reported at the airport in 2025&ndash;2026",
+  "cities": {
+    "ICN": "Seoul",
+    "PUS": "Busan",
+    "KUL": "Kuala Lumpur",
+    "BKK": "Bangkok",
+    "DMK": "Bangkok",
+    "SIN": "Singapore",
+    "HKG": "Hong Kong",
+    "TPE": "Taipei"
+  },
   "guide": "https://phuquocairportfasttrack.com/phu-quoc-airport-immigration-wait-time/"
 }

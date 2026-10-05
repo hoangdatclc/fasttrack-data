@@ -1,45 +1,51 @@
 # -*- coding: utf-8 -*-
-"""Va CSS tinh cua element Wait Times -- phan NGOAI vung dat:zone.
+"""KIEM CSS TINH -- phan NGOAI vung dat:zone.
 
-Chay khi CSS doi. update_zones.py khong dung toi khoi <style>, nen sua
-render_blocks.py thoi se KHONG doi duoc mau cot Fast Track. Hoc tu DAF/SAF.
+Vi sao file nay ton tai: khoi <style> cua element Wait Times va media query cua Hero deu
+nam NGOAI vung dat:zone. `update_zones.py` khong dung toi chung. Sua mau trong
+render_blocks.py ma quen dong bo vao trang la LOI AM -- khong ai bao, trang cu the dang.
 
-Chay:  python3 patch_static.py <trang-goc> page-in.txt
+TRUOC 05/10/2026 file nay la bo VA mot lan (doi #1a5c2e -> #1a7a42...). Va xong roi thi
+no luon bao loi vi khong con gi de va, trong khi runbook van bao chay va phai PASS --
+tuc mot canh bao gia moi thang. Gio no lam viec nguoc lai: NO KIEM.
+
+Chay:  python3 patch_static.py out/caf-home-YYYY-MM.txt
 """
 import io, re, sys
 
-SRC = sys.argv[1] if len(sys.argv) > 1 else "page-live.txt"
-DST = sys.argv[2] if len(sys.argv) > 2 else "page-in.txt"
+PAGE = sys.argv[1] if len(sys.argv) > 1 else "out/caf-home-2026-10.txt"
+s = io.open(PAGE, encoding="utf-8").read()
+err = []
 
-s = io.open(SRC, encoding="utf-8").read()
-before = len(s)
+def need(pat, n, why):
+    got = len(re.findall(pat, s))
+    if got != n:
+        err.append(f"{why}: khop {got} lan, can {n}  [{pat}]")
 
-def sub(old, new, why):
-    global s
-    n = s.count(old)
-    if n != 1:
-        sys.exit(f"[{why}] khop {n} lan, can dung 1: {old[:70]!r}")
-    s = s.replace(old, new)
+# LUAT 1 -- bang dung dung hai ma mau cua hero, khong phai ma cu cua ban dau tien.
+need(r"#wait-times \.caf-wt-ft \{[^}]*color: #1a7a42 !important;", 1, "mau Fast Track trong bang")
+need(r"#1a5c2e", 0, "ma xanh cu con sot")
+need(r"#C1272D", 0, "ma do cu con sot")
+if "#C9281C" not in s:
+    err.append("khong thay ma do #C9281C (mau khung bac Busy, lay tu hero)")
 
-# 1. Mau so Fast Track trong bang -> dung mau xanh cua hero (#1a7a42).
-sub("color: #1a5c2e !important;", "color: #1a7a42 !important;", "mau .caf-wt-ft")
+# Tieu de the hero la phan TINH, phai nam NGOAI vung wait-hero. Lot vao trong thi thang
+# sau update_zones.py xoa mat ma khong ai bao.
+TITLE = "CXR Immigration &mdash; The Real Numbers"
+z = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->", s, re.S)
+if not z:
+    err.append("khong tim thay vung wait-hero")
+elif TITLE in z.group(1):
+    err.append(f"tieu de {TITLE!r} lot VAO TRONG vung wait-hero -- thang sau se bi xoa")
+elif s.count(TITLE) != 1:
+    err.append(f"tieu de {TITLE!r} xuat hien {s.count(TITLE)} lan, can 1")
 
-# 2. Nut CTA cuoi muc Wait Times gio dung MOT MINH (da bo link WhatsApp o renderer)
-#    -> noi ra cho can doi, giong SAF/DAF: 18px 46px / 0.86rem.
-sub("padding: 15px 30px !important;", "padding: 18px 46px !important;", "padding nut")
-old_fs = ("#wait-times .caf-wt-btn { display: inline-flex !important; align-items: center !important; "
-          "gap: 8px !important; padding: 18px 46px !important; background: #C9A84C !important; "
-          "background-image: none !important; color: #0B1F3A !important; "
-          "font-family: 'DM Sans', sans-serif !important; font-size: 0.8rem !important;")
-sub(old_fs, old_fs.replace("font-size: 0.8rem", "font-size: 0.86rem"), "font-size nut")
+# Hai dong phu cua hai hang thoi gian phai SONG SONG nhau -- xem ghi chu trong render_hero.
+need(r"Through immigration in the busiest hours &middot; [A-Za-z]+ \d{4} estimate", 1,
+     "dong phu hang QUEUE")
+need(r"Through immigration with our service", 1, "dong phu hang FAST TRACK")
 
-# 3. Quy tac .caf-wt-link thanh code chet -> xoa, dung de lai rac.
-s, n = re.subn(r"#wait-times \.caf-wt-link \{[^}]*\}\n?", "", s)
-if n != 1:
-    sys.exit(f"quy tac .caf-wt-link: xoa duoc {n} lan")
-
-# CAF KHONG co media query `.caf-cta-row a` nen khong dinh loi nut mobile
-# cua SAF/DAF -- da kiem 05/10/2026, khong can va.
-
-io.open(DST, "w", encoding="utf-8").write(s)
-print(f"{before:,} -> {len(s):,} ky tu  ->  {DST}")
+print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
+for e in err:
+    print(" -", e)
+sys.exit(1 if err else 0)

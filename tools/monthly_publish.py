@@ -11,7 +11,14 @@ PROFILE = {
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
                    'Mobile Book Now', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-        "musts": ['add-to-cart=311', 'add-to-cart=313',
+
+        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
+        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        "hero_title": 'PQC Immigration &mdash; The Real Numbers',
+        "musts": [
+                  'Through immigration in the busiest hours &middot;',
+                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
                   '[paf_price service="fast_track_arrival"]',
                   '[paf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="paf-pick-tpl"', '#wait-times .paf-wt-num',
@@ -25,7 +32,14 @@ PROFILE = {
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
                    'Mobile Book Now', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-        "musts": ['add-to-cart=311', 'add-to-cart=313',
+
+        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
+        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        "hero_title": 'DAD Immigration &mdash; The Real Numbers',
+        "musts": [
+                  'Through immigration in the busiest hours &middot;',
+                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
                   '[daf_price service="fast_track_arrival"]',
                   '[daf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="daf-pick-tpl"', '#wait-times .daf-wt-num',
@@ -39,7 +53,14 @@ PROFILE = {
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
                    'Mobile Book Now', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-        "musts": ['add-to-cart=311', 'add-to-cart=313',
+
+        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
+        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        "hero_title": 'CXR Immigration &mdash; The Real Numbers',
+        "musts": [
+                  'Through immigration in the busiest hours &middot;',
+                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
                   '[caf_price service="fast_track_arrival"]',
                   '[caf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="caf-pick-tpl"', '#wait-times .caf-wt-num',
@@ -63,7 +84,14 @@ PROFILE = {
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
                    'Book Now Button', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-        "musts": ['add-to-cart=311', 'add-to-cart=313',
+
+        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
+        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        "hero_title": 'SGN Immigration &mdash; The Real Numbers',
+        "musts": [
+                  'Through immigration in the busiest hours &middot;',
+                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
                   '[saf_price service="fast_track_arrival"]',
                   '[saf_price service="fast_track_departure"]',
                   '[saf_price service="connection"]',
@@ -91,7 +119,14 @@ PROFILE = {
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
                    'Book Now Button', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-        "musts": ['add-to-cart=311', 'add-to-cart=313',
+
+        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
+        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        "hero_title": 'Why Choose Fast Track?',
+        "musts": [
+                  'Through immigration in the busiest hours &middot;',
+                  'Through immigration with our service','add-to-cart=311', 'add-to-cart=313',
                   '[haf_price service="fast_track"]',
                   '[haf_price service="vip_departure"]',
                   '[haf_price service="connection"]',
@@ -197,6 +232,21 @@ def main():
     print("--- QC trang ---")
     if qc.main(a.page, prof["labels"], prof["musts"], prof["counts"], prof["zones"]):
         sys.exit("QC FAIL -> dung lai, khong dung XML")
+
+    # Tieu de the hero la phan TINH. Neu no lot VAO TRONG vung wait-hero thi thang sau
+    # update_zones.py se xoa mat ma khong ai bao -- dung loai loi am da dinh nhieu lan.
+    ht = prof.get("hero_title")
+    if ht:
+        zm = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->",
+                       content, re.S)
+        if not zm:
+            sys.exit("khong tim thay vung wait-hero")
+        if content.count(ht) != 1:
+            sys.exit(f"tieu de the hero {ht!r} xuat hien {content.count(ht)} lan, can 1")
+        if ht in zm.group(1):
+            sys.exit(f"tieu de the hero {ht!r} lot VAO TRONG vung wait-hero -- "
+                     "thang sau update_zones.py se xoa mat no")
+        print(f"  tieu de hero tinh: OK ({ht})")
 
     sha = hashlib.sha256(content.encode("utf-8")).hexdigest()
     xml = build_xml(content, page_id, a.month, sha)
