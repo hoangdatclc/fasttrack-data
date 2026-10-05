@@ -79,6 +79,33 @@ PROFILE = {
         "counts": {r'<img ': 15, r'schema\.org/Question': 12,
                    r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3},
     },
+    "HAF": {
+        # BON cho HAF khac bon site kia -- doi mot trong bon la trang hong:
+        #   1. ten element giong SAF: "Whatsapp & Mess" / "Book Now Button".
+        #   2. tien to DON: CSS va shortcode deu dung `haf`. Khac SAF (sgn- + saf_).
+        #      Port tu SAF phai doi saf_price TRUOC roi moi doi sgn-.
+        #   3. TEN DICH VU khac moi site kia: fast_track / vip_departure / connection,
+        #      khong phai fast_track_arrival / fast_track_departure.
+        #   4. CHI MOT nut picker o hero (bon site kia hai) -> tong 2, khong phai 3.
+        "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
+                   'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
+                   'Book Now Button', 'Booking Picker'],
+        "zones": ['wait-hero', 'wait-section', 'wait-faq'],
+        "musts": ['add-to-cart=311', 'add-to-cart=313',
+                  '[haf_price service="fast_track"]',
+                  '[haf_price service="vip_departure"]',
+                  '[haf_price service="connection"]',
+                  'id="wait-times"', 'id="haf-pick-tpl"', '#wait-times .haf-wt-num',
+                  '#wait-times .haf-wt-ft', '#wait-times .haf-wt-btn', '.haf-pick-btn',
+                  '#haf-pick-panel', 'id="haf-carousel-track"', 'class="haf-marquee-track"',
+                  # LUAT 7: nut vang hero la <button>, media query phai phu ca button.
+                  # Mat dong nay = nut lech trai tren dien thoai, khong ai bao.
+                  '.haf-cta-row button'],
+        # Bang review HAF: 32 the = 16 goc + 16 ban sao aria-hidden. So LE hoac hai nua
+        # khac nhau se lam bang giat moi vong (animation chay translateX(-50%)).
+        "counts": {r'<img ': 17, r'schema\.org/Question': 12,
+                   r'class="haf-review-card': 32, r'class="haf-pick-btn': 2},
+    },
 }
 
 
