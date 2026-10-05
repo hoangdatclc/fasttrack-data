@@ -126,8 +126,8 @@ PROFILE = {
         #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong
         "hero_title": 'Why Choose HAN Fast Track?',
         "musts": [
-                  'Through immigration in the busiest hours: an&nbsp;estimated&nbsp;',
-                  'With Fast Track: under',
+                  'The standard immigration queue is estimated to reach&nbsp;',
+                  'Fast Track gets you through in under&nbsp;',
                   'Why Choose HAN Fast Track?','add-to-cart=311', 'add-to-cart=313',
                   '[haf_price service="fast_track"]',
                   '[haf_price service="vip_departure"]',

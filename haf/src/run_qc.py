@@ -40,10 +40,13 @@ COUNTS = {
     # The hero HAF la Save / From / 24-7 (ba ly do khac nhau), khong phai bang so sanh.
     # Dong phu hang SAVE phai noi CA HAI dau cua phep tru -- mat mot dau thi con so
     # tiet kiem dung tran, khach khong biet no tru tu dau. Hai dong, hai dau:
-    r'Through immigration in the busiest hours: an&nbsp;estimated&nbsp;\d+(?:&ndash;\d+)?&nbsp;min<br>': 1,
-    r'With Fast Track: under \d+ min, any hour': 1,
-    # Chu "estimated" la cong bo bat buoc, khong duoc bo trong lan viet lai nao.
-    r'an&nbsp;estimated&nbsp;\d+(?:&ndash;\d+)?&nbsp;min': 1,
+    r'The standard immigration queue is estimated to reach&nbsp;\d+(?:&ndash;\d+)?&nbsp;minutes\.<br>': 1,
+    r'Fast Track gets you through in under&nbsp;\d+&nbsp;minutes\.': 1,
+    # Hai chu ganh toan bo tinh trung thuc cua dong phu, kiem rieng tung chu:
+    #   "estimated" -> day la uoc tinh, khong phai so do duoc
+    #   "reach"     -> 90-110 la luc CAO DIEM. Doi thanh "is"/"takes" la the hero
+    #                  tuyen bo ca ngay, mau thuan voi doan dan va voi khung vang 35-36.
+    r'queue is estimated to reach&nbsp;': 1,
     r'>Save</span>': 1, r'>24/7</span>': 1,
 }
 
