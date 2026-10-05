@@ -10,7 +10,14 @@ fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
 words = lambda w: ", or between ".join(" and ".join(r.split("-")) for r in w.split("|"))
 rng   = lambda p: f"{p[0]}&ndash;{p[1]}"
-ftxt  = lambda v: (f"{v[0]}&ndash;{v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
+# Bac cao diem hien HAI kieu, co y (chot 05/10/2026, theo chuan SAF/DAF):
+#   o BANG   -> "10-15 min": cot hep tren dien thoai.
+#   HERO+van xuoi -> "Under 15": hero da co MOT dai so o dong Queue; them dai thu hai
+#   ngay duoi lam yeu tuong phan "dai va bap benh" vs "ngan va chac". "Under 15" la
+#   tran, dung o MOI khung, khop dong phu "every flight, every hour".
+ftcell = lambda v: (f"{v[0]}&ndash;{v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
+ftword = lambda v: (f"Under {v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
+ftcap  = lambda c: (c["peak"][1] if isinstance(c.get("peak"), (list, tuple)) else c["peak"]) if isinstance(c, dict) else c
 # Fast Track doi theo bac: khung thuong ~10 phut, khung cao diem 10-15.
 ft_of = lambda tier, c: (c["peak"] if tier == "busy" else c["base"]) if isinstance(c, dict) else c
 # Cau o the vang phai khop voi con so that cua khung de tho nhat. O PQC khung do la
@@ -18,9 +25,10 @@ ft_of = lambda tier, c: (c["peak"] if tier == "busy" else c["base"]) if isinstan
 # van la 43-65 phut -- noi cau do thanh ra sai, va ban re chinh dich vu cua minh.
 # O CXR khung 16:00-20:00 chi co 1 chuyen va ra 28-30 phut -- that su ngan, nen cau
 # "co the ban khong can chung toi" o day la DUNG. De no tu dong theo tier, dung ep.
-calm_line = lambda q: ("you may not need us, and we will say so."
-                       if q.get("tier") == "quick"
-                       else "the line is shorter, though rarely short.")
+# Chu site CAM cau "you may not need us, and we will say so." tu 04/10/2026, o MOI site.
+# Rieng CXR khung de tho nhat that su nhanh (28-30 phut) nen cau do se DUNG o day --
+# nhung lenh cam la lenh cam, va mot cau dung cho ca 5 site thi de bao tri hon.
+calm_line = lambda q: "the line is shorter, though rarely short."
 
 
 def level(b):
@@ -31,48 +39,37 @@ def level(b):
     # Tuong phan tren nen trang: vang 5,1:1 · cam dat 5,3:1 · do 5,8:1 -- deu dat WCAG AA.
     # Co y KHONG dung xanh la cho bac nhe vi #1a7a42 la mau cot Fast Track.
     return {"none":     ("none",  "#8a9ab0", "No regular international arrivals"),
-            "quick":    ("light", "#8B6914", "Usually quick"),
+            "quick":    ("light", "#8B6914", "Lighter"),
             "moderate": ("light", "#A8541A", "Moderate"),
-            "busy":     ("busy",  "#C1272D", "Busy")}[b.get("tier", "quick")]
+            "busy":     ("busy",  "#C9281C", "Busy")}[b.get("tier", "quick")]
 
 
 def cities(d, window):
-    """Ten thanh pho cua cac chuyen ha canh trong `window`, theo thu tu GIO.
+    """Ten thanh pho trong `window`, xep theo SO CHUYEN (khong theo gio den som nhat).
 
-    Hai cho tung sai, deu sua o day:
-      1. CUA SO VAT QUA NUA DEM bi bo im. "20:00-06:00" cho ra span (20,6) va phep
-         kiem `20 <= h < 6` KHONG BAO GIO dung -> toan bo cum dem khong duoc tinh.
-         O CXR day dung la cum quan trong nhat (11 chuyen Han 20:20-00:35), nen the
-         "When Fast Track matters most" ke ten cac thanh pho ban ngay. Khong ai bao.
-      2. Lay 4 ten DAU TIEN theo thu tu trong file lich bay, khong phai theo gio ->
-         danh sach doi khi khi sap xep lai file. Gio sap theo gio ha canh.
+    Lay "bon cai dau theo gio" se bo qua thi truong lon chi vi no ha muon hon, va
+    nhay lung tung moi thang chi vi mot chuyen doi gio 5 phut. Hoa -> chuyen HA SOM
+    HON dung truoc. Toi da 4 ten.
     """
     spans = [tuple(int(x[:2]) for x in r.split("-")) for r in window.split("|")]
-
     def inside(h):
-        for a, z in spans:
-            if a < z:
-                if a <= h < z:
-                    return True
-            else:                      # vat qua nua dem: [a,24) hop [0,z)
-                if h >= a or h < z:
-                    return True
-        return False
-
-    picked = [f for f in d["sample_flights"] if inside(int(f["time"][:2]))]
-    picked.sort(key=lambda f: f["time"])
-    out = []
-    for f in picked:
-        c = d["cities"].get(f["from"], f["from"])
-        if c not in out:
-            out.append(c)
-    out = out[:4]                                      # toi da 4 ten, dai hon la le the
+        return any((a <= h < z) if a < z else (h >= a or h < z) for a, z in spans)
+    n, first = {}, {}
+    for f in d["sample_flights"]:
+        if inside(int(f["time"][:2])):
+            c = d["cities"].get(f["from"], f["from"])
+            n[c] = n.get(c, 0) + 1
+            first.setdefault(c, f["time"])
+    out = sorted(n, key=lambda c: (-n[c], first[c]))[:4]
     return ", ".join(out[:-1]) + " and " + out[-1] if len(out) > 1 else "".join(out)
 
 
 def render_hero(d, updated):
     h = d["headline"]
-    busy = h.get("peak") or h["busy"]   # hero: chi khung te nhat
+    # CXR: cum busy TACH BACH khoi cac bac duoi (san 54 > tran Moderate 50) nen
+    # cong bo CA CUM theo chuan SAF. Khac DAF -- o DAD cum busy co mot khung dao
+    # dong manh keo san xuong duoi ca khung Moderate nen DAF phai dung h["peak"].
+    busy = h["busy"]
     return f'''
       <div style="
         display: flex;
@@ -97,14 +94,14 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(busy["range"])} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing {dash(busy["window"])} &mdash; from touchdown to leaving immigration</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Last passengers off a flight landing in the busiest hours &mdash; from touchdown to leaving immigration</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{ftxt(ft_of(busy.get("tier","busy"), h["fast_track"]))} min</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{ftword(ft_of(busy.get("tier","busy"), h["fast_track"]))} min</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service &mdash; every flight, every hour</span>
         </div>
 
@@ -124,7 +121,7 @@ def render_hero(d, updated):
 
 def render_section(d, updated):
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
-    peak = h.get("peak") or h["busy"]   # doan dan: khung te nhat
+    # doan dan dung CA CUM, giong hero. The vang van ghi khung gio (ngoai le).
     busy = h["busy"]                     # the vang: toan bo cum cao diem
     bands = d["bands"]
     top = max(b["standard"][1] for b in bands if b["standard"])
@@ -149,14 +146,14 @@ def render_section(d, updated):
             <span class="caf-wt-num" style="color:{color} !important;">{rng(b["standard"])} min</span>
             <span class="caf-wt-track" aria-hidden="true"><span class="caf-wt-fill" style="width:{width}% !important; background:{color} !important;"></span></span>
           </div>
-          <div class="caf-wt-cell caf-wt-ft" role="cell" data-label="With Fast Track">{ftxt(ft_of(b.get("tier","quick"), ft))} min</div>
+          <div class="caf-wt-cell caf-wt-ft" role="cell" data-label="With Fast Track">{ftcell(ft_of(b.get("tier","quick"), ft))} min</div>
         </div>''')
     return f'''
     <div class="caf-wt-head">
       <span class="caf-wt-eyebrow">Immigration wait times &middot; {d["month_label"]} &middot; updated {fmt_date(updated)}</span>
       <h2 id="caf-h2-wait">How Long Is the Immigration Queue at Cam Ranh Airport in {d["month_label"]}?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="caf-wt-lead">In {d["month_label"]}, the last passengers off a flight landing between {words(peak["window"])} need an estimated <strong>{rng(peak["range"])} minutes</strong> from touchdown to leaving immigration at Cam Ranh International Airport (CXR). Flights landing {dash(quiet["window"])} clear in {rng(quiet["range"])} minutes. With Fast Track it is about {ft_of("quick", ft)} minutes, or {ftxt(ft_of(peak.get("tier","busy"), ft))} at the busiest hours.</p>
+      <p class="caf-wt-lead">In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong>{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration at Cam Ranh International Airport (CXR). At quieter hours it is {rng(quiet["range"])} minutes. With Fast Track it is about {ft_of("quick", ft)} minutes, and under {ftcap(ft)} even at the busiest hours.</p>
     </div>
 
     <div class="caf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Cam Ranh Airport by arrival time, {d["month_label"]}">
@@ -178,18 +175,17 @@ def render_section(d, updated):
       </div>
     </div>
 
-    <p class="caf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the {h["intl_arrivals_per_day"]} international arrivals on a representative {d["month_label"].split()[0]} day, counting deplaning and the walk to the hall, and checked against the waits travellers report here. Estimates, not measurements.</p>
+    <p class="caf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the {h["intl_arrivals_per_day"]} international arrivals on a representative {d["month_label"].split()[0]} day, counting deplaning and the walk to the hall, and checked against the waits travellers report. Estimates, not measurements.</p>
 
     <div class="caf-wt-cta">
       <button type="button" class="caf-pick-btn caf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="caf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-      <a class="caf-wt-link" href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20check%20the%20immigration%20queue%20for%20my%20flight%20to%20Nha%20Trang." target="_blank" rel="noopener">Send us your flight number &mdash; we will tell you if you need it</a>
     </div>
 '''
 
 
 def render_faq(d, updated, faq_id="caf-faq-a12"):
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
-    busy = h.get("peak") or h["busy"]   # FAQ bam theo hero
+    busy = h["busy"]   # FAQ bam theo hero: ca cum, khong ten khung
     return f'''
         <div class="caf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <button class="caf-faq-btn" type="button" onclick="cafFaqToggle(this)" aria-expanded="false" aria-controls="{faq_id}">
@@ -198,8 +194,8 @@ def render_faq(d, updated, faq_id="caf-faq-a12"):
           </button>
           <div class="caf-faq-body" id="{faq_id}" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In {d["month_label"]}, the last passengers off a flight landing between {words(busy["window"])} need an estimated <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration. Flights landing {dash(quiet["window"])} clear in {rng(quiet["range"])} minutes.</p>
-            <p style="margin-top:10px !important;">With Fast Track it is about {ft_of("quick", ft)} minutes, and {ftxt(ft_of(busy.get("tier","busy"), ft))} even at the busiest hours. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
+            <p>In {d["month_label"]}, the last passengers off a flight landing in the busiest hours need an estimated <strong style="color:#0B1F3A; font-weight:600;">{rng(busy["range"])} minutes</strong> from touchdown to leaving immigration. At quieter hours it is {rng(quiet["range"])} minutes.</p>
+            <p style="margin-top:10px !important;">With Fast Track it is under {ftcap(ft)} minutes even at the busiest hours, and about {ft_of("quick", ft)} when the hall is lighter. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated {fmt_date(updated)}).</p>
             </div>
           </div>
         </div>
