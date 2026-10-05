@@ -38,9 +38,12 @@ COUNTS = {
     # NGOAI vung zone -> quy trinh hang thang khong duoc lam mat no.
     r'Why Choose HAN Fast Track\?': 1,
     # The hero HAF la Save / From / 24-7 (ba ly do khac nhau), khong phai bang so sanh.
-    # Dong phu hang SAVE phai mang CA phep so LAN thang -- mat no thi con so tiet kiem
-    # dung tran, khong biet so voi cai gi va cua thang nao.
-    r'Against a standard queue of \d+&ndash;\d+ min &middot; [A-Za-z]+ \d{4} estimate': 1,
+    # Dong phu hang SAVE phai noi CA HAI dau cua phep tru -- mat mot dau thi con so
+    # tiet kiem dung tran, khach khong biet no tru tu dau. Hai dong, hai dau:
+    r'Through immigration in the busiest hours: an&nbsp;estimated&nbsp;\d+(?:&ndash;\d+)?&nbsp;min<br>': 1,
+    r'With Fast Track: under \d+ min, any hour': 1,
+    # Chu "estimated" la cong bo bat buoc, khong duoc bo trong lan viet lai nao.
+    r'an&nbsp;estimated&nbsp;\d+(?:&ndash;\d+)?&nbsp;min': 1,
     r'>Save</span>': 1, r'>24/7</span>': 1,
 }
 

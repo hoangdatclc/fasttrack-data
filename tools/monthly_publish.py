@@ -120,12 +120,14 @@ PROFILE = {
                    'Book Now Button', 'Booking Picker'],
         "zones": ['wait-hero', 'wait-section', 'wait-faq'],
 
-        # Form the hero gop (chot 05/10/2026, chung ca 5 site):
+        # The hero HAF giu MAU GOC cua trang: Save / From / 24-7, khong phai bang
+        # so sanh nhu bon site kia (chot 05/10/2026).
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - hai dong phu cua hai hang thoi gian PHAI song song nhau
+        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong
         "hero_title": 'Why Choose HAN Fast Track?',
         "musts": [
-                  'Against a standard queue of',
+                  'Through immigration in the busiest hours: an&nbsp;estimated&nbsp;',
+                  'With Fast Track: under',
                   'Why Choose HAN Fast Track?','add-to-cart=311', 'add-to-cart=313',
                   '[haf_price service="fast_track"]',
                   '[haf_price service="vip_departure"]',

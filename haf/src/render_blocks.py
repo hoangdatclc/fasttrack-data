@@ -94,28 +94,39 @@ def cities(d, window):
 
 
 def render_hero(d, updated):
-    """Khac bon site kia: KHONG in the tieu de va KHONG in doan `basis`.
+    """The hero cua HAF theo MAU GOC cua trang (Save / From / 24-7), khong phai the
+    so sanh hai hang nhu bon site kia. Chu site chot 05/10/2026: giu gan ban goc.
 
-    1. Tieu de the ("Why Choose Fast Track?") la phan TINH nam ngoai vung -- chu site
-       chot 05/10/2026 giu nguyen nhu trang goc. Xem SKILL.md muc 3b.
-    2b. HAI DONG PHU CUA HAI HANG THOI GIAN PHAI SONG SONG NHAU.
-       hang QUEUE      -> "Through immigration in the busiest hours - {thang} estimate"
-       hang FAST TRACK -> "Through immigration with our service"
-       Ca the nay ton tai de nguoi ta so 69-91 voi duoi 15. Phep so chi dung neu hai
-       con so cung do MOT thu. Ban cu ghi "{thang} estimate - passengers landing in the
-       busiest hours": no tra loi AI va KHI NAO, khong tra loi "69-91 phut cua CAI GI",
-       nen doc canh dong duoi (co tra loi) thi hai hang nhu do hai thu khac nhau.
-       Chu "Through immigration" lap lai o hai dong la CO Y -- chinh no lam phep so
-       doc duoc trong mot nhip mat. Dung "gon" bang cach bo mot trong hai.
-       Luu y nhan "QUEUE" hep hon con so that (69-91 da gom xuong may bay va di bo),
-       nen dong phu PHAI noi "through immigration" de bu lai.
+    1. Tieu de the ("Why Choose HAN Fast Track?") la phan TINH nam NGOAI vung zone.
+       Sua no phai sua trong trang, `monthly_publish.py` co cong chan rieng. Xem
+       SKILL.md muc 3b.
 
-    2. Bo doan `basis`: dung mot minh ngay duoi tieu de no doc nhu loi dan khong co
-       ngu canh -- chua noi so nao da giai thich cach tinh so. Gop phan can thiet
-       (thang + chu "estimate") vao dong phu cua hang QUEUE, ngay canh con so no
-       mo ta. The ngan di ba dong.
-       `d["basis"]` van nam trong JSON de ghi lai phuong phap cua thang, va ban day
-       du cua no la cau "How we estimate" ngay duoi bang -- KHONG mat thong tin.
+    2. Hang SAVE chi in MOT con so -- muc tiet kiem -- de khach khong phai tru nham.
+       Nhung mot con so tiet kiem dung tran trui thi khach khong biet no tru tu dau,
+       nen dong phu PHAI noi ca HAI dau: hang thuong bao nhieu, Fast Track bao nhieu.
+       Chu site chot 05/10/2026 sau khi doc ban cu ("Against a standard queue of
+       90-110 min - October 2026 estimate"): ban do moi noi mot dau, khach van phai
+       tu suy ra dau con lai.
+       Viet thanh HAI DONG (ngat bang <br>), moi dong mot dau, cau truc song song:
+         dong 1 -> "Through immigration in the busiest hours: an estimated {X} min"
+         dong 2 -> "With Fast Track: under {tran} min, any hour"
+       Ba dieu bat buoc:
+       a. Chu "Through immigration" o dong 1. Nhan "SAVE" khong noi duoc con so do
+          la THOI GIAN GI, va 90-110 da gom ca xuong may bay va di bo -- goi no la
+          "queue" thoi thi hep hon su that.
+       b. Chu "estimated" o dong 1. Day la cong bo bat buoc, khong duoc bo.
+       c. "any hour" o dong 2. Fast Track la MOT nguong phang cho moi khung gio;
+          bo chu nay thi khach tuong duoi 15 phut chi dung o khung ban.
+       KHONG in thang o day nua: dong "Updated {ngay}" nam ngay duoi the da noi
+       ky hon, va dong phu da dai hai dong roi.
+       Cum "an estimated {X} min" noi bang &nbsp; de KHONG BAO GIO bi ngat doi.
+       Khong buoc thi o 1440px no vo thanh "... hours: an" / "estimated 90-110 min":
+       con so roi xuong dong tiep, mat khoi ve cau hoi ma no tra loi. Buoc roi thi
+       dong 1 la cau hoi, dong 2 la dap an, dong 3 la dap an con lai.
+
+    3. KHONG in doan `basis` trong the. No la MENH DE MO DAU cua doan dan ben duoi
+       (xem render_section) va cua FAQ. Dung mot minh trong the thi no doc nhu loi
+       dan khong co ngu canh -- chua noi so nao da giai thich cach tinh so.
     """
     h = d["headline"]
     # HAN: cum busy TACH BACH khoi cac bac duoi (san 69 > tran Moderate 65) nen
@@ -134,7 +145,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Against a standard queue of {rng(busy["range"])} min &middot; {d["month_label"]} estimate</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Through immigration in the busiest hours: an&nbsp;estimated&nbsp;{rng(busy["range"])}&nbsp;min<br>With Fast Track: under {ftcap(h["fast_track"])} min, any hour</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
