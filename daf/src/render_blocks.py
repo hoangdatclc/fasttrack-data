@@ -78,29 +78,85 @@ def ft_floor_cap(ft):
     return ft, ft
 
 
+def headline_range(d):
+    """Dai hang thuong ma trang cong bo: GHEP hai dinh cao nhat CA NGAY.
+
+    Chu site chot 06/10/2026. Ban cu lay nguyen dai cua MOT khung (khung ban nhat),
+    vi du 16:00-20:00 = 59-94 -> trang in "59-94". Con so 59 khi do la SAN cua chinh
+    khung do, khong noi len gi ve ca ngay: no chi la "khach may man nhat trong khung
+    te nhat". Ban moi:
+
+        can tren = tran CAO NHAT trong ngay
+        can duoi = tran CAO THU NHI trong ngay
+
+    Thang 10/2026 o DAD: cac tran la 62 / 60 / 77 / 66 / 45 / 79 -> lay 79 va 77 -> 77-79.
+
+    Doc ra la: "trong cac khung ban nhat, hang cho dung lai o dau do giua 69 va 94
+    phut" -- 69 la dinh cua mot dot ban, 94 la dinh cua dot ban kia. Ca hai deu la
+    truong hop XAU NHAT cua khung cua no, nen cau "passengers landing during the
+    busiest hours could spend {dai}" van dung tung ve.
+
+    DUNG doi sang "min/max cua moi dai" hay "trung binh": cai truoc keo san xuong
+    con so cua khung vang, cai sau khong tra loi duoc cau hoi cua khach ("toi co the
+    phai cho bao lau").
+
+    Hai truong hop bien:
+      - chi MOT khung co so -> tra ve nguyen dai cua khung do (khong co "thu nhi").
+      - hai tran CAO NHAT bang nhau -> lay gia tri KHAC tiep theo xuong duoi lam can
+        duoi; het gia tri khac thi tra ve nguyen dai cua khung cao nhat.
+    """
+    tops = sorted((b["standard"][1] for b in d["bands"] if b.get("standard")), reverse=True)
+    best = max((b for b in d["bands"] if b.get("standard")),
+               key=lambda b: b["standard"][1], default=None)
+    if best is None:
+        raise SystemExit("KHONG CO KHUNG NAO CO SO -- khong dung duoc dai cong bo.")
+    lower = next((v for v in tops if v < tops[0]), None)
+    if lower is None:
+        return list(best["standard"])
+    return [lower, tops[0]]
+
+
 def saved(busy, ft):
-    """Muc tiet kiem: hang thuong TRU Fast Track, o khung ban nhat.
+    """Muc tiet kiem: dai hang thuong TRU Fast Track.
 
-    Can duoi = dai hang NGAN NHAT trong cum ban tru TRAN Fast Track (truong hop it
-    loi nhat cho minh). Can tren = dai DAI NHAT tru SAN Fast Track.
+    CA HAI DAU deu tru TRAN Fast Track, khong phai san (chot 06/10/2026):
+        can duoi = dai THAP - tran FT     can tren = dai CAO - tran FT
+    Ly do: the hero chi cong bo MOT con so Fast Track -- "under {tran} minutes" o
+    dong 2. Neu can tren tru SAN (10) thi khach lay giay but tinh lai theo dong phu
+    se ra con so khac cai in to phia tren, khong kiem chung duoc. Bon site kia van
+    tru san o can tren (luat 9); PAF di rieng vi bac nua tieng lam cho chenh lech
+    do nhin thay ro. Thang 10/2026 hai cach ra y het nhau (1-1.5 hours).
 
-    Doi sang GIO khi can duoi >= 60 phut -- "1 - 2 hours" doc to hon "75 - 100 min".
-    Duoi 60 phut thi giu phut: lam tron len gio se cho ra "0 - 2 hours", vo nghia.
+    DAF IN THEO GIO, BAC NUA TIENG (chu site chot 06/10/2026, theo sau PAF):
+    1 - 1.5 - 2 - 2.5 - 3 ... Lam tron ve bac GAN NHAT (62 phut -> 1; 64 phut -> 1),
+    khong phai lam tron len. HAF/SAF/CAF van in phut hoac gio tron -- xem luat 9.
 
-    CONG CHAN: can duoi phai >= 15 phut. Day la con so SUY RA, khong co trong du
-    lieu; thang nao do khung ban tut xuong gan tran Fast Track thi no se ra so be
-    hoac am va the hero se noi doi. Dung luon, dung giao trang.
+    CONG CHAN 1: can duoi phai >= 15 phut (so SUY RA, khong co trong du lieu).
+    CONG CHAN 2: sau khi lam tron, can duoi phai >= 1.0 gio. Chu site muon "toi thieu
+    la 1 gio", nhung 1 gio phai la KET QUA lam tron, khong phai mot cai san ep vao.
+    Lam tron ve bac gan nhat chi ra >= 1.0 khi can duoi that >= 45 phut. Thang nao
+    tut xuong duoi 45 phut ma van in "1 hour" la trang noi qua >25% -- dung luon,
+    hoi chu site xem chuyen ve phut hay xem lai mo hinh.
     """
     base, cap = ft_floor_cap(ft)
-    lo, hi = busy["range"][0] - cap, busy["range"][1] - base
+    lo, hi = busy["range"][0] - cap, busy["range"][1] - cap
     if lo < 15:
         raise SystemExit(
             f"MUC TIET KIEM VO LY: {lo}-{hi} phut. Can duoi phai >= 15 phut. "
             "Khung ban da tut xuong gan tran Fast Track -- xem lai mo hinh, "
             "dung dang the hero voi con so nay.")
-    if lo >= 60:
-        return f"{lo // 60}&ndash;{-(-hi // 60)} hours"
-    return f"{lo}&ndash;{hi} min"
+    half = lambda m: round(m / 30.0) / 2.0        # bac nua tieng, lam tron GAN NHAT
+    h_lo, h_hi = half(lo), half(hi)
+    if h_lo < 1.0:
+        raise SystemExit(
+            f"KHONG IN DUOC THEO GIO: tiet kiem that la {lo}-{hi} phut, lam tron ve "
+            f"bac nua tieng ra {h_lo} gio. Chu site muon toi thieu 1 gio, nhung ep "
+            f"{lo} phut thanh '1 hour' la noi qua {60 - lo} phut. Dung lai -- hoi chu "
+            "site: chuyen the hero ve phut thang nay, hay xem lai mo hinh?")
+    fmt = lambda v: (f"{v:.0f}" if v == int(v) else f"{v:.1f}")
+    if h_lo == h_hi:
+        return f"{fmt(h_lo)} hour" + ("" if h_lo == 1.0 else "s")
+    return f"{fmt(h_lo)}&ndash;{fmt(h_hi)} hours"
 
 
 def render_hero(d, updated):
@@ -142,7 +198,10 @@ def render_hero(d, updated):
     # (10:00-13:00, trung vi 50 nhung kich ban xau 77) nen bien duoi cua ca cum
     # tut xuong 50 -- thap hon ca mot khung Moderate (52-62) ngay duoi bang.
     # Chu site chot 04/10/2026: lay khung ban nhat, giu cach noi chung.
-    busy = h.get("peak") or h["busy"]
+    # Dai cong bo = ghep hai dinh cao nhat ca ngay (headline_range, chot 06/10/2026),
+    # KHONG phai nguyen dai cua mot khung. Hero / doan dan / FAQ dung CHUNG ham nay
+    # -- lech nhau la trang tu mau thuan.
+    busy = {"range": headline_range(d)}
     return f'''
 
       <div style="display: flex; flex-direction: column; gap: 0;">
@@ -188,7 +247,7 @@ def render_section(d, updated):
     """
 
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
-    peak = h.get("peak") or h["busy"]   # doan dan: con so cua khung ban nhat
+    peak = {"range": headline_range(d)}  # doan dan: dai cong bo, dung het voi hero
     busy = h["busy"]                     # the vang: ca cum, va the vang DUOC ghi khung gio
     bands = d["bands"]
     top = max(b["standard"][1] for b in bands if b["standard"])
@@ -259,7 +318,7 @@ def render_faq(d, updated, faq_id="daf-faq-a12"):
     """
 
     h = d["headline"]; quiet, ft = h["quiet"], h["fast_track"]
-    busy = h.get("peak") or h["busy"]   # FAQ bam theo hero
+    busy = {"range": headline_range(d)}  # FAQ bam theo hero
     return f'''
         <div class="daf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <button class="daf-faq-btn" type="button" onclick="dafFaqToggle(this)" aria-expanded="false" aria-controls="{faq_id}">
