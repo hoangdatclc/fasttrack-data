@@ -168,7 +168,10 @@ def saved(busy, ft):
             "site: chuyen the hero ve phut thang nay, hay xem lai mo hinh?")
     fmt = lambda v: (f"{v:.0f}" if v == int(v) else f"{v:.1f}")
     if h_lo == h_hi:
-        return f"{fmt(h_lo)} hour" + ("" if h_lo == 1.0 else "s")
+        # Mot gia tri thi phai co dau xap xi: "1 hour" tran doc nhu con so DO duoc,
+        # trong khi no la hai can khac nhau (vi du 51 va 64 phut) cung tron ve 1.0.
+        # Dung dau "~" cho khop cot Fast Track trong bang ("~10 min").
+        return f"~{fmt(h_lo)} hour" + ("" if h_lo == 1.0 else "s")
     return f"{fmt(h_lo)}&ndash;{fmt(h_hi)} hours"
 
 
