@@ -56,6 +56,11 @@ need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
 # DAF tung la ban THU cua cach viet nay (05/10/2026); tu 06/10/2026 no la LUAT CHUNG
 # cua PQC, DAD, CXR va SGN. Dau "~" tung dung o dong 1 nhung da bo cung ngay.
 need(r"Peak immigration queue: ", 1, "chu 'immigration'")
+# Hang SAVE PHAI la mot KHOANG theo gio, bac nua tieng, can duoi >= 1 (chu site chot
+# 06/10/2026, ap cho PQC/DAD/CXR/HAN -- SGN co luat rieng, chua chuyen). Mot gia tri
+# don ("~1.5 hours") la VI PHAM: no khong gay an tuong va khong con la mot khoang.
+need(r">[1-9](?:\.5)?&ndash;[1-9](?:\.5)? hours<", 1, "hang SAVE phai la KHOANG theo gio")
+need(r">~[\d.]+ hours?<", 0, "hang SAVE khong duoc la mot gia tri don")
 need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
 # Link "Hour by hour" da bo 06/10/2026 -- chan viec tu dong them lai.
 need(r"Hour by hour", 0, "link 'Hour by hour' da bo khoi the hero")

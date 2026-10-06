@@ -49,6 +49,10 @@ need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
 need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
      "dong 2 hang SAVE (Fast Track)")
 need(r"Peak immigration queue: ", 1, "chu 'immigration'")
+# SGN CO Y KHONG co cong chan "hang SAVE phai la mot KHOANG" ma PQC/DAD/CXR/HAN co tu
+# 06/10/2026. Chu site giu SAF lai de ra LUAT RIENG cho site nay. Dung chep cong do tu
+# bon site kia sang -- lam vay la ep SAF vao luat chua duoc duyet cho no. SAF hien in
+# mot gia tri don ("~1.5 hours") va do la DUNG voi trang thai hien tai.
 need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
 # O SAF tran Fast Track la 20, khong phai 15. Gan cung 15 (theo bon site kia) se lam
 # dong 2 hua chac hon dong 1 tru di -- the hero tu mau thuan. Kiem thang con so.

@@ -1,5 +1,5 @@
 """Render 3 vùng từ {site}-wait-YYYY-MM.json."""
-import json, os, sys
+import json, math, os, sys
 from datetime import date
 
 MONTHS = ["January","February","March","April","May","June","July",
@@ -125,57 +125,84 @@ def headline_range(d, min_gap=10):
 
 
 def saved(busy, ft):
-    """Muc tiet kiem: dai hang thuong TRU Fast Track.
+    """Muc tiet kiem in o hang SAVE. LUON LA MOT KHOANG, don vi GIO, bac nua tieng.
 
-    CA HAI DAU deu tru TRAN Fast Track, khong phai san (chot 06/10/2026):
-        can duoi = dai THAP - tran FT     can tren = dai CAO - tran FT
-    Ly do: the hero chi cong bo MOT con so Fast Track -- "under {tran} minutes" o
-    dong 2. Neu can tren tru SAN (10) thi khach lay giay but tinh lai theo dong phu
-    se ra con so khac cai in to phia tren, khong kiem chung duoc. Bon site kia van
-    tru san o can tren (luat 9); PAF di rieng vi bac nua tieng lam cho chenh lech
-    do nhin thay ro. Thang 10/2026 hai cach ra y het nhau (1-1.5 hours).
+    CHU SITE CHOT 06/10/2026 -- bon dieu, ap cung:
+      1. PHAI la mot KHOANG (hai gia tri), khong bao gio mot so.
+      2. Bac nua tieng: 1 - 1.5 - 2 - 2.5 - 3 ... Toi thieu 1 gio.
+      3. CAN CU la dai hang thuong NGUYEN, *KHONG* tru thoi gian Fast Track.
+      4. Chon khoang dung nhat theo lam tron GAN NHAT ca hai can.
 
-    PAF IN THEO GIO, BAC NUA TIENG (chu site chot 06/10/2026):
-    1 - 1.5 - 2 - 2.5 - 3 ... Lam tron ve bac GAN NHAT (54 phut -> 1; 84 phut -> 1.5),
-    khong phai lam tron len. Bon site kia van in phut hoac gio tron -- PAF di rieng,
-    xem luat 9.
+    VI SAO KHONG TRU FAST TRACK (ly do chu site, ghi lai de khong ai "sua lai cho
+    dung"): dai hang thuong la UOC TINH tu mo hinh, con thuc te van hanh cho thay
+    buffer thuong lon hon 15 phut rat nhieu. Tru dung 15 phut trong khi phan vuot
+    buffer khong ai do duoc la tu ha thap muc tiet kiem that. Hang SAVE la cho gay
+    an tuong voi khach; hai dong ngay duoi no van in ca hai con so nguyen de khach
+    tu kiem.
 
-    CONG CHAN 1: can duoi phai >= 15 phut (so SUY RA, khong co trong du lieu).
-    CONG CHAN 2: sau khi lam tron, can duoi phai >= 1.0 gio. Chu site muon "toi thieu
-    la 1 gio", nhung 1 gio phai la KET QUA lam tron, khong phai mot cai san ep vao.
-    Lam tron ve bac gan nhat chi ra >= 1.0 khi can duoi that >= 45 phut. Thang nao
-    tut xuong duoi 45 phut ma van in "1 hour" la trang noi qua >25% -- dung luon,
-    hoi chu site xem chuyen ve phut hay xem lai mo hinh.
+    TINH CHAT GIU CHO CON SO NAY TRUNG THUC -- va CONG CHAN o duoi ep no dung:
+
+        can duoi cua khoang == dung bang phep tru ma khach tu lam theo dong 1 va 2
+
+    Thang 10/2026 ca nam site deu thoa: PQC 69-94 -> SAVE 1-1.5, khach tu tru
+    (69-15=54) cung ra 1.0. HAN 97-110 -> SAVE 1.5-2, khach tu tru (97-15=82)
+    cung ra 1.5. Nghia la CAN DUOI luon kiem chung duoc ngay tren trang; chi CAN
+    TREN moi la phan dua vao buffer thuc te. Day la cau tra loi cho khach nao lay
+    giay but ra tinh: ho se thay con so nho nhat trang hua dung bang con so ho tinh.
+
+    Thang nao tinh chat do gay -> DUNG, khong giao trang. Luc do hang SAVE se hua
+    o CAN DUOI nhieu hon cai trang tu noi, va do la noi qua, khong phai an tuong.
+
+    LAM TRON: dung floor(m/30 + 0.5), KHONG dung round(). round() cua Python la
+    banker's rounding -- round(2.5) ra 2 chu khong phai 3 -- nen 75 phut se tut
+    xuong 1.0 thay vi len 1.5. Da suyt dinh.
+
+    HAI CAN TRON VE CUNG MOT GIA TRI: noi rong XUONG (can duoi = can tren - 0.5),
+    khong bao gio noi len. Noi len la dua can tren vuot qua ca so lon nhat trong
+    bang -- bia ra mot con so khong co trong du lieu. Noi xuong chi lam loi hua
+    khiem ton hon.
     """
     base, cap = ft_floor_cap(ft)
-    lo, hi = busy["range"][0] - cap, busy["range"][1] - cap
-    if lo < 15:
+    lo_min, hi_min = busy["range"]                 # NGUYEN, khong tru Fast Track
+    half = lambda m: math.floor(m / 30.0 + 0.5) / 2.0
+    fmt  = lambda v: (f"{v:.0f}" if v == int(v) else f"{v:.1f}")
+
+    lo, hi = half(lo_min), half(hi_min)
+
+    # CONG CHAN 1 -- toi thieu 1 gio, va phai la KET QUA lam tron chu khong phai san
+    # ep vao. Kiem CA HAI can: ban dau chi kiem `hi` nen dai 40-50 phut lot qua va in
+    # ra "0.5-1 hours" -- vua duoi nguong chu site dat, vua la mot khoang nua tieng
+    # doc nhu khong co gi de ban. Lam tron ve bac gan nhat chi ra >= 1.0 khi so that
+    # >= 45 phut; thang nao tut duoi do ma van in "1 hour" la trang noi qua > 25%.
+    if hi < 1.0:
         raise SystemExit(
-            f"MUC TIET KIEM VO LY: {lo}-{hi} phut. Can duoi phai >= 15 phut. "
-            "Khung ban da tut xuong gan tran Fast Track -- xem lai mo hinh, "
-            "dung dang the hero voi con so nay.")
-    half = lambda m: round(m / 30.0) / 2.0        # bac nua tieng, lam tron GAN NHAT
-    h_lo, h_hi = half(lo), half(hi)
-    fmt = lambda v: (f"{v:.0f}" if v == int(v) else f"{v:.1f}")
-    if h_lo < 1.0:
-        # Can duoi tut xuong duoi 1 gio. Ep no thanh "1 hour" la noi qua (CXR thang
-        # 10/2026: can duoi that 35 phut -> "1 hour" la noi qua 71%), nen KHONG ep.
-        # Chu site chot 06/10/2026: chuyen sang dang TRAN -- "Up to ~{tran} hour".
-        # Dang nay chi hua CAN TREN nen khong the noi qua o can duoi, van giu duoc don
-        # vi gio va nguong toi thieu 1 gio. Danh doi: the doi tu mot DAI sang mot TRAN.
-        if h_hi < 1.0:
+            f"KHONG IN DUOC THEO GIO: dai hang thuong {lo_min}-{hi_min} phut, ca hai can "
+            f"deu tron ve duoi 1 gio. Hang SAVE khong the vua la khoang vua >= 1 gio. "
+            "Dung lai -- hoi chu site: chuyen the hero ve phut thang nay, hay xem lai mo hinh?")
+    if lo < 1.0:
+        raise SystemExit(
+            f"CAN DUOI DUOI NGUONG: dai hang thuong {lo_min}-{hi_min} phut -> can duoi tron "
+            f"ve {fmt(lo)} gio, duoi nguong 1 gio chu site dat. Ep len 1.0 la noi qua "
+            f"({lo_min} phut that su khong phai 1 gio). Dung lai, hoi chu site.")
+
+    # CONG CHAN 2 -- can duoi phai TRUNG voi phep tru khach tu lam (xem docstring).
+    arith = half(lo_min - cap)
+    if lo != arith:
+        raise SystemExit(
+            f"CAN DUOI KHONG KIEM CHUNG DUOC: hang SAVE se in can duoi {fmt(lo)} gio, nhung "
+            f"khach tu tru theo dong 1 va dong 2 ({lo_min} - {cap} = {lo_min - cap} phut) ra "
+            f"{fmt(arith)} gio. Chenh nhau la trang hua nhieu hon chinh no noi. Dung lai.")
+
+    # PHAI LA MOT KHOANG. Tron ve cung mot gia tri -> noi rong XUONG, khong bao gio len.
+    if lo == hi:
+        lo = hi - 0.5
+        if lo < 1.0:
             raise SystemExit(
-                f"KHONG IN DUOC THEO GIO: tiet kiem that la {lo}-{hi} phut, ca hai can "
-                f"deu tron ve duoi 1 gio ({h_lo} va {h_hi}). Den dang 'Up to' cung khong "
-                "cuu duoc. Dung lai -- hoi chu site: chuyen the hero ve phut thang nay, "
-                "hay xem lai mo hinh?")
-        return f"Up to ~{fmt(h_hi)} hour" + ("" if h_hi == 1.0 else "s")
-    if h_lo == h_hi:
-        # Mot gia tri thi phai co dau xap xi: "1 hour" tran doc nhu con so DO duoc,
-        # trong khi no la hai can khac nhau (vi du 51 va 64 phut) cung tron ve 1.0.
-        # Dung dau "~" cho khop cot Fast Track trong bang ("~10 min").
-        return f"~{fmt(h_lo)} hour" + ("" if h_lo == 1.0 else "s")
-    return f"{fmt(h_lo)}&ndash;{fmt(h_hi)} hours"
+                f"KHONG DUNG DUOC KHOANG: ca hai can deu tron ve {fmt(hi)} gio, noi rong "
+                f"xuong se ra {fmt(hi - 0.5)} gio -- duoi nguong 1 gio chu site dat. "
+                "Dung lai, hoi chu site truoc khi giao.")
+
+    return f"{fmt(lo)}&ndash;{fmt(hi)} hours"
 
 
 def render_hero(d, updated):
