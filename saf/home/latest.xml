@@ -4,8 +4,8 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[773f65276c86e05d38a8a082c42f706f8cbcbb495e15012cd555ad1eb57886f1]]></content_sha256>
-  <post_content><![CDATA[[ux_html label="Nav Bar"]
+  <content_sha256><![CDATA[bf13edd97dc25dbc13e2c88a0995bf63291fc480adf711e65b0f062d084784e0]]></content_sha256>
+  <post_content><![CDATA[<!-- wp:html -->[ux_html label="Nav Bar"]
 
 <!-- ============================================================
      HOMEPAGE SAF · element "Nav Bar" — BẢN ĐÃ SỬA
@@ -436,7 +436,8 @@
       box-sizing: border-box;
     ">
 
-            <div style="
+      <!--dat:zone:wait-hero-->
+      <div style="
         display: flex;
         align-items: center;
         gap: 9px;
@@ -446,37 +447,34 @@
         letter-spacing: 0.12em;
         text-transform: uppercase;
         color: #0B1F3A;
-        border-bottom: 1px solid #E8E4DE;
-        padding-bottom: 14px;
+        padding-bottom: 10px;
       ">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5c-1.5-1.5-3.5-1.5-5 0L11 6 2.8 4.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 1 1 1-1v2l1 1 1-1v-1l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.3-.3.5-.7.4-1.2z"/></svg>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
         Why Choose SGN Fast Track?
       </div>
 
-<!--dat:zone:wait-hero-->
-
       <div style="display: flex; flex-direction: column; gap: 0;">
 
-        <div class="sgn-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">~1.5 hours</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Peak immigration queue: 97&ndash;113&nbsp;min<br>With Fast Track: under&nbsp;20&nbsp;min<br><span style="font-size:0.72rem;">Estimate &middot; Updated 5 Oct 2026</span></span>
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">111&ndash;133 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:2px;">Estimated peak standard immigration queue &middot; Updated 5 Oct 2026</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
-        <div class="sgn-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Under 20 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+        </div>
+
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">[saf_price service="fast_track_arrival"]</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
-        </div>
-
-        <div style="height:1px; background:#E8E4DE;"></div>
-
-        <div class="sgn-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>
         </div>
 
       </div>
@@ -630,36 +628,6 @@
     justify-content: center !important;
   }
 }
-
-/* Thu hoi khoang trang hai ben the hero tren man hep (chot 06/10/2026).
-   Cot nhan 50px + gap 12px an mat 62px be ngang -- tren iPhone SE dung chung do
-   la dong dau cua dong phu hang SAVE vo hai dong. Hai nac:
-     <=420px  thu cot nhan con 40px, gap 8px   -> giu bo cuc hai cot, the THAP hon
-     <=345px  gop mot cot, nhan len tren       -> cuu not lop may 320px
-   Khoi nay nam NGOAI vung dat:zone -- quy trinh hang thang khong cham vao.
-   Mat no la "loi am": chu khong doi, chi vo dong tren dien thoai. patch_static.py kiem.
-   O SAF dong dau la dong DAI NHAT trong nam site (dai ba chu so o ca hai can,
-   vi du 97-113) nen hai nac nay can thiet hon o day, dung bo bot. */
-@media (max-width: 420px) {
-  .sgn-hero-row {
-    grid-template-columns: 40px 1fr !important;
-    column-gap: 8px !important;
-  }
-}
-@media (max-width: 345px) {
-  .sgn-hero-row {
-    grid-template-columns: 1fr !important;
-  }
-  .sgn-hero-row > span {
-    grid-column: 1 !important;
-  }
-  .sgn-hero-row > span:nth-child(1) {
-    grid-row: 1 !important;
-    align-self: start !important;
-  }
-  .sgn-hero-row > span:nth-child(2) { grid-row: 2 !important; }
-  .sgn-hero-row > span:nth-child(3) { grid-row: 3 !important; }
-}
 </style>
 [/ux_html]
 [ux_html label="Wait Times"]
@@ -721,7 +689,7 @@
       <span class="sgn-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 5 October 2026</span>
       <h2 id="sgn-h2-wait">How Long Is the Immigration Queue at Tan Son Nhat Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="sgn-wt-lead">In October 2026, based on flight schedules and official airport data from 2024&ndash;2026, passengers landing during the busiest hours at Tan Son Nhat International Airport (SGN) could spend <strong>97&ndash;113 minutes</strong> completing immigration procedures. With Fast Track, this time is under 20 minutes at any hour.</p>
+      <p class="sgn-wt-lead">In October 2026, based on flight schedules and official airport data from 2024&ndash;2026, passengers landing during the busiest hours at Tan Son Nhat International Airport (SGN) could spend <strong>111&ndash;133 minutes</strong> completing immigration procedures. With Fast Track, this time is under 20 minutes at any hour.</p>
     </div>
 
     <div class="sgn-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Tan Son Nhat Airport by arrival time, October 2026">
@@ -731,41 +699,41 @@
         <div role="columnheader">With Fast Track</div>
       </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
-          <div class="sgn-wt-band" role="rowheader"><strong>00:00&ndash;06:00</strong><span class="sgn-wt-flights">22 international arrivals &middot; Lighter</span></div>
+          <div class="sgn-wt-band" role="rowheader"><strong>00:00&ndash;06:00</strong><span class="sgn-wt-flights">22 international arrivals &middot; Moderate</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#8B6914 !important;">52&ndash;55 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:49% !important; background:#8B6914 !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#A8541A !important;">52&ndash;71 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:53% !important; background:#A8541A !important;"></span></span>
           </div>
-          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
+          <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~15 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="sgn-wt-flights">18 international arrivals &middot; Lighter</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#8B6914 !important;">51&ndash;55 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:49% !important; background:#8B6914 !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#8B6914 !important;">51&ndash;57 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:43% !important; background:#8B6914 !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="sgn-wt-flights">19 international arrivals &middot; Lighter</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#8B6914 !important;">56&ndash;58 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:51% !important; background:#8B6914 !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#8B6914 !important;">57&ndash;60 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:45% !important; background:#8B6914 !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-light" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="sgn-wt-flights">27 international arrivals &middot; Moderate</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#A8541A !important;">70&ndash;77 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:68% !important; background:#A8541A !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#A8541A !important;">76&ndash;84 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:63% !important; background:#A8541A !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">~15 min</div>
         </div>
         <div class="sgn-wt-row sgn-wt-busy" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="sgn-wt-flights">30 international arrivals &middot; Busy</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#C9281C !important;">93&ndash;113 min</span>
+            <span class="sgn-wt-num" style="color:#C9281C !important;">111&ndash;133 min</span>
             <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:100% !important; background:#C9281C !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
@@ -773,8 +741,8 @@
         <div class="sgn-wt-row sgn-wt-busy" role="row">
           <div class="sgn-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="sgn-wt-flights">29 international arrivals &middot; Busy</span></div>
           <div class="sgn-wt-queue" role="cell" data-label="Standard queue">
-            <span class="sgn-wt-num" style="color:#C9281C !important;">78&ndash;97 min</span>
-            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:86% !important; background:#C9281C !important;"></span></span>
+            <span class="sgn-wt-num" style="color:#C9281C !important;">95&ndash;133 min</span>
+            <span class="sgn-wt-track" aria-hidden="true"><span class="sgn-wt-fill" style="width:100% !important; background:#C9281C !important;"></span></span>
           </div>
           <div class="sgn-wt-cell sgn-wt-ft" role="cell" data-label="With Fast Track">15&ndash;20 min</div>
         </div>
@@ -783,7 +751,7 @@
     <div class="sgn-wt-cards">
       <div class="sgn-wt-card sgn-wt-card-gold">
         <h3>When Fast Track matters most</h3>
-        <p>Flights landing 16:00&ndash;24:00, when arrivals from Bangkok, Singapore, Taipei and Hong Kong land minutes apart. Land 00:00&ndash;13:00 &mdash; the line is shorter, though rarely short.</p>
+        <p>Flights landing 16:00&ndash;24:00, when arrivals from Bangkok, Singapore, Taipei and Hong Kong land minutes apart. Land 06:00&ndash;13:00 &mdash; the line is shorter, though rarely short.</p>
       </div>
       <div class="sgn-wt-card">
         <h3>October 2026 notes</h3>
@@ -1796,7 +1764,7 @@
           ">
             <!-- ⚠️ Thay PHOTO_01–12 bằng URL ảnh thật từ WordPress Media Library (ảnh khách tại SGN) -->
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="https://hochiminhairportfasttrack.com/wp-content/uploads/2026/06/hochiminh-airport-fast-track-customers-2.jpg" alt="Fast Track guests at Tan Son Nhat Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
-            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="https://hochiminhairportfasttrack.com/wp-content/uploads/2026/06/hochiminh-airport-fast-track-customers-12.jpg" alt="VIP arrival Ho Chi Minh Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="https://hochiminhairportfasttrack.com/wp-content/uploads/2026/10/SGN-ho-chi-minh-airport-fast-track-service-customer-4.jpg" alt="VIP arrival Ho Chi Minh Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="https://hochiminhairportfasttrack.com/wp-content/uploads/2026/06/hochiminh-airport-fast-track-customers-3.jpg" alt="Priority immigration lane SGN T2" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="https://hochiminhairportfasttrack.com/wp-content/uploads/2026/06/hochiminh-airport-fast-track-customers-10.jpg" alt="Happy travelers Fast Track Saigon" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="https://hochiminhairportfasttrack.com/wp-content/uploads/2026/06/hochiminh-airport-fast-track-customers-11.jpg" alt="Fast Track staff with guests SGN" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
@@ -2200,7 +2168,7 @@
           </button>
           <div class="sgn-faq-body" id="sgn-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, based on flight schedules and official airport data from 2024&ndash;2026, passengers landing during the busiest hours at Tan Son Nhat Airport could spend <strong style="color:#0B1F3A; font-weight:600;">97&ndash;113 minutes</strong> completing immigration procedures, and 51&ndash;58 minutes at quieter hours.</p>
+            <p>In October 2026, based on flight schedules and official airport data from 2024&ndash;2026, passengers landing during the busiest hours at Tan Son Nhat Airport could spend <strong style="color:#0B1F3A; font-weight:600;">111&ndash;133 minutes</strong> completing immigration procedures, and 51&ndash;60 minutes at quieter hours.</p>
             <p style="margin-top:10px !important;">With Fast Track, this time is under 20 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 5 October 2026).</p>
             </div>
           </div>
@@ -2735,7 +2703,6 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function () { if (current) { closePicker(); } });
 })();
 </script>
-[/ux_html]
-]]></post_content>
+[/ux_html]<!-- /wp:html -->]]></post_content>
  </item>
 </data>

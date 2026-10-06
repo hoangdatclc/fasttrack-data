@@ -29,55 +29,63 @@ need(r"#C1272D", 0, "ma do cu con sot")
 if "#C9281C" not in s:
     err.append("khong thay ma do #C9281C (mau khung bac Busy, lay tu hero)")
 
-# Tieu de the hero la phan TINH, phai nam NGOAI vung wait-hero. Lot vao trong thi thang
-# sau update_zones.py xoa mat ma khong ai bao.
+# ===================================================================================
+# THE HERO CUA SAF — CAU TRUC RIENG, KHONG GIONG BON SITE KIA
+# ===================================================================================
+# Chu site chot 06/10/2026: SGN la site manh nhat ve SEO/AEO nen GIU cau truc goc
+# (ba hang Queue / Fast Track / From), KHONG doi sang form Save / From / 24-7.
+# Moi phep kiem duoi day la cua rieng SAF. DUNG chep tu patch_static cua site khac sang.
+
+# 1. TIEU DE NAM TRONG VUNG — nguoc voi bon site kia.
+#    O PQC/DAD/CXR/HAN tieu de la phan TINH ngoai vung, va cong ben do bat loi neu no
+#    lot VAO trong. O SAF toan bo ruot the nam trong wait-hero, nen tieu de PHAI o TRONG.
+#    Dao chieu phep kiem, khong xoa: de trong thi thang sau render_hero mat tieu de ma
+#    khong ai bao.
 TITLE = "Why Choose SGN Fast Track?"
 z = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->", s, re.S)
 if not z:
     err.append("khong tim thay vung wait-hero")
-elif TITLE in z.group(1):
-    err.append(f"tieu de {TITLE!r} lot VAO TRONG vung wait-hero -- thang sau se bi xoa")
+elif TITLE not in z.group(1):
+    err.append(f"tieu de {TITLE!r} KHONG nam trong vung wait-hero -- o SAF no phai o TRONG")
 elif s.count(TITLE) != 1:
     err.append(f"tieu de {TITLE!r} xuat hien {s.count(TITLE)} lan, can 1")
+need(r"SGN Immigration &mdash; \w+ \d{4}", 0, "tieu de cu mang ten thang da bo (06/10/2026)")
 
-# Dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong --
-# xem ghi chu trong render_hero. Hai chu "estimated" va "reach" khong duoc mat:
-#   estimated -> day la uoc tinh, khong phai so do duoc
-#   reach     -> dai nay la luc CAO DIEM, khong phai hang chuan ca ngay
-need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
-     "dong 1 hang SAVE (hang thuong)")
-need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
-     "dong 2 hang SAVE (Fast Track)")
-need(r"Peak immigration queue: ", 1, "chu 'immigration'")
-# SGN CO Y KHONG co cong chan "hang SAVE phai la mot KHOANG" ma PQC/DAD/CXR/HAN co tu
-# 06/10/2026. Chu site giu SAF lai de ra LUAT RIENG cho site nay. Dung chep cong do tu
-# bon site kia sang -- lam vay la ep SAF vao luat chua duoc duyet cho no. SAF hien in
-# mot gia tri don ("~1.5 hours") va do la DUNG voi trang thai hien tai.
-need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
-# O SAF tran Fast Track la 20, khong phai 15. Gan cung 15 (theo bon site kia) se lam
-# dong 2 hua chac hon dong 1 tru di -- the hero tu mau thuan. Kiem thang con so.
-need(r"With Fast Track: under&nbsp;20&nbsp;min", 1, "tran Fast Track cua SAF la 20")
-# Ban cu cua dong phu: mot cau day du, vo thanh 4 dong tren dien thoai. Da bo 06/10/2026.
-need(r"queue is estimated to reach", 0, "dong phu kieu cau day du da bo")
-# Link "Hour by hour" da bo 06/10/2026 -- chan viec tu dong them lai.
-need(r"Hour by hour", 0, "link 'Hour by hour' da bo khoi the hero")
-# LUAT 3 -- chuoi chu site cam, o MOI site. Truoc 06/10/2026 SAF con mot nhanh
-# dieu kien co the in ra no khi khung vang xuong duoi 35 phut; nhanh do da bo.
-need(r"you may not need us", 0, "chuoi bi cam (luat 3)")
+# 2. BA HANG, dung thu tu Queue -> Fast Track -> From.
+need(r">Queue</span>", 1, "hang QUEUE")
+need(r">Fast Track</span>", 1, "hang FAST TRACK")
+need(r">From</span>", 1, "hang FROM")
+need(r">Save</span>", 0, "hang SAVE la cua form bon site kia, SAF khong dung")
 
-# LUAT 8 -- ba cum chu da bo hang khoi the hero, cong chan de khong ai them lai.
-# Truoc 05/10/2026 KHONG cong nao kiem ba cum nay nen chung troi im lang mot vong.
-# Dung cum DAY DU "Through immigration with our service": grep "Through immigration"
-# tran se bat nham review khach ("Through immigration in no time") o DAF/CAF/SAF.
+# 3. DONG PHU HANG QUEUE gop ca cau `basis` lan ngay (chot 06/10/2026).
+#    Truoc do ba cho noi ve do tin cay nam tan mat: mot doan `basis` rieng o dau the,
+#    dong phu "Last passengers off a flight...", va "Updated {ngay} - Hour by hour" o day.
+#    Gio gop lam MOT, dat ngay duoi con so ma no mo ta.
+need(r"Estimated peak standard immigration queue &middot; Updated ", 1,
+     "dong phu hang QUEUE (gop basis + ngay)")
+need(r"Estimated from the .* arrival schedule", 0, "doan basis rieng o dau the da bo")
+need(r"Last passengers off a flight landing in the busiest hours", 0,
+     "dong phu cu cua hang QUEUE da bo")
+need(r"Hour by hour", 0, "dong 'Updated ... Hour by hour' o day the da bo")
+
+# 4. HANG FAST TRACK giu dang nhan "Under 20 min" — SAF la cho DUY NHAT con dung dang nay.
+need(r">Under 20 min<", 1, "gia tri hang FAST TRACK")
+# LUAT 8 cam cum "Through immigration with our service" o BON site kia, noi no la dong phu
+# cua mot hang da bi bo. O SAF hang FAST TRACK VAN CON nen cum nay VAN DUNG CHO.
+# Chu site chot 06/10/2026: giu. Dao chieu phep kiem tu `=0` thanh `=1`.
+need(r"Through immigration with our service", 1, "dong phu hang FAST TRACK (SAF giu, luat 8 khong ap)")
+
+# 5. Cac thu cua form bon site kia KHONG duoc xuat hien o SAF.
+need(r"Peak immigration queue: ", 0, "dong phu form Save/From/24-7 — SAF khong dung")
+need(r"class=\"sgn-hero-row\"", 0, "class cua form bon site kia — SAF khong dung")
+need(r"grid-template-columns: 40px 1fr !important", 0,
+     "CSS thu cot cua form bon site kia — SAF giu bo cuc goc")
+
+# LUAT 8 — hai cum con lai VAN cam o SAF (chung thuoc hang QUEUE cu, da bo that).
 need(r"touchdown", 0, "cum '- from touchdown to leaving immigration' da bo")
 need(r"every flight, every hour", 0, "cum '- every flight, every hour' da bo")
-need(r"Through immigration with our service", 0, "dong phu hang FAST TRACK cu da bo")
-
-# CSS thu hoi khoang trang the hero tren man hep -- nam NGOAI vung zone nen mat no
-# la "loi am": chu khong doi, chi vo dong tren dien thoai. Kiem ca hai nac.
-need(r"grid-template-columns: 40px 1fr !important", 1, "nac <=420px: thu cot nhan the hero")
-need(r"\.sgn-hero-row > span:nth-child\(3\)", 1, "nac <=345px: gop mot cot")
-need(r'class="sgn-hero-row"', 3, "ba hang the hero phai co class")
+# LUAT 3 — chuoi chu site cam, o MOI site.
+need(r"you may not need us", 0, "chuoi bi cam (luat 3)")
 
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:

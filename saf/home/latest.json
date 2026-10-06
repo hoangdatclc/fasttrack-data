@@ -4,7 +4,7 @@
   "page_id": 15,
   "host": "x",
   "edit_url": "https://x/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "773f65276c86e05d38a8a082c42f706f8cbcbb495e15012cd555ad1eb57886f1",
-  "content_bytes": 212677,
+  "content_sha256": "bf13edd97dc25dbc13e2c88a0995bf63291fc480adf711e65b0f062d084784e0",
+  "content_bytes": 211184,
   "generated": "2026-10-06"
 }

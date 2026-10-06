@@ -38,6 +38,45 @@ co luong khach noi chuyen quoc te->noi dia lon (phai kiem them chang tiep). CXR 
 lai gan nhu thuan charter Nga/Han lap lai, ho so giong nhau, quet rat nhanh.
 
 ======================================================================
+(C) SURGE = 4 (ha tu 6) -- HIEU CHUAN LAI 06/10/2026 THEO THUC TE VAN HANH
+======================================================================
+Chu site bao: cao diem o T2 thuc te cho LAU HON HAN mo hinh -- thuong hon 2 tieng,
+co luc 2,5 tieng. Mo hinh khi do cong bo dinh 113 phut (1,88 gio).
+
+VI SAO LA SURGE CHU KHONG PHAI PROC_SEC -- da quet ca hai, co so do:
+
+  | don bay          | dinh cong bo | hinh dang bang                          |
+  |------------------|--------------|------------------------------------------|
+  | SURGE 6 (cu)     | 113 (1,88h)  | du ba bac, khung dem 52-55 quick         |
+  | SURGE 5          | 123 (2,05h)  | du ba bac, khung dem 52-55 quick         |
+  | SURGE 4 (chon)   | 133 (2,22h)  | du ba bac, khung dem 52-71 moderate      |
+  | SURGE 3          | 155 (2,58h)  | du ba bac, khung dem 52-95 busy          |
+  | PROC_SEC 110->120| 152 (2,53h)  | VO: mat bac Moderate, khung dem thanh    |
+  |                  |              | busy 55-90 -- ca NGAY deu tac            |
+
+PROC_SEC lam cham DEU ca ngay. Chu site bao van de o CAO DIEM, khong phai ca ngay --
+khung vang 06:00-10:00 khong ai keu. Nang PROC_SEC se day luon khung dem thanh "busy",
+tra ve mot bang chi con hai bac: sai voi cai duoc mo ta.
+
+SURGE thi can DUNG CHO: no chi tac dong khi hang da dai, tuc chi o cao diem.
+
+VI SAO HA SURGE LA CO CAN CU, KHONG PHAI "chinh cho vua so":
+muc (B)(3) dat SURGE = 6 bang cach tinh "can bao nhieu quay de GIAI TOA kip dinh
+chieu-toi". Tuc no gia dinh cong an cua khau MO DU so quay can thiet. Quan sat cua chu
+site noi chinh xac dieu nguoc lai: hang KHONG duoc giai toa kip, no dai toi 2+ gio.
+Vay gia dinh "mo du" la cai sai, va SURGE la cho dung de sua. Day cung la gia thuyet
+thu hai chu site tu neu ("so quay it hon so voi uoc tinh").
+
+VI SAO CHON 4 CHU KHONG PHAI 3: so trang cong bo la phan vi 0,75 cua luoi -- truong hop
+xau, khong phai xau nhat. SURGE 4 cho cong bo 133 phut (= "hon 2 tieng", dung mo ta
+thuong gap) va duoi luoi cham ~150 (= "co luc 2,5 tieng", dung mo ta ca biet).
+SURGE 3 cong bo thang 155 = 2,58h -- lay truong hop CA BIET lam so thuong gap, noi qua.
+
+CONG CHAN VAT LY DA KIEM: voi SURGE 4, hang VAN giai toa het trong ngay (ton cuoi ngay
+= 0 khach). Neu khong, mo hinh se mau thuan voi viec T2 tren thuc te van thong
+~50.000 luot/ngay -- luc do con so dinh "dep" cung la con so sai.
+
+======================================================================
 (B) BASE_DAY = 28 -- SUY TU CHINH DU LIEU CUA SGN, bon rang buoc doc lap
 ======================================================================
 (0) TRAN VAT LY -- so quay LAP DAT, nguon cong khai:
@@ -85,7 +124,7 @@ LOAD, FOREIGN = 0.85, 0.70
 MONTH_UPLIFT = 1.00   # thang 10 = moc. Xem BANG HE SO MUA cuoi file -- SGN rat phang.
 WALK = (10, 28)        # T2 115.834 m2, 19 cua ra -- nha ga lon nhat trong bon site
 PROC_SEC = 110         # xem muc (A) dau file
-BASE_DAY, BASE_NIGHT, SURGE = 28, 22, 6
+BASE_DAY, BASE_NIGHT, SURGE = 28, 22, 4   # SURGE ha 6 -> 4 ngay 06/10/2026, xem (C)
 SURGE_PAX = 1800       # khach vua ha trong 45 phut gan nhat -> mo them lan. ~8 chuyen SGN.
 SURGE_AT = 300         # chot chan: hang da dai the nay thi mo them du lich bay khong bao truoc
 # Fast Track bam theo BAC, ba muc -- khac ca PAF/DAF/CAF (hai muc) lan ban SAF dau tien
@@ -112,12 +151,17 @@ BAND_Q = (0.50, 0.75)
 # van 52-58 phut. Dat nguong thap thi moi khung deu "Busy", bang mat het tac dung phan loai.
 TIER_MOD, TIER_BUSY = 65, 90
 
-OBSERVED_PEAK = (60, 120)
-# NGUON: chinh trang saf dang cong bo "60-120 minutes at peak". Chu site viet tu thuc te
-# van hanh. Mo hinh da duoc HIEU CHUAN THEO TRANG (quyet dinh cua chu site 03/10/2026):
-# PROC_SEC 110 + BASE_DAY 28 cho dinh 80 phut (sau khi tru TAXI va WALK), nam giua dai.
+OBSERVED_PEAK = (85, 120)
+# CAP NHAT 06/10/2026 -- xem muc (C) dau file. Day la THOI GIAN XEP HANG THUAN,
+# KHONG phai so trang cong bo. Quy doi:  cong bo = hang cho + WALK[1] 28 + TAXI 5.
+#   chu site quan sat (so cong bo): thuong > 120 phut, co luc 150 phut
+#   -> hang cho thuan:               thuong >  87 phut, co luc 117 phut
+#   -> OBSERVED_PEAK = (85, 120)
+# DUNG LAN LON HAI THUOC DO NAY. Ban truoc ghi (60, 120) va chu thich "trang dang cong bo
+# 60-120 at peak" -- tron so CONG BO vao mot hang danh cho hang cho THUAN, nen dai that
+# rong gap doi y dinh va cong hieu chuan gan nhu khong bao gio keu.
 # Neu sau nay chu site do lai va ra dai khac, sua OBSERVED_PEAK truoc roi chinh
-# PROC_SEC/BASE_DAY cho khop.
+# SURGE / PROC_SEC / BASE_DAY cho khop -- va chi chinh MOT don bay moi lan.
 #
 # !!! DIEM NHAY CAM NHAT CUA MO HINH NAY !!!
 # O he so su dung 86%, 10 giay PROC_SEC doi dinh toi 28 phut (110s -> 88 phut, 120s -> 116).

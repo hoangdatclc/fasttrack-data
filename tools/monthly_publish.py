@@ -126,10 +126,16 @@ PROFILE = {
         #     (xem luat 1b trong skill me). SAF chuyen sang ban nay 06/10/2026;
         #     ban cu ("...is estimated to reach...") vo 4 dong tren dien thoai.
         "hero_title": 'Why Choose SGN Fast Track?',
+        # SAF la site DUY NHAT co tieu de nam TRONG vung (cau truc hero goc, giu 06/10/2026)
+        "hero_title_in_zone": True,
         "musts": [
-                  'Peak immigration queue: ',
-                  'With Fast Track: under&nbsp;20&nbsp;min',
-                  'Estimate &middot; Updated ','add-to-cart=311', 'add-to-cart=313',
+                  # SAF GIU CAU TRUC HERO GOC (Queue / Fast Track / From) -- chu site
+                  # chot 06/10/2026, KHONG doi sang form Save/From/24-7 cua bon site kia:
+                  # SGN manh nhat ve SEO/AEO, doi form la nhan rui ro thu hang khong can.
+                  '>Queue</span>', '>Fast Track</span>', '>From</span>', '>Under 20 min<',
+                  'Why Choose SGN Fast Track?',
+                  'Estimated peak standard immigration queue &middot; Updated ',
+                  'add-to-cart=311', 'add-to-cart=313',
                   '[saf_price service="fast_track_arrival"]',
                   '[saf_price service="fast_track_departure"]',
                   '[saf_price service="connection"]',
@@ -150,11 +156,9 @@ PROFILE = {
                   # CSS tinh thu cot nhan the hero tren man hep (luat 1d). Nam NGOAI
                   # vung zone -> mat no la loi am, chu khong doi, chi vo dong tren
                   # dien thoai. SAF can hai nac nay hon ca: dai 97-113 la ba chu so.
-                  'grid-template-columns: 40px 1fr !important',
-                  '.sgn-hero-row > span:nth-child(3)'],
+                  ],
         "counts": {r'<img ': 15, r'schema\.org/Question': 12,
-                   r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3,
-                   r'class="sgn-hero-row"': 3},
+                   r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3},
     },
     "HAF": {
         # BON cho HAF khac bon site kia -- doi mot trong bon la trang hong:
@@ -299,8 +303,13 @@ def main():
     if qc.main(a.page, prof["labels"], prof["musts"], prof["counts"], prof["zones"]):
         sys.exit("QC FAIL -> dung lai, khong dung XML")
 
-    # Tieu de the hero la phan TINH. Neu no lot VAO TRONG vung wait-hero thi thang sau
-    # update_zones.py se xoa mat ma khong ai bao -- dung loai loi am da dinh nhieu lan.
+    # TIEU DE THE HERO -- vi tri KHAC NHAU giua cac site, phai kiem theo tung site.
+    #   PQC/DAD/CXR/HAN: tieu de la phan TINH, nam NGOAI vung. Lot VAO trong thi thang sau
+    #                    update_zones.py xoa mat ma khong ai bao -- loi am da dinh nhieu lan.
+    #   SGN:             toan bo ruot the (tieu de -> ba hang) nam TRONG vung. Chu site chot
+    #                    06/10/2026 giu cau truc goc cua SAF, nen o day tieu de PHAI o TRONG.
+    #                    Keo no ra ngoai la doi cau truc -- dung cai chu site tu choi.
+    # PROFILE[site]["hero_title_in_zone"] quyet dinh chieu kiem. Mac dinh False (ngoai vung).
     ht = prof.get("hero_title")
     if ht:
         zm = re.search(r"<!--dat:zone:wait-hero-->(.*?)<!--/dat:zone:wait-hero-->",
@@ -309,10 +318,15 @@ def main():
             sys.exit("khong tim thay vung wait-hero")
         if content.count(ht) != 1:
             sys.exit(f"tieu de the hero {ht!r} xuat hien {content.count(ht)} lan, can 1")
-        if ht in zm.group(1):
+        trong_vung = ht in zm.group(1)
+        phai_trong = prof.get("hero_title_in_zone", False)
+        if trong_vung and not phai_trong:
             sys.exit(f"tieu de the hero {ht!r} lot VAO TRONG vung wait-hero -- "
                      "thang sau update_zones.py se xoa mat no")
-        print(f"  tieu de hero tinh: OK ({ht})")
+        if phai_trong and not trong_vung:
+            sys.exit(f"tieu de the hero {ht!r} NAM NGOAI vung wait-hero -- o site nay no "
+                     "phai o TRONG (render_hero sinh ra no). Xem ghi chu ngay tren.")
+        print(f"  tieu de hero: OK ({ht}) -- {'trong vung' if trong_vung else 'ngoai vung'}")
 
     sha = hashlib.sha256(content.encode("utf-8")).hexdigest()
     xml = build_xml(content, page_id, a.month, sha)

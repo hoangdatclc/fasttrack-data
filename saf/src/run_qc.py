@@ -14,13 +14,15 @@ MUSTS = ['add-to-cart=311', 'add-to-cart=313',
          'https://schema.org/FAQPage',
          # SAF cong bo "under 20 minutes" -- khac quy uoc ~10 / 10-15 cua ba site kia.
          # Neu renderer bi be ve quy uoc kia thi chuoi nay bien mat va QC bat duoc.
-         # 'in under&nbsp;20&nbsp;minutes.' DA BO 06/10/2026: do la ban cu cua dong phu
-         # hang SAVE ("Fast Track gets you through in under 20 minutes."), nay la
-         # "With Fast Track: under 20 min". Chuoi moi o ngay duoi.
          'under 20 minutes',
-         # Dong phu hang SAVE, ban chot 06/10/2026 -- giong bon site kia tru con so tran.
-         'With Fast Track: under&nbsp;20&nbsp;min',
-         'Peak immigration queue: ', 'Estimate &middot; Updated ']
+         # THE HERO CUA SAF GIU CAU TRUC GOC (Queue / Fast Track / From) — chu site chot
+         # 06/10/2026, KHONG doi sang form Save/From/24-7 cua bon site kia vi SGN manh
+         # nhat ve SEO/AEO. Ba chuoi duoi la xuong song cua cau truc do.
+         '>Queue</span>', '>Fast Track</span>', '>From</span>',
+         '>Under 20 min<',
+         # Dong phu hang QUEUE: gop ca cau `basis` lan ngay vao mot cho.
+         'Estimated peak standard immigration queue &middot; Updated ',
+         'Why Choose SGN Fast Track?']
 
 COUNTS = {
     r'<img': 15,
