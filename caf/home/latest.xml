@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[d8f52f4ee3d0a9e2ccd04964a58559c655c04c989455527da383a12a7581f73c]]></content_sha256>
+  <content_sha256><![CDATA[03daac6260efac69ad7278d9eace623d2c56eaffb0fc6d1d8f4ac06a93fca296]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -227,8 +227,8 @@
 
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">39&ndash;73 min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;54&ndash;83&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;15&nbsp;minutes.</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Up to ~1 hour</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;50&ndash;83&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;15&nbsp;minutes.</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -386,7 +386,7 @@
       <span class="caf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 5 October 2026</span>
       <h2 id="caf-h2-wait">How Long Is the Immigration Queue at Cam Ranh Airport in October 2026?</h2>
       <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="caf-wt-lead">In October 2026, based on flight schedules and the airport&rsquo;s published passenger numbers from 2024&ndash;2026, passengers landing during the busiest hours at Cam Ranh International Airport (CXR) could spend <strong>54&ndash;83 minutes</strong> completing immigration procedures. With Fast Track, this time is under 15 minutes at any hour.</p>
+      <p class="caf-wt-lead">In October 2026, based on flight schedules and the airport&rsquo;s published passenger numbers from 2024&ndash;2026, passengers landing during the busiest hours at Cam Ranh International Airport (CXR) could spend <strong>50&ndash;83 minutes</strong> completing immigration procedures. With Fast Track, this time is under 15 minutes at any hour.</p>
     </div>
 
     <div class="caf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Cam Ranh Airport by arrival time, October 2026">
@@ -1271,7 +1271,7 @@
           </button>
           <div class="caf-faq-body" id="caf-faq-a13" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>In October 2026, based on flight schedules and the airport&rsquo;s published passenger numbers from 2024&ndash;2026, passengers landing during the busiest hours at Cam Ranh Airport could spend <strong style="color:#0B1F3A; font-weight:600;">54&ndash;83 minutes</strong> completing immigration procedures, and 28&ndash;30 minutes at quieter hours.</p>
+            <p>In October 2026, based on flight schedules and the airport&rsquo;s published passenger numbers from 2024&ndash;2026, passengers landing during the busiest hours at Cam Ranh Airport could spend <strong style="color:#0B1F3A; font-weight:600;">50&ndash;83 minutes</strong> completing immigration procedures, and 28&ndash;30 minutes at quieter hours.</p>
             <p style="margin-top:10px !important;">With Fast Track, this time is under 15 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 5 October 2026).</p>
             </div>
           </div>

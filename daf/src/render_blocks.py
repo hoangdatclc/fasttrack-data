@@ -162,13 +162,20 @@ def saved(busy, ft):
             "dung dang the hero voi con so nay.")
     half = lambda m: round(m / 30.0) / 2.0        # bac nua tieng, lam tron GAN NHAT
     h_lo, h_hi = half(lo), half(hi)
-    if h_lo < 1.0:
-        raise SystemExit(
-            f"KHONG IN DUOC THEO GIO: tiet kiem that la {lo}-{hi} phut, lam tron ve "
-            f"bac nua tieng ra {h_lo} gio. Chu site muon toi thieu 1 gio, nhung ep "
-            f"{lo} phut thanh '1 hour' la noi qua {60 - lo} phut. Dung lai -- hoi chu "
-            "site: chuyen the hero ve phut thang nay, hay xem lai mo hinh?")
     fmt = lambda v: (f"{v:.0f}" if v == int(v) else f"{v:.1f}")
+    if h_lo < 1.0:
+        # Can duoi tut xuong duoi 1 gio. Ep no thanh "1 hour" la noi qua (CXR thang
+        # 10/2026: can duoi that 35 phut -> "1 hour" la noi qua 71%), nen KHONG ep.
+        # Chu site chot 06/10/2026: chuyen sang dang TRAN -- "Up to ~{tran} hour".
+        # Dang nay chi hua CAN TREN nen khong the noi qua o can duoi, van giu duoc don
+        # vi gio va nguong toi thieu 1 gio. Danh doi: the doi tu mot DAI sang mot TRAN.
+        if h_hi < 1.0:
+            raise SystemExit(
+                f"KHONG IN DUOC THEO GIO: tiet kiem that la {lo}-{hi} phut, ca hai can "
+                f"deu tron ve duoi 1 gio ({h_lo} va {h_hi}). Den dang 'Up to' cung khong "
+                "cuu duoc. Dung lai -- hoi chu site: chuyen the hero ve phut thang nay, "
+                "hay xem lai mo hinh?")
+        return f"Up to ~{fmt(h_hi)} hour" + ("" if h_hi == 1.0 else "s")
     if h_lo == h_hi:
         # Mot gia tri thi phai co dau xap xi: "1 hour" tran doc nhu con so DO duoc,
         # trong khi no la hai can khac nhau (vi du 51 va 64 phut) cung tron ve 1.0.
