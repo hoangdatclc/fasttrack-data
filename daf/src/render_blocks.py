@@ -203,29 +203,33 @@ def render_hero(d, updated):
          Fast Track gets you through in under {Y} minutes.
 
        Hai dong, ngat bang <br>, moi dong mot dau cua phep tru.
-       DAF DANG CHAY BAN THU (06/10/2026), KHAC PQC va CXR mot cho:
-           DAD -> "Peak immigration queue: ~68-79 min."
-           PQC, CXR -> "Estimated peak queue: 69-94 min."
-       Ly do thu: dem lai chu "immigration". Ca the hien KHONG co chu nay, ma hero cua
-       PQC thi ca cot trai LAN the deu khong co -- khach khong co cho nao biet 69-94 la
-       hang NAO (san bay co hang check-in, soi chieu, nhap canh, hanh ly, taxi). Ngay
-       duoi the lai la hai o Arrival/Departure, nen khach mua Departure rat de hieu
-       nham thanh hang check-in.
-       "Estimated immigration queue" vo hai dong o 360px -> phai bo chu "Estimated",
-       dau "~" ganh phan cong bo uoc tinh. Dau "~" dung lai quy uoc da co tren chinh
-       the nay ("~1 hour") va trong bang ("~10 min").
-       Chu "Estimate" o DONG 3 ganh toan bo phan cong bo uoc tinh. Dau "~" o dong 1
-       DA BO 06/10/2026: no thua khi dong 3 da noi "Estimate", va tren iPhone SE moi
-       ky tu deu dang gia. Cung bo dau cham cuoi dong 1 va dong 2 -- ba ky tu nay
-       khong mang nghia nao, chi an cho.
-       Dong 3 co font 0.72rem (nho hon hai dong tren) nen con nhieu cho hon.
-       LUU Y: "Estimate" dat o dau dong 3 thi no phu CA dong 2 -- ma "under 15 min"
-       la CAM KET dich vu, khong phai uoc tinh. Ban khoanh vung hep hon la
-       "Queue estimate - 5 October 2026" (do: vua mot dong o ca 390/375/360px),
-       doi lai mat chu "Updated".
-       DAY LA BAN THU tren MOT site. Doi chung: PQC va CXR giu nguyen.
+       LUU Y chua giai quyet: "Estimate" dat o dau dong 3 thi no phu CA dong 2 --
+       ma "under 15 min" la CAM KET dich vu, khong phai uoc tinh. Ban khoanh vung
+       hep hon la "Queue estimate - 5 October 2026" (da do: vua mot dong o ca
+       390/375/360px), doi lai mat chu "Updated". Chu site chua chot doi.
 
-       DO DAI LA RANG BUOC CUNG (chot 06/10/2026): moi dong phai vua MOT DONG o
+       CAU CHU CHOT 06/10/2026, GIONG NHAU O CA BA SITE (PQC, DAD, CXR):
+           Peak immigration queue: {dai} min
+           With Fast Track: under {tran} min
+           Estimate - Updated {ngay rut gon}
+
+       Bon chu bat buoc, mat chu nao cung la trang noi sai:
+       a. "immigration" -- san bay co nhieu hang cho (check-in, soi chieu, nhap canh,
+          hanh ly, taxi) va ngay duoi the la hai o Arrival/Departure, nen khach mua
+          Departure rat de hieu con so nay thanh hang check-in. Dem tren hero TRUOC
+          khi them chu nay: PQC 0 lan, DAD 1 lan, CXR 3 lan -- rieng PQC khong co cho
+          nao cho khach biet day la hang gi.
+       b. "Peak" -- con so la luc CAO DIEM, khong phai ca ngay. Bo di la trang tuyen
+          bo dai do dung o moi khung gio.
+       c. "under {tran}" -- MOT nguong duy nhat (luat 10). Dung doi thanh "10-15 min".
+       d. "Estimate" o dong 3 -- cong bo uoc tinh, danh cho khach luot. Dau "~" tung
+          dung thay no (06/10/2026) nhung da bo: thua khi dong 3 da noi, va tren man
+          hep moi ky tu deu dang gia.
+
+       KHONG dau cham cuoi dong 1 va dong 2. Don vi "min", khong phai "minutes".
+       Ngay dung fmt_short (5 Oct 2026), khong phai fmt_date.
+
+       DO DAI LA RANG BUOC CUNG: moi dong phai vua MOT DONG o
        ca 1440px (cot 262px) lan 390px (cot 240px). Ban cu la mot cau day du
        ("The standard immigration queue is estimated to reach X minutes.") --
        no vo thanh 4 dong, va cum &nbsp; lam dong 2 de lai mot khoang trong lon
