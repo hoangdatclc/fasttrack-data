@@ -25,9 +25,18 @@ PROFILE = {
                   '[paf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="paf-pick-tpl"', '#wait-times .paf-wt-num',
                   '#wait-times .paf-wt-ft', '#wait-times .paf-wt-btn', '.paf-pick-btn',
-                  '#paf-pick-panel'],
+                  '#paf-pick-panel',
+                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
+                  # 06/10/2026). Nam NGOAI vung dat:zone -> quy trinh hang thang khong
+                  # cham vao, nen mat no la LOI AM: chu khong doi, chi vo dong tren
+                  # dien thoai. patch_static.py cua site cung kiem; de ca o day cho
+                  # cong chung nam site dong deu mot muc.
+                  'grid-template-columns: 40px 1fr !important',
+                  '.paf-hero-row > span:nth-child(3)'],
+
         "counts": {r'<img ': 15, r'schema\.org/Question': 12,
-                   r'class="paf-review-card"': 22, r'class="paf-pick-btn': 3},
+                   r'class="paf-review-card"': 22, r'class="paf-pick-btn': 3,
+                   r'class="paf-hero-row"': 3},
     },
     "DAF": {
         "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
@@ -42,14 +51,26 @@ PROFILE = {
         "hero_title": 'Why Choose DAD Fast Track?',
         "musts": [
                   'Peak immigration queue: ',
-                  'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
+                  'With Fast Track: under&nbsp;',
+                  # Dong 3 cua dong phu hang SAVE. DAF tung thieu must nay trong khi
+                  # PAF/CAF/SAF deu co -- mot nac ho so voi ba site kia.
+                  'Estimate &middot; Updated ','add-to-cart=311', 'add-to-cart=313',
                   '[daf_price service="fast_track_arrival"]',
                   '[daf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="daf-pick-tpl"', '#wait-times .daf-wt-num',
                   '#wait-times .daf-wt-ft', '#wait-times .daf-wt-btn', '.daf-pick-btn',
-                  '#daf-pick-panel'],
+                  '#daf-pick-panel',
+                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
+                  # 06/10/2026). Nam NGOAI vung dat:zone -> quy trinh hang thang khong
+                  # cham vao, nen mat no la LOI AM: chu khong doi, chi vo dong tren
+                  # dien thoai. patch_static.py cua site cung kiem; de ca o day cho
+                  # cong chung nam site dong deu mot muc.
+                  'grid-template-columns: 40px 1fr !important',
+                  '.daf-hero-row > span:nth-child(3)'],
+
         "counts": {r'<img ': 16, r'schema\.org/Question': 11,
-                   r'class="daf-review-card"': 16, r'class="daf-pick-btn': 3},
+                   r'class="daf-review-card"': 16, r'class="daf-pick-btn': 3,
+                   r'class="daf-hero-row"': 3},
     },
     "CAF": {
         "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
@@ -70,13 +91,22 @@ PROFILE = {
                   '[caf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="caf-pick-tpl"', '#wait-times .caf-wt-num',
                   '#wait-times .caf-wt-ft', '#wait-times .caf-wt-btn', '.caf-pick-btn',
-                  '#caf-pick-panel', 'id="caf-marquee"'],
+                  '#caf-pick-panel', 'id="caf-marquee"',
+                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
+                  # 06/10/2026). Nam NGOAI vung dat:zone -> quy trinh hang thang khong
+                  # cham vao, nen mat no la LOI AM: chu khong doi, chi vo dong tren
+                  # dien thoai. patch_static.py cua site cung kiem; de ca o day cho
+                  # cong chung nam site dong deu mot muc.
+                  'grid-template-columns: 40px 1fr !important',
+                  '.caf-hero-row > span:nth-child(3)'],
+
         # CAF co 13 Question (12 cua site + 1 trong vung wait-faq), DAF co 11.
         # Bang review CAF KHONG dung class .caf-review-card nhu PAF/DAF: the la div tran,
         # va ban sao duoc JS nhan ra khi chay (clone + aria-hidden), khong nhan doi san
         # trong markup. Nen dem bang chuoi 5 sao - moi the dung mot lan.
         "counts": {r'<img ': 16, r'schema\.org/Question': 13,
-                   r'\u2605\u2605\u2605\u2605\u2605': 11, r'class="caf-pick-btn': 3},
+                   r'\u2605\u2605\u2605\u2605\u2605': 11, r'class="caf-pick-btn': 3,
+                   r'class="caf-hero-row"': 3},
     },
     "SAF": {
         # BA cho SAF khac ba site kia -- doi mot trong ba la trang hong:
@@ -92,12 +122,14 @@ PROFILE = {
 
         # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
         #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
-        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
+        #   - dong phu hang SAVE: BA dong, chot 06/10/2026, giong PAF/DAF/CAF
+        #     (xem luat 1b trong skill me). SAF chuyen sang ban nay 06/10/2026;
+        #     ban cu ("...is estimated to reach...") vo 4 dong tren dien thoai.
         "hero_title": 'Why Choose SGN Fast Track?',
         "musts": [
-                  'The standard immigration queue is estimated to reach&nbsp;',
-                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
+                  'Peak immigration queue: ',
+                  'With Fast Track: under&nbsp;20&nbsp;min',
+                  'Estimate &middot; Updated ','add-to-cart=311', 'add-to-cart=313',
                   '[saf_price service="fast_track_arrival"]',
                   '[saf_price service="fast_track_departure"]',
                   '[saf_price service="connection"]',
@@ -111,9 +143,18 @@ PROFILE = {
                   # Mat mot trong hai nghia la renderer da bi be ve quy uoc 15.
                   # Thang nao cung co khung Busy nen ca hai chuoi luon phai co mat;
                   # mat chung = hieu chuan da troi. Bat bien day du nam o saf/run_qc.py.
-                  'in under&nbsp;20&nbsp;minutes.', '15&ndash;20 min', '~10 min'],
+                  # 'in under&nbsp;20&nbsp;minutes.' DA BO 06/10/2026 cung voi ban cu
+                  # cua dong phu. Tran 20 gio nam o 'With Fast Track: under 20 min'
+                  # (phia tren) va o 'under 20 minutes' trong doan dan + FAQ.
+                  'under 20 minutes', '15&ndash;20 min', '~10 min',
+                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d). Nam NGOAI
+                  # vung zone -> mat no la loi am, chu khong doi, chi vo dong tren
+                  # dien thoai. SAF can hai nac nay hon ca: dai 97-113 la ba chu so.
+                  'grid-template-columns: 40px 1fr !important',
+                  '.sgn-hero-row > span:nth-child(3)'],
         "counts": {r'<img ': 15, r'schema\.org/Question': 12,
-                   r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3},
+                   r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3,
+                   r'class="sgn-hero-row"': 3},
     },
     "HAF": {
         # BON cho HAF khac bon site kia -- doi mot trong bon la trang hong:
