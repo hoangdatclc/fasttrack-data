@@ -3,7 +3,11 @@ import json, re, sys
 from datetime import date
 import render_blocks as R
 
-ZONES = ("wait-hero", "wait-section", "wait-faq")
+# Hai vung "wait-hours-*" chi boc DUNG CUM CON SO trong hai cau van xuoi tinh o cot
+# trai hero ("skip the {X} immigration queue" / "avoid the {X} queue"). Chu site chot
+# 06/10/2026: giu cau, nhung con so phai tu doi moi thang. Boc het ca cau se bien van
+# xuoi tinh thanh may sinh -- khong can, va rui ro hon.
+ZONES = ("wait-hero", "wait-section", "wait-faq", "wait-hours-lede", "wait-hours-bullet")
 
 
 def zone_re(name):
@@ -25,8 +29,10 @@ def main(src, data_path, updated, dst):
     cur = zone_re("wait-faq").search(page)
     ids = re.findall(r"haf-faq-a\d+", cur.group(2)) if cur else []
     faq_id = ids[0] if ids else "haf-faq-a12"
+    hours = R.queue_hours(d)          # hai vung nho dung CHUNG mot gia tri
     new = {"wait-hero": R.render_hero(d, up), "wait-section": R.render_section(d, up),
-           "wait-faq": R.render_faq(d, up, faq_id=faq_id)}
+           "wait-faq": R.render_faq(d, up, faq_id=faq_id),
+           "wait-hours-lede": hours, "wait-hours-bullet": hours}
     out = page
     for z in ZONES:
         if len(zone_re(z).findall(out)) != 1:

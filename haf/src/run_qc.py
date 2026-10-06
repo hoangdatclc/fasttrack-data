@@ -59,7 +59,8 @@ COUNTS = {
     r'>Save</span>': 1, r'>24/7</span>': 1,
 }
 
-ZONES = ["wait-hero", "wait-section", "wait-faq"]
+# Hai vung "wait-hours-*" boc cum con so trong van xuoi tinh o cot trai hero.
+ZONES = ["wait-hero", "wait-section", "wait-faq", "wait-hours-lede", "wait-hours-bullet"]
 
 if __name__ == "__main__":
     sys.exit(qc.main(sys.argv[1], LABELS, MUSTS, COUNTS, ZONES))

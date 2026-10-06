@@ -59,6 +59,16 @@ need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
 need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
      "dong 2 hang SAVE (Fast Track)")
 need(r"Peak immigration queue: ", 1, "chu 'immigration'")
+# HAI CAU VAN XUOI TINH o cot trai hero PHAI con nguyen va PHAI mang con so (chu site
+# chot 06/10/2026). Truoc do con so bi go han ("skip the main immigration queue") --
+# het stale nhung mat suc nang cua cau. Nay con so nam trong vung dat:zone nen tu doi
+# moi thang; hai phep kiem duoi chan ca viec go con so LAN viec go ca cau.
+need(r"skip the <!--dat:zone:wait-hours-lede-->[\d.]+&ndash;[\d.]+ hour<!--/dat:zone:wait-hours-lede--> immigration queue", 1,
+     "cau lede o cot trai hero + con so trong vung")
+need(r"avoid the <!--dat:zone:wait-hours-bullet-->[\d.]+&ndash;[\d.]+ hour<!--/dat:zone:wait-hours-bullet--> queue", 1,
+     "gach dau dong 'Priority immigration lane' + con so trong vung")
+need(r"skip the main immigration queue", 0, "ban da go con so cua cau lede")
+need(r"straight past the main queue", 0, "ban da go con so cua gach dau dong")
 # Hang SAVE PHAI la mot KHOANG theo gio, bac nua tieng, can duoi >= 1 (chu site chot
 # 06/10/2026). Mot gia tri don ("~1.5 hours") la VI PHAM -- no khong gay an tuong va
 # khong con la mot khoang. Regex ep ca ba thu: hai gia tri, co &ndash;, don vi "hours".

@@ -220,6 +220,36 @@ def cities(d, window):
     return ", ".join(out[:-1]) + " and " + out[-1] if len(out) > 1 else "".join(out)
 
 
+def queue_hours(d):
+    """Dai hang thuong doi ra GIO, bac nua tieng -- dung cho VAN XUOI TINH o cot trai hero.
+
+    Chu site chot 06/10/2026: hai cau trong cot trai ("skip the {X} immigration queue" va
+    "avoid the {X} queue") PHAI giu lai va PHAI mang con so. Truoc do con so bi go han di
+    vi luat 2 cam con so trong van xuoi ngoai vung -- go thi het stale nhung cung mat luon
+    suc nang cua cau. Cach dung: khoanh CHINH CHO CON SO thanh vung dat:zone
+    (wait-hours-lede, wait-hours-bullet) de may thay moi thang, cau van la van xuoi tinh.
+
+    TRA VE CUM TINH TU, khong phai cau: "1.5&ndash;2 hour". Chu "hour" SO IT, co y --
+    day la tinh tu ghep ("a 1.5-2 hour queue"), khong phai danh tu dem duoc.
+
+    KHONG goi saved(). Hai thu TINH CO bang nhau tu 06/10/2026 (saved() cung lay dai
+    nguyen lam can cu) nhung chung noi hai dieu khac nhau: day la DO DAI HANG CHO, con
+    saved() la MUC TIET KIEM. SAF sap co luat saved() rieng; neu dung chung ham thi cau
+    van xuoi cua site do se chay theo luat tiet kiem, sai nghia.
+    """
+    lo, hi = headline_range(d)
+    half = lambda m: math.floor(m / 30.0 + 0.5) / 2.0
+    fmt  = lambda v: (f"{v:.0f}" if v == int(v) else f"{v:.1f}")
+    a, b = half(lo), half(hi)
+    if a == b:
+        a = b - 0.5                      # luon la mot khoang, noi rong XUONG -- nhu saved()
+    if a < 1.0:
+        raise SystemExit(
+            f"VAN XUOI TINH KHONG IN DUOC THEO GIO: dai {lo}-{hi} phut -> {fmt(a)}-{fmt(b)} gio, "
+            "can duoi duoi 1 gio. Hai cau o cot trai hero se noi qua. Dung lai, hoi chu site.")
+    return f"{fmt(a)}&ndash;{fmt(b)} hour"
+
+
 def render_hero(d, updated):
     """The hero cua HAF theo MAU GOC cua trang (Save / From / 24-7), khong phai the
     so sanh hai hang nhu bon site kia. Chu site chot 05/10/2026: giu gan ban goc.

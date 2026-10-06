@@ -170,7 +170,9 @@ PROFILE = {
         "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
                    'Book Now Button', 'Booking Picker'],
-        "zones": ['wait-hero', 'wait-section', 'wait-faq'],
+        "zones": ['wait-hero', 'wait-section', 'wait-faq',
+                  # hai vung nho boc cum con so trong van xuoi tinh o cot trai hero
+                  'wait-hours-lede', 'wait-hours-bullet'],
 
         # The hero HAF giu MAU GOC cua trang: Save / From / 24-7, khong phai bang
         # so sanh nhu bon site kia (chot 05/10/2026).

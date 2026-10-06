@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[f3aed9d6aa652a03938a16fdd0b188e81c1bc14568617f3525dd3b554d2c492f]]></content_sha256>
+  <content_sha256><![CDATA[4bac913a66f85e79d5fc8aa5dff25676dba459df112c14d2d578c57c1bfcf908]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -344,12 +344,12 @@ function hafCloseMenu() {
         max-width: 500px;
         margin: 0 0 24px 0;
         padding: 0;
-      ">Premium Fast Track service at Hanoi Noi Bai Airport (T2) — skip the main immigration queue with a dedicated assistant who handles every formality for you, from landing to exit.</p>
+      ">Premium Fast Track service at Hanoi Noi Bai Airport (T2) — skip the <!--dat:zone:wait-hours-lede-->1.5&ndash;2 hour<!--/dat:zone:wait-hours-lede--> immigration queue with a dedicated assistant who handles every formality for you, from landing to exit.</p>
 
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Priority immigration lane — straight past the main queue
+          Priority immigration lane — avoid the <!--dat:zone:wait-hours-bullet-->1.5&ndash;2 hour<!--/dat:zone:wait-hours-bullet--> queue
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
