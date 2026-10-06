@@ -18,7 +18,7 @@ PROFILE = {
         #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose PQC Fast Track?',
         "musts": [
-                  'Estimated peak standard queue: ',
+                  'Estimated peak queue: ',
                   'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[paf_price service="fast_track_arrival"]',
                   '[paf_price service="fast_track_departure"]',
@@ -40,7 +40,7 @@ PROFILE = {
         #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose DAD Fast Track?',
         "musts": [
-                  'Estimated peak standard queue: ',
+                  'Estimated peak queue: ',
                   'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[daf_price service="fast_track_arrival"]',
                   '[daf_price service="fast_track_departure"]',
@@ -62,7 +62,7 @@ PROFILE = {
         #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose CXR Fast Track?',
         "musts": [
-                  'Estimated peak standard queue: ',
+                  'Estimated peak queue: ',
                   'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[caf_price service="fast_track_arrival"]',
                   '[caf_price service="fast_track_departure"]',
