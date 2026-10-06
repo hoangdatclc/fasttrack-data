@@ -59,6 +59,11 @@ need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
 need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
      "dong 2 hang SAVE (Fast Track)")
 need(r"Peak immigration queue: ", 1, "chu 'immigration'")
+# Hang SAVE PHAI la mot KHOANG theo gio, bac nua tieng, can duoi >= 1 (chu site chot
+# 06/10/2026). Mot gia tri don ("~1.5 hours") la VI PHAM -- no khong gay an tuong va
+# khong con la mot khoang. Regex ep ca ba thu: hai gia tri, co &ndash;, don vi "hours".
+need(r">[1-9](?:\.5)?&ndash;[1-9](?:\.5)? hours<", 1, "hang SAVE phai la KHOANG theo gio")
+need(r">~[\d.]+ hours?<", 0, "hang SAVE khong duoc la mot gia tri don")
 need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
 # Ban cu cua dong phu: mot cau day du, vo thanh 4 dong tren dien thoai. Bo 06/10/2026.
 need(r"queue is estimated to reach", 0, "dong phu kieu cau day du da bo")
