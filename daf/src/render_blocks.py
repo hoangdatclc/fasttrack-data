@@ -200,6 +200,26 @@ def render_hero(d, updated):
          Fast Track gets you through in under {Y} minutes.
 
        Hai dong, ngat bang <br>, moi dong mot dau cua phep tru.
+       DAF DANG CHAY BAN THU (06/10/2026), KHAC PQC va CXR mot cho:
+           DAD -> "Peak immigration queue: ~68-79 min."
+           PQC, CXR -> "Estimated peak queue: 69-94 min."
+       Ly do thu: dem lai chu "immigration". Ca the hien KHONG co chu nay, ma hero cua
+       PQC thi ca cot trai LAN the deu khong co -- khach khong co cho nao biet 69-94 la
+       hang NAO (san bay co hang check-in, soi chieu, nhap canh, hanh ly, taxi). Ngay
+       duoi the lai la hai o Arrival/Departure, nen khach mua Departure rat de hieu
+       nham thanh hang check-in.
+       "Estimated immigration queue" vo hai dong o 360px -> phai bo chu "Estimated",
+       dau "~" ganh phan cong bo uoc tinh. Dau "~" dung lai quy uoc da co tren chinh
+       the nay ("~1 hour") va trong bang ("~10 min").
+       Dau "~" mot minh YEU HON chu "estimated" voi khach luot, nen dong 3 mang them
+       chu "Estimate": "Estimate - Updated {ngay}". Hai lop, mot o con so mot o nhan.
+       Dong 3 co font 0.72rem (nho hon hai dong tren) nen con nhieu cho hon.
+       LUU Y: "Estimate" dat o dau dong 3 thi no phu CA dong 2 -- ma "under 15 min"
+       la CAM KET dich vu, khong phai uoc tinh. Ban khoanh vung hep hon la
+       "Queue estimate - 5 October 2026" (do: vua mot dong o ca 390/375/360px),
+       doi lai mat chu "Updated".
+       DAY LA BAN THU tren MOT site. Doi chung: PQC va CXR giu nguyen.
+
        DO DAI LA RANG BUOC CUNG (chot 06/10/2026): moi dong phai vua MOT DONG o
        ca 1440px (cot 262px) lan 390px (cot 240px). Ban cu la mot cau day du
        ("The standard immigration queue is estimated to reach X minutes.") --
@@ -243,7 +263,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Estimated peak queue: {rng(busy["range"])}&nbsp;min.<br>With Fast Track: under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;min.<br><span style="font-size:0.72rem;">Updated {fmt_date(updated)}</span></span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Peak immigration queue: ~{rng(busy["range"])}&nbsp;min.<br>With Fast Track: under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;min.<br><span style="font-size:0.72rem;">Estimate &middot; Updated {fmt_date(updated)}</span></span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
