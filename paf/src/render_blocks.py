@@ -216,6 +216,15 @@ def render_hero(d, updated):
     3. KHONG in thang trong the: dong "Updated {ngay}" ngay duoi da noi ky hon.
     4. KHONG in doan `basis`: no la menh de mo dau cua doan dan ben duoi (render_section).
     5. Hai cum so noi bang &nbsp; de khong bao gio bi ngat khoi dong cua no.
+    6. Dong "Updated {ngay} - Hour by hour" nam TRONG dong phu hang SAVE, khong
+       phai o day the. Chu site chot 06/10/2026: ngay do dong dau thoi diem cua
+       UOC TINH, ma uoc tinh nam o hang SAVE. De duoi day the, no doc nhu footer
+       cua ca the -- ham y gia va gio ho tro cung "cap nhat 5/10", khong phai y do.
+       Link "Hour by hour" GIU LAI: no la duong duy nhat tu hero xuong bang Wait
+       Times (nav khong co muc nay; link con lai nam trong FAQ, tuc DUOI bang roi),
+       va la thu duy nhat tren the noi "so nay kiem chung duoc". Da do: ca dong
+       "Updated 5 October 2026 - Hour by hour" vua MOT dong o ca 262px lan 240px,
+       nen giu link KHONG ton them dong nao.
     """
     h = d["headline"]
     # Con so: khung BAN NHAT. Text: KHONG ghi ten khung ra trang.
@@ -232,7 +241,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Estimated peak standard queue: {rng(busy["range"])}&nbsp;min.<br>With Fast Track: under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;min.</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Estimated peak standard queue: {rng(busy["range"])}&nbsp;min.<br>With Fast Track: under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;min.<br><span style="font-size:0.72rem;">Updated {fmt_date(updated)} &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></span></span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -252,8 +261,6 @@ def render_hero(d, updated):
         </div>
 
       </div>
-
-      <p style="font-family:'DM Sans',sans-serif; font-size:0.74rem; color:#5A5A72; margin:0; padding:0;">Updated {fmt_date(updated)} &middot; <a href="#wait-times" style="color:#8B6914; font-weight:600; text-decoration:none; border-bottom:1px solid rgba(201,168,76,0.4);">Hour by hour</a></p>
 '''
 
 
