@@ -75,42 +75,57 @@ def ft_floor_cap(ft):
     return ft, ft
 
 
-def headline_range(d):
-    """Dai hang thuong ma trang cong bo: GHEP hai dinh cao nhat CA NGAY.
+def headline_range(d, min_gap=10):
+    """Dai hang thuong ma trang cong bo: TRAN bac Moderate -> TRAN bac Busy.
 
-    Chu site chot 06/10/2026. Ban cu lay nguyen dai cua MOT khung (khung ban nhat),
-    vi du 16:00-20:00 = 59-94 -> trang in "59-94". Con so 59 khi do la SAN cua chinh
-    khung do, khong noi len gi ve ca ngay: no chi la "khach may man nhat trong khung
-    te nhat". Ban moi:
+    Chu site chot 06/10/2026 (thay ban "ghep hai dinh cao nhat" chay duoc 1 ngay).
 
-        can tren = tran CAO NHAT trong ngay
-        can duoi = tran CAO THU NHI trong ngay
+        can tren = tran CAO NHAT trong ngay   (thuc te luon la mot khung Busy)
+        can duoi = tran CAO NHAT cua bac MODERATE
 
-    Thang 10/2026 o PQC: cac tran la 56 / 46 / 69 / 94 / 44 -> lay 94 va 69 -> 69-94.
+    Doc ra la: "ngay trong mot khung VUA, hang cho da co the len toi {lo} phut;
+    trong khung BAN thi toi {hi}". Hai dau deu la truong hop XAU NHAT cua bac minh,
+    nen cau "passengers landing during the busiest hours could spend {dai}" dung ca hai ve.
 
-    Doc ra la: "trong cac khung ban nhat, hang cho dung lai o dau do giua 69 va 94
-    phut" -- 69 la dinh cua mot dot ban, 94 la dinh cua dot ban kia. Ca hai deu la
-    truong hop XAU NHAT cua khung cua no, nen cau "passengers landing during the
-    busiest hours could spend {dai}" van dung tung ve.
+    VI SAO BO BAN "ghep hai dinh cao nhat ca ngay": o DAD hai khung ban nhat
+    (10:00-13:00 va 20:00-24:00) co tran gan bang nhau (77 va 79) -> dai co lai con
+    2 PHUT, doc nhu so DO chinh xac trong khi chu "estimated" noi day la uoc tinh.
+    Lay tran Moderate lam can duoi thi hai dau den tu HAI BAC KHAC NHAU nen chung
+    tu nhien cach xa nhau. O PQC hai cach ra Y HET (69-94) vi tran cao thu nhi cua
+    PQC von la mot khung Moderate.
 
-    DUNG doi sang "min/max cua moi dai" hay "trung binh": cai truoc keo san xuong
-    con so cua khung vang, cai sau khong tra loi duoc cau hoi cua khach ("toi co the
-    phai cho bao lau").
+    Thang 10/2026 o PQC: tran Moderate cao nhat 69 (13:00-16:00), tran Busy cao nhat
+    94 (16:00-20:00) -> 69-94, cach nhau 25 phut.
 
-    Hai truong hop bien:
-      - chi MOT khung co so -> tra ve nguyen dai cua khung do (khong co "thu nhi").
-      - hai tran CAO NHAT bang nhau -> lay gia tri KHAC tiep theo xuong duoi lam can
-        duoi; het gia tri khac thi tra ve nguyen dai cua khung cao nhat.
+    CONG CHAN: hai so phai cach nhau >= {min_gap} phut (chu site chot 06/10/2026).
+    Khong dat thi lui dan: lay tran cao nhat (trong bac Moderate + Busy) con cach
+    can tren du khoang. Het nac thi quay ve nguyen dai cua khung co tran cao nhat.
+    Neu ca cai do cung hep hon {min_gap} -> DUNG, khong giao trang: ngay hom do
+    phang that, mot dai hep se noi doi ve do chac chan cua con so.
+
+    KHONG lay bac Lighter lam can duoi: cau tren trang noi "busiest hours", ma
+    Lighter thi khong phai gio ban.
     """
-    tops = sorted((b["standard"][1] for b in d["bands"] if b.get("standard")), reverse=True)
-    best = max((b for b in d["bands"] if b.get("standard")),
-               key=lambda b: b["standard"][1], default=None)
-    if best is None:
+    rows = [b for b in d["bands"] if b.get("standard")]
+    if not rows:
         raise SystemExit("KHONG CO KHUNG NAO CO SO -- khong dung duoc dai cong bo.")
-    lower = next((v for v in tops if v < tops[0]), None)
-    if lower is None:
-        return list(best["standard"])
-    return [lower, tops[0]]
+    hi = max(b["standard"][1] for b in rows)
+    mod = [b["standard"][1] for b in rows if b.get("tier") == "moderate"]
+    lo = max(mod) if mod else None
+    if lo is None or hi - lo < min_gap:
+        cands = [b["standard"][1] for b in rows
+                 if b.get("tier") in ("moderate", "busy") and b["standard"][1] <= hi - min_gap]
+        lo = max(cands) if cands else None
+    if lo is None:
+        best = max(rows, key=lambda b: b["standard"][1])
+        a, z = best["standard"]
+        if z - a < min_gap:
+            raise SystemExit(
+                f"DAI CONG BO QUA HEP: khong tim duoc hai moc cach nhau >= {min_gap} phut "
+                f"(tran cao nhat {hi}, khung te nhat {a}-{z}). Ngay nay phang that -- "
+                "mot dai hep se noi doi ve do chac chan. Hoi chu site truoc khi giao.")
+        return [a, z]
+    return [lo, hi]
 
 
 def saved(busy, ft):
