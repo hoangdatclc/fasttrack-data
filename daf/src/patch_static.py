@@ -44,12 +44,12 @@ elif s.count(TITLE) != 1:
 # xem ghi chu trong render_hero. Hai chu "estimated" va "reach" khong duoc mat:
 #   estimated -> day la uoc tinh, khong phai so do duoc
 #   reach     -> dai nay la luc CAO DIEM, khong phai hang chuan ca ngay
-need(r"Peak immigration queue: ~\d+(?:&ndash;\d+)?&nbsp;min\.<br>", 1,
+need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
      "dong 1 hang SAVE (hang thuong)")
-need(r"With Fast Track: under&nbsp;\d+&nbsp;min\.", 1,
+need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
      "dong 2 hang SAVE (Fast Track)")
 # DAF chay ban thu: chu "immigration" + dau "~" thay cho chu "Estimated".
-need(r"Peak immigration queue: ~", 1, "chu 'immigration' va dau '~'")
+need(r"Peak immigration queue: ", 1, "chu 'immigration'")
 need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
 # Link "Hour by hour" da bo 06/10/2026 -- chan viec tu dong them lai.
 need(r"Hour by hour", 0, "link 'Hour by hour' da bo khoi the hero")
