@@ -83,57 +83,50 @@ def ft_floor_cap(ft):
 
 
 def headline_range(d, min_gap=10):
-    """Dai hang thuong ma trang cong bo: TRAN bac Moderate -> TRAN bac Busy.
+    """Dai hang thuong ma trang cong bo: DINH va SO LON THU NHI TRONG BANG.
 
-    Chu site chot 06/10/2026 (thay ban "ghep hai dinh cao nhat" chay duoc 1 ngay).
+    Chu site chot 06/10/2026 (ban thu tu, va la ban dung).
 
-        can tren = tran CAO NHAT trong ngay   (thuc te luon la mot khung Busy)
-        can duoi = tran CAO NHAT cua bac MODERATE
+        can tren = so LON NHAT trong bang
+        can duoi = so LON NHAT con lai ma NHO HON can tren it nhat {min_gap} phut
 
-    Doc ra la: "ngay trong mot khung VUA, hang cho da co the len toi {lo} phut;
-    trong khung BAN thi toi {hi}". Hai dau deu la truong hop XAU NHAT cua bac minh,
-    nen cau "passengers landing during the busiest hours could spend {dai}" dung ca hai ve.
+    Xet TAT CA cac so hien trong cot "Standard queue" -- ca can duoi LAN can tren cua
+    moi khung, khong chi tran. Nho vay can duoi luon la mot con so khach DOC DUOC
+    trong bang ngay ben duoi, do lai duoc.
 
-    VI SAO BO BAN "ghep hai dinh cao nhat ca ngay": o DAD hai khung ban nhat
-    (10:00-13:00 va 20:00-24:00) co tran gan bang nhau (77 va 79) -> dai co lai con
-    2 PHUT, doc nhu so DO chinh xac trong khi chu "estimated" noi day la uoc tinh.
-    Lay tran Moderate lam can duoi thi hai dau den tu HAI BAC KHAC NHAU nen chung
-    tu nhien cach xa nhau. O PQC hai cach ra Y HET (69-94) vi tran cao thu nhi cua
-    PQC von la mot khung Moderate.
+    Thang 10/2026:
+      PQC  moi so 94 69 59 56 48 46 44 42 38 37        -> dinh 94, lon nhat <=84 la 69  -> 69-94
+      DAD  moi so 79 77 68 66 62 60 52 50 49 45 44 40  -> dinh 79, lon nhat <=69 la 68  -> 68-79
+      CXR  moi so 83 77 71 70 64 54 50 44 43 30 28     -> dinh 83, lon nhat <=73 la 71  -> 71-83
 
-    Thang 10/2026 o CXR: tran Moderate cao nhat 50 (06:00-10:00 va 13:00-16:00), tran
-    Busy cao nhat 83 (20:00-24:00) -> 50-83, cach nhau 33 phut.
-    Luu y rieng CXR: cac khung Moderate cua Cam Ranh NHE THAT (43-50 va 44-50), nen can
-    duoi tut kha sau so voi cum busy. Do la su that cua san bay nay, khong phai loi ham.
+    BA BAN TRUOC DA BO, DUNG QUAY LAI:
+      1. nguyen dai cua khung ban nhat -- can duoi la SAN cua chinh khung do, chi noi
+         "khach may man nhat trong khung te nhat", khong noi gi ve ca ngay.
+      2. ghep hai TRAN cao nhat ca ngay -- o DAD hai khung ban nhat co tran gan bang
+         nhau (77 va 79) nen dai co lai con 2 phut, doc nhu so DO chinh xac.
+      3. tran bac Moderate -> tran bac Busy -- o CXR cac khung Moderate nhe that
+         (tran 50) nen can duoi tut qua sau, tiet kiem roi xuong duoi 1 gio.
+    Ban thu tu bo han khai niem "bac" va "tran": chi lay hai con so lon nhat trong
+    bang con cach nhau du xa. On dinh voi moi hinh dang ngay.
 
-    CONG CHAN: hai so phai cach nhau >= {min_gap} phut (chu site chot 06/10/2026).
-    Khong dat thi lui dan: lay tran cao nhat (trong bac Moderate + Busy) con cach
-    can tren du khoang. Het nac thi quay ve nguyen dai cua khung co tran cao nhat.
-    Neu ca cai do cung hep hon {min_gap} -> DUNG, khong giao trang: ngay hom do
-    phang that, mot dai hep se noi doi ve do chac chan cua con so.
+    CONG CHAN: khong tim duoc so nao nho hon can tren >= {min_gap} phut -> DUNG, khong
+    giao trang. Ngay hom do phang that; mot dai hep se noi doi ve do chac chan cua
+    con so.
 
-    KHONG lay bac Lighter lam can duoi: cau tren trang noi "busiest hours", ma
-    Lighter thi khong phai gio ban.
+    Khong can loc theo bac: can duoi la so LON NHAT du dieu kien, nen no khong the
+    roi vao mot khung nhe hon trong khi con mot khung ban hon dang o giua.
     """
-    rows = [b for b in d["bands"] if b.get("standard")]
-    if not rows:
+    nums = sorted({v for b in d["bands"] if b.get("standard") for v in b["standard"]},
+                  reverse=True)
+    if not nums:
         raise SystemExit("KHONG CO KHUNG NAO CO SO -- khong dung duoc dai cong bo.")
-    hi = max(b["standard"][1] for b in rows)
-    mod = [b["standard"][1] for b in rows if b.get("tier") == "moderate"]
-    lo = max(mod) if mod else None
-    if lo is None or hi - lo < min_gap:
-        cands = [b["standard"][1] for b in rows
-                 if b.get("tier") in ("moderate", "busy") and b["standard"][1] <= hi - min_gap]
-        lo = max(cands) if cands else None
+    hi = nums[0]
+    lo = next((v for v in nums if v <= hi - min_gap), None)
     if lo is None:
-        best = max(rows, key=lambda b: b["standard"][1])
-        a, z = best["standard"]
-        if z - a < min_gap:
-            raise SystemExit(
-                f"DAI CONG BO QUA HEP: khong tim duoc hai moc cach nhau >= {min_gap} phut "
-                f"(tran cao nhat {hi}, khung te nhat {a}-{z}). Ngay nay phang that -- "
-                "mot dai hep se noi doi ve do chac chan. Hoi chu site truoc khi giao.")
-        return [a, z]
+        raise SystemExit(
+            f"DAI CONG BO QUA HEP: dinh la {hi}, khong so nao trong bang nho hon no "
+            f">= {min_gap} phut (cac so: {nums}). Ngay nay phang that -- mot dai hep se "
+            "noi doi ve do chac chan cua con so. Hoi chu site truoc khi giao.")
     return [lo, hi]
 
 
