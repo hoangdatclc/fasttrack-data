@@ -175,8 +175,11 @@ PROFILE = {
         #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong
         "hero_title": 'Why Choose HAN Fast Track?',
         "musts": [
-                  'The standard immigration queue is estimated to reach&nbsp;',
-                  'Fast Track gets you through in under&nbsp;',
+                  # Dong phu hang SAVE: BA dong, chot 06/10/2026. HAN la site CUOI
+                  # chuyen sang ban nay -- nay ca 5 site dung chung mot cach viet.
+                  'Peak immigration queue: ',
+                  'With Fast Track: under&nbsp;',
+                  'Estimate &middot; Updated ',
                   'Why Choose HAN Fast Track?','add-to-cart=311', 'add-to-cart=313',
                   '[haf_price service="fast_track"]',
                   '[haf_price service="vip_departure"]',
@@ -186,11 +189,18 @@ PROFILE = {
                   '#haf-pick-panel', 'id="haf-carousel-track"', 'class="haf-marquee-track"',
                   # LUAT 7: nut vang hero la <button>, media query phai phu ca button.
                   # Mat dong nay = nut lech trai tren dien thoai, khong ai bao.
-                  '.haf-cta-row button'],
+                  '.haf-cta-row button',
+                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
+                  # 06/10/2026). Nam NGOAI vung dat:zone -> mat no la LOI AM: chu
+                  # khong doi, chi vo dong tren dien thoai.
+                  'grid-template-columns: 40px 1fr !important',
+                  '.haf-hero-row > span:nth-child(3)'],
+
         # Bang review HAF: 32 the = 16 goc + 16 ban sao aria-hidden. So LE hoac hai nua
         # khac nhau se lam bang giat moi vong (animation chay translateX(-50%)).
         "counts": {r'<img ': 17, r'schema\.org/Question': 12,
-                   r'class="haf-review-card': 32, r'class="haf-pick-btn': 3},
+                   r'class="haf-review-card': 32, r'class="haf-pick-btn': 3,
+                   r'class="haf-hero-row"': 3},
     },
 }
 

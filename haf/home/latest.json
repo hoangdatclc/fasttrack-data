@@ -2,9 +2,9 @@
   "site": "HAF",
   "month": "2026-10",
   "page_id": 15,
-  "host": "hanoiairportfasttrack.com",
-  "edit_url": "https://hanoiairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "731916ca20ac6dec762c6d31f6818bacb537db10504acf0100dc8f342804bc5f",
-  "content_bytes": 242819,
+  "host": "x",
+  "edit_url": "https://x/wp-admin/post.php?post=15&action=edit",
+  "content_sha256": "02c5d72a44c25c58fe3e3a21ea340a076f60710d20c8e072ea1dad8631c38e4a",
+  "content_bytes": 243666,
   "generated": "2026-10-06"
 }

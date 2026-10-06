@@ -54,11 +54,18 @@ elif s.count("Why Choose HAN Fast Track?") != 1:
 
 # Dong phu hang SAVE phai noi CA HAI dau cua phep tru -- xem ghi chu trong render_hero.
 # run_qc.py cung kiem, nhung runbook co buoc chay rieng patch_static.py nen de o ca hai.
-need(r"The standard immigration queue is estimated to reach&nbsp;\d+(?:&ndash;\d+)?&nbsp;minutes\.<br>", 1,
+need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
      "dong 1 hang SAVE (hang thuong)")
-need(r"Fast Track gets you through in under&nbsp;\d+&nbsp;minutes\.", 1,
+need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
      "dong 2 hang SAVE (Fast Track)")
-need(r"queue is estimated to reach&nbsp;", 1, "hai chu 'estimated' va 'reach'")
+need(r"Peak immigration queue: ", 1, "chu 'immigration'")
+need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
+# Ban cu cua dong phu: mot cau day du, vo thanh 4 dong tren dien thoai. Bo 06/10/2026.
+need(r"queue is estimated to reach", 0, "dong phu kieu cau day du da bo")
+# Link "Hour by hour" da bo 06/10/2026 -- chan viec tu dong them lai.
+need(r"Hour by hour", 0, "link 'Hour by hour' da bo khoi the hero")
+# LUAT 3 -- chuoi chu site cam, o MOI site.
+need(r"you may not need us", 0, "chuoi bi cam (luat 3)")
 
 # LUAT 8 -- ba cum chu da bo hang khoi the hero, cong chan de khong ai them lai.
 # Truoc 05/10/2026 KHONG cong nao kiem ba cum nay nen chung troi im lang mot vong.
@@ -67,6 +74,12 @@ need(r"queue is estimated to reach&nbsp;", 1, "hai chu 'estimated' va 'reach'")
 need(r"touchdown", 0, "cum '- from touchdown to leaving immigration' da bo")
 need(r"every flight, every hour", 0, "cum '- every flight, every hour' da bo")
 need(r"Through immigration with our service", 0, "dong phu hang FAST TRACK cu da bo")
+
+# CSS thu hoi khoang trang the hero tren man hep -- nam NGOAI vung zone nen mat no
+# la "loi am": chu khong doi, chi vo dong tren dien thoai. Kiem ca hai nac.
+need(r"grid-template-columns: 40px 1fr !important", 1, "nac <=420px: thu cot nhan the hero")
+need(r"\.haf-hero-row > span:nth-child\(3\)", 1, "nac <=345px: gop mot cot")
+need(r'class="haf-hero-row"', 3, "ba hang the hero phai co class")
 
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:

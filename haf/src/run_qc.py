@@ -41,15 +41,21 @@ COUNTS = {
     # NGOAI vung zone -> quy trinh hang thang khong duoc lam mat no.
     r'Why Choose HAN Fast Track\?': 1,
     # The hero HAF la Save / From / 24-7 (ba ly do khac nhau), khong phai bang so sanh.
-    # Dong phu hang SAVE phai noi CA HAI dau cua phep tru -- mat mot dau thi con so
-    # tiet kiem dung tran, khach khong biet no tru tu dau. Hai dong, hai dau:
-    r'The standard immigration queue is estimated to reach&nbsp;\d+(?:&ndash;\d+)?&nbsp;minutes\.<br>': 1,
-    r'Fast Track gets you through in under&nbsp;\d+&nbsp;minutes\.': 1,
-    # Hai chu ganh toan bo tinh trung thuc cua dong phu, kiem rieng tung chu:
-    #   "estimated" -> day la uoc tinh, khong phai so do duoc
-    #   "reach"     -> 90-110 la luc CAO DIEM. Doi thanh "is"/"takes" la the hero
-    #                  tuyen bo ca ngay, mau thuan voi doan dan va voi khung vang 35-36.
-    r'queue is estimated to reach&nbsp;': 1,
+    # Dong phu hang SAVE la BA dong (chot 06/10/2026, giong bon site kia) -- moi dau cua
+    # phep tru mot dong, cong mot dong cong bo "Estimate" va ngay:
+    r'Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>': 1,
+    r'With Fast Track: under&nbsp;\d+&nbsp;min<': 1,
+    # Bon chu ganh toan bo tinh trung thuc cua dong phu, kiem rieng tung chu:
+    #   "immigration" -> san bay co nhieu hang cho; thieu chu nay khach mua Departure
+    #                    rat de hieu con so thanh hang check-in
+    #   "Peak"        -> 97-110 la luc CAO DIEM. Bo di la the hero tuyen bo ca ngay,
+    #                    mau thuan voi doan dan va voi khung vang 35-36.
+    #   "Estimate"    -> day la uoc tinh, khong phai so do duoc
+    r'Peak immigration queue: ': 1,
+    r'Estimate &middot; Updated ': 1,
+    # Ban cu cua dong phu + link "Hour by hour" da bo 06/10/2026, chan them lai:
+    r'queue is estimated to reach': 0,
+    r'Hour by hour': 0,
     r'>Save</span>': 1, r'>24/7</span>': 1,
 }
 
