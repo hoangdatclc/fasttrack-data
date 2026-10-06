@@ -163,7 +163,10 @@ PROFILE = {
         #      Port tu SAF phai doi saf_price TRUOC roi moi doi sgn-.
         #   3. TEN DICH VU khac moi site kia: fast_track / vip_departure / connection,
         #      khong phai fast_track_arrival / fast_track_departure.
-        #   4. CHI MOT nut picker o hero (bon site kia hai) -> tong 2, khong phai 3.
+        #   4. Picker: HAF co BA nut haf-pick-btn (hero + wait-times + Booking Picker),
+        #      bang voi bon site kia. Comment cu ghi "tong 2, khong phai 3" -- SAI, va
+        #      count ngay duoi luon la 3. Trang live thang 10/2026 tung chi co 2 vi nut
+        #      hero bi tra ve <a href="#services">; cong nay bat duoc, da khoi phuc.
         "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
                    'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
                    'Book Now Button', 'Booking Picker'],

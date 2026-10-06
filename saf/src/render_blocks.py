@@ -11,7 +11,6 @@ fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
 fmt_short = lambda d: f"{d.day} {MONTHS[d.month - 1][:3]} {d.year}"
 # window có thể gồm nhiều cụm rời, nối bằng '|'. Một cụm thì kết quả y hệt bản cũ.
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
-words = lambda w: ", or between ".join(" and ".join(r.split("-")) for r in w.split("|"))
 rng   = lambda p: f"{p[0]}&ndash;{p[1]}"
 # Fast Track BA BAC o SAF: Lighter ~10 · Moderate ~15 · Busy tran 20.
 # FT_WORD/ftxt (bang tra cuu cho HERO, tra ve "Under 20") DA BO 06/10/2026: tu khi dong

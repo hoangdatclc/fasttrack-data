@@ -11,7 +11,6 @@ fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
 fmt_short = lambda d: f"{d.day} {MONTHS[d.month - 1][:3]} {d.year}"
 # window có thể gồm nhiều cụm rời, nối bằng '|'. Một cụm thì kết quả y hệt bản cũ.
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
-words = lambda w: ", or between ".join(" and ".join(r.split("-")) for r in w.split("|"))
 rng   = lambda p: f"{p[0]}&ndash;{p[1]}"
 
 
@@ -34,7 +33,6 @@ def level(b):
 # HERO + van xuoi "Under 15" (mot TRAN, doc nhu loi hua, va dung o moi khung).
 ft_of  = lambda tier, c: (c["peak"] if tier == "busy" else c["base"]) if isinstance(c, dict) else c
 ftcell = lambda v: (f"{v[0]}&ndash;{v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
-ftword = lambda v: (f"Under {v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
 ftcap  = lambda c: (c["peak"][1] if isinstance(c.get("peak"), (list, tuple)) else c["peak"]) if isinstance(c, dict) else c
 
 

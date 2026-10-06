@@ -11,7 +11,6 @@ fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
 fmt_short = lambda d: f"{d.day} {MONTHS[d.month - 1][:3]} {d.year}"
 # window có thể gồm nhiều cụm rời, nối bằng '|'. Một cụm thì kết quả y hệt bản cũ.
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
-words = lambda w: ", or between ".join(" and ".join(r.split("-")) for r in w.split("|"))
 rng   = lambda p: f"{p[0]}&ndash;{p[1]}"
 # Fast Track doi theo bac: khung thuong ~10 phut, khung cao diem 10-15.
 ft_of = lambda tier, c: (c["peak"] if tier == "busy" else c["base"]) if isinstance(c, dict) else c
@@ -22,7 +21,6 @@ ft_of = lambda tier, c: (c["peak"] if tier == "busy" else c["base"]) if isinstan
 #   "Under 15" la tran, dung o MOI khung (quiet 10 < 15), khop dong phu
 #   "every flight, every hour".
 ftcell = lambda v: (f"{v[0]}&ndash;{v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
-ftword = lambda v: (f"Under {v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
 ftcap  = lambda c: (c["peak"][1] if isinstance(c.get("peak"), (list, tuple)) else c["peak"]) if isinstance(c, dict) else c
 # Khung "de tho nhat" cua DAD van la 40-45 phut. Cau cu "you may not need us, and we
 # will say so." vua sai vua ban re dich vu -> CHU SITE CAM dung lai (04/10/2026),

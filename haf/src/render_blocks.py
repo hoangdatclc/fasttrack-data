@@ -11,10 +11,12 @@ fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
 fmt_short = lambda d: f"{d.day} {MONTHS[d.month - 1][:3]} {d.year}"
 # window có thể gồm nhiều cụm rời, nối bằng '|'. Một cụm thì kết quả y hệt bản cũ.
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
-words = lambda w: ", or between ".join(" and ".join(r.split("-")) for r in w.split("|"))
-# Mot dau thay vi hai khi hai dau bang nhau. O HAN khung 00:00-06:00 ra 35-35 vi luoi
-# 22 kich ban deu cho cung mot so -- "35&ndash;35 min" doc nhu loi dinh dang, khong nhu
-# ket qua chac chan. Ba site kia chua tung cham truong hop nay nen khong lo ra.
+# Mot dau thay vi hai khi hai dau bang nhau: "35&ndash;35 min" doc nhu loi dinh dang,
+# khong nhu ket qua chac chan. Xay ra khi luoi kich ban deu cho cung mot so o mot khung.
+# HAF la site DUY NHAT co nhanh nay; bon site kia van la f"{p[0]}&ndash;{p[1]}" tran.
+# TINH DEN 10/2026 NHANH NAY CHUA CHAY LAN NAO -- khong khung nao cua nam site co
+# lo == hi (khung 00:00-06:00 cua HAN ra 35-36, khong phai 35-35 nhu ban comment cu ghi).
+# Giu lai lam phong xa; dung tuong no dang co tac dung.
 rng   = lambda p: (f"{p[0]}" if p[0] == p[1] else f"{p[0]}&ndash;{p[1]}")
 # Bac cao diem hien HAI kieu, co y (chot 05/10/2026, theo chuan SAF/DAF):
 #   o BANG   -> "10-15 min": cot hep tren dien thoai.
@@ -143,7 +145,6 @@ def saved(busy, ft):
     return f"{fmt(h_lo)}&ndash;{fmt(h_hi)} hours"
 
 
-ftword = lambda v: (f"Under {v[1]}" if isinstance(v, (list, tuple)) else f"~{v}")
 ftcap  = lambda c: (c["peak"][1] if isinstance(c.get("peak"), (list, tuple)) else c["peak"]) if isinstance(c, dict) else c
 # Fast Track doi theo bac: khung thuong ~10 phut, khung cao diem 10-15.
 ft_of = lambda tier, c: (c["peak"] if tier == "busy" else c["base"]) if isinstance(c, dict) else c
