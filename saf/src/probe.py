@@ -10,12 +10,12 @@ Script nay do bang so, khong doan bang mat: no tu dung ban xem thu tu element He
 Banner cua trang truyen vao argv, nen khong the "qua" nho mot file cu con sot lai.
 Dat o <= 599px thi moi phan tu gian het be rong phai co justify-content: center.
 
-Chay: python3 probe.py out/sgn-home-2026-10.txt
+Chay: python3 probe.py out/saf-home-2026-10.txt
 """
 import re, sys, asyncio, pathlib
 from playwright.async_api import async_playwright
 
-PAGE = sys.argv[1] if len(sys.argv) > 1 else "out/sgn-home-2026-10.txt"
+PAGE = sys.argv[1] if len(sys.argv) > 1 else "out/saf-home-2026-10.txt"
 TMP = pathlib.Path("/tmp/sgn-probe.html")
 src = open(PAGE, encoding="utf-8").read()
 els = dict(re.findall(r'\[ux_html label="([^"]+)"\]\n(.*?)\n\[/ux_html\]', src, re.S))

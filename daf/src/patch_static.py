@@ -41,14 +41,20 @@ elif s.count(TITLE) != 1:
     err.append(f"tieu de {TITLE!r} xuat hien {s.count(TITLE)} lan, can 1")
 
 # Dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong --
-# xem ghi chu trong render_hero. Hai chu "estimated" va "reach" khong duoc mat:
-#   estimated -> day la uoc tinh, khong phai so do duoc
-#   reach     -> dai nay la luc CAO DIEM, khong phai hang chuan ca ngay
+# xem ghi chu trong render_hero. BON chu khong duoc mat (ban chot 06/10/2026):
+#   immigration -> san bay co nhieu hang cho; thieu chu nay khach mua Departure
+#                  rat de hieu con so thanh hang check-in
+#   Peak        -> dai nay la luc CAO DIEM, khong phai hang chuan ca ngay
+#   under {tran}-> MOT nguong duy nhat, khong phai mot dai
+#   Estimate    -> cong bo uoc tinh (o dong 3)
+# Ban cu doi hai chu "estimated" va "reach"; ca cau do da bo 06/10/2026 vi no vo
+# thanh 4 dong tren dien thoai. Dung quay lai.
 need(r"Peak immigration queue: \d+(?:&ndash;\d+)?&nbsp;min<br>", 1,
      "dong 1 hang SAVE (hang thuong)")
 need(r"With Fast Track: under&nbsp;\d+&nbsp;min<", 1,
      "dong 2 hang SAVE (Fast Track)")
-# DAF chay ban thu: chu "immigration" + dau "~" thay cho chu "Estimated".
+# DAF tung la ban THU cua cach viet nay (05/10/2026); tu 06/10/2026 no la LUAT CHUNG
+# cua PQC, DAD, CXR va SGN. Dau "~" tung dung o dong 1 nhung da bo cung ngay.
 need(r"Peak immigration queue: ", 1, "chu 'immigration'")
 need(r"Estimate &middot; Updated ", 1, "chu 'Estimate' o dong 3")
 # Link "Hour by hour" da bo 06/10/2026 -- chan viec tu dong them lai.

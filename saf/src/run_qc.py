@@ -14,7 +14,13 @@ MUSTS = ['add-to-cart=311', 'add-to-cart=313',
          'https://schema.org/FAQPage',
          # SAF cong bo "under 20 minutes" -- khac quy uoc ~10 / 10-15 cua ba site kia.
          # Neu renderer bi be ve quy uoc kia thi chuoi nay bien mat va QC bat duoc.
-         'in under&nbsp;20&nbsp;minutes.', 'under 20 minutes']
+         # 'in under&nbsp;20&nbsp;minutes.' DA BO 06/10/2026: do la ban cu cua dong phu
+         # hang SAVE ("Fast Track gets you through in under 20 minutes."), nay la
+         # "With Fast Track: under 20 min". Chuoi moi o ngay duoi.
+         'under 20 minutes',
+         # Dong phu hang SAVE, ban chot 06/10/2026 -- giong bon site kia tru con so tran.
+         'With Fast Track: under&nbsp;20&nbsp;min',
+         'Peak immigration queue: ', 'Estimate &middot; Updated ']
 
 COUNTS = {
     r'<img': 15,
