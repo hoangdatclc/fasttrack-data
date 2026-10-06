@@ -134,7 +134,10 @@ PROFILE = {
                   # SGN manh nhat ve SEO/AEO, doi form la nhan rui ro thu hang khong can.
                   '>Queue</span>', '>Fast Track</span>', '>From</span>', '>Under 20 min<',
                   'Why Choose SGN Fast Track?',
-                  'Estimated peak standard immigration queue &middot; Updated ',
+                  # Dong phu hang QUEUE ("at peak" o CUOI) va hang FAST TRACK --
+                  # ca hai chu site duyet 06/10/2026, xem saf/run-2026-10/patch_static.py.
+                  'Estimated standard immigration queue at peak ',
+                  'Priority lane, escorted by our staff',
                   'add-to-cart=311', 'add-to-cart=313',
                   '[saf_price service="fast_track_arrival"]',
                   '[saf_price service="fast_track_departure"]',

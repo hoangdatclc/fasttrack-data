@@ -21,7 +21,12 @@ MUSTS = ['add-to-cart=311', 'add-to-cart=313',
          '>Queue</span>', '>Fast Track</span>', '>From</span>',
          '>Under 20 min<',
          # Dong phu hang QUEUE: gop ca cau `basis` lan ngay vao mot cho.
-         'Estimated peak standard immigration queue &middot; Updated ',
+         # "at peak" o CUOI (chot 06/10/2026) -- xem patch_static.py muc 3.
+         'Estimated standard immigration queue at peak ',
+         '&middot; Updated&nbsp;',
+         # Dong phu hang FAST TRACK (chot 06/10/2026, thay cum cu "Through immigration
+         # with our service"): noi ro day la LAN rieng va co NGUOI DI KEM.
+         'Priority lane, escorted by our staff',
          'Why Choose SGN Fast Track?']
 
 COUNTS = {

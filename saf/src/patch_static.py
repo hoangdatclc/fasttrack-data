@@ -61,8 +61,12 @@ need(r">Save</span>", 0, "hang SAVE la cua form bon site kia, SAF khong dung")
 #    Truoc do ba cho noi ve do tin cay nam tan mat: mot doan `basis` rieng o dau the,
 #    dong phu "Last passengers off a flight...", va "Updated {ngay} - Hour by hour" o day.
 #    Gio gop lam MOT, dat ngay duoi con so ma no mo ta.
-need(r"Estimated peak standard immigration queue &middot; Updated ", 1,
-     "dong phu hang QUEUE (gop basis + ngay)")
+#    Trat tu chu "at peak" o CUOI (chot 06/10/2026). Ban cu "Estimated peak standard
+#    immigration queue" doc ra "peak standard" nhu mot loai hang; y that la "hang
+#    thuong, vao luc cao diem". Chan ca hai ban cu.
+need(r"Estimated standard immigration queue at peak <span style=\"white-space:nowrap;\">&middot; Updated&nbsp;", 1,
+     "dong phu hang QUEUE (mo ta + cum ngay boc nowrap)")
+need(r"Estimated peak standard immigration queue", 0, "ban cu cua dong phu QUEUE da bo")
 need(r"Estimated from the .* arrival schedule", 0, "doan basis rieng o dau the da bo")
 need(r"Last passengers off a flight landing in the busiest hours", 0,
      "dong phu cu cua hang QUEUE da bo")
@@ -70,10 +74,12 @@ need(r"Hour by hour", 0, "dong 'Updated ... Hour by hour' o day the da bo")
 
 # 4. HANG FAST TRACK giu dang nhan "Under 20 min" — SAF la cho DUY NHAT con dung dang nay.
 need(r">Under 20 min<", 1, "gia tri hang FAST TRACK")
-# LUAT 8 cam cum "Through immigration with our service" o BON site kia, noi no la dong phu
-# cua mot hang da bi bo. O SAF hang FAST TRACK VAN CON nen cum nay VAN DUNG CHO.
-# Chu site chot 06/10/2026: giu. Dao chieu phep kiem tu `=0` thanh `=1`.
-need(r"Through immigration with our service", 1, "dong phu hang FAST TRACK (SAF giu, luat 8 khong ap)")
+# Dong phu hang FAST TRACK doi 06/10/2026: "Through immigration with our service" ->
+# "Priority lane, escorted by our staff". Ban cu chi lap lai y cua con so; ban moi noi
+# them hai thu khach chua biet (LAN rieng + co NGUOI DI KEM). Cum cu gio bi CAM o ca
+# nam site -- luat 8 ap tro lai cho SAF.
+need(r"Priority lane, escorted by our staff", 1, "dong phu hang FAST TRACK")
+need(r"Through immigration with our service", 0, "dong phu hang FAST TRACK cu da bo")
 
 # 5. Cac thu cua form bon site kia KHONG duoc xuat hien o SAF.
 need(r"Peak immigration queue: ", 0, "dong phu form Save/From/24-7 — SAF khong dung")

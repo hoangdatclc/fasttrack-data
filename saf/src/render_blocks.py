@@ -9,6 +9,11 @@ fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
 # Ban rut gon, CHI dung trong the hero: cot o do hep nhat trang, moi ky tu dang
 # gia. Doan dan va FAQ van dung fmt_date day du -- chung co ca chieu rong dong van.
 fmt_short = lambda d: f"{d.day} {MONTHS[d.month - 1][:3]} {d.year}"
+# Ban KHONG XUONG DONG GIUA CHUNG cua fmt_short -- chi the hero dung. Dong phu hang
+# QUEUE dai (mo ta + ngay) nen tren man hep no xuong hai dong; de tu nhien thi cho
+# be nhu "Updated 5 / Oct 2026" -- doc nhu loi. Noi bang &nbsp; de ca cum ngay roi
+# xuong dong NGUYEN KHOI. Cum chi ~18 ky tu o 0.75rem nen khong the tran cot.
+fmt_short_nb = lambda d: f"{d.day}&nbsp;{MONTHS[d.month - 1][:3]}&nbsp;{d.year}"
 # window có thể gồm nhiều cụm rời, nối bằng '|'. Một cụm thì kết quả y hệt bản cũ.
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
 rng   = lambda p: f"{p[0]}&ndash;{p[1]}"
@@ -112,7 +117,7 @@ def ft_floor_cap(ft):
     return ft, ft
 
 
-def headline_range(d, min_gap=10):
+def headline_range(d, min_gap=30):
     """Dai hang thuong ma trang cong bo: DINH va SO LON THU NHI TRONG BANG.
 
     Chu site chot 06/10/2026 (ban thu tu, va la ban dung).
@@ -124,15 +129,25 @@ def headline_range(d, min_gap=10):
     moi khung, khong chi tran. Nho vay can duoi luon la mot con so khach DOC DUOC
     trong bang ngay ben duoi, do lai duoc.
 
-    Thang 10/2026:
-      PQC  moi so 94 69 59 56 48 46 44 42 38 37           -> dinh 94,  lon nhat <=84  la 69  -> 69-94
-      DAD  moi so 79 77 68 66 62 60 52 50 49 45 44 40     -> dinh 79,  lon nhat <=69  la 68  -> 68-79
-      CXR  moi so 83 77 71 70 64 54 50 44 43 30 28        -> dinh 83,  lon nhat <=73  la 71  -> 71-83
-      SGN  moi so 113 97 93 78 77 70 58 56 55 52 51       -> dinh 113, lon nhat <=103 la 97  -> 97-113
+    `min_gap` O SAF LA 30, KHONG PHAI 10 -- LUAT RIENG, CHU SITE CHOT 06/10/2026.
+    Bon site kia (PQC/DAD/CXR/HAN) GIU NGUYEN 10; dung dong bo con so nay sang ho.
 
-    SGN la ngay co dai RONG nhat trong nam site: dinh 113 cach so thu nhi 16 phut.
-    Khong phai may man -- SGN la san bay DONG nhat (59 chuyen trong cum busy), nen
-    khung 16:00-20:00 doi dau han cac khung khac. Dung coi do la ly do bo cong chan.
+      Vi sao SAF duoc rieng: SGN la san bay DONG nhat (59 chuyen trong cum busy) va
+      dinh cua no cach xa phan con lai hon han. Voi min_gap=10 dai cong bo la 111-133,
+      bien do chi 22 phut tren mot con so 2 tieng -- doc nhu so DO chinh xac, trong khi
+      day la uoc tinh. Noi 30 phut keo can duoi xuong 95, dai 95-133 (38 phut) noi dung
+      hon ve do chac chan, va 95 VAN la mot con so khach doc duoc trong bang (san khung
+      20:00-24:00), nen van do lai duoc.
+
+      Vi sao BON SITE KIA KHONG LAY DUOC: ho co hang SAVE, va saved() co cong chan
+      "can duoi hang SAVE phai bang dai nguyen tru Fast Track, lam tron nua tieng".
+      Voi min_gap=30 ho ra PQC 59-94, DAD 49-79, CXR 50-83, HAN 77-110 -- ca BON deu
+      vo cong do (vd PQC 59-15=44 phut -> 0.5 gio, trong khi hang SAVE cong bo 1 gio).
+      SAF khong co hang SAVE nen khong vuong. Day la ly do KY THUAT, khong phai so
+      thich: bo min_gap=30 sang site co hang SAVE la lam trang khong giao duoc.
+
+    Thang 10/2026 (SGN, sau khi hieu chuan lai mo hinh 06/10/2026):
+      SGN  moi so 133 111 95 84 76 71 60 57 52 51   -> dinh 133, lon nhat <=103 la 95  -> 95-133
 
     BA BAN TRUOC DA BO, DUNG QUAY LAI:
       1. nguyen dai cua khung ban nhat -- can duoi la SAN cua chinh khung do, chi noi
@@ -144,9 +159,10 @@ def headline_range(d, min_gap=10):
     Ban thu tu bo han khai niem "bac" va "tran": chi lay hai con so lon nhat trong
     bang con cach nhau du xa. On dinh voi moi hinh dang ngay.
 
-    O SAF cach nay con THAY luon cum h["busy"] (78-113) o ba cho in con so. Cum busy
-    cua SGN gom hai khung chenh nhau nhieu (93-113 va 78-97) nen can duoi 78 la san
-    cua khung NHE HON trong cum -- cong bo 78-113 la tu ha thap dinh cua chinh minh.
+    O SAF cach nay con THAY luon cum h["busy"] o ba cho in con so. Thang 10/2026 hai
+    cach tinh tinh co ra cung ket qua (95-133) vi khung 20:00-24:00 cham dinh, nhung
+    chung KHONG phai mot thu: h["busy"] la san cua khung NHE NHAT trong cum busy, thang
+    nao cum busy gom hai khung chenh nhau la no tu ha thap dinh cua chinh minh.
     h["busy"] VAN duoc dung cho the vang (window + cities), xem render_section.
 
     CONG CHAN: khong tim duoc so nao nho hon can tren >= {min_gap} phut -> DUNG, khong
@@ -252,20 +268,35 @@ def render_hero(d, updated):
        Truoc 06/10/2026 the co mot doan `basis` rieng o dau the va mot dong
        "Updated {ngay} - Hour by hour" o day the -- ba cho noi ve do tin cay, tan mat.
        Gio gop lam mot, dat ngay duoi con so ma no mo ta:
-           Estimated peak standard immigration queue &middot; Updated {ngay rut gon}
+           Estimated standard immigration queue at peak &middot; Updated {ngay rut gon}
        Doan `basis` rieng va dong "Updated ... Hour by hour" DEU DA BO.
-       Ngay dung fmt_short (5 Oct 2026) -- the hep, thang viet tat.
+       Ngay dung fmt_short_nb (5 Oct 2026, noi bang &nbsp;) -- the hep, thang viet tat.
 
-    3. HANG FAST TRACK giu nguyen "Under 20 min" + "Through immigration with our service".
-       Day la cho DUY NHAT trong nam site con dung dang nhan "Under 20"; o bon site kia
-       dang do da bo. Giu vi cau truc the nay la the SO SANH -- hang Queue va hang Fast
-       Track doc theo cap, bo "Under" se lam ve phai mat doi trong.
+       TRAT TU CHU "at peak" o CUOI, khong phai "peak ..." o giua (ban cu:
+       "Estimated peak standard immigration queue"). Ban cu doc ra "peak standard" nhu
+       mot loai hang -- "hang thuong cao diem" -- trong khi y la "hang thuong, vao luc
+       cao diem". Day cung la cho DUY NHAT tren the noi con so nay la cua GIO CAO DIEM,
+       nen no phai doc dung ngay lan dau. Chu site duyet 06/10/2026.
+
+       Cum "&middot; Updated ..." boc trong white-space:nowrap: dong nay dai nen tren
+       man hep no xuong hai dong, va cho be tu nhien roi dung giua ngay. Boc lai thi
+       ca cum (ke ca dau cham giua) roi xuong dong 2 nguyen khoi.
+
+    3. HANG FAST TRACK giu "Under 20 min"; dong phu doi thanh
+       "Priority lane, escorted by our staff" (chu site duyet 06/10/2026).
+       "Under 20 min" la cho DUY NHAT trong nam site con dung dang nhan nay; o bon site
+       kia dang do da bo. Giu vi cau truc the nay la the SO SANH -- hang Queue va hang
+       Fast Track doc theo cap, bo "Under" se lam ve phai mat doi trong.
+       Dong phu cu ("Through immigration with our service") chi lap lai y cua con so.
+       Ban moi noi THEM hai thu khach chua biet: day la LAN rieng, va co NGUOI DI KEM --
+       tra loi dung cau hoi "Fast Track la cai gi" ma the cu de ngo.
 
     4. KHONG co hang 24/7 va KHONG co hang SAVE. Hang SAVE la cua form kia; luat SAVE moi
        (khoang theo gio, can cu dai nguyen) chu site CHUA ap cho SAF -- se co luat rieng.
     """
     h = d["headline"]
-    # Dai cong bo = dinh bang + so lon thu nhi cach no >= 10 phut (headline_range).
+    # Dai cong bo = dinh bang + so lon thu nhi cach no >= 30 phut (headline_range;
+    # 30 la luat RIENG cua SAF, bon site kia van 10 -- xem docstring headline_range).
     # Dung CHUNG mot ham voi doan dan va FAQ -- lech nhau la trang tu mau thuan.
     rng_pub = headline_range(d)
     return f'''
@@ -290,7 +321,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{rng(rng_pub)} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:2px;">Estimated peak standard immigration queue &middot; Updated {fmt_short(updated)}</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:2px;">Estimated standard immigration queue at peak <span style="white-space:nowrap;">&middot; Updated&nbsp;{fmt_short_nb(updated)}</span></span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -298,7 +329,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Under {ft_floor_cap(h["fast_track"])[1]} min</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Priority lane, escorted by our staff</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
