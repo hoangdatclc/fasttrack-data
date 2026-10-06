@@ -200,6 +200,13 @@ def render_hero(d, updated):
          Fast Track gets you through in under {Y} minutes.
 
        Hai dong, ngat bang <br>, moi dong mot dau cua phep tru.
+       DO DAI LA RANG BUOC CUNG (chot 06/10/2026): moi dong phai vua MOT DONG o
+       ca 1440px (cot 262px) lan 390px (cot 240px). Ban cu la mot cau day du
+       ("The standard immigration queue is estimated to reach X minutes.") --
+       no vo thanh 4 dong, va cum &nbsp; lam dong 2 de lai mot khoang trong lon
+       ben phai, trong nhu loi hien thi. Da do bang Playwright: chi dang nhan:gia-tri
+       moi vua mot dong. "within 15 minutes" va "in 10-15 minutes" DEU KHONG cuu
+       duoc (van 2 dong o 240px) -- dung de xuat lai.
        Hai chu bat buoc giu trong moi lan viet lai sau nay:
        a. "estimated" -- cong bo bat buoc, bo di la trang noi mot con so DO duoc.
        b. "reach" -- chinh chu nay ganh ve "o luc cao diem" ("len toi" ban tieng Viet).
@@ -229,7 +236,7 @@ def render_hero(d, updated):
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">The standard immigration queue is estimated to reach&nbsp;{rng(busy["range"])}&nbsp;minutes.<br>Fast Track gets you through in under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;minutes.</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Estimated peak standard queue: {rng(busy["range"])}&nbsp;min.<br>With Fast Track: under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;min.</span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>

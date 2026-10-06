@@ -18,8 +18,8 @@ PROFILE = {
         #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose PQC Fast Track?',
         "musts": [
-                  'The standard immigration queue is estimated to reach&nbsp;',
-                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
+                  'Estimated peak standard queue: ',
+                  'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[paf_price service="fast_track_arrival"]',
                   '[paf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="paf-pick-tpl"', '#wait-times .paf-wt-num',
@@ -40,8 +40,8 @@ PROFILE = {
         #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose DAD Fast Track?',
         "musts": [
-                  'The standard immigration queue is estimated to reach&nbsp;',
-                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
+                  'Estimated peak standard queue: ',
+                  'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[daf_price service="fast_track_arrival"]',
                   '[daf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="daf-pick-tpl"', '#wait-times .daf-wt-num',
@@ -62,8 +62,8 @@ PROFILE = {
         #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
         "hero_title": 'Why Choose CXR Fast Track?',
         "musts": [
-                  'The standard immigration queue is estimated to reach&nbsp;',
-                  'Fast Track gets you through in under&nbsp;','add-to-cart=311', 'add-to-cart=313',
+                  'Estimated peak standard queue: ',
+                  'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
                   '[caf_price service="fast_track_arrival"]',
                   '[caf_price service="fast_track_departure"]',
                   'id="wait-times"', 'id="caf-pick-tpl"', '#wait-times .caf-wt-num',
