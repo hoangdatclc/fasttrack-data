@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[c52d9e7a5f449e19b58ac0884619294c30e69f1ff92576a4b8bb8e921046247d]]></content_sha256>
+  <content_sha256><![CDATA[4e6e42944d43c84154c0259d97b7a567c76003f14416e140cd9e8f20004d0d66]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -103,6 +103,36 @@
      dòng social proof cuối để cân chiều cao với info card
      ⚠️ Thay HERO_IMAGE_URL bằng ảnh thật T2 CXR / Bãi Dài / biển Nha Trang
      ============================================================ -->
+
+<style>
+/* Thu hoi khoang trang hai ben the hero tren man hep (chot 06/10/2026).
+   Cot nhan 50px + gap 12px an mat 62px be ngang -- tren iPhone SE dung chung do
+   la dong dau cua dong phu hang SAVE vo hai dong. Hai nac:
+     <=420px  thu cot nhan con 40px, gap 8px   -> giu bo cuc hai cot, the THAP hon
+     <=345px  gop mot cot, nhan len tren       -> cuu not lop may 320px
+   Khoi nay nam NGOAI vung dat:zone -- quy trinh hang thang khong cham vao.
+   Mat no la "loi am": chu khong doi, chi vo dong tren dien thoai. patch_static.py kiem. */
+@media (max-width: 420px) {
+  .caf-hero-row {
+    grid-template-columns: 40px 1fr !important;
+    column-gap: 8px !important;
+  }
+}
+@media (max-width: 345px) {
+  .caf-hero-row {
+    grid-template-columns: 1fr !important;
+  }
+  .caf-hero-row > span {
+    grid-column: 1 !important;
+  }
+  .caf-hero-row > span:nth-child(1) {
+    grid-row: 1 !important;
+    align-self: start !important;
+  }
+  .caf-hero-row > span:nth-child(2) { grid-row: 2 !important; }
+  .caf-hero-row > span:nth-child(3) { grid-row: 3 !important; }
+}
+</style>
 
 <section aria-labelledby="caf-hero-title" style="position:relative !important; width:100% !important; max-width:100% !important; min-height:100vh !important; display:flex !important; flex-direction:column !important; justify-content:center !important; overflow:hidden !important; padding:104px clamp(16px,4vw,24px) 84px !important; font-family:'DM Sans',sans-serif !important; box-sizing:border-box !important">
 
@@ -225,7 +255,7 @@
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div class="caf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">~1 hour</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Estimated peak queue: 71&ndash;83&nbsp;min.<br>With Fast Track: under&nbsp;15&nbsp;min.<br><span style="font-size:0.72rem;">Updated 5 October 2026</span></span>
@@ -233,7 +263,7 @@
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div class="caf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">[caf_price service="fast_track_arrival"]</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
@@ -241,7 +271,7 @@
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div class="caf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>

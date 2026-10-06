@@ -60,6 +60,12 @@ need(r"touchdown", 0, "cum '- from touchdown to leaving immigration' da bo")
 need(r"every flight, every hour", 0, "cum '- every flight, every hour' da bo")
 need(r"Through immigration with our service", 0, "dong phu hang FAST TRACK cu da bo")
 
+# CSS thu hoi khoang trang the hero tren man hep -- nam NGOAI vung zone nen mat no
+# la "loi am": chu khong doi, chi vo dong tren dien thoai. Kiem ca hai nac.
+need(r"grid-template-columns: 40px 1fr !important", 1, "nac <=420px: thu cot nhan the hero")
+need(r"\.paf-hero-row > span:nth-child\(3\)", 1, "nac <=370px: gop mot cot")
+need(r'class="paf-hero-row"', 3, "ba hang the hero phai co class")
+
 print("CSS TINH: PASS" if not err else "CSS TINH: FAIL")
 for e in err:
     print(" -", e)

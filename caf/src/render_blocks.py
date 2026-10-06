@@ -6,6 +6,9 @@ MONTHS = ["January","February","March","April","May","June","July",
           "August","September","October","November","December"]
 
 fmt_date = lambda d: f"{d.day} {MONTHS[d.month - 1]} {d.year}"
+# Ban rut gon, CHI dung trong the hero: cot o do hep nhat trang, moi ky tu dang
+# gia. Doan dan va FAQ van dung fmt_date day du -- chung co ca chieu rong dong van.
+fmt_short = lambda d: f"{d.day} {MONTHS[d.month - 1][:3]} {d.year}"
 # window có thể gồm nhiều cụm rời, nối bằng '|'. Một cụm thì kết quả y hệt bản cũ.
 dash  = lambda w: " and ".join("&ndash;".join(r.split("-")) for r in w.split("|"))
 words = lambda w: ", or between ".join(" and ".join(r.split("-")) for r in w.split("|"))
@@ -242,7 +245,7 @@ def render_hero(d, updated):
 
       <div style="display: flex; flex-direction: column; gap: 0;">
 
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div class="caf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">{saved(busy, h["fast_track"])}</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Estimated peak queue: {rng(busy["range"])}&nbsp;min.<br>With Fast Track: under&nbsp;{ft_floor_cap(h["fast_track"])[1]}&nbsp;min.<br><span style="font-size:0.72rem;">Updated {fmt_date(updated)}</span></span>
@@ -250,7 +253,7 @@ def render_hero(d, updated):
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div class="caf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">[caf_price service="fast_track_arrival"]</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
@@ -258,7 +261,7 @@ def render_hero(d, updated):
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
-        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div class="caf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
           <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>
