@@ -158,7 +158,8 @@ PROFILE = {
                   'under 20 minutes', '15&ndash;20 min', '~10 min',
                   # CSS tinh thu cot nhan the hero tren man hep (luat 1d). Nam NGOAI
                   # vung zone -> mat no la loi am, chu khong doi, chi vo dong tren
-                  # dien thoai. SAF can hai nac nay hon ca: dai 97-113 la ba chu so.
+                  # dien thoai. KHONG ap cho SAF: SAF giu cau truc hero goc nen khong co
+                  # hai nac media query nay (kiem = 0, xem patch_static.py cua SAF).
                   ],
         "counts": {r'<img ': 15, r'schema\.org/Question': 12,
                    r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3},
