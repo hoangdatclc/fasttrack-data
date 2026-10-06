@@ -6,7 +6,7 @@ Dung chung khung voi DAD/CXR. NAM cho khac, deu co ly do rut tu chinh du lieu cu
      den/ngay, 31.857 ghe -- gap 5,5 lan CXR. Moi hang so ben duoi phai suy lai tu dau,
      khong duoc be tu site khac sang.
 
-  2. PROC_SEC = 120 GIAY, GAP GAN HAI LAN BA SITE KIA (70). Day la con so gay tranh cai
+  2. PROC_SEC = 110 GIAY, GAP HON MOT RUOI BA SITE KIA (70). Day la con so gay tranh cai
      nhat trong file, nen phan chung minh dat ngay duoi, muc (A).
 
   3. FOREIGN = 0,70 -- THAP NHAT trong bon site. SGN la diem ve cua kieu bao va la
@@ -20,7 +20,7 @@ Dung chung khung voi DAD/CXR. NAM cho khac, deu co ly do rut tu chinh du lieu cu
      tra ve rong hoac gan rong -- dung, va phai de nguyen.
 
 ======================================================================
-(A) PROC_SEC = 120 -- SUY TU SAN LUONG CONG BO CUA CHINH T2
+(A) PROC_SEC = 110 -- SUY TU SAN LUONG CONG BO CUA CHINH T2
 ======================================================================
 Bao Thanh Nien (02/2026) dan so cua don vi van hanh: khu xuat nhap canh nha ga quoc te
 T2 giai quyet "khoang 50.000 luot khach/ngay, ca biet co ngay cao diem toi hon 61.000".
@@ -29,8 +29,12 @@ T2 co 44 quay nhap canh + 48 quay xuat canh = 92 quay lap dat.
     50.000 luot / (92 quay x 20 gio mo) = 27,2 luot/gio/quay = 132 giay/luot
 
 132 giay la dau CHAM NHAT cua dai: no gia dinh ca 92 quay deu mo 20 tieng. Mo it quay
-hon thi moi quay phai chay nhanh hon, tuc so giay/luot THAP hon 132. Chon 120 -- nam
+hon thi moi quay phai chay nhanh hon, tuc so giay/luot THAP hon 132. Chon 110 -- nam
 trong dai, lech an toan ve phia nhanh hon.
+
+SUA 06/10/2026: ba cho trong muc nay ghi "120" trong khi hang so thuc la 110 -- comment
+viet tu thoi PROC_SEC con 120, doi gia tri ma quen doi chu. Khong doi mot byte dau ra;
+nhung day dung la kieu loi da can mot lan roi (ma chet kem comment noi sai), nen chua.
 
 Vi sao SGN cham hon CXR/DAD (70 giay): SGN nhan ty le khach e-visa va visa-on-arrival
 lan dau cao nhat nuoc, co mat gan nhu moi quoc tich, va la noi duy nhat trong bon site
