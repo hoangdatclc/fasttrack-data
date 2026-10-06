@@ -68,6 +68,15 @@ need(r"skip the <!--dat:zone:wait-hours-lede-->[\d.]+&ndash;[\d.]+ hour<!--/dat:
 need(r"avoid the <!--dat:zone:wait-hours-bullet-->[\d.]+&ndash;[\d.]+ hour<!--/dat:zone:wait-hours-bullet--> queue", 1,
      "gach dau dong 'Priority immigration lane' + con so trong vung")
 need(r"skip the main immigration queue", 0, "ban da go con so cua cau lede")
+# Cam ket Fast Track cua HAF la TRAN 15 phut (ft_floor_cap -> (10, 15)). Van xuoi tinh
+# KHONG duoc hua chac hon tran do. Element "What Is Fast Track?" tung ghi "Clear
+# immigration in under 10 minutes" -- manh hon cam ket, va mau thuan voi chinh cau cach
+# no ba dong ("through in 10 to 15 minutes") LAN voi bang ngay tren (3/6 khung ghi
+# "10-15 min", chiem 72/120 chuyen mot ngay). Chu site chot 06/10/2026: doi thanh 15.
+need(r"Clear immigration in under <strong[^>]*>15 minutes</strong>", 1,
+     "cau 'Clear immigration in under 15 minutes' o element What Is Fast Track?")
+need(r"Clear immigration in under <strong[^>]*>10 minutes", 0,
+     "van xuoi tinh hua chac hon tran Fast Track (15 phut)")
 need(r"straight past the main queue", 0, "ban da go con so cua gach dau dong")
 # Hang SAVE PHAI la mot KHOANG theo gio, bac nua tieng, can duoi >= 1 (chu site chot
 # 06/10/2026). Mot gia tri don ("~1.5 hours") la VI PHAM -- no khong gay an tuong va
