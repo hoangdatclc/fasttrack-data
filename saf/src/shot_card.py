@@ -24,9 +24,14 @@ async def main():
     async with async_playwright() as p:
         b = await p.chromium.launch()
         for w in (1440, 375, 360, 320):
-            pg = await b.new_page(viewport={"width": w, "height": 1200})
+            # Khung nhin phai CAO: o 320px hai nac media query gop the thanh mot cot nen
+            # the dai ra, va hero can giua man hinh -> the tut xuong duoi day khung nhin.
+            # 1200px tung lam ca lenh chet voi "Clipped area ... outside the resulting
+            # image" dung o nac 320. Cao 2200 + scroll_into_view cho moi be rong.
+            pg = await b.new_page(viewport={"width": w, "height": 2200})
             await pg.goto(TMP.as_uri()); await pg.wait_for_timeout(2200)
             el = await pg.query_selector(".sgn-hero-row")
+            await el.scroll_into_view_if_needed(); await pg.wait_for_timeout(250)
             box = await (await el.evaluate_handle("e => e.parentElement")).as_element().bounding_box()
             pad = 10
             await pg.screenshot(path=f"card-{w}.png", clip={
