@@ -3,21 +3,7 @@ import json
 from collections import deque
 
 # (giờ hạ cánh, số hiệu, sân bay đi) — THAY bằng lịch của tháng cần tính
-SCHEDULE_SEASON = "S2026"   # mua IATA cua danh sach chuyen DUOI DAY.
-# Dung lai danh sach cho mua khac thi PHAI sua dong nay cung luc. run_month.py co
-# cong chan doi chieu no voi thang dang dung va DUNG HAN neu lech (them 07/10/2026).
-
-FLIGHTS = [
-    ("07:35", "VJ979", "ICN"), ("09:00", "9G (W16098)", "ICN"), ("09:30", "AK543", "KUL"),
-    ("09:40", "UO598", "HKG"), ("11:10", "VJ969", "PUS"),
-    ("13:20", "AK660", "DMK"), ("13:35", "AK545", "KUL"), ("13:45", "VJ984", "SIN"),
-    ("14:30", "9G (W16114)", "BKK"), ("15:05", "9G720", "SIN"), ("15:30", "AK547", "KUL"),
-    ("15:35", "9G451", "ICN"), ("15:55", "VZ982", "BKK"),
-    ("16:50", "VJ845", "TPE"), ("17:00", "AK662", "DMK"), ("17:40", "TR524", "SIN"),
-    ("17:55", "9G750", "KUL"), ("18:05", "UO596", "HKG"), ("18:25", "VJ985", "HKG"),
-    ("18:35", "9G501", "HKG"), ("20:25", "9G511", "TPE"), ("21:00", "LJ91", "ICN"),
-    ("21:25", "7C2315", "ICN"), ("22:25", "ZE981", "PUS"), ("22:50", "KE485", "ICN"),
-]
+from paf_flights import FLIGHTS, SCHEDULE_SEASON   # tach ra 07/10/2026, xem docstring file do
 
 # Ghế theo TỪNG HÃNG. Dùng một con số phẳng 180 là sai: 9G và VJ — 12/25 chuyến ở PQC
 # — đều bay A321. [V] = đã xác minh bằng nguồn; [~] = ước tính thận trọng, nên tra lại khi có dịp.
@@ -240,6 +226,40 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
     Hang so module gio chi con la MAC DINH cho ban chay tay; moi thang co so cua no
     nam trong inputs cua chinh thang do.
     """
+    # CONG CHAN TRAN LAP DAY -- them 07/10/2026.
+    #
+    # `uplift` nhan THANG vao LOAD (xem `simulate`: pax = seats * LOAD * foreign * uplift).
+    # Nen LOAD * uplift la TY LE LAP DAY GHE THUC TE, va no khong the vuot 1,0: khong
+    # chuyen nao cho nhieu khach hon so ghe no co.
+    #
+    # VI SAO PHAI LA MOT CONG, KHONG PHAI MOT GHI CHU: bang he so mua cua CA NAM SITE
+    # deu co o thang 12 / 1 / 2 lam vo tran nay, va khong ai nhan ra trong nhieu thang:
+    #     PQC  0,85 x 1,20 = 102,0%      DAD  0,85 x 1,20 = 102,0% (thang 2)
+    #     CXR  0,87 x 1,25 = 108,7%      SGN  0,85 x 1,20 = 102,0%
+    #     HAN  0,85 x 1,15 =  97,7% (lot, nhung thang 2 cung 1,15 nen sat men)
+    # Ngay 07/10/2026 ba trong nam ban chay thu thang 12 da dung dung so vo tran do ma
+    # cong bo -- mot ban len tan 102%. Doc bang roi go vao la khong du; phai co cong.
+    #
+    # CACH XU DUNG khi cong nay no (day la cong PHAN DOAN, khong phai co hoc):
+    #   Bang he so mua chi dung duoc nhu HE SO SAN LUONG so voi thang moc, chu khong
+    #   phai he so lap day. Dat so bang lam MUC TIEU SAN LUONG roi dat nos bang
+    #   DANH SACH CHUYEN -- dung nhu chinh bang da canh bao bang chu in ("thang 12/1/2
+    #   cac hang THEM CHUYEN THAT, phai dung lai danh sach") -- roi de `month_uplift`
+    #   o muc lap day THAT.
+    #   TUYET DOI khong ha LOAD de lot cong: LOAD la hang so da hieu chuan cua site.
+    if LOAD * (MONTH_UPLIFT if uplift is None else uplift) > 1.0:
+        u = MONTH_UPLIFT if uplift is None else uplift
+        raise SystemExit(
+            f"TY LE LAP DAY GHE VUOT 100%: LOAD {LOAD} x month_uplift {u} = "
+            f"{LOAD * u:.1%}.\n\n"
+            f"  Khong chuyen nao cho nhieu khach hon so ghe no co. Tran cua "
+            f"`month_uplift` o site nay la {1 / LOAD:.3f}.\n\n"
+            f"  DAY LA LOI CUA BANG HE SO MUA, khong phai loi cua thang nay. Bang chi\n"
+            f"  dung duoc nhu he so SAN LUONG so voi thang moc. Dat muc tieu do bang\n"
+            f"  DANH SACH CHUYEN (chinh bang da can: 'thang 12/1/2 cac hang them chuyen\n"
+            f"  that, phai dung lai danh sach'), roi de `month_uplift` o muc lap day THAT.\n\n"
+            f"  KHONG duoc ha LOAD de lot cong -- LOAD la hang so da hieu chuan cua site.")
+
     import itertools
     central_rows, _, central_pax = simulate(uplift=uplift, surge=surge)
     grid = [simulate(proc_sec=p, base_day=c, foreign=fo, uplift=uplift, surge=surge)
@@ -340,7 +360,8 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
                         #   CHIEU cho phep thu don dieu thang sau. Ghi hang so module
                         #   vao day la noi doi: 07/10/2026 HAF da in surge=8/uplift=1,05
                         #   cho ban thang 10 that ra chay surge=5/uplift=1,00, va moc
-                        #   sai do se lam thang 11 ket luan nguoc ("khong them quay"). "walk_min": WALK, "processing_sec": PROC_SEC,
+                        #   sai do se lam thang 11 ket luan nguoc ("khong them quay").
+                        "walk_min": WALK, "processing_sec": PROC_SEC,
                         "seats": {f: seats_of(f) for _, f, _ in FLIGHTS},
                         "counters_day": BASE_DAY, "counters_night": BASE_NIGHT,
                         "surge_counters": SURGE if surge is None else surge, "surge_queue": SURGE_AT, "taxi_min": TAXI,

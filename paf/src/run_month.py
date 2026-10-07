@@ -114,7 +114,7 @@ def check_month_label(month, label):
 
 def main(inp_path, out_path):
     i = json.load(open(inp_path, encoding="utf-8"))
-    season = check_season(i["month"], M.SCHEDULE_SEASON, "paf_queue_model.py")
+    season = check_season(i["month"], M.SCHEDULE_SEASON, "paf_flights.py")
     check_month_label(i["month"], i["month_label"])
     d = M.build_month_json(i["month"], i["month_label"], i["month_notes"],
                            i["empty_band_note"], i["context"], i["basis"],
