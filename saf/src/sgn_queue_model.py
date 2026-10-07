@@ -122,7 +122,7 @@ Ca nuoc chi ~2.500 luot/ngay dung autogate ca hai chieu -- 5% luu luong T2.
 """
 import json
 from collections import deque
-from sgn_flights import FLIGHTS
+from sgn_flights import FLIGHTS, SCHEDULE_SEASON
 
 LOAD, FOREIGN = 0.85, 0.70
 MONTH_UPLIFT = 1.00   # thang 10 = moc. Xem BANG HE SO MUA cuoi file -- SGN rat phang.

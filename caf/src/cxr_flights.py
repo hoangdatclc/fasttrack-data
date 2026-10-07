@@ -44,6 +44,10 @@ khong khai thac duong nay -> codeshare ao).
 (gio_ha_canh, so_hieu, san_bay_di, loai_tau_bay, so_ghe)
 """
 
+SCHEDULE_SEASON = "S2026"   # mua IATA cua danh sach chuyen DUOI DAY.
+# Dung lai danh sach cho mua khac thi PHAI sua dong nay cung luc. run_month.py co
+# cong chan doi chieu no voi thang dang dung va DUNG HAN neu lech (them 07/10/2026).
+
 FLIGHTS = [
     # ================= CUM DEM HAN QUOC - dac diem lon nhat cua CXR =================
     # 11 chuyen Han ha canh trong 4 tieng 20:20-00:35. Khong san bay nao trong mang

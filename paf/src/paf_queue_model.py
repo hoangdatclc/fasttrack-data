@@ -3,6 +3,10 @@ import json
 from collections import deque
 
 # (giờ hạ cánh, số hiệu, sân bay đi) — THAY bằng lịch của tháng cần tính
+SCHEDULE_SEASON = "S2026"   # mua IATA cua danh sach chuyen DUOI DAY.
+# Dung lai danh sach cho mua khac thi PHAI sua dong nay cung luc. run_month.py co
+# cong chan doi chieu no voi thang dang dung va DUNG HAN neu lech (them 07/10/2026).
+
 FLIGHTS = [
     ("07:35", "VJ979", "ICN"), ("09:00", "9G (W16098)", "ICN"), ("09:30", "AK543", "KUL"),
     ("09:40", "UO598", "HKG"), ("11:10", "VJ969", "PUS"),

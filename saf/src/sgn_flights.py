@@ -21,6 +21,10 @@ bong GDS A1xxxx/W2xxxx/H1xxxx; CNX (bat dau 25/10/2026) va CEB (26/10) chua chay
 (gio_ha_canh, so_hieu, san_bay_di, so_ghe)
 """
 
+SCHEDULE_SEASON = "S2026"   # mua IATA cua danh sach chuyen DUOI DAY.
+# Dung lai danh sach cho mua khac thi PHAI sua dong nay cung luc. run_month.py co
+# cong chan doi chieu no voi thang dang dung va DUNG HAN neu lech (them 07/10/2026).
+
 FLIGHTS = [
     ("00:05", "5J751", "MNL", 236),
     ("00:20", "NH833", "NRT", 257),

@@ -9,7 +9,7 @@ Khac PQC o ba cho, deu co that:
 """
 import json
 from collections import deque
-from dad_flights import FLIGHTS
+from dad_flights import FLIGHTS, SCHEDULE_SEASON
 
 LOAD, FOREIGN = 0.85, 0.85
 MONTH_UPLIFT = 1.00

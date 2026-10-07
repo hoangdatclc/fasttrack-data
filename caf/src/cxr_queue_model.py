@@ -20,7 +20,7 @@ Dung chung khung voi DAD. BON cho khac, deu co ly do thuc te:
 """
 import json
 from collections import deque
-from cxr_flights import FLIGHTS
+from cxr_flights import FLIGHTS, SCHEDULE_SEASON
 
 LOAD, FOREIGN = 0.87, 0.88
 MONTH_UPLIFT = 1.00   # thang 10 = moc. Xem BANG HE SO MUA cuoi file -- CXR nguoc PQC.

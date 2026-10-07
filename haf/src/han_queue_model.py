@@ -132,7 +132,7 @@ Do tran nay van can: khong co no, luoi nhan ca nhung kich ban hang dai vo han.
 """
 import json
 from collections import deque
-from han_flights import FLIGHTS
+from han_flights import FLIGHTS, SCHEDULE_SEASON
 
 LOAD, FOREIGN = 0.85, 0.70
 MONTH_UPLIFT = 1.00   # thang 10 = moc. Xem BANG HE SO MUA cuoi file.

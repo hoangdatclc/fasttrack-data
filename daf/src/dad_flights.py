@@ -8,6 +8,10 @@ Da loc theo NGAY TRONG TUAN = thu Tu. Da loai codeshare va ma GDS ao
 Ghe lay theo cau hinh pho bien cua chinh hang tren tuyen do; [?] = uoc tinh.
 """
 
+SCHEDULE_SEASON = "S2026"   # mua IATA cua danh sach chuyen DUOI DAY.
+# Dung lai danh sach cho mua khac thi PHAI sua dong nay cung luc. run_month.py co
+# cong chan doi chieu no voi thang dang dung va DUNG HAN neu lech (them 07/10/2026).
+
 FLIGHTS = [
     # --- rang sang ---
     ("00:25", "TW13",   "ICN", "B737-800",   189),
