@@ -19,5 +19,7 @@
     "HKG": "Hong Kong",
     "TPE": "Taipei"
   },
-  "guide": "https://phuquocairportfasttrack.com/phu-quoc-airport-immigration-wait-time/"
+  "guide": "https://phuquocairportfasttrack.com/phu-quoc-airport-immigration-wait-time/",
+  "month_uplift": 1.05,
+  "surge": 2
 }

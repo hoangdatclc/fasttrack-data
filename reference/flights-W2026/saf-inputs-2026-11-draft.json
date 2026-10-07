@@ -1,12 +1,12 @@
 {
-  "month": "2026-10",
-  "month_label": "October 2026",
-  "updated": "2026-10-04",
-  "month_notes": "China&#8217;s National Day week runs to the 7th and lifts the mainland routes &#8212; about a fifth of the daily arrivals. The winter schedule then starts on the 25th, bringing Chiang Mai and Cebu back to the board.",
-  "empty_band_note": "No international arrivals scheduled in this window",
+  "month": "2026-11",
+  "month_label": "November 2026",
+  "updated": "2026-11-01",
+  "month_notes": "The winter schedule is in full effect from the 25th of last month: Singapore Airlines now runs a fourth daily flight from Changi, Sun PhuQuoc Airways has opened Shanghai, and VietJet&#8217;s Chiang Mai route is back after nearly three years. November is also the last full month before Long Thanh opens on 1 December &#8212; every international arrival into Ho Chi Minh City still clears Terminal 2.",
+  "empty_band_note": "No international arrivals land in this window in November",
   "context": {
-    "text": "Tan Son Nhat handled 39.9 million passengers in 2024 and is still Vietnam&#8217;s busiest airport. Every international arrival clears Terminal 2, which was built for 13 million passengers a year and now processes around 50,000 entry and exit movements a day &#8212; over 61,000 on its busiest. That gap, not a shortage of counters, is what the queue is.",
-    "source": "Airports Corporation of Vietnam, 2024; Thanh Nien, Feb 2026"
+    "text": "Tan Son Nhat handled 39.9 million passengers in 2024 and is still Vietnam&#8217;s busiest airport. Every international arrival clears Terminal 2, which was built for 13 million passengers a year and now processes around 50,000 entry and exit movements a day &#8212; over 61,000 on its busiest. November is the last full month that the whole load sits on Terminal 2: Long Thanh opens on 1 December and takes long-haul services first, in phases running into 2027.",
+    "source": "Airports Corporation of Vietnam, 2024; Thanh Nien, Feb 2026; ACV Long Thanh transition plan"
   },
   "basis": "based on flight schedules and official airport data from 2024&ndash;2026",
   "cities": {
@@ -20,6 +20,7 @@
     "CGK": "Jakarta",
     "CKG": "Chongqing",
     "CMB": "Colombo",
+    "CNX": "Chiang Mai",
     "DEL": "Delhi",
     "DMK": "Bangkok",
     "DOH": "Doha",
@@ -63,6 +64,5 @@
     "XMN": "Xiamen"
   },
   "guide": "https://hochiminhairportfasttrack.com/tan-son-nhat-airport-arrival-guide/",
-  "month_uplift": 1.0,
-  "surge": 4
+  "month_uplift": 1.05
 }

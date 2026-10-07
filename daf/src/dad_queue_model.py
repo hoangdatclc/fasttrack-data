@@ -199,11 +199,26 @@ def peak_queue(**kw):
     return max(r["worst_wait"] for r in rows if r["worst_wait"] is not None) - WALK[1]
 
 
-def build_month_json(month, month_label, month_notes, empty_band_note, context, basis, cities, guide):
-    """month='2026-10', month_label='October 2026'."""
+def build_month_json(month, month_label, month_notes, empty_band_note, context, basis, cities,
+                     guide, uplift=None, surge=None):
+    """month='2026-10', month_label='October 2026'.
+
+    `uplift` va `surge` LA DON BAY THEO THANG, nhan tu inputs-YYYY-MM.json (khoa
+    `month_uplift` / `surge`). None -> dung hang so module.
+
+    VI SAO PHAI NHAN TU INPUTS -- sua 07/10/2026:
+    Truoc day ca hai la HANG SO MODULE. Doi chung cho thang moi la thang cu KHONG
+    DUNG LAI DUOC nua: dung inputs thang 10 voi model da chinh cho thang 11 ra mot
+    con so thu ba, khong phai thang nao ca. Da dinh that o HAF ngay 07/10/2026 khi
+    SURGE 5 -> 8 lam thang 10 (da phat hanh 97-110) vo luon cong tran phong cho.
+    Skill van canh bao "MONTH_UPLIFT la hang so module, quen sua la im lang dung he
+    so thang truoc" -- day la cach chua goc cho ca canh bao do.
+    Hang so module gio chi con la MAC DINH cho ban chay tay; moi thang co so cua no
+    nam trong inputs cua chinh thang do.
+    """
     import itertools
-    central_rows, _, central_pax = simulate()
-    grid = [simulate(proc_sec=p, base_day=c, foreign=fo)
+    central_rows, _, central_pax = simulate(uplift=uplift, surge=surge)
+    grid = [simulate(proc_sec=p, base_day=c, foreign=fo, uplift=uplift, surge=surge)
             for p, c, fo in itertools.product(GRID_PROC, GRID_COUNTERS, GRID_FOREIGN)]
 
     def q(vals, lo=BAND_Q[0], hi=BAND_Q[1]):      # phan vi -> khoang, khong lay min/max

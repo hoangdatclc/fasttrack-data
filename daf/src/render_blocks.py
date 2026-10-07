@@ -188,14 +188,6 @@ def saved(busy, ft):
             f"ve {fmt(lo)} gio, duoi nguong 1 gio chu site dat. Ep len 1.0 la noi qua "
             f"({lo_min} phut that su khong phai 1 gio). Dung lai, hoi chu site.")
 
-    # CONG CHAN 2 -- can duoi phai TRUNG voi phep tru khach tu lam (xem docstring).
-    arith = half(lo_min - cap)
-    if lo != arith:
-        raise SystemExit(
-            f"CAN DUOI KHONG KIEM CHUNG DUOC: hang SAVE se in can duoi {fmt(lo)} gio, nhung "
-            f"khach tu tru theo dong 1 va dong 2 ({lo_min} - {cap} = {lo_min - cap} phut) ra "
-            f"{fmt(arith)} gio. Chenh nhau la trang hua nhieu hon chinh no noi. Dung lai.")
-
     # PHAI LA MOT KHOANG. Tron ve cung mot gia tri -> noi rong XUONG, khong bao gio len.
     if lo == hi:
         lo = hi - 0.5
@@ -204,6 +196,24 @@ def saved(busy, ft):
                 f"KHONG DUNG DUOC KHOANG: ca hai can deu tron ve {fmt(hi)} gio, noi rong "
                 f"xuong se ra {fmt(hi - 0.5)} gio -- duoi nguong 1 gio chu site dat. "
                 "Dung lai, hoi chu site truoc khi giao.")
+
+    # CONG CHAN 2 -- can duoi phai TRUNG voi phep tru khach tu lam (xem docstring).
+    #
+    # SUA THU TU 07/10/2026 -- truoc do cong nay chay TRUOC buoc noi rong o tren, tuc
+    # no kiem mot gia tri KHONG BAO GIO LEN TRANG. CXR thang 11 lo ra: dai 75-87, ca
+    # hai can tron ve 1.5, cong doi chieu 1.5 voi phep tru half(75-15)=1.0 roi DUNG --
+    # trong khi sau khi noi rong can duoi la 1.0, BANG DUNG phep tru, va trang se in
+    # "1-1.5 hours" hoan toan kiem chung duoc. Cong da chan mot trang dung.
+    # Chuyen xuong day: kiem DUNG con so se in ra. Khong noi long mot ly nao -- noi
+    # rong chi HA can duoi, nen phep kiem o vi tri moi chat bang hoac chat hon.
+    # Da doi chieu: thang 10/2026 ca bon site deu khong cham nhanh noi rong, nen doi
+    # thu tu KHONG doi mot con so nao cua thang 10.
+    arith = half(lo_min - cap)
+    if lo != arith:
+        raise SystemExit(
+            f"CAN DUOI KHONG KIEM CHUNG DUOC: hang SAVE in can duoi {fmt(lo)} gio, nhung "
+            f"khach tu tru theo dong 1 va dong 2 ({lo_min} - {cap} = {lo_min - cap} phut) ra "
+            f"{fmt(arith)} gio. Chenh nhau la trang hua nhieu hon chinh no noi. Dung lai.")
 
     return f"{fmt(lo)}&ndash;{fmt(hi)} hours"
 

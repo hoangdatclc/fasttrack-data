@@ -59,5 +59,7 @@
     "CDG": "Paris",
     "SYD": "Sydney"
   },
-  "guide": "https://hanoiairportfasttrack.com/hanoi-airport-immigration-wait-time/"
+  "guide": "https://hanoiairportfasttrack.com/hanoi-airport-immigration-wait-time/",
+  "month_uplift": 1.0,
+  "surge": 5
 }

@@ -28,5 +28,6 @@
     "PNH": "Phnom Penh",
     "SAI": "Siem Reap"
   },
-  "guide": "https://danangairportfasttrack.com/da-nang-airport-immigration-wait-time/"
+  "guide": "https://danangairportfasttrack.com/da-nang-airport-immigration-wait-time/",
+  "month_uplift": 1.0
 }

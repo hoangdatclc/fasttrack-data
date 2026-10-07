@@ -118,7 +118,8 @@ def main(inp_path, out_path):
     check_month_label(i["month"], i["month_label"])
     d = M.build_month_json(i["month"], i["month_label"], i["month_notes"],
                            i["empty_band_note"], i["context"], i["basis"],
-                           i["cities"], i["guide"])
+                           i["cities"], i["guide"],
+                           uplift=i.get("month_uplift"), surge=i.get("surge"))
     open(out_path, "w", encoding="utf-8").write(json.dumps(d, ensure_ascii=False, indent=2) + "\n")
     h = d["headline"]
     print(f"CONG MUA LICH BAY: PASS ({season})")

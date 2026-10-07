@@ -1,0 +1,42 @@
+{
+  "month": "2026-11",
+  "month_label": "November 2026",
+  "updated": "2026-11-01",
+  "month_notes": "November is when Cam Ranh&#8217;s winter actually starts, and the winter schedule that began on 25 October is now the one flying. Azur Air&#8217;s charter programme from seven Russian cities opens this month, Korean Air switches its Incheon flight to a 276-seat A330-300 for the whole winter, and VietJet&#8217;s new Moscow service adds a wide-body in the early afternoon. One thing moves the other way: VietJet cuts Cam Ranh&ndash;Busan from daily to four flights a week between 3 November and 4 December. The new Cam Ranh&ndash;Singapore route does not start until 11 December, so it is not in these numbers.",
+  "empty_band_note": "No international arrival scheduled in this window in November",
+  "context": {
+    "text": "Cam Ranh handled 6.8 million passengers in 2024, of whom 4.2 million were international, and international traffic grew again to roughly 4.69 million in 2025. Khanh Hoa received 851,390 Russian visitors in the first eight months of 2026 alone, more than three times the same period a year earlier, and the airport counts 124 Korean flights a week from Seoul, Busan, Daegu and Cheongju. Terminal 2 takes all international arrivals.",
+    "source": "Bao Khanh Hoa, Dec 2024; Cam Ranh International Terminal, 2025&ndash;2026; Airports Corporation of Vietnam, Sep 2026"
+  },
+  "basis": "based on flight schedules and the airport&rsquo;s published passenger numbers from 2024&ndash;2026",
+  "cities": {
+    "ICN": "Seoul",
+    "PUS": "Busan",
+    "TAE": "Daegu",
+    "CJJ": "Cheongju",
+    "CAN": "Guangzhou",
+    "TFU": "Chengdu",
+    "HFE": "Hefei",
+    "BKK": "Bangkok",
+    "DMK": "Bangkok",
+    "KUL": "Kuala Lumpur",
+    "SIN": "Singapore",
+    "PNH": "Phnom Penh",
+    "SVO": "Moscow",
+    "DME": "Moscow",
+    "VKO": "Moscow",
+    "OVB": "Novosibirsk",
+    "IKT": "Irkutsk",
+    "SVX": "Yekaterinburg",
+    "VVO": "Vladivostok",
+    "MRV": "Mineralnye Vody",
+    "TJM": "Tyumen",
+    "ALA": "Almaty",
+    "NQZ": "Astana",
+    "TAS": "Tashkent",
+    "FRU": "Bishkek",
+    "MSQ": "Minsk"
+  },
+  "guide": "https://nhatrangairportfasttrack.com/nha-trang-airport-guide/",
+  "month_uplift": 1.1
+}

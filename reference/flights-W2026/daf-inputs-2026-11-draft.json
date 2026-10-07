@@ -1,0 +1,34 @@
+{
+  "month": "2026-11",
+  "month_label": "November 2026",
+  "updated": "2026-11-01",
+  "month_notes": "November is the heart of Da Nang's storm-and-flood season, and the first full month running entirely on the winter schedule. Singapore Airlines now lands three times a day instead of two and Vietnam Airlines twice from Bangkok, while Air Cambodia's Siem Reap flight has moved from late afternoon to 20:00 on a 180-seat jet instead of a 72-seat turboprop. VietJet has cut Seoul to four flights a week until 5 December, and it is Asiana's last full month before its 17 December merger into Korean Air.",
+  "empty_band_note": "Two Korean red-eyes clear the hall after midnight",
+  "context": {
+    "text": "Da Nang International Airport handled 13.1 million passengers in the first nine months of 2026, and the winter schedule adds more: Singapore Airlines alone lifts Da Nang from 2,156 to 3,234 seats a week from 25 October.",
+    "source": "congluan.vn 27 Sep 2026; Mainly Miles 20 Sep 2026"
+  },
+  "basis": "based on flight schedules and queue times reported at the airport in 2025&ndash;2026",
+  "cities": {
+    "ICN": "Seoul",
+    "PUS": "Busan",
+    "TAE": "Daegu",
+    "CJJ": "Cheongju",
+    "TPE": "Taipei",
+    "KHH": "Kaohsiung",
+    "HKG": "Hong Kong",
+    "MFM": "Macau",
+    "SIN": "Singapore",
+    "KUL": "Kuala Lumpur",
+    "BKK": "Bangkok",
+    "DMK": "Bangkok",
+    "MNL": "Manila",
+    "NRT": "Tokyo",
+    "KIX": "Osaka",
+    "PNH": "Phnom Penh",
+    "SAI": "Siem Reap",
+    "DPS": "Bali"
+  },
+  "guide": "https://danangairportfasttrack.com/da-nang-airport-immigration-wait-time/",
+  "month_uplift": 1.0
+}

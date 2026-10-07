@@ -1,0 +1,30 @@
+{
+  "month": "2026-11",
+  "month_label": "November 2026",
+  "updated": "2026-11-01",
+  "month_notes": "November is the first full month on the winter (W2026) schedule. Sun PhuQuoc Airways' new Shenzhen service, which started on 27 October, lands in the small hours, so the quietest stretch of the night is no longer empty. Aeroflot's Moscow A330 returned on 15 October and Aero Nomad started Bishkek flights on 31 October; both land around the middle of the day, but only on some days of the week. Starlux ended its Taichung flights on 1 November.",
+  "empty_band_note": "No international arrivals late morning midweek; Moscow and Bishkek land near midday on other days",
+  "context": {
+    "text": "Aeroflot began scheduled Moscow–Phu Quoc flights on 15 October 2026 with an Airbus A330-300, and Aero Nomad added Bishkek on 31 October — the first winter season in which Phu Quoc has regular, non-charter wide-body service from Russia.",
+    "source": "AeroRoutes, 24 Aug 2026 and 5 Oct 2026"
+  },
+  "basis": "based on flight schedules and queue times reported at the airport in 2025&ndash;2026",
+  "cities": {
+    "ICN": "Seoul",
+    "PUS": "Busan",
+    "KUL": "Kuala Lumpur",
+    "BKK": "Bangkok",
+    "DMK": "Bangkok",
+    "SIN": "Singapore",
+    "HKG": "Hong Kong",
+    "TPE": "Taipei",
+    "TAS": "Tashkent",
+    "PNH": "Phnom Penh",
+    "XIY": "Xi'an",
+    "TFU": "Chengdu",
+    "KMG": "Kunming",
+    "SZX": "Shenzhen"
+  },
+  "guide": "https://phuquocairportfasttrack.com/phu-quoc-airport-immigration-wait-time/",
+  "month_uplift": 1.1
+}

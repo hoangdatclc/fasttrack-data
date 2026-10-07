@@ -37,5 +37,6 @@
     "FRU": "Bishkek",
     "MSQ": "Minsk"
   },
-  "guide": "https://nhatrangairportfasttrack.com/nha-trang-airport-guide/"
+  "guide": "https://nhatrangairportfasttrack.com/nha-trang-airport-guide/",
+  "month_uplift": 1.0
 }

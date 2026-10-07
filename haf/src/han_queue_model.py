@@ -65,6 +65,63 @@ hon SGN o moi hang dem duoc (144 quay check-in so voi 120, 30 cua ra so voi 26).
 45 buc la con so hop ly -- neu khong noi la khiem ton.
 
 ======================================================================
+(E) THANG 11/2026: SURGE 5 -> 8. VAN DONG CAN, KHONG PHAI CAN BASE_DAY
+======================================================================
+Muc (B) tien lieu dung thang nay nhung chi duong SAI CAN: no bao "nang BASE_DAY".
+Lam vay ra mot ket qua VO LY ma chu site bat duoc ngay 07/10/2026:
+
+    T10: 28 quay nen, hang 794 nguoi (72% sanh) -> cong bo  97-110
+    T11: 33 quay nen, hang 1.079    (98% sanh) -> cong bo  95-105
+
+Thang 11 dong khach hon, hang dai hon han (1.079 so voi 794 nguoi), ma so cong bo
+lai THAP hon thang 10. Khong the dung. Chu site noi thang: "dong khach hon, ke ca
+co mo them quay thi thoi gian cho cung khong the thap hon thang 10 duoc".
+
+VI SAO NANG BASE_DAY LAI SAI VE BAN CHAT:
+BASE_DAY la BIEN CHE NEN -- so quay mo theo ke hoach nhan su, chay suot ca ngay, doi
+theo quy/nam chu khong theo thang. Nang no len 33 tuc gia dinh san bay tang bien che
+nen 18% chi cho mot thang, va hieu ung phu la KHUNG VANG CUNG NHANH LEN: khung
+06:00-10:00 vot tu 51-53 (T10) xuong con 49-52 du thang 11 dong hon. Mot thang dong
+hon khong the lam gio vang chay nhanh hon. Do la dau hieu da van nham can.
+
+SURGE moi la phan PHAN UNG THEO NHU CAU: `simulate()` chi cong no khi hang da dai
+(SURGE_PAX / SURGE_AT). Dung no thi:
+  - khung vang GIU NGUYEN muc dich vu thang 10 (khong co hang dai -> khong surge)
+  - chi gio cao diem duoc tang vien, dung nghia "san bay mo them quay de chua du khach"
+  - va so cong bo DI LEN, dung chieu voi luu luong
+
+CHON SURGE = 8 -- so NHO NHAT giu hang trong suc chua sanh cong tran hanh lang:
+    SURGE  quay dinh   hang   %sanh    cong bo
+      5       33       2.131  194%     CHAN (vo tran)
+      7       35       1.579  144%     CHAN (vo tran)
+      8       36       1.403  128%     103-113   <= CHON
+      9       37       1.297  118%     104-114
+     10       38       1.192  108%      99-110
+     12       40       1.057   96%      92-102
+Khong chon cao hon: moi quay them la mot phut bot di tren so cong bo, va lam tron ve
+phia ban duoc nhieu Fast Track hon la dieu muc (B) cam.
+
+NGUONG DUNG LA 1,35x SUC CHUA (1.485), KHONG PHAI 1.100:
+Muc (B) ghi nguong 1.100 (vua long sanh). Thang 10 lot thoai mai nen khong ai phai
+chon. Thang 11 hai nguong cho hai ket qua nguoc nhau:
+    nguong 1.485 (co tran hanh lang) -> SURGE 8  -> 103-113  (CAO hon T10, dung chieu)
+    nguong 1.100 (khong tran)        -> SURGE 11 -> 96-106   (THAP hon T10, vo ly)
+Chon 1.485. HALL_SPILL = 1,35 ton tai chinh de mo ta viec hang tran ra hanh lang --
+dieu co that o Noi Bai thang cao diem. 1.100 la muc THIET KE nham toi, khong phai muc
+van hanh. Muc (B) viet khi thang 10 chua cham den cho nay; (E) la ban chot.
+
+KIEM LAI: dinh xep hang thuan 117 phut, nam trong dai chap nhan 42-144 cua cong hieu
+chuan (OBSERVED_PEAK 60-90 x 0,7-1,6). Hang 1.403 = 128% sanh, lot tran 1,35x.
+
+GIA DINH CON PHAI XAC MINH: 28 + 8 = 36 quay cho lan khach ngoai luc cao diem, trong
+khi muc (A) uoc T2 chi co ~45 buc va suy ra "toi da 33 quay cho lan ngoai". 36 doi hoi
+dieu buc tu lan khach Viet sang (khach Viet phan lon di autogate nen khong chiem buc).
+Co ly nhung la SUY LUAN.
+=> VIEC CAN LAM, re va dut diem: nho nhan vien tai Noi Bai dem SO QUAY NHAP CANH THUC
+   MO cho lan khach ngoai luc 13:00-16:00 mot ngay thuong thang 11. Mot con so do
+   thay the ca muc nay lan OBSERVED_PEAK dang thieu.
+
+======================================================================
 (B) BASE_DAY = 28 -- VA VI SAO KHONG PHAI 27
 ======================================================================
 Ca 27 lan 28 deu qua ca hai rang buoc o muc (A):
@@ -135,10 +192,13 @@ from collections import deque
 from han_flights import FLIGHTS, SCHEDULE_SEASON
 
 LOAD, FOREIGN = 0.85, 0.70
-MONTH_UPLIFT = 1.00   # thang 10 = moc. Xem BANG HE SO MUA cuoi file.
+MONTH_UPLIFT = 1.05   # thang 11. BANG HE SO MUA KHONG CO trong file nay (comment cu noi
+# "cuoi file" nhung cuoi file khong co bang nao) -- bang that nam o skill
+# update-fast-track-hanoi/reference/model.md, muc "Bang he so mua cua rieng HAN":
+# thang 11 = 1,05 ("Mua thu Ha Noi + lich dong day du"). Moc van la thang 10 = 1,00.
 WALK = (10, 30)        # T2 200.164 m2 sau mo rong 19/12/2025 -- nha ga LON NHAT mang luoi
 PROC_SEC = 138         # xem muc (A). 125 -> 138 ngay 05/10/2026, theo quan sat cua chu site.
-BASE_DAY, BASE_NIGHT, SURGE = 28, 24, 5
+BASE_DAY, BASE_NIGHT, SURGE = 28, 24, 8   # SURGE 5 -> 8 ngay 07/10/2026 cho thang 11, xem (E)
 SURGE_PAX = 1500       # khach ngoai vua ha trong 45 phut gan nhat -> mo them lan. ~7 chuyen HAN.
 SURGE_AT = 400         # chot chan theo do dai hang. Tran phong cho ~1.100 cho (xem (6)).
 # Fast Track hai bac, giong DAF/CAF/PAF (SAF ba bac vi co ca khung duoi 60 phut).
@@ -330,16 +390,31 @@ def hall_overflow(**kw):
     return max(0.0, mq - HALL_CAPACITY)
 
 
-def build_month_json(month, month_label, month_notes, empty_band_note, context, basis, cities, guide):
-    """month='2026-10', month_label='October 2026'."""
+def build_month_json(month, month_label, month_notes, empty_band_note, context, basis, cities,
+                     guide, uplift=None, surge=None):
+    """month='2026-10', month_label='October 2026'.
+
+    `uplift` va `surge` LA DON BAY THEO THANG, nhan tu inputs-YYYY-MM.json (khoa
+    `month_uplift` / `surge`). None -> dung hang so module.
+
+    VI SAO PHAI NHAN TU INPUTS -- sua 07/10/2026:
+    Truoc day ca hai la HANG SO MODULE. Doi chung cho thang moi la thang cu KHONG
+    DUNG LAI DUOC nua: dung inputs thang 10 voi model da chinh cho thang 11 ra mot
+    con so thu ba, khong phai thang nao ca. Da dinh that o HAF ngay 07/10/2026 khi
+    SURGE 5 -> 8 lam thang 10 (da phat hanh 97-110) vo luon cong tran phong cho.
+    Skill van canh bao "MONTH_UPLIFT la hang so module, quen sua la im lang dung he
+    so thang truoc" -- day la cach chua goc cho ca canh bao do.
+    Hang so module gio chi con la MAC DINH cho ban chay tay; moi thang co so cua no
+    nam trong inputs cua chinh thang do.
+    """
     import itertools
-    central_rows, _, central_pax, central_queue = simulate()
+    central_rows, _, central_pax, central_queue = simulate(uplift=uplift, surge=surge)
     if central_queue > HALL_CAPACITY * HALL_SPILL:
         raise SystemExit(
             f"KICH BAN TRUNG TAM VO TRAN PHONG CHO: hang dai nhat {central_queue:.0f} nguoi "
             f"> {HALL_SPILL:.2f}x suc chua {HALL_CAPACITY}. San bay se mo them quay chu khong de "
             "ngoai phong. NANG BASE_DAY cho toi khi lot roi chay lai -- dung giao so nay.")
-    grid_all = [(simulate(proc_sec=p, base_day=c, foreign=fo), (p, c, fo))
+    grid_all = [(simulate(proc_sec=p, base_day=c, foreign=fo, uplift=uplift, surge=surge), (p, c, fo))
                 for p, c, fo in itertools.product(GRID_PROC, GRID_COUNTERS, GRID_FOREIGN)]
     grid = [g for g, _k in grid_all if g[3] <= HALL_CAPACITY * HALL_SPILL]
     dropped = [k for g, k in grid_all if g[3] > HALL_CAPACITY * HALL_SPILL]
