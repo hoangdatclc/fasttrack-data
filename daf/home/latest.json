@@ -2,9 +2,73 @@
   "site": "DAF",
   "month": "2026-10",
   "page_id": 15,
-  "host": "x",
-  "edit_url": "https://x/wp-admin/post.php?post=15&action=edit",
+  "host": "danangairportfasttrack.com",
+  "edit_url": "https://danangairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
   "content_sha256": "5eb7939722ca10511b37f38d7d193bc8a805b72349a4aa769dcdb90bb4920354",
   "content_bytes": 199998,
-  "generated": "2026-10-06"
+  "generated": "2026-10-06",
+  "baseline": {
+    "month": "2026-10",
+    "bands": [
+      {
+        "band": "00:00-06:00",
+        "flights": 2,
+        "pax": 296,
+        "standard": [
+          52,
+          62
+        ]
+      },
+      {
+        "band": "06:00-10:00",
+        "flights": 9,
+        "pax": 1361,
+        "standard": [
+          49,
+          60
+        ]
+      },
+      {
+        "band": "10:00-13:00",
+        "flights": 13,
+        "pax": 1907,
+        "standard": [
+          50,
+          77
+        ]
+      },
+      {
+        "band": "13:00-16:00",
+        "flights": 10,
+        "pax": 1238,
+        "standard": [
+          44,
+          66
+        ]
+      },
+      {
+        "band": "16:00-20:00",
+        "flights": 6,
+        "pax": 790,
+        "standard": [
+          40,
+          45
+        ]
+      },
+      {
+        "band": "20:00-24:00",
+        "flights": 13,
+        "pax": 2009,
+        "standard": [
+          68,
+          79
+        ]
+      }
+    ],
+    "levers": {
+      "month_uplift": 1.0,
+      "surge": 3,
+      "counters_day": 11
+    }
+  }
 }

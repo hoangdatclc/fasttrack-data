@@ -284,6 +284,27 @@ def push(repo, files, month, site):
         shutil.rmtree(tmp, ignore_errors=True)
 
 
+def baseline_from(wait_path):
+    """Lay MOC DOI CHIEU cho phep thu don dieu thang sau (luat 12).
+
+    Vi sao phai ghi vao latest.json: thang sau can biet thang nay DA CONG BO dai nao,
+    luu luong bao nhieu, va MO MAY QUAY -- ca ba. Trang HTML chi in dai va so chuyen,
+    khong in `pax` lan don bay, nen doc tu trang la doc thieu: mot tran giam di vi da
+    them quay thi hop le, giam di ma KHONG them quay thi la vặn nhầm cần. Khong co so
+    quay thi khong phan biet duoc hai truong hop.
+    """
+    d = json.load(open(wait_path, encoding="utf-8"))
+    asm = d.get("assumptions", {})
+    return {
+        "month": d.get("month"),
+        "bands": [{"band": b["band"], "flights": b.get("flights"), "pax": b.get("pax"),
+                   "standard": b.get("standard")} for b in d.get("bands", [])],
+        "levers": {"month_uplift": asm.get("month_uplift"),
+                   "surge": asm.get("surge_counters", asm.get("surge")),
+                   "counters_day": asm.get("counters_day")},
+    }
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--page", required=True)
@@ -293,6 +314,10 @@ def main():
     ap.add_argument("--repo", default="")
     ap.add_argument("--outdir", default="out")
     ap.add_argument("--no-push", action="store_true")
+    ap.add_argument("--wait-json", default="",
+                    help="{site}-wait-YYYY-MM.json cua thang nay. Ghi MOC DOI CHIEU vao "
+                         "latest.json de thang sau chay duoc phep thu don dieu (luat 12) "
+                         "bang so chinh xac, khong phai bang cach do chu tren trang.")
     a = ap.parse_args()
 
     if not re.fullmatch(r"\d{4}-\d{2}", a.month):
@@ -338,6 +363,11 @@ def main():
     meta = {"site": a.site, "month": a.month, "page_id": page_id, "host": host,
             "edit_url": a.edit_url, "content_sha256": sha,
             "content_bytes": len(content.encode("utf-8")), "generated": date.today().isoformat()}
+    if a.wait_json:
+        meta["baseline"] = baseline_from(a.wait_json)
+        if meta["baseline"]["month"] != a.month:
+            sys.exit(f"--wait-json la thang {meta['baseline']['month']!r} nhung --month "
+                     f"la {a.month!r}. Sai file -> moc doi chieu thang sau se sai.")
 
     os.makedirs(a.outdir, exist_ok=True)
     paths = {f"{slug}/home/latest.xml": os.path.join(a.outdir, "latest.xml"),

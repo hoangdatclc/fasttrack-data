@@ -38,5 +38,6 @@
     "MSQ": "Minsk"
   },
   "guide": "https://nhatrangairportfasttrack.com/nha-trang-airport-guide/",
-  "month_uplift": 1.0
+  "month_uplift": 1.0,
+  "surge": 3
 }

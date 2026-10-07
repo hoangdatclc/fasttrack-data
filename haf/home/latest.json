@@ -2,9 +2,73 @@
   "site": "HAF",
   "month": "2026-10",
   "page_id": 15,
-  "host": "x",
-  "edit_url": "https://x/wp-admin/post.php?post=15&action=edit",
+  "host": "hanoiairportfasttrack.com",
+  "edit_url": "https://hanoiairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
   "content_sha256": "96f8bfd1450954c0e05a939f21390d0c17a3156baf90b48cbf9e141493cb8260",
   "content_bytes": 243819,
-  "generated": "2026-10-06"
+  "generated": "2026-10-06",
+  "baseline": {
+    "month": "2026-10",
+    "bands": [
+      {
+        "band": "00:00-06:00",
+        "flights": 12,
+        "pax": 1395,
+        "standard": [
+          35,
+          36
+        ]
+      },
+      {
+        "band": "06:00-10:00",
+        "flights": 15,
+        "pax": 2062,
+        "standard": [
+          51,
+          53
+        ]
+      },
+      {
+        "band": "10:00-13:00",
+        "flights": 21,
+        "pax": 2697,
+        "standard": [
+          70,
+          77
+        ]
+      },
+      {
+        "band": "13:00-16:00",
+        "flights": 25,
+        "pax": 3157,
+        "standard": [
+          97,
+          109
+        ]
+      },
+      {
+        "band": "16:00-20:00",
+        "flights": 24,
+        "pax": 2892,
+        "standard": [
+          90,
+          107
+        ]
+      },
+      {
+        "band": "20:00-24:00",
+        "flights": 23,
+        "pax": 2918,
+        "standard": [
+          90,
+          110
+        ]
+      }
+    ],
+    "levers": {
+      "month_uplift": 1.0,
+      "surge": 5,
+      "counters_day": 28
+    }
+  }
 }

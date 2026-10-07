@@ -29,5 +29,6 @@
     "SAI": "Siem Reap"
   },
   "guide": "https://danangairportfasttrack.com/da-nang-airport-immigration-wait-time/",
-  "month_uplift": 1.0
+  "month_uplift": 1.0,
+  "surge": 3
 }

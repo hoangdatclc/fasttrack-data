@@ -336,10 +336,18 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
         "context": context, "basis": basis,
         "links": {"guide": guide}, "cities": cities,
         "assumptions": {"load": LOAD, "foreign_share": FOREIGN,
-                        "month_uplift": MONTH_UPLIFT, "walk_min": WALK, "processing_sec": PROC_SEC,
+                        "month_uplift": MONTH_UPLIFT if uplift is None else uplift,
+                        # ^ GIA TRI DA DUNG THAT, khong phai hang so module.
+                        #   Tu khi don bay ve inputs (luat nha 14), hai khoa nay la
+                        #   thu DUY NHAT ghi lai thang do chay voi don bay nao -- va
+                        #   monthly_publish.py cop chung vao latest.json lam MOC DOI
+                        #   CHIEU cho phep thu don dieu thang sau. Ghi hang so module
+                        #   vao day la noi doi: 07/10/2026 HAF da in surge=8/uplift=1,05
+                        #   cho ban thang 10 that ra chay surge=5/uplift=1,00, va moc
+                        #   sai do se lam thang 11 ket luan nguoc ("khong them quay"). "walk_min": WALK, "processing_sec": PROC_SEC,
                         "seats": {f[1]: f[4] for f in FLIGHTS},
                         "counters_day": BASE_DAY, "counters_night": BASE_NIGHT,
-                        "surge_counters": SURGE, "surge_queue": SURGE_AT, "taxi_min": TAXI,
+                        "surge_counters": SURGE if surge is None else surge, "surge_queue": SURGE_AT, "taxi_min": TAXI,
                         "seats_per_flight": True, "calibrated_to": list(OBSERVED_PEAK),
                         "grid_counters": list(GRID_COUNTERS), "grid_processing_sec": list(GRID_PROC),
                         "grid_foreign_share": list(GRID_FOREIGN), "band_quantiles": list(BAND_Q)},

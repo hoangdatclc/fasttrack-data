@@ -143,9 +143,18 @@ He so su dung ~86%. Thu nghiem tren chinh mo hinh nay:
     uplift 1,20 (T12) -> dinh 136 phut, hang 2.161 (196% -- VO TRAN)
 Doc cho dung: KHONG phai "thang 11 cho 71 phut". Hang 1.158 nguoi khong lot vao phong
 1.100 cho, nen tinh huong do khong xay ra -- san bay se mo them quay. Nghia la:
-=> TU THANG 11 TRO DI, PHAI NANG BASE_DAY CHO TOI KHI HANG DAI NHAT <= 1.100,
-   roi moi doc ket qua. Doi moi he so mua ma giu nguyen BASE_DAY la ra so sai.
-   Ham `hall_overflow()` se bao; dung bo qua.
+=> TU THANG 11 TRO DI, PHAI MO THEM QUAY CHO TOI KHI HANG DAI NHAT LOT TRAN,
+   roi moi doc ket qua. Doi he so mua ma giu nguyen so quay la ra so sai.
+
+   DINH CHINH 07/10/2026 -- CAN PHAI VAN LA `surge`, KHONG PHAI `BASE_DAY`.
+   Ba dong tren day viet truoc khi co luat nha 12-13 va da chi SAI CAN; chinh
+   chung lam ra ban 95-105 bi chu site tra lai. Giu lai nguyen van de thay vet,
+   nhung doc theo ban dinh chinh o muc (E) cuoi file. Tom lai:
+     - `BASE_DAY` = bien che nen, chay SUOT CA NGAY -> lam nhanh ca khung vang.
+     - `surge`    = phan ung theo nhu cau, chi chay khi hang da dai -> dung can.
+   Thang 11/2026: `surge` 5 -> 8. Tai sao dung 8: 7 cho hang 1.579 > tran 1.485,
+   8 cho 1.4xx -- 8 la SO NHO NHAT lot. Khong duoc lay to hon cho "an toan", vi
+   moi quay them la mot phut bot di tren con so cong bo.
 
 ======================================================================
 (C) OBSERVED_PEAK = (60, 90) -- QUAN SAT CUA CHU SITE, 05/10/2026
@@ -413,7 +422,18 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
         raise SystemExit(
             f"KICH BAN TRUNG TAM VO TRAN PHONG CHO: hang dai nhat {central_queue:.0f} nguoi "
             f"> {HALL_SPILL:.2f}x suc chua {HALL_CAPACITY}. San bay se mo them quay chu khong de "
-            "ngoai phong. NANG BASE_DAY cho toi khi lot roi chay lai -- dung giao so nay.")
+            "ngoai phong.\n\n"
+            f"  NANG `surge` trong inputs-YYYY-MM.json -- KHONG nang BASE_DAY, va KHONG sua\n"
+            f"  hang so module. Lay SO NHO NHAT lot tran: tang 1 roi chay lai, dung nhay.\n"
+            f"  Hien `surge` = {SURGE if surge is None else surge}.\n\n"
+            f"  VI SAO KHONG PHAI BASE_DAY (luat nha 13): BASE_DAY la bien che NEN, chay\n"
+            f"  suot ca ngay, nen no lam nhanh ca nhung khung KHONG he dong -- va mot thang\n"
+            f"  dong hon khong the co khung nao nhanh len (luat 12). Ngay 07/10/2026 chinh\n"
+            f"  cau canh bao cu o day da chi sai can: nang BASE_DAY 28->33 cho ra 95-105,\n"
+            f"  THAP hon thang 10 (97-110), va khung vang 06:00-10:00 nhanh len 51-53 ->\n"
+            f"  49-52. Chu site bat duoc ngay. Xem muc (E) cuoi file nay.\n\n"
+            f"  Chay xong NHO chay phep thu don dieu truoc khi giao:\n"
+            f"    python3 tools/prev_bands.py --prev haf/home/latest.json --new <json vua dung>")
     grid_all = [(simulate(proc_sec=p, base_day=c, foreign=fo, uplift=uplift, surge=surge), (p, c, fo))
                 for p, c, fo in itertools.product(GRID_PROC, GRID_COUNTERS, GRID_FOREIGN)]
     grid = [g for g, _k in grid_all if g[3] <= HALL_CAPACITY * HALL_SPILL]
@@ -512,10 +532,18 @@ def build_month_json(month, month_label, month_notes, empty_band_note, context, 
         "context": context, "basis": basis,
         "links": {"guide": guide}, "cities": cities,
         "assumptions": {"load": LOAD, "foreign_share": FOREIGN,
-                        "month_uplift": MONTH_UPLIFT, "walk_min": WALK, "processing_sec": PROC_SEC,
+                        "month_uplift": MONTH_UPLIFT if uplift is None else uplift,
+                        # ^ GIA TRI DA DUNG THAT, khong phai hang so module.
+                        #   Tu khi don bay ve inputs (luat nha 14), hai khoa nay la
+                        #   thu DUY NHAT ghi lai thang do chay voi don bay nao -- va
+                        #   monthly_publish.py cop chung vao latest.json lam MOC DOI
+                        #   CHIEU cho phep thu don dieu thang sau. Ghi hang so module
+                        #   vao day la noi doi: 07/10/2026 HAF da in surge=8/uplift=1,05
+                        #   cho ban thang 10 that ra chay surge=5/uplift=1,00, va moc
+                        #   sai do se lam thang 11 ket luan nguoc ("khong them quay"). "walk_min": WALK, "processing_sec": PROC_SEC,
                         "seats": {f[1]: f[3] for f in FLIGHTS},
                         "counters_day": BASE_DAY, "counters_night": BASE_NIGHT,
-                        "surge_counters": SURGE, "surge_queue": SURGE_AT, "taxi_min": TAXI,
+                        "surge_counters": SURGE if surge is None else surge, "surge_queue": SURGE_AT, "taxi_min": TAXI,
                         "seats_per_flight": True, "calibrated_to": list(OBSERVED_PEAK),
                         "grid_counters": list(GRID_COUNTERS), "grid_processing_sec": list(GRID_PROC),
                         "grid_foreign_share": list(GRID_FOREIGN), "band_quantiles": list(BAND_Q),
