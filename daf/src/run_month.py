@@ -58,9 +58,20 @@ def check_season(month, declared):
         raise SystemExit(
             f"LICH BAY SAI MUA: danh sach chuyen dang khai SCHEDULE_SEASON={declared}, "
             f"nhung thang {month} thuoc mua {want}.\n"
-            f"  Phai DUNG LAI danh sach chuyen cho dung mua roi sua SCHEDULE_SEASON.\n"
-            f"  Dung chay tiep: khong cong nao khac bat duoc loi nay -- trang se ra "
-            f"con so cua mua cu kem nhan thang moi, va moi cong deu PASS.")
+            f"\n"
+            f"  DAY LA VIEC DU KIEN moi lan doi mua IATA (2 lan/nam), KHONG phai hong.\n"
+            f"  Viec phai lam: DUNG LAI danh sach chuyen quoc te den cho mua {want}\n"
+            f"  (tra lich bay that, bo codeshare, bo noi dia, kiem cheo >=2 nguon),\n"
+            f"  GHI DE danh sach cu, ROI moi sua SCHEDULE_SEASON thanh \"{want}\".\n"
+            f"  Xong thi chay lai lenh nay va di tiep -- dung bo cuoc, dung bao\n"
+            f"  \"khong chay duoc\" roi dung lai.\n"
+            f"\n"
+            f"  TUYET DOI KHONG chi sua moi SCHEDULE_SEASON cho qua cong. Lam vay la\n"
+            f"  noi doi voi chinh cong nay: trang se in con so cua mua {declared} kem\n"
+            f"  nhan thang {month}, va sau do KHONG CONG NAO khac bat duoc -- "
+            f"patch_static,\n"
+            f"  run_qc va monthly_publish deu se PASS. Do dung la loi am ma cong nay\n"
+            f"  sinh ra de chan.")
     return want
 
 
