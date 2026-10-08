@@ -4,17 +4,18 @@
   "_month": "2026-10",
   "_frozen": [
     "queue-figure",
-    "compare-row1"
+    "compare-row1",
+    "queue-note"
   ],
-  "_frozen_why": "Hai vung nay chua con so hang cho da cong bo (45-120 min, 45 to 90 minutes). Chu site chot 08/10/2026: giu nguyen moi con so dang co tren trang, khong dong vao.",
+  "_frozen_why": "Vung chua con so hang cho da cong bo (60 - 90 min) va dong phu duoi no. Chu site chot 08/10/2026: queue-note giu NGUYEN VAN ban goc, khong doi theo thang.",
   "_untouched_this_month": [
     "hero-lead",
     "intro",
     "footer-para"
   ],
   "hero-bullet": "Beat the queue when the late-night Korean bank lands — through in 15–20 min",
-  "queue-note": "Peak — the Korean bank, 23:15 to midnight",
   "peak-eyebrow": "October peak — DAD T2",
-  "peak-body": "Korea is Da Nang's biggest source market, and October gives it two long weekends — 3–5 and 9–11 October. The winter flight schedule starts on the 25th. When two or three flights touch down within the same hour, the Terminal 2 immigration hall fills quickly — 45 to 90 minutes.",
-  "faq-night": "Most Korean arrivals fall in these hours — seven land 23:15 to midnight. Our service is available 24/7 regardless of flight time."
+  "peak-body": "Korea is Da Nang's biggest source market, and October gives it two long weekends — 3–5 and 9–11 October. The winter flight schedule starts on the 25th. When two or three flights touch down within the same hour, the Terminal 2 immigration hall fills quickly — 60 to 90 minutes.",
+  "faq-night": "Most Korean arrivals fall in these hours — seven land 23:15 to midnight. Our service is available 24/7 regardless of flight time.",
+  "_base": "daf-base-6090.txt -- nen da dong bo moi con so hang cho ve 60-90 phut (chu site chot 08/10/2026). Thang 11 tro di chay tren nen nay."
 }

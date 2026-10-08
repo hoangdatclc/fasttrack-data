@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<data>
- <item>
-  <ID>15</ID>
-  <post_type>page</post_type>
-  <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[fc6328b4c869069f2765c068d16419e475fe096b5028a346785307861d4e0dfc]]></content_sha256>
-  <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
+<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -317,7 +310,7 @@
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <!--m:hero-bullet-->Beat the queue when the late-night Korean bank lands — through in 15–20 min<!--/m:hero-bullet-->
+          <!--m:hero-bullet-->Beat the queue when Korean flight banks land — through in 15–20 min<!--/m:hero-bullet-->
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -654,7 +647,7 @@
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
-              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->October peak — DAD T2<!--/m:peak-eyebrow--></span>
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->Peak hours — DAD T2<!--/m:peak-eyebrow--></span>
             </div>
           </div>
           <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
@@ -665,7 +658,7 @@
               <h3 style="margin:0 !important;">When the Banks Land</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->Korea is Da Nang's biggest source market, and October gives it two long weekends — 3–5 and 9–11 October. The winter flight schedule starts on the 25th. When two or three flights touch down within the same hour, the Terminal 2 immigration hall fills quickly — 60 to 90 minutes.<!--/m:peak-body-->
+              <!--m:peak-body-->When two or three Korean or Chinese flights touch down within the same hour, the Terminal 2 immigration hall fills quickly — 60 to 90 minutes, and longer during Tet, the summer rush or the fireworks festival. A long line before your holiday has even started.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -1664,7 +1657,7 @@
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg><strong style="color:#0B1F3A; font-weight:600;">Arrivals:</strong>&nbsp;between 10:00 PM and 6:00 AM</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg><strong style="color:#0B1F3A; font-weight:600;">Departures:</strong>&nbsp;between 12:00 AM and 8:00 AM</li>
             </ul>
-            <p style="margin-top:10px !important;"><!--m:faq-night-->Most Korean arrivals fall in these hours — seven land 23:15 to midnight. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
+            <p style="margin-top:10px !important;"><!--m:faq-night-->Many Korean and Chinese flights at Da Nang fall in these hours. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
             </div>
           </div>
         </div>
@@ -2227,6 +2220,4 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function () { if (current) { closePicker(); } });
 })();
 </script>
-[/ux_html]]]></post_content>
- </item>
-</data>
+[/ux_html]
