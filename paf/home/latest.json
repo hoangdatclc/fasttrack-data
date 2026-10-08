@@ -4,68 +4,7 @@
   "page_id": 15,
   "host": "phuquocairportfasttrack.com",
   "edit_url": "https://phuquocairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "d1850160acaa628627c608c05273d570edd0b072f11f57fbcc287c6281087cda",
-  "content_bytes": 204308,
-  "generated": "2026-10-06",
-  "baseline": {
-    "month": "2026-10",
-    "bands": [
-      {
-        "band": "00:00-06:00",
-        "flights": 0,
-        "pax": 0,
-        "standard": null
-      },
-      {
-        "band": "06:00-10:00",
-        "flights": 4,
-        "pax": 620,
-        "standard": [
-          42,
-          56
-        ]
-      },
-      {
-        "band": "10:00-13:00",
-        "flights": 1,
-        "pax": 174,
-        "standard": [
-          38,
-          46
-        ]
-      },
-      {
-        "band": "13:00-16:00",
-        "flights": 8,
-        "pax": 1215,
-        "standard": [
-          48,
-          69
-        ]
-      },
-      {
-        "band": "16:00-20:00",
-        "flights": 7,
-        "pax": 1100,
-        "standard": [
-          59,
-          94
-        ]
-      },
-      {
-        "band": "20:00-24:00",
-        "flights": 5,
-        "pax": 716,
-        "standard": [
-          37,
-          44
-        ]
-      }
-    ],
-    "levers": {
-      "month_uplift": 1.05,
-      "surge": 2,
-      "counters_day": 7
-    }
-  }
+  "content_sha256": "eedf4555f38c3be8c6b64701fc94affa4726abf373967019b74352dada579584",
+  "content_bytes": 179533,
+  "generated": "2026-10-08"
 }
