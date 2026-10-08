@@ -49,41 +49,30 @@ PROFILE = {
                    r'class="daf-pick-chev"': 2,
                    r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
+    # CAF -- DOI HAN 08/10/2026. Trang chu quay ve ban GOC 11 element (bo he tinh
+    # thoi gian cho), cong element "Booking Picker" => 12 element. Khong con vung
+    # dat:zone nao; cap nhat hang thang di qua cac vung <!--m:id--> (tools/text_zones.py).
+    #
+    # CAF KHAC PAF/DAF hai cho, dung sua cho "giong":
+    #   1. Khong co schema.org/FAQPage -- 12 the .caf-faq tran, khong microdata.
+    #   2. Khong co media query nao, khong co .caf-cta-row. Trang tu ghi "100% inline,
+    #      khong <style>, khong media query". Nen KHONG co must '.caf-cta-row button'
+    #      nhu PAF/DAF -- phai kiem nut hero bang RENDER 390px thay vi bang chuoi.
     "CAF": {
-        "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
-                   'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
+        "labels": ['Nav Bar', 'Hero Banner', 'What Is Fast Track?', 'Services', 'Booking',
+                   'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
                    'Mobile Book Now', 'Booking Picker'],
-        "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-
-        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
-        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
-        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
-        "hero_title": 'Why Choose CXR Fast Track?',
-        "musts": [
-                  'Peak immigration queue: ',
-                  'Estimate &middot; Updated ',
-                  'With Fast Track: under&nbsp;','add-to-cart=311', 'add-to-cart=313',
+        "zones": [],
+        "musts": ['add-to-cart=311', 'add-to-cart=313',
                   '[caf_price service="fast_track_arrival"]',
                   '[caf_price service="fast_track_departure"]',
-                  'id="wait-times"', 'id="caf-pick-tpl"', '#wait-times .caf-wt-num',
-                  '#wait-times .caf-wt-ft', '#wait-times .caf-wt-btn', '.caf-pick-btn',
-                  '#caf-pick-panel', 'id="caf-marquee"',
-                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
-                  # 06/10/2026). Nam NGOAI vung dat:zone -> quy trinh hang thang khong
-                  # cham vao, nen mat no la LOI AM: chu khong doi, chi vo dong tren
-                  # dien thoai. patch_static.py cua site cung kiem; de ca o day cho
-                  # cong chung nam site dong deu mot muc.
-                  'grid-template-columns: 40px 1fr !important',
-                  '.caf-hero-row > span:nth-child(3)'],
-
-        # CAF co 13 Question (12 cua site + 1 trong vung wait-faq), DAF co 11.
+                  'id="caf-pick-tpl"', '.caf-pick-btn', 'id="caf-marquee"'],
         # Bang review CAF KHONG dung class .caf-review-card nhu PAF/DAF: the la div tran,
-        # va ban sao duoc JS nhan ra khi chay (clone + aria-hidden), khong nhan doi san
-        # trong markup. Nen dem bang chuoi 5 sao - moi the dung mot lan.
-        "counts": {r'<img ': 16, r'schema\.org/Question': 13,
-                   r'\u2605\u2605\u2605\u2605\u2605': 11, r'class="caf-pick-btn': 3,
-                   r'class="caf-hero-row"': 3},
+        # ban sao do JS clone khi chay. Nen dem bang chuoi 5 sao -- moi the dung mot lan.
+        "counts": {r'<img ': 16, r'class="caf-faq"': 12,
+                   r'\u2605\u2605\u2605\u2605\u2605': 11,
+                   r'class="caf-pick-btn"': 2, r'class="caf-pick-chev"': 2,
+                   r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
     "SAF": {
         # BA cho SAF khac ba site kia -- doi mot trong ba la trang hong:

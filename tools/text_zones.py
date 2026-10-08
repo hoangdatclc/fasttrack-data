@@ -49,8 +49,13 @@ def blank(page):
 
 
 def plain(t):
-    t = re.sub(r'<(script|style)\b.*?</\1>', '', t, flags=re.S)
+    # BO COMMENT TRUOC, roi moi bo script/style. Thu tu nay la BAT BUOC:
+    # trang CAF co ghi chu "100% inline - khong <style>" NAM TRONG COMMENT.
+    # Neu bo script/style truoc, chu <style> trong comment mo mot khoi ma va
+    # nuot toi the </style> that o cuoi trang -- 196KB con lai 283 ky tu, cong
+    # tu khoa chay RONG ma van bao PASS. Loi am, da dinh that 08/10/2026.
     t = re.sub(r'<!--.*?-->', '', t, flags=re.S)
+    t = re.sub(r'<(script|style)\b.*?</\1>', '', t, flags=re.S)
     return html.unescape(re.sub(r'<[^>]+>', ' ', t)).lower()
 
 

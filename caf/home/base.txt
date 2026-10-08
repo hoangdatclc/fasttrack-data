@@ -1,11 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<data>
- <item>
-  <ID>15</ID>
-  <post_type>page</post_type>
-  <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[b721d203cb882b402ca0b3f56c5727e0e65abf9bff601b25e65948c295c5be00]]></content_sha256>
-  <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
+<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
 <!-- ============================================================
@@ -130,7 +123,7 @@
       <ul style="list-style:none !important; padding:0 !important; margin:0 0 30px 0 !important; display:flex !important; flex-direction:column !important; gap:12px !important">
         <li style="display:flex !important; align-items:flex-start !important; gap:10px !important; font-family:'DM Sans',sans-serif !important; font-size:clamp(0.87rem,2.3vw,0.92rem) !important; line-height:1.55 !important; color:rgba(255,255,255,0.86) !important; margin:0 !important; padding:0 !important">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0 !important; margin-top:3px !important"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <span style="min-width:0 !important; font-family:'DM Sans',sans-serif !important; color:rgba(255,255,255,0.86) !important"><!--m:hero-bullet-->Priority immigration lane — past the 60–90 minute winter-charter queue<!--/m:hero-bullet--></span>
+          <span style="min-width:0 !important; font-family:'DM Sans',sans-serif !important; color:rgba(255,255,255,0.86) !important"><!--m:hero-bullet-->Priority immigration lane — avoid the 60–90 minute peak queue<!--/m:hero-bullet--></span>
         </li>
         <li style="display:flex !important; align-items:flex-start !important; gap:10px !important; font-family:'DM Sans',sans-serif !important; font-size:clamp(0.87rem,2.3vw,0.92rem) !important; line-height:1.55 !important; color:rgba(255,255,255,0.86) !important; margin:0 !important; padding:0 !important">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" style="flex-shrink:0 !important; margin-top:3px !important"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -177,7 +170,7 @@
           <span style="flex:0 0 74px !important; font-family:'DM Sans',sans-serif !important; font-size:0.64rem !important; font-weight:600 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; color:#5A5A72 !important; line-height:1.4 !important">Queue</span>
           <span style="flex:1 !important; min-width:0 !important">
             <span style="display:block !important; font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.6rem !important; font-weight:700 !important; color:#B23A48 !important; line-height:1 !important"><!--m:queue-figure-->30 – 90 min<!--/m:queue-figure--></span>
-            <span style="display:block !important; font-family:'DM Sans',sans-serif !important; font-size:0.75rem !important; line-height:1.5 !important; color:#5A5A72 !important; margin-top:3px !important"><!--m:queue-note-->Peak — Russian charters, Korean red-eyes<!--/m:queue-note--></span>
+            <span style="display:block !important; font-family:'DM Sans',sans-serif !important; font-size:0.75rem !important; line-height:1.5 !important; color:#5A5A72 !important; margin-top:3px !important"><!--m:queue-note-->Peak hours — charter flights landing together<!--/m:queue-note--></span>
           </span>
         </div>
         <div aria-hidden="true" style="height:1px !important; background:#E8E4DE !important"></div>
@@ -277,7 +270,7 @@
             <img src="https://nhatrangairportfasttrack.com/wp-content/uploads/2026/08/save-1-3-hours-in-cam-ranh-airport.jpg" alt="Immigration queue at Cam Ranh Nha Trang Airport Terminal 2 during peak hours" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important" />
             <div style="position:absolute !important; top:0 !important; left:0 !important; right:0 !important; height:4px !important; background:#C9A84C !important"></div>
             <div style="position:absolute !important; bottom:14px !important; left:14px !important; background:rgba(11,31,58,0.85) !important; padding:6px 14px !important; border-radius:4px !important">
-              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff !important; letter-spacing:0.1em !important; text-transform:uppercase !important"><!--m:peak-eyebrow-->October peak — CXR T2<!--/m:peak-eyebrow--></span>
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff !important; letter-spacing:0.1em !important; text-transform:uppercase !important"><!--m:peak-eyebrow-->Peak hours — CXR T2<!--/m:peak-eyebrow--></span>
             </div>
           </div>
           <div style="padding:28px 26px 32px !important; flex:1 !important; display:flex !important; flex-direction:column !important">
@@ -287,7 +280,7 @@
               </div>
               <h3 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.4rem !important; font-weight:700 !important; line-height:1.15 !important; color:#0B1F3A !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important">When the Charters Land</h3>
             </div>
-            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important"><!--m:peak-body-->Cam Ranh is a small terminal serving big aircraft — Vietjet's new Moscow route, flying three times a week since 23 September, lands a 370-seat jet. The winter charter season opens with the new schedule on 25 October, so the T2 hall fills within minutes — 30 to 50 minutes on a normal busy day, 60 to 90 at the peak.<!--/m:peak-body--></p>
+            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important"><!--m:peak-body-->Cam Ranh is a small terminal serving big aircraft. When two Russian wide-bodies arrive within the hour, or Korean and Chinese flights stack up on a summer evening, the T2 hall fills within minutes — 30 to 50 minutes on a normal busy day, 60 to 90 during Tet, the dry-season peak or the winter charter season.<!--/m:peak-body--></p>
           </div>
         </div>
 
@@ -1007,7 +1000,7 @@
           <div style="max-height:0 !important; overflow:hidden !important; padding-bottom:0 !important">
             <p style="font-family:'DM Sans',sans-serif !important; font-size:0.92rem !important; color:#5A5A72 !important; line-height:1.78 !important; margin:0 !important; padding:0 !important">Yes, a <strong style="color:#0B1F3A !important; font-weight:600 !important">$10 surcharge per person</strong> applies for night flights. The windows differ slightly between services:</p>
             <p style="font-family:'DM Sans',sans-serif !important; font-size:0.92rem !important; color:#5A5A72 !important; line-height:1.9 !important; margin:8px 0 0 0 !important; padding:0 !important">› <strong style="color:#0B1F3A !important; font-weight:600 !important">Arrivals:</strong> between 10:00 PM and 6:00 AM<br>› <strong style="color:#0B1F3A !important; font-weight:600 !important">Departures:</strong> between 12:00 AM and 8:00 AM</p>
-            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.92rem !important; color:#5A5A72 !important; line-height:1.78 !important; margin:10px 0 0 0 !important; padding:0 !important"><!--m:faq-night-->A large share of flights at Cam Ranh falls in these hours — eight land between 22:30 and midnight, and the Russian charters start at 04:00. We operate 24/7 regardless of flight time.<!--/m:faq-night--></p>
+            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.92rem !important; color:#5A5A72 !important; line-height:1.78 !important; margin:10px 0 0 0 !important; padding:0 !important"><!--m:faq-night-->A large share of flights at Cam Ranh — Russian charters and Korean low-cost services in particular — fall inside these hours. We operate 24/7 regardless of flight time.<!--/m:faq-night--></p>
           </div>
         </div>
 
@@ -1443,6 +1436,4 @@ document.addEventListener('DOMContentLoaded', function() {
   window.addEventListener('resize', function () { if (current) { closePicker(); } });
 })();
 </script>
-[/ux_html]]]></post_content>
- </item>
-</data>
+[/ux_html]

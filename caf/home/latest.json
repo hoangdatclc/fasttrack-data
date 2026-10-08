@@ -4,71 +4,7 @@
   "page_id": 15,
   "host": "nhatrangairportfasttrack.com",
   "edit_url": "https://nhatrangairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "05a6f706209456c8b7ac5e7a4bce445428b8e72b41632ef7e1e4479d08e645e6",
-  "content_bytes": 203313,
-  "generated": "2026-10-06",
-  "baseline": {
-    "month": "2026-10",
-    "bands": [
-      {
-        "band": "00:00-06:00",
-        "flights": 3,
-        "pax": 524,
-        "standard": [
-          54,
-          71
-        ]
-      },
-      {
-        "band": "06:00-10:00",
-        "flights": 3,
-        "pax": 535,
-        "standard": [
-          43,
-          50
-        ]
-      },
-      {
-        "band": "10:00-13:00",
-        "flights": 9,
-        "pax": 1418,
-        "standard": [
-          64,
-          77
-        ]
-      },
-      {
-        "band": "13:00-16:00",
-        "flights": 3,
-        "pax": 443,
-        "standard": [
-          44,
-          50
-        ]
-      },
-      {
-        "band": "16:00-20:00",
-        "flights": 1,
-        "pax": 126,
-        "standard": [
-          28,
-          30
-        ]
-      },
-      {
-        "band": "20:00-24:00",
-        "flights": 9,
-        "pax": 1370,
-        "standard": [
-          70,
-          83
-        ]
-      }
-    ],
-    "levers": {
-      "month_uplift": 1.0,
-      "surge": 3,
-      "counters_day": 10
-    }
-  }
+  "content_sha256": "b721d203cb882b402ca0b3f56c5727e0e65abf9bff601b25e65948c295c5be00",
+  "content_bytes": 196568,
+  "generated": "2026-10-08"
 }

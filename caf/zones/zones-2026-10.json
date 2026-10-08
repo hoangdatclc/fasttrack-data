@@ -1,0 +1,21 @@
+{
+  "_site": "CAF",
+  "_airport": "CXR",
+  "_month": "2026-10",
+  "_frozen": [
+    "queue-figure",
+    "compare-row1"
+  ],
+  "_frozen_why": "Vung chua con so hang cho da cong bo (30 - 90 min; 30 to 50 / 60 to 90). Luat 5 skill me: quy trinh thang khong dung vao con so.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "intro",
+    "footer-para"
+  ],
+  "_base": "caf/home/base.txt",
+  "hero-bullet": "Priority immigration lane — past the 60–90 minute winter-charter queue",
+  "queue-note": "Peak — Russian charters, Korean red-eyes",
+  "peak-eyebrow": "October peak — CXR T2",
+  "peak-body": "Cam Ranh is a small terminal serving big aircraft — Vietjet's new Moscow route, flying three times a week since 23 September, lands a 370-seat jet. The winter charter season opens with the new schedule on 25 October, so the T2 hall fills within minutes — 30 to 50 minutes on a normal busy day, 60 to 90 at the peak.",
+  "faq-night": "A large share of flights at Cam Ranh falls in these hours — eight land between 22:30 and midnight, and the Russian charters start at 04:00. We operate 24/7 regardless of flight time."
+}
