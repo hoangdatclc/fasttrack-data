@@ -1,0 +1,21 @@
+{
+  "_site": "PAF",
+  "_airport": "PQC",
+  "_month": "2026-10",
+  "_frozen": [
+    "queue-figure",
+    "compare-row1"
+  ],
+  "_frozen_why": "Vung chua con so hang cho da cong bo (60 - 90 min). Chu site chot 08/10/2026: giu nguyen moi con so dang co tren trang, khong dong vao, khong gan nguon.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "intro",
+    "footer-para"
+  ],
+  "_base": "paf/home/base.txt",
+  "hero-bullet": "Beat the queue when winter-schedule charters bank from 25 October — through in 10–20 min",
+  "queue-note": "Peak — winter-schedule charters at the single terminal",
+  "peak-eyebrow": "October peak — PQC",
+  "peak-body": "Visa-free doesn't mean skipping the line. You still queue to have your exemption stamped and onward ticket checked. The winter schedule starts 25 October, with Aeroflot's Moscow route from the 15th and Shenzhen from the 27th, so charters bank more often at the single terminal — 60 to 90 minutes at peak.",
+  "faq1": "\n            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style=\"color:#0B1F3A; font-weight:600;\">30-day visa exemption to every nationality</strong> — but you still have to line up at immigration to get that exemption stamped, and officers may check your onward or return ticket. When several charter flights land within the same hour at the single terminal, that line builds fast. Fast Track walks you through the priority lane so you clear immigration in 10–20 minutes instead of queueing with everyone else. October is when Phu Quoc switches to its winter flight schedule — it starts on 25 October, with new Moscow, Shenzhen and Bishkek services opening the same month.</p>\n            "
+}

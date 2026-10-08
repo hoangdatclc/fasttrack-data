@@ -1,0 +1,2176 @@
+<!-- wp:flatsome/uxbuilder -->
+[ux_html label="Nav Bar"]
+
+<!-- ============================================================
+     NAVBAR — Phu Quoc Airport Fast Track (PQC)
+     Paste vào Custom HTML block ĐẦU TIÊN trên trang
+     phuquocairportfasttrack.com/
+     ============================================================ -->
+
+
+<!-- ============================================================
+     FONTS + PRECONNECT — khai báo 1 LẦN DUY NHẤT ở đây
+     (trước đây lặp 9 lần). KHÔNG thêm <link> font vào block khác.
+     ============================================================ -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,600&family=DM+Sans:wght@300;400;500;600&display=swap">
+
+<div id="paf-navbar" style="
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  z-index: 9999;
+  background: rgba(7,21,40,0.97);
+  border-bottom: 1px solid rgba(201,168,76,0.25);
+  padding: 0 32px;
+  height: 68px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  transform: translateY(0);
+  transition: transform 0.32s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform;
+">
+
+  <!-- Logo -->
+  <a href="https://phuquocairportfasttrack.com/" style="display:flex; align-items:center; gap:12px; text-decoration:none; flex-shrink:0;">
+    <svg width="42" height="42" viewBox="-4 -4 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+      <polygon points="36,2 70,36 36,70 2,36" fill="none" stroke="#C9A84C" stroke-width="2"/>
+      <polygon points="36,14 58,36 36,58 14,36" fill="#0B1F3A"/>
+      <polygon points="36,14 58,36 36,58 14,36" fill="#C9A84C" opacity="0.12"/>
+      <rect x="22" y="33" width="28" height="8" rx="4" fill="#C9A84C"/>
+      <polygon points="26,33 26,41 10,48 10,43" fill="#C9A84C"/>
+      <polygon points="46,33 46,41 62,48 62,43" fill="#C9A84C"/>
+      <polygon points="22,33 22,41 14,20" fill="#C9A84C"/>
+      <polygon points="50,34 50,38 60,36" fill="#F9F7F3"/>
+      <circle cx="36" cy="2" r="3" fill="#C9A84C"/>
+      <circle cx="70" cy="36" r="3" fill="#C9A84C"/>
+      <circle cx="36" cy="70" r="3" fill="#C9A84C"/>
+      <circle cx="2" cy="36" r="3" fill="#C9A84C"/>
+    </svg>
+    <div style="line-height:1.2;">
+      <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:1.45rem; font-weight:700; color:#fff; letter-spacing:0.5px; line-height:1.15;">Phu Quoc Airport</div>
+      <div style="font-family:'DM Sans',sans-serif; font-size:0.72rem; font-weight:600; color:#C9A84C; letter-spacing:2.5px; text-transform:uppercase;">Fast Track Service</div>
+    </div>
+  </a>
+
+  <!-- Nav links (desktop) -->
+  <nav id="paf-nav-links" style="display:flex; align-items:center; gap:4px; flex-shrink:1; overflow:hidden;">
+    <a href="#what-is-fasttrack"
+       style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500; color:rgba(255,255,255,0.8); text-decoration:none; padding:8px 12px; border-radius:3px; letter-spacing:0.04em; white-space:nowrap;"
+       onmouseover="this.style.color='#C9A84C';this.style.background='rgba(201,168,76,0.08)'"
+       onmouseout="this.style.color='rgba(255,255,255,0.8)';this.style.background='transparent'">How It Works</a>
+    <a href="#services"
+       style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500; color:rgba(255,255,255,0.8); text-decoration:none; padding:8px 12px; border-radius:3px; letter-spacing:0.04em; white-space:nowrap;"
+       onmouseover="this.style.color='#C9A84C';this.style.background='rgba(201,168,76,0.08)'"
+       onmouseout="this.style.color='rgba(255,255,255,0.8)';this.style.background='transparent'">Our Services</a>
+    <a href="#reviews"
+       style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500; color:rgba(255,255,255,0.8); text-decoration:none; padding:8px 12px; border-radius:3px; letter-spacing:0.04em; white-space:nowrap;"
+       onmouseover="this.style.color='#C9A84C';this.style.background='rgba(201,168,76,0.08)'"
+       onmouseout="this.style.color='rgba(255,255,255,0.8)';this.style.background='transparent'">Guest Reviews</a>
+    <a href="#faqs"
+       style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500; color:rgba(255,255,255,0.8); text-decoration:none; padding:8px 12px; border-radius:3px; letter-spacing:0.04em; white-space:nowrap;"
+       onmouseover="this.style.color='#C9A84C';this.style.background='rgba(201,168,76,0.08)'"
+       onmouseout="this.style.color='rgba(255,255,255,0.8)';this.style.background='transparent'">FAQs</a>
+    <a href="https://phuquocairportfasttrack.com/phu-quoc-airport-guide/"
+       style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:500; color:rgba(255,255,255,0.8); text-decoration:none; padding:8px 12px; border-radius:3px; letter-spacing:0.04em; white-space:nowrap;"
+       onmouseover="this.style.color='#C9A84C';this.style.background='rgba(201,168,76,0.08)'"
+       onmouseout="this.style.color='rgba(255,255,255,0.8)';this.style.background='transparent'">Blog</a>
+    <a href="#services"
+       style="font-family:'DM Sans',sans-serif; font-size:0.78rem; font-weight:700; color:#0B1F3A; text-decoration:none; padding:9px 18px; border-radius:3px; background:#C9A84C; border:2px solid #C9A84C; margin-left:6px; white-space:nowrap;"
+       onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A'"
+       onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C'">Book Fast Track</a>
+  </nav>
+
+  <!-- Hamburger (mobile / tablet) -->
+  <button id="paf-hamburger"
+    type="button"
+    aria-expanded="false"
+    aria-controls="paf-mobile-menu"
+    onclick="(function(b){var m=document.getElementById('paf-mobile-menu');var open=m.style.display!=='flex';m.style.display=open?'flex':'none';b.setAttribute('aria-expanded',open?'true':'false');b.setAttribute('aria-label',open?'Close menu':'Open menu');})(this)"
+    style="display:none; background:none; border:none; cursor:pointer; padding:4px; flex-direction:column; gap:5px; align-items:flex-end; flex-shrink:0;"
+    aria-label="Menu">
+    <span style="display:block; width:24px; height:2px; background:#C9A84C; border-radius:2px;"></span>
+    <span style="display:block; width:18px; height:2px; background:#C9A84C; border-radius:2px;"></span>
+    <span style="display:block; width:24px; height:2px; background:#C9A84C; border-radius:2px;"></span>
+  </button>
+
+</div>
+
+<!-- Mobile dropdown menu -->
+<div id="paf-mobile-menu" style="display:none; position:fixed; top:68px; left:0; right:0; z-index:9998; background:rgba(7,21,40,0.98); border-bottom:1px solid rgba(201,168,76,0.2); padding:16px 24px; flex-direction:column; gap:4px;">
+  <a href="#what-is-fasttrack"
+     onclick="document.getElementById('paf-mobile-menu').style.display='none'"
+     style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(255,255,255,0.85); text-decoration:none; padding:12px 16px; border-radius:4px; display:block;"
+     onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">How It Works</a>
+  <a href="#services"
+     onclick="document.getElementById('paf-mobile-menu').style.display='none'"
+     style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(255,255,255,0.85); text-decoration:none; padding:12px 16px; border-radius:4px; display:block;"
+     onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Our Services</a>
+  <a href="#reviews"
+     onclick="document.getElementById('paf-mobile-menu').style.display='none'"
+     style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(255,255,255,0.85); text-decoration:none; padding:12px 16px; border-radius:4px; display:block;"
+     onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Guest Reviews</a>
+  <a href="#faqs"
+     onclick="document.getElementById('paf-mobile-menu').style.display='none'"
+     style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(255,255,255,0.85); text-decoration:none; padding:12px 16px; border-radius:4px; display:block;"
+     onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">FAQs</a>
+  <a href="https://phuquocairportfasttrack.com/phu-quoc-airport-guide/"
+     style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:500; color:rgba(255,255,255,0.85); text-decoration:none; padding:12px 16px; border-radius:4px; display:block;"
+     onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.85)'">Blog</a>
+  <a href="#services"
+     onclick="document.getElementById('paf-mobile-menu').style.display='none'"
+     style="font-family:'DM Sans',sans-serif; font-size:0.9rem; font-weight:700; color:#0B1F3A; text-decoration:none; padding:12px 16px; border-radius:3px; background:#C9A84C; text-align:center; margin-top:8px; display:block;">Book Fast Track</a>
+</div>
+
+<script>
+(function () {
+  var navbar     = document.getElementById('paf-navbar');
+  var nav        = document.getElementById('paf-nav-links');
+  var hamburger  = document.getElementById('paf-hamburger');
+  var mobileMenu = document.getElementById('paf-mobile-menu');
+
+  function checkFit() {
+    var logo      = navbar.firstElementChild;
+    var logoW     = logo ? logo.offsetWidth : 280;
+    var gap       = 32 * 2;
+    var available = navbar.offsetWidth - logoW - gap - 24;
+
+    nav.style.display    = 'flex';
+    nav.style.visibility = 'hidden';
+    var navW = nav.scrollWidth;
+    nav.style.visibility = '';
+
+    if (navW > available) {
+      nav.style.display       = 'none';
+      hamburger.style.display = 'flex';
+    } else {
+      nav.style.display       = 'flex';
+      hamburger.style.display = 'none';
+      mobileMenu.style.display = 'none';
+    }
+  }
+
+  window.addEventListener('load', checkFit);
+  window.addEventListener('resize', checkFit);
+  checkFit();
+})();
+
+/* ══════════════════════════════════════════════════════════════
+   NAV AUTO-HIDE (CHỈ MOBILE ≤768px) — ẩn khi cuộn xuống, hiện khi cuộn lên
+   • Desktop: nav LUÔN hiện · 120px đầu trang luôn hiện
+   • KHÔNG ẩn khi menu mobile đang mở · ngưỡng 6px chống rung lắc
+   • transform (GPU) · tôn trọng prefers-reduced-motion
+   ══════════════════════════════════════════════════════════════ */
+(function () {
+  var nav  = document.getElementById('paf-navbar');
+  var menu = document.getElementById('paf-mobile-menu');
+  if (!nav) return;
+
+  var MOBILE_MAX = 768, REVEAL_ZONE = 120, THRESHOLD = 6;
+  var lastY = window.pageYOffset || 0, hidden = false, ticking = false;
+
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    nav.style.setProperty('transition', 'none', 'important');
+  }
+  function setHidden(st) {
+    if (st === hidden) return;
+    hidden = st;
+    nav.style.setProperty('transform', st ? 'translateY(-100%)' : 'translateY(0)', 'important');
+  }
+  function update() {
+    ticking = false;
+    var y = window.pageYOffset || 0; if (y < 0) y = 0;
+    var delta = y - lastY;
+    if (window.innerWidth > MOBILE_MAX) { setHidden(false); lastY = y; return; }
+    if (menu && menu.style.display === 'flex') { setHidden(false); lastY = y; return; }
+    if (y <= REVEAL_ZONE)        setHidden(false);
+    else if (delta >  THRESHOLD) setHidden(true);
+    else if (delta < -THRESHOLD) setHidden(false);
+    else return;
+    lastY = y;
+  }
+  window.addEventListener('scroll', function () {
+    if (!ticking) { ticking = true; window.requestAnimationFrame(update); }
+  }, { passive: true });
+  window.addEventListener('resize', function () {
+    if (window.innerWidth > MOBILE_MAX) { setHidden(false); }
+    lastY = window.pageYOffset || 0;
+  });
+})();
+</script>
+[/ux_html]
+[ux_html label="Hero Banner"]
+
+<!-- ============================================================
+     PHU QUOC AIRPORT FAST TRACK — Hero Section
+     phuquocairportfasttrack.com/
+     ⚠️ Thay PHOTO_HERO_URL bằng ảnh thật: sảnh đến PQC / Sunset Town /
+        Hòn Thơm cáp treo / Long Beach
+     ============================================================ -->
+
+
+<div style="
+  position: relative;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  overflow: hidden;
+  padding: 110px 24px 70px;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+">
+
+  <!-- Background image — replace with real PQC / Phu Quoc photo -->
+  <!-- Div ảnh nền đã GỠ.
+       Trước: background-image: url('PHOTO_HERO_URL') — placeholder chưa thay,
+       trình duyệt hiểu là đường dẫn tương đối → 404 → không render gì.
+       Gỡ đi trung tính hoàn toàn về hiển thị, bỏ được 1 request lỗi.
+       Hero chạy bằng lớp gradient navy bên dưới — giống SAF và DAF. -->
+
+  <!-- Dark overlay -->
+  <div style="
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(105deg, rgba(11,31,58,0.96) 0%, rgba(11,31,58,0.84) 55%, rgba(11,31,58,0.62) 100%);
+    z-index: 1;
+  "></div>
+
+  <!-- Decorative left line -->
+  <div style="position: absolute; top: 0; bottom: 0; left: 7%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.4) 20%, rgba(201,168,76,0.4) 80%, transparent); z-index: 2;"></div>
+
+  <!-- Decorative right line -->
+  <div style="position: absolute; top: 0; bottom: 0; right: 7%; width: 1px; background: linear-gradient(to bottom, transparent, rgba(201,168,76,0.4) 20%, rgba(201,168,76,0.4) 80%, transparent); z-index: 2;"></div>
+
+  <!-- Main grid -->
+  <div style="
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: 1fr 400px;
+    gap: 48px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+  " class="paf-hero-grid">
+
+    <!-- LEFT: Content -->
+    <div>
+
+      <!-- Eyebrow -->
+      <span style="
+        display: block;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1.08rem;
+        font-weight: 600;
+        letter-spacing: 0.18em;
+        text-transform: uppercase;
+        color: #C9A84C;
+        margin-bottom: 18px;
+      ">Phu Quoc Airport · Vietnam's Only Visa-Free Airport · Gateway to the Island's Resorts</span>
+
+      <!-- Headline -->
+      <h1 style="
+        font-family: 'Cormorant Garamond', Georgia, serif !important;
+        font-size: clamp(2.4rem, 4.5vw, 3.8rem) !important;
+        font-weight: 700 !important;
+        line-height: 1.08 !important;
+        color: #ffffff !important;
+        margin: 0 0 4px 0 !important;
+        padding: 0 !important;
+        border: none !important;
+        background: none !important;
+        text-shadow: none !important;
+      ">Phu Quoc Airport Fast Track<br>
+      <em style="font-style: italic !important; color: #C9A84C !important; font-weight: 600 !important; font-size: 0.62em !important; display: inline-block !important; margin-top: 8px !important; line-height: 1.25 !important;">Skip the Queue. Start Your Island Escape.</em>
+      </h1>
+
+      <!-- Gold line -->
+      <div style="width: 44px; height: 3px; background: #C9A84C; margin: 14px 0 20px;"></div>
+
+      <!-- Description — PQC-specific, honest tone (visa-free ≠ no queue) -->
+      <p style="
+        font-family: 'DM Sans', sans-serif;
+        font-size: 1rem;
+        line-height: 1.75;
+        color: rgba(255,255,255,0.78);
+        max-width: 500px;
+        margin: 0 0 24px 0;
+        padding: 0;
+      "><!--m:hero-lead-->Phu Quoc is the only airport in Vietnam where every nationality enters visa-free — but visa-free doesn't mean no queue. You still line up to have your exemption stamped and your onward ticket checked at a handful of counters, and when Korean, Chinese and Russian charter flights land together the single terminal backs up fast. Our Fast Track service gets you through in 10–20 minutes, every time.<!--/m:hero-lead--></p>
+
+      <!-- Feature list — PQC pain points -->
+      <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
+        <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          <!--m:hero-bullet-->Beat the queue when Korean, Chinese &amp; Russian charters bank — through in 10–20 min<!--/m:hero-bullet-->
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Dedicated assistant meets you at the arrival hall — name sign, no confusion
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          PAI pre-arrival registration &amp; visa-exemption paperwork handled for you
+        </li>
+        <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
+          Available 24/7 — early Seoul, Busan, Almaty &amp; charter flights included
+        </li>
+      </ul>
+
+      <!-- CTA Buttons -->
+      <div style="display: flex; gap: 14px; flex-wrap: wrap; margin-bottom: 32px;" class="paf-cta-row">
+        <button type="button" class="paf-pick-btn" aria-haspopup="true" aria-expanded="false" style="
+          display: inline-flex;
+          align-items: center;
+          gap: 8px;
+          padding: 15px 32px;
+          background: #C9A84C;
+          color: #0B1F3A;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.82rem;
+          font-weight: 700;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          text-decoration: none;
+          border-radius: 3px;
+          border: 2px solid #C9A84C;
+          box-sizing: border-box;
+          line-height: 1; margin:0" onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A';this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C';this.style.transform='translateY(0)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+          Book Fast Track Now
+          <svg class="paf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+        <a href="#services" style="
+          display: inline-flex;
+          align-items: center;
+          padding: 15px 28px;
+          background: transparent;
+          color: #ffffff;
+          font-family: 'DM Sans', sans-serif;
+          font-size: 0.82rem;
+          font-weight: 600;
+          letter-spacing: 0.08em;
+          text-transform: uppercase;
+          text-decoration: none;
+          border-radius: 3px;
+          border: 2px solid rgba(255,255,255,0.5);
+          box-sizing: border-box;
+          line-height: 1;
+        " onmouseover="this.style.borderColor='#fff';this.style.background='rgba(255,255,255,0.1)'"
+           onmouseout="this.style.borderColor='rgba(255,255,255,0.5)';this.style.background='transparent'">
+          View Services &amp; Pricing
+        </a>
+      </div>
+
+    </div><!-- /LEFT -->
+
+    <!-- RIGHT: Info Card -->
+    <div style="
+      background: rgba(255,255,255,0.97);
+      border-radius: 20px;
+      padding: 30px;
+      border-top: 4px solid #C9A84C;
+      box-shadow: 0 24px 64px rgba(11,31,58,0.28);
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+      box-sizing: border-box;
+    ">
+
+      <!-- Card header -->
+      <div style="
+        display: flex;
+        align-items: center;
+        gap: 9px;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.7rem;
+        font-weight: 700;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: #0B1F3A;
+        border-bottom: 1px solid #E8E4DE;
+        padding-bottom: 14px;
+      ">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        PQC Immigration — The Real Numbers
+      </div>
+
+      <!-- Stats — PQC-specific, honest -->
+      <div style="display: flex; flex-direction: column; gap: 0;">
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1;"><!--m:queue-figure-->60 – 90 min<!--/m:queue-figure--></span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;"><!--m:queue-note-->Peak — when charter flights bank at the single terminal<!--/m:queue-note--></span>
+        </div>
+
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1;">10 – 20 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+        </div>
+
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1;">[paf_price service="fast_track_arrival"]</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person · Confirmed in 10 minutes</span>
+        </div>
+
+      </div>
+
+      <!-- Service mini tiles -->
+      <div style="display: flex; gap: 8px;">
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; padding:14px 8px; background:#F5EDD8; border-radius:8px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/>
+          </svg>
+          <span style="font-family:'DM Sans',sans-serif; font-size:0.72rem; font-weight:600; color:#8B6914; text-align:center; line-height:1.4;">Fast Track<br>Arrival<br><span style="font-weight:400; font-size:0.65rem; color:#a07820;">from [paf_price service="fast_track_arrival"]</span></span>
+        </div>
+        <div style="flex:1; display:flex; flex-direction:column; align-items:center; gap:6px; padding:14px 8px; background:#F5EDD8; border-radius:8px;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M22 2L11 13"/>
+            <path d="M22 2L15 22 11 13 2 9l20-7z"/>
+          </svg>
+          <span style="font-family:'DM Sans',sans-serif; font-size:0.72rem; font-weight:600; color:#8B6914; text-align:center; line-height:1.4;">Fast Track<br>Departure<br><span style="font-weight:400; font-size:0.65rem; color:#a07820;">from [paf_price service="fast_track_departure"]</span></span>
+        </div>
+      </div>
+
+      <!-- Book Now button -->
+      <button type="button" class="paf-pick-btn" aria-haspopup="true" aria-expanded="false" style="
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 15px 24px;
+        background: #C9A84C;
+        color: #0B1F3A;
+        font-family: 'DM Sans', sans-serif;
+        font-size: 0.8rem;
+        font-weight: 700;
+        letter-spacing: 0.08em;
+        text-transform: uppercase;
+        text-decoration: none;
+        border-radius: 3px;
+        border: 2px solid #C9A84C;
+        box-sizing: border-box;
+        line-height: 1; margin:0" onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+        Book Now — Response in 10 min
+          <svg class="paf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
+
+      <!-- Contact line -->
+      <p style="text-align:center; font-family:'DM Sans',sans-serif; font-size:0.78rem; color:#5A5A72; margin:0; padding:0;">
+        Questions first?
+        <a href="https://wa.me/84368938081" style="color:#1a7a42; font-weight:600; text-decoration:none;">WhatsApp us</a>
+        &nbsp;·&nbsp;
+        <a href="mailto:support@phuquocairportfasttrack.com" style="color:#0B1F3A; font-weight:600; text-decoration:none;">Email us</a>
+      </p>
+
+    </div><!-- /RIGHT CARD -->
+
+  </div><!-- /GRID -->
+
+  <!-- Scroll indicator -->
+  <div style="
+    position: absolute;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.45);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 0.65rem;
+    letter-spacing: 0.16em;
+    text-transform: uppercase;
+  ">
+    <span>Scroll</span>
+    <div style="width:1px; height:36px; background: linear-gradient(to bottom, rgba(201,168,76,0.7), transparent);"></div>
+  </div>
+
+</div><!-- /HERO WRAPPER -->
+
+
+<!-- ============================================================
+     TRUST BAR — block riêng ngay sau Hero
+     ============================================================ -->
+<div style="
+  background: #071528;
+  border-top: 1px solid rgba(201,168,76,0.3);
+  padding: 14px 24px;
+  font-family: 'DM Sans', sans-serif;
+  box-sizing: border-box;
+">
+  <div style="
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 32px;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+  ">
+
+    <div style="display:flex; align-items:center; gap:8px; color:#fff; font-size:0.8rem; font-weight:500; white-space:nowrap;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      Licensed Direct Provider
+    </div>
+
+    <div style="width:1px; height:18px; background:rgba(255,255,255,0.15);"></div>
+
+    <div style="display:flex; align-items:center; gap:8px; color:#fff; font-size:0.8rem; font-weight:500; white-space:nowrap;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+      Vietnam's Only Visa-Free Airport
+    </div>
+
+    <div style="display:flex; align-items:center; gap:8px; color:#fff; font-size:0.8rem; font-weight:500; white-space:nowrap;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      24/7 · All Flights · Single Terminal
+    </div>
+
+    <div style="width:1px; height:18px; background:rgba(255,255,255,0.15);"></div>
+
+    <div style="display:flex; align-items:center; gap:8px; color:#fff; font-size:0.8rem; font-weight:500; white-space:nowrap;">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg>
+      Confirmed Before You Pay
+    </div>
+
+  </div>
+</div>
+
+
+<!-- ============================================================
+     RESPONSIVE CSS
+     ============================================================ -->
+<style>
+@media (max-width: 900px) {
+  .paf-hero-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+@media (max-width: 600px) {
+  .paf-cta-row {
+    flex-direction: column !important;
+  }
+  .paf-cta-row a,
+  .paf-cta-row button {
+    justify-content: center !important;
+  }
+}
+</style>
+[/ux_html]
+[ux_html label="What Is Fast Track?"]
+
+<!-- ============================================================
+     SECTION 2: WHAT IS FAST TRACK?
+     Phu Quoc Airport Fast Track — phuquocairportfasttrack.com/
+     ⚠️ Thay 3 URL ảnh bằng URL thật (ảnh PQC single terminal):
+        Card 1 → hàng chờ nhập cảnh PQC giờ charter dồn
+        Card 2 → nhân viên cầm biển tên đón khách tại sảnh đến
+        Card 3 → nhân viên dẫn khách qua priority lane PQC
+     ============================================================ -->
+
+
+<style>
+#what-is-fasttrack, #what-is-fasttrack * { box-sizing: border-box !important; }
+#what-is-fasttrack h2, #what-is-fasttrack h3, #what-is-fasttrack h4 {
+  font-weight: 700 !important; line-height: 1.15 !important;
+  margin-top: 0 !important; padding: 0 !important;
+  border: none !important; background: none !important; text-shadow: none !important;
+}
+#what-is-fasttrack h2 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important; color: #0B1F3A !important; }
+#what-is-fasttrack h3 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.4rem !important; color: #0B1F3A !important; }
+#what-is-fasttrack h4 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.2rem !important; color: #0B1F3A !important; }
+#what-is-fasttrack p, #what-is-fasttrack li, #what-is-fasttrack span { font-family: 'DM Sans', sans-serif !important; margin-bottom: 0 !important; padding: 0 !important; }
+#what-is-fasttrack a { text-decoration: none !important; }
+#what-is-fasttrack ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+@media (max-width: 900px) {
+  #what-is-fasttrack .paf-intro-grid   { grid-template-columns: 1fr !important; }
+  #what-is-fasttrack .paf-compare-grid { grid-template-columns: 1fr !important; }
+  #what-is-fasttrack .paf-compare-grid > div:first-child { border-radius: 16px !important; }
+  #what-is-fasttrack .paf-compare-grid > div:last-child  { border-radius: 16px !important; }
+  #what-is-fasttrack .paf-vs-divider { display: none !important; }
+}
+@media (max-width: 768px) {
+  #what-is-fasttrack .paf-steps-grid { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+  #what-is-fasttrack .paf-step-line  { display: none !important; }
+}
+@media (max-width: 480px) {
+  #what-is-fasttrack .paf-steps-grid { grid-template-columns: 1fr !important; }
+}
+</style>
+
+<section id="what-is-fasttrack" aria-labelledby="paf-h2-what" style="font-family:'DM Sans',sans-serif;">
+
+  <!-- ════════════════════════════════════════════
+       PART A: WHAT IS FAST TRACK (intro + photo cards)
+  ═════════════════════════════════════════════ -->
+  <div style="background:#F9F7F3; padding:80px 24px 60px;">
+    <div style="max-width:1200px; margin:0 auto;">
+
+      <!-- Section header -->
+      <div style="text-align:center; margin-bottom:56px;">
+        <span style="display:block; font-family:'DM Sans',sans-serif !important; font-size:0.72rem; font-weight:600 !important; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">What We Offer</span>
+        <h2 id="paf-h2-what">What Is Airport Fast Track?</h2>
+        <div style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
+        <p style="font-size:1rem !important; color:#5A5A72 !important; max-width:640px; margin:0 auto !important; line-height:1.75 !important;">
+          <!--m:intro-->Phu Quoc International Airport (PQC) is Vietnam's only visa-free gateway — every nationality enters for up to 30 days without a visa — and the doorway to Long Beach, Sunset Town and the island's resorts. On a quiet day you'll clear immigration in minutes. But it's a single terminal with a limited number of counters, so when Korean, Chinese and Russian charter flights land together the queue builds quickly. Fast Track is a licensed airport assistance service that keeps you to 10–20 minutes, whatever the crowd.<!--/m:intro-->
+        </p>
+      </div>
+
+      <!-- 3 photo cards -->
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:24px;" class="paf-intro-grid">
+
+        <!-- Card 1: When the Charters Land -->
+        <div style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #E8E4DE; display:flex; flex-direction:column;">
+          <div style="position:relative; height:220px; overflow:hidden;">
+            <img width="800" height="600" loading="lazy" decoding="async" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/06/save-1-3-hours-in-tan-son-nhat.jpg"
+                 alt="Immigration queue at Phu Quoc Airport during peak charter hours"
+                 style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
+            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
+            <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->Peak hours — PQC<!--/m:peak-eyebrow--></span>
+            </div>
+          </div>
+          <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+              <div style="width:36px; height:36px; background:#F5EDD8; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+              </div>
+              <h3 style="margin:0 !important;">When the Charters Land</h3>
+            </div>
+            <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
+              <!--m:peak-body-->Visa-free doesn't mean skipping the line. You still queue to have your exemption stamped and onward ticket checked. When two or three Korean, Chinese or Russian charters land within the same hour, the single terminal's counters fill quickly — 60 to 90 minutes at peak, and longer during Tet or the dry-season high season.<!--/m:peak-body-->
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 2: We're Already Waiting (dark featured) -->
+        <div style="background:#0B1F3A; border-radius:16px; overflow:hidden; border:1px solid #0B1F3A; display:flex; flex-direction:column;">
+          <div style="position:relative; height:220px; overflow:hidden;">
+            <img width="800" height="600" loading="lazy" decoding="async" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/06/Man_holding_welcome_sign.jpg"
+                 alt="Fast Track staff holding name sign at Phu Quoc Airport arrival hall"
+                 style="width:100% !important; height:100% !important; object-fit:cover !important; object-position:center top !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
+            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
+            <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;">Your name. Our sign.</span>
+            </div>
+          </div>
+          <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+              <div style="width:36px; height:36px; background:rgba(201,168,76,0.15); border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+              </div>
+              <h3 style="color:#fff !important; margin:0 !important;">We're Already Waiting</h3>
+            </div>
+            <p style="font-size:0.9rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.72 !important; flex:1;">
+              Step into the arrival hall and our assistant is already there — holding a sign with your name. No searching after a long overnight flight, no confusion about PAI registration or the visa-exemption counter. Just follow and relax.
+            </p>
+          </div>
+        </div>
+
+        <!-- Card 3: Through in 10-20 Minutes -->
+        <div style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #E8E4DE; display:flex; flex-direction:column;">
+          <div style="position:relative; height:220px; overflow:hidden;">
+            <img width="800" height="600" loading="lazy" decoding="async" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/06/Airport_staff_guiding_travelers.jpeg"
+                 alt="Fast Track staff escorting guest through priority immigration lane at Phu Quoc Airport"
+                 style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
+            <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
+            <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;">Priority Lane — PQC</span>
+            </div>
+          </div>
+          <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
+            <div style="display:flex; align-items:center; gap:10px; margin-bottom:14px;">
+              <div style="width:36px; height:36px; background:#F5EDD8; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h3 style="margin:0 !important;">Through in 10–20 Minutes</h3>
+            </div>
+            <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
+              We guide you through the priority immigration lane, handle the PAI registration and visa-exemption paperwork, and escort you straight to the exit. While the regular line is still halfway through the hall, you're already on your way to Long Beach or your island resort.
+            </p>
+          </div>
+        </div>
+
+      </div><!-- /intro grid -->
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════
+       PART B: WITHOUT vs WITH FAST TRACK
+  ═════════════════════════════════════════════ -->
+  <div style="background:#fff; padding:70px 24px;">
+    <div style="max-width:1200px; margin:0 auto;">
+
+      <!-- Header -->
+      <div style="text-align:center; margin-bottom:48px;">
+        <span style="display:block; font-family:'DM Sans',sans-serif !important; font-size:0.72rem; font-weight:600 !important; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">
+          The Difference
+        </span>
+        <h2>Your First Hour on Phu Quoc</h2>
+        <div style="width:44px; height:3px; background:#C9A84C; margin:14px auto 0;"></div>
+      </div>
+
+      <!-- Comparison grid -->
+      <div style="display:grid; grid-template-columns:1fr auto 1fr; gap:0; align-items:stretch;" class="paf-compare-grid">
+
+        <!-- WITHOUT column -->
+        <div style="background:#FDF5F5; border-radius:16px 0 0 16px; padding:36px 32px; border:1px solid #F0D5D5;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:28px;">
+            <div style="width:32px; height:32px; background:#E8C4C4; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2.5" stroke-linecap="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+            </div>
+            <h3 style="font-family:'DM Sans',sans-serif !important; font-size:1rem !important; font-weight:700 !important; color:#c0392b !important; letter-spacing:0.04em; text-transform:uppercase; margin:0 !important;">Without Fast Track</h3>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;"><!--m:compare-row1-->Join the crowd when Korean, Chinese and Russian charter flights bank — 60 to 90 minutes at the single terminal, and longer during Tet or the dry-season peak<!--/m:compare-row1--></p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Find your way through the arrival hall alone after a long overnight flight</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Sort your PAI pre-arrival registration and visa-exemption paperwork yourself</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Keep your resort transfer waiting — Long Beach is 15 min out, Sunset Town nearer 40</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Reach your resort tired and drained — before your island holiday has even begun</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- VS divider -->
+        <div class="paf-vs-divider" style="display:flex; flex-direction:column; align-items:center; justify-content:center; padding:0 20px; position:relative;">
+          <div style="width:1px; height:100%; background:linear-gradient(to bottom, transparent, #E8E4DE 20%, #E8E4DE 80%, transparent); position:absolute;"></div>
+          <div style="background:#0B1F3A; color:#C9A84C; font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.1rem; font-weight:700 !important; font-style:italic; width:44px; height:44px; border-radius:50%; display:flex; align-items:center; justify-content:center; position:relative; z-index:1; border:3px solid #C9A84C;">vs</div>
+        </div>
+
+        <!-- WITH column -->
+        <div style="background:#F0F8F4; border-radius:0 16px 16px 0; padding:36px 32px; border:1px solid #C4DFD3;">
+          <div style="display:flex; align-items:center; gap:10px; margin-bottom:28px;">
+            <div style="width:32px; height:32px; background:#C4DFD3; border-radius:50%; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2.5" stroke-linecap="round"><polyline points="20 6 9 17 4 12"/></svg>
+            </div>
+            <h3 style="font-family:'DM Sans',sans-serif !important; font-size:1rem !important; font-weight:700 !important; color:#1a7a42 !important; letter-spacing:0.04em; text-transform:uppercase; margin:0 !important;">With Fast Track</h3>
+          </div>
+
+          <div style="display:flex; flex-direction:column; gap:16px;">
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Walk straight to the priority lane — clear immigration in <strong style="color:#0B1F3A; font-weight:600;">10–20 minutes</strong>, however many flights just landed</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Our assistant is waiting at the arrival hall — right on time, name sign in hand</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">We handle your PAI registration and visa-exemption paperwork at the counter</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Meet your driver sooner and set off for Long Beach or Sunset Town without delay</p>
+            </div>
+            <div style="display:flex; align-items:flex-start; gap:12px;">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Arrive at your resort calm, rested and ready — the way every island escape should begin</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /compare grid -->
+    </div>
+  </div>
+
+
+  <!-- ════════════════════════════════════════════
+       PART C: HOW IT WORKS (step-by-step)
+  ═════════════════════════════════════════════ -->
+  <div style="background:#F9F7F3; padding:70px 24px;">
+    <div style="max-width:1200px; margin:0 auto;">
+
+      <!-- Header -->
+      <div style="text-align:center; margin-bottom:52px;">
+        <span style="display:block; font-family:'DM Sans',sans-serif !important; font-size:0.72rem; font-weight:600 !important; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">
+          Simple &amp; Seamless
+        </span>
+        <h2>How It Works</h2>
+        <div style="width:44px; height:3px; background:#C9A84C; margin:14px auto 0;"></div>
+      </div>
+
+      <!-- Steps -->
+      <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0; position:relative;" class="paf-steps-grid">
+
+        <!-- Connector line -->
+        <div class="paf-step-line" style="position:absolute; top:36px; left:12.5%; right:12.5%; height:2px; background:linear-gradient(to right, #C9A84C, #E2C07A); z-index:0;"></div>
+
+        <!-- Step 1 -->
+        <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 16px; position:relative; z-index:1;">
+          <div style="width:72px; height:72px; background:#0B1F3A; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:3px solid #C9A84C; flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2" ry="2"/><line x1="12" y1="18" x2="12.01" y2="18"/></svg>
+          </div>
+          <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 01</div>
+          <h4 style="margin-bottom:10px !important;">Book Your Service</h4>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Send us your flight number, date, and number of passengers via WhatsApp or the form below. Takes under 2 minutes.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 16px; position:relative; z-index:1;">
+          <div style="width:72px; height:72px; background:#0B1F3A; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:3px solid #C9A84C; flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.63 3.45 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.96a16 16 0 0 0 6.13 6.13l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 21.73 16.92z"/></svg>
+          </div>
+          <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 02</div>
+          <h4 style="margin-bottom:10px !important;">Confirmed in 10 Min</h4>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">We confirm your booking within 10 minutes — day or night — and send everything you need to know before arrival, including PAI guidance.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 16px; position:relative; z-index:1;">
+          <div style="width:72px; height:72px; background:#0B1F3A; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:3px solid #C9A84C; flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+          </div>
+          <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 03</div>
+          <h4 style="margin-bottom:10px !important;">We Meet You on Arrival</h4>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Our assistant is waiting at the arrival hall with a sign bearing your name — no waiting, no searching, no confusion.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div style="display:flex; flex-direction:column; align-items:center; text-align:center; padding:0 16px; position:relative; z-index:1;">
+          <div style="width:72px; height:72px; background:#C9A84C; border-radius:50%; display:flex; align-items:center; justify-content:center; margin-bottom:20px; border:3px solid #C9A84C; flex-shrink:0;">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          </div>
+          <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 04</div>
+          <h4 style="margin-bottom:10px !important;">Straight Through</h4>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, all paperwork handled, out in 10–20 minutes — and on your way to the resort while the queue is still building.</p>
+        </div>
+
+      </div><!-- /steps -->
+
+      <!-- CTA below steps -->
+      <div style="text-align:center; margin-top:52px;">
+        <a href="#services" style="
+          display:inline-flex; align-items:center; gap:8px;
+          padding:16px 40px;
+          background:#C9A84C; color:#0B1F3A;
+          font-family:'DM Sans',sans-serif !important; font-size:0.85rem; font-weight:700 !important;
+          letter-spacing:0.1em; text-transform:uppercase; text-decoration:none !important;
+          border-radius:3px; border:2px solid #C9A84C;
+        " onmouseover="this.style.background='#E2C07A';this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.background='#C9A84C';this.style.transform='translateY(0)'">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+          Book Your Fast Track Now
+        </a>
+        <p style="font-family:'DM Sans',sans-serif !important; font-size:0.82rem !important; color:#5A5A72 !important; margin:14px 0 0 !important;">
+          WhatsApp us at +84 368 938 081 · We respond within 10 minutes
+        </p>
+      </div>
+
+    </div>
+  </div>
+
+</section><!-- /what-is-fasttrack -->
+[/ux_html]
+[ux_html label="Services"]
+
+<!-- ============================================================
+     SECTION 3: SERVICES & PRICING (v4 — NO ADD-ONS)
+     Phu Quoc Airport Fast Track — phuquocairportfasttrack.com/
+     2 gói CƠ BẢN: Fast Track Arrival + Fast Track Departure
+     ⚠️ PAF KHÔNG có add-on (khác DAF). Mỗi gói chỉ dịch vụ cơ bản.
+     Infant dưới 2 = MIỄN PHÍ · 2+ trả full
+     Phụ thu đêm: Arrival 22:00–06:00 · Departure 00:00–08:00
+     Product IDs: Arrival=311, Departure=313
+     ============================================================ -->
+
+
+<style>
+#services, #services * { box-sizing: border-box !important; }
+#services h2, #services h3, #services h4 {
+  font-weight: 700 !important; line-height: 1.15 !important;
+  margin-top: 0 !important; padding: 0 !important;
+  border: none !important; background: none !important; text-shadow: none !important;
+}
+#services h2 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important; color: #F9F7F3 !important; }
+#services h3 { font-family: 'Cormorant Garamond', Georgia, serif !important; }
+#services h4 { font-family: 'Cormorant Garamond', Georgia, serif !important; }
+#services p, #services li, #services span { font-family: 'DM Sans', sans-serif !important; margin-bottom: 0 !important; padding: 0 !important; }
+#services a { text-decoration: none !important; }
+#services ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+@media (max-width: 820px) {
+  #services .paf-pricing-grid { grid-template-columns: 1fr !important; max-width: 480px !important; margin-left: auto !important; margin-right: auto !important; }
+}
+#services .paf-price-display-light .paf-price {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 48px !important; font-weight: 700 !important;
+  color: #0B1F3A !important; line-height: 1 !important; display: inline !important;
+}
+#services .paf-price-display-dark .paf-price {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: 48px !important; font-weight: 700 !important;
+  color: #F9F7F3 !important; line-height: 1 !important; display: inline !important;
+}
+#services a .paf-price {
+  font-size: inherit !important; font-family: inherit !important;
+  font-weight: inherit !important; color: inherit !important;
+  line-height: inherit !important; display: inline !important;
+}
+</style>
+
+<section id="services" aria-labelledby="paf-h2-services" style="background:#0B1F3A; padding:80px 24px; font-family:'DM Sans',sans-serif;">
+
+  <!-- Section Header -->
+  <div style="text-align:center; max-width:640px; margin:0 auto 60px;">
+    <span style="display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">Services &amp; Pricing</span>
+    <h2 id="paf-h2-services">Choose Your Service</h2>
+    <div style="width:44px; height:3px; background:#C9A84C; margin:16px auto 20px;"></div>
+    <p style="font-size:1rem !important; color:rgba(255,255,255,0.65) !important; line-height:1.75 !important;">
+      Both services include a dedicated assistant who meets you at the terminal and guides you through every step — priority lane, PAI registration, paperwork, all handled. No queues, no confusion, no stress. One simple, all-inclusive price per person.
+    </p>
+  </div>
+
+  <!-- Pricing Cards — 2 cards, centered -->
+  <div style="display:grid; grid-template-columns:repeat(2,1fr); gap:24px; max-width:860px; margin:0 auto; align-items:stretch;" class="paf-pricing-grid">
+
+    <!-- ── CARD 1: FAST TRACK ARRIVAL (Featured) ── -->
+    <div style="background:#0B1F3A; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; position:relative; border:1px solid rgba(201,168,76,0.35); outline:2px solid #C9A84C; outline-offset:-1px;">
+
+      <!-- Most Popular badge -->
+      <div style="background:#C9A84C; text-align:center; padding:9px 16px;">
+        <span style="font-size:0.68rem; font-weight:700; letter-spacing:0.2em; text-transform:uppercase; color:#0B1F3A;">⭐ Most Popular</span>
+      </div>
+
+      <!-- Header -->
+      <div style="padding:28px 30px 24px; border-bottom:1px solid rgba(201,168,76,0.15);">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:rgba(201,168,76,0.12); padding:5px 12px; border-radius:2px; margin-bottom:18px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+          <span style="font-size:0.68rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#C9A84C;">Arrival</span>
+        </div>
+        <h3 style="font-size:1.7rem !important; color:#F9F7F3 !important; margin-bottom:6px !important;">Fast Track Arrival</h3>
+        <p style="font-size:0.85rem !important; color:rgba(255,255,255,0.6) !important; line-height:1.6 !important; margin-bottom:20px !important;">
+          Skip the immigration queue at Phu Quoc Airport — through in 10–20 minutes with a dedicated assistant, even when the charter flights bank.
+        </p>
+        <!-- Price -->
+        <div style="display:flex; align-items:baseline; gap:5px; margin-bottom:6px;">
+          <span class="paf-price-display-dark" style="font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; color:#F9F7F3; line-height:1;">[paf_price service="fast_track_arrival"]</span>
+          <span style="font-size:0.8rem; color:rgba(255,255,255,0.5);">/ person</span>
+        </div>
+        <p style="font-size:0.75rem !important; color:rgba(255,255,255,0.45) !important; font-weight:500 !important;">+ $10 surcharge for arrivals 10:00 PM – 6:00 AM</p>
+      </div>
+
+      <!-- Features -->
+      <div style="padding:24px 30px; flex:1;">
+        <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:rgba(255,255,255,0.5); margin-bottom:14px !important;">What's included</p>
+        <ul style="display:flex; flex-direction:column; gap:11px;">
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:rgba(255,255,255,0.82) !important; line-height:1.5 !important;">Meet &amp; greet at the arrival hall with your name sign</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:rgba(255,255,255,0.82) !important; line-height:1.5 !important;">Priority immigration lane — bypass the main queue</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:rgba(255,255,255,0.82) !important; line-height:1.5 !important;">PAI pre-arrival registration &amp; immigration forms handled for you</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:rgba(255,255,255,0.82) !important; line-height:1.5 !important;">Visa-exemption &amp; onward-ticket paperwork assistance at the counter</span>
+          </li>
+        </ul>
+
+        <!-- Note -->
+        <div style="margin-top:22px; padding:12px 14px; background:rgba(201,168,76,0.08); border-left:3px solid #C9A84C; border-radius:2px;">
+          <p style="font-size:0.78rem !important; color:rgba(255,255,255,0.6) !important; line-height:1.55 !important;">
+            <strong style="font-weight:600; color:#C9A84C;">Applies to:</strong> All nationalities — Phu Quoc grants 30-day visa-free entry to everyone arriving direct. E-Visa and Visa on Arrival holders welcome too. Not for Vietnamese passport holders (autogate only).
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="padding:0 30px 32px;">
+        <a href="https://phuquocairportfasttrack.com/checkout/?add-to-cart=311"
+           style="display:block; text-align:center; background:#C9A84C; color:#0B1F3A; font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:15px 24px; text-decoration:none !important; border-radius:2px;"
+           onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+          Book Fast Track Arrival — [paf_price service="fast_track_arrival"]
+        </a>
+      </div>
+    </div>
+
+    <!-- ── CARD 2: FAST TRACK DEPARTURE ── -->
+    <div style="background:#F9F7F3; border-radius:4px; overflow:hidden; display:flex; flex-direction:column; position:relative;">
+      <div style="height:4px; background:#C9A84C;"></div>
+
+      <!-- Header -->
+      <div style="padding:32px 30px 24px; border-bottom:1px solid #E8E4DE;">
+        <div style="display:inline-flex; align-items:center; gap:8px; background:#F5EDD8; padding:5px 12px; border-radius:2px; margin-bottom:18px;">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+          <span style="font-size:0.68rem; font-weight:700; letter-spacing:0.15em; text-transform:uppercase; color:#8B6914;">Departure</span>
+        </div>
+        <h3 style="font-size:1.7rem !important; color:#0B1F3A !important; margin-bottom:6px !important;">Fast Track Departure</h3>
+        <p style="font-size:0.85rem !important; color:#7a8a9a !important; line-height:1.6 !important; margin-bottom:20px !important;">
+          Leave Phu Quoc stress-free — skip the departure immigration queue and head to your gate with time to spare before your flight home.
+        </p>
+        <!-- Price -->
+        <div style="display:flex; align-items:baseline; gap:5px; margin-bottom:6px;">
+          <span class="paf-price-display-light" style="font-family:'Cormorant Garamond',Georgia,serif; font-weight:700; color:#0B1F3A; line-height:1;">[paf_price service="fast_track_departure"]</span>
+          <span style="font-size:0.8rem; color:#7a8a9a;">/ person</span>
+        </div>
+        <p style="font-size:0.75rem !important; color:#7a8a9a !important; font-weight:500 !important;">+ $10 surcharge for departures 12:00 AM – 8:00 AM</p>
+      </div>
+
+      <!-- Features -->
+      <div style="padding:24px 30px; flex:1;">
+        <p style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#0B1F3A; margin-bottom:14px !important;">What's included</p>
+        <ul style="display:flex; flex-direction:column; gap:11px;">
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.5 !important;">Meet &amp; greet at the departures entrance</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.5 !important;">Escorted through the priority exit immigration lane</span>
+          </li>
+          <li style="display:flex; align-items:flex-start; gap:10px;">
+            <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>
+            <span style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.5 !important;">Skip the passport-control queue — cleared in minutes, then on to your gate</span>
+          </li>
+        </ul>
+
+        <!-- Note -->
+        <div style="margin-top:22px; padding:12px 14px; background:#F5EDD8; border-left:3px solid #C9A84C; border-radius:2px;">
+          <p style="font-size:0.78rem !important; color:#8B6914 !important; line-height:1.55 !important;">
+            <strong style="font-weight:600;">Tip:</strong> Book arrival + departure together — start and end your Phu Quoc trip completely hassle-free.
+          </p>
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div style="padding:0 30px 32px;">
+        <a href="https://phuquocairportfasttrack.com/checkout/?add-to-cart=313"
+           style="display:block; text-align:center; background:#0B1F3A; color:#C9A84C; font-size:0.78rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; padding:15px 24px; text-decoration:none !important; border-radius:2px;"
+           onmouseover="this.style.background='#162d52'" onmouseout="this.style.background='#0B1F3A'">
+          Book Fast Track Departure — [paf_price service="fast_track_departure"]
+        </a>
+      </div>
+    </div>
+
+  </div><!-- /pricing grid -->
+
+  <!-- Bottom note -->
+  <div style="text-align:center; margin-top:48px; padding-top:40px; border-top:1px solid rgba(201,168,76,0.15); max-width:700px; margin-left:auto; margin-right:auto;">
+    <p style="font-size:0.88rem !important; color:rgba(255,255,255,0.55) !important; line-height:1.8 !important; margin-top:0 !important;">
+      All prices are per person · Night surcharge +$10 — <strong style="color:rgba(255,255,255,0.75); font-weight:500;">arrivals 10:00 PM – 6:00 AM</strong>, <strong style="color:rgba(255,255,255,0.75); font-weight:500;">departures 12:00 AM – 8:00 AM</strong><br>
+      Children: <strong style="color:rgba(255,255,255,0.75); font-weight:500;">No charge for infants under 2</strong> · age 2 and over pay the full price<br>
+      Government fees (e.g. e-visa or visa-on-arrival stamping) are paid separately on the day of service
+    </p>
+    <p style="font-size:0.84rem !important; color:#5a7a9a !important; margin-top:14px !important;">
+      Not sure which service fits you? <a href="https://wa.me/84368938081" style="color:#C9A84C !important; font-weight:600; text-decoration:none !important;">WhatsApp us</a> — we'll help you choose and confirm within 10 minutes.
+    </p>
+  </div>
+
+</section><!-- /services -->
+[/ux_html]
+[ux_html label="Booking"]
+
+<!-- ============================================================
+     SECTION 4: BOOKING & CONTACT (v3 — no CF7)
+     Phu Quoc Airport Fast Track — phuquocairportfasttrack.com/
+     2 kênh: WhatsApp + Email · 2 cột desktop / 1 cột mobile
+     ============================================================ -->
+
+
+<style>
+#book-now, #book-now * { box-sizing: border-box !important; }
+#book-now h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-weight: 700 !important; line-height: 1.15 !important;
+  margin: 0 !important; padding: 0 !important;
+  border: none !important; background: none !important; text-shadow: none !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important;
+  color: #0B1F3A !important;
+}
+#book-now p, #book-now span { font-family: 'DM Sans', sans-serif !important; margin-bottom: 0 !important; padding: 0 !important; }
+#book-now a { text-decoration: none !important; }
+/* 2 cột desktop / 1 cột mobile */
+@media (max-width: 640px) {
+  #book-now .paf-contact-cards { grid-template-columns: 1fr !important; }
+  #book-now .paf-resp-badge { flex-direction: column !important; text-align: center !important; }
+}
+@media (max-width: 480px) {
+  #book-now { padding: 56px 16px !important; }
+}
+</style>
+
+<section id="book-now" aria-labelledby="paf-h2-book" style="background:#F9F7F3; padding:72px 24px; font-family:'DM Sans',sans-serif;">
+  <div style="max-width:960px; margin:0 auto;">
+
+    <!-- Header -->
+    <div style="text-align:center; margin-bottom:28px;">
+      <h2 id="paf-h2-book" style="margin-bottom:0 !important;">Contact Us Directly</h2>
+      <div style="width:44px; height:3px; background:#C9A84C; margin:16px auto 20px;"></div>
+      <p style="font-size:1rem !important; color:#5A5A72 !important; line-height:1.7 !important; max-width:560px; margin:0 auto !important;">
+        The fastest way to book — send us your flight details and we'll confirm everything before you pay.
+      </p>
+    </div>
+
+    <!-- Contact cards: WhatsApp + Email (2 cột desktop / 1 cột mobile) -->
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px; align-items:stretch;" class="paf-contact-cards">
+
+      <!-- WhatsApp -->
+      <a href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Fast%20Track%20service%20at%20Phu%20Quoc%20Airport."
+         target="_blank" rel="noopener"
+         style="display:flex; align-items:center; gap:16px; padding:18px 20px; background:#fff; border:1.5px solid #E8E4DE; border-radius:8px; text-decoration:none !important;"
+         onmouseover="this.style.borderColor='#25D366'" onmouseout="this.style.borderColor='#E8E4DE'">
+        <div style="width:46px; height:46px; background:#E8F8EE; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg viewBox="0 0 24 24" width="24" height="24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        </div>
+        <div style="flex:1; min-width:0;">
+          <p style="font-size:0.76rem !important; font-weight:700 !important; letter-spacing:0.08em; text-transform:uppercase; color:#25D366; margin-bottom:3px !important;">WhatsApp · <wbr><span style="white-space:nowrap;">+84 368 938 081</span></p>
+          <p style="font-size:0.98rem !important; font-weight:700 !important; color:#0B1F3A; margin-bottom:2px !important;">Chat with us now</p>
+          <p style="font-size:0.8rem !important; color:#5A5A72;">Fastest response · Available 24/7</p>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+      <!-- Email -->
+      <a href="mailto:support@phuquocairportfasttrack.com?subject=Phu%20Quoc%20Airport%20Fast%20Track%20Booking"
+         style="display:flex; align-items:center; gap:16px; padding:18px 20px; background:#fff; border:1.5px solid #E8E4DE; border-radius:8px; text-decoration:none !important;"
+         onmouseover="this.style.borderColor='#C9A84C'" onmouseout="this.style.borderColor='#E8E4DE'">
+        <div style="width:46px; height:46px; background:#F5EDD8; border-radius:10px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+            <polyline points="22,6 12,13 2,6"/>
+          </svg>
+        </div>
+        <div style="flex:1; min-width:0;">
+          <p style="font-size:0.76rem !important; font-weight:700 !important; letter-spacing:0.08em; text-transform:uppercase; color:#C9A84C; margin-bottom:3px !important;">Email</p>
+          <p style="font-size:0.98rem !important; font-weight:700 !important; color:#0B1F3A; margin-bottom:2px !important; word-break:break-word;">support<wbr>@phuquocairportfasttrack.com</p>
+          <p style="font-size:0.8rem !important; color:#5A5A72;">We reply within 1 hour</p>
+        </div>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><polyline points="9 18 15 12 9 6"/></svg>
+      </a>
+
+    </div><!-- /cards -->
+
+    <!-- Response time badge -->
+    <div class="paf-resp-badge" style="display:flex; align-items:center; gap:12px; margin-top:16px; padding:14px 18px; background:#0B1F3A; border-radius:8px;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      <p style="font-size:0.85rem !important; color:rgba(255,255,255,0.9) !important; line-height:1.5 !important;">
+        Average response time: <strong style="color:#C9A84C;">under 10 minutes</strong> · Available 24/7 for all flight times
+      </p>
+    </div>
+
+  </div>
+</section><!-- /book-now -->
+[/ux_html]
+[ux_html label="Reviews"]
+
+<!-- ============================================================
+     SECTION 5: TESTIMONIALS + PHOTO GALLERY
+     Phu Quoc Airport Fast Track — phuquocairportfasttrack.com/
+     ⚠️ Ảnh carousel dùng media library /phu-quoc/ — thay bằng ảnh
+        khách thật tại sảnh đến PQC khi có.
+     ============================================================ -->
+
+
+<style>
+#reviews, #reviews * { box-sizing: border-box !important; }
+#reviews h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important;
+  font-weight: 700 !important; line-height: 1.15 !important;
+  color: #0B1F3A !important;
+  margin-top: 0 !important; padding: 0 !important;
+  border: none !important; background: none !important; text-shadow: none !important;
+}
+#reviews p, #reviews span {
+  font-family: 'DM Sans', sans-serif !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+#reviews .paf-marquee-wrapper {
+  overflow: hidden !important;
+  width: 100% !important;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent) !important;
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent) !important;
+}
+#reviews .paf-marquee-track {
+  display: flex !important;
+  gap: 20px !important;
+  width: max-content !important;
+  animation: paf-scroll 50s linear infinite !important;
+}
+#reviews .paf-marquee-track:hover { animation-play-state: paused !important; }
+@keyframes paf-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
+#reviews .paf-review-card {
+  width: 320px !important;
+  flex-shrink: 0 !important;
+  background: #fff !important;
+  border: 1px solid #E8E4DE !important;
+  border-top: 3px solid #C9A84C !important;
+  border-radius: 8px !important;
+  padding: 24px 26px !important;
+}
+@media (max-width: 900px) { #reviews .paf-review-card { width: 280px !important; } }
+@media (max-width: 600px) { #reviews .paf-review-card { width: 260px !important; } }
+</style>
+
+<section id="reviews" aria-labelledby="paf-h2-reviews" style="font-family:'DM Sans',sans-serif;">
+
+  <!-- ════ PART A: TESTIMONIALS ════ -->
+  <div style="background:#F9F7F3; padding:80px 0 60px;">
+
+    <div style="text-align:center; max-width:640px; margin:0 auto 48px; padding:0 24px;">
+      <span style="display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">What Our Guests Say</span>
+      <h2 id="paf-h2-reviews">Reviews from Travelers at PQC</h2>
+      <div style="width:44px; height:3px; background:#C9A84C; margin:16px auto 20px;"></div>
+    </div>
+
+    <div class="paf-marquee-wrapper" style="margin-bottom:20px;">
+      <div class="paf-marquee-track">
+
+        <!-- R1 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Our flight landed early but the assistant was already waiting in the arrival hall. We cleared immigration in about 5 minutes and made our Long Beach transfer with time to spare. Wonderfully efficient."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Ajit *****</span><span style="font-size:0.75rem; color:#9a9aaa;">Mar 2026</span></div>
+        </div>
+
+        <!-- R2 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Greeted right at the Phu Quoc arrival area and taken straight to the fast track lane. Quick and smooth — the perfect relaxed start to an island holiday."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Shahidah ****</span><span style="font-size:0.75rem; color:#9a9aaa;">Dec 2025</span></div>
+        </div>
+
+        <!-- R3 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Staff messaged me the night before and helped with the PAI registration. After I shared my arrival time, he walked us through immigration in under 15 minutes — even with a Korean charter landing at the same moment."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Nicole ***</span><span style="font-size:0.75rem; color:#9a9aaa;">Nov 2025</span></div>
+        </div>
+
+        <!-- R4 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"First time in Phu Quoc. Staff waited with a sign with my name in the arrival hall. Followed along, through immigration in no time. Waited until our luggage reached the driver. Felt safe 😊"</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">張 **</span><span style="font-size:0.75rem; color:#9a9aaa;">Jan 2025</span></div>
+        </div>
+
+        <!-- R5 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Arrived on a Sunday morning when several charter flights landed together and the PQC queue was huge. Thanks to Fast Track we were out in 15 minutes — while everyone else was still waiting."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Veronica ***</span><span style="font-size:0.75rem; color:#9a9aaa;">Oct 2025</span></div>
+        </div>
+
+        <!-- R6 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"So glad we used this — we had a tight connection at Phu Quoc and would have missed it otherwise. Easy, professional and very helpful. Highly recommend."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Chung ****</span><span style="font-size:0.75rem; color:#9a9aaa;">Apr 2026</span></div>
+        </div>
+
+        <!-- R7 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Excellent experience at Phu Quoc! Very smooth process. I booked both arrival and departure for peace of mind. Clear instructions on where to meet and what time."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Li *********</span><span style="font-size:0.75rem; color:#9a9aaa;">Apr 2026</span></div>
+        </div>
+
+        <!-- R8 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Thank you for guiding me so smoothly through Phu Quoc Airport! Really convenient and I'll definitely book again next time I'm back for the beach 🥹"</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Demi ****</span><span style="font-size:0.75rem; color:#9a9aaa;">Oct 2025</span></div>
+        </div>
+
+        <!-- R9 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"A lovely experience at PQC and I hope to use it again. 10/10 for this service."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">TJ *****</span><span style="font-size:0.75rem; color:#9a9aaa;">Mar 2025</span></div>
+        </div>
+
+        <!-- R10 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Fast Track at Phu Quoc was quick — barely any wait. Great value, especially during the busy dry season when the regular line was over an hour."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Hui ********</span><span style="font-size:0.75rem; color:#9a9aaa;">Nov 2025</span></div>
+        </div>
+
+        <!-- R11 -->
+        <div class="paf-review-card">
+          <div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div>
+          <p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Staff messaged me on WhatsApp the day before departure. Very nice and considerate. The whole process at Phu Quoc Airport was seamless from start to finish."</p>
+          <div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Emiliani ******</span><span style="font-size:0.75rem; color:#9a9aaa;">Aug 2025</span></div>
+        </div>
+
+        <!-- ══════════════════════════════════════════════════════
+     A8 — BỘ NHÂN BẢN (chỉ để marquee chạy liền mạch).
+     aria-hidden="true" → Google & AI KHÔNG đọc trùng nội dung.
+     Hiển thị y hệt.
+     ══════════════════════════════════════════════════════ -->
+        <div class="paf-review-card" aria-hidden="true"><div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Our flight landed early but the assistant was already waiting in the arrival hall. Cleared immigration in about 5 minutes and made our Long Beach transfer with time to spare."</p><div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Ajit *****</span><span style="font-size:0.75rem; color:#9a9aaa;">Mar 2026</span></div></div>
+        <div class="paf-review-card" aria-hidden="true"><div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"Staff messaged me the night before and helped with the PAI form. Walked us through immigration in under 15 minutes even with a Korean charter landing at the same time. Wonderful."</p><div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Nicole ***</span><span style="font-size:0.75rem; color:#9a9aaa;">Nov 2025</span></div></div>
+        <div class="paf-review-card" aria-hidden="true"><div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"PQC queue was huge on a Sunday morning, but thanks to Fast Track we were out in 15 minutes while everyone else was still waiting."</p><div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Veronica ***</span><span style="font-size:0.75rem; color:#9a9aaa;">Oct 2025</span></div></div>
+        <div class="paf-review-card" aria-hidden="true"><div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"First time in Phu Quoc. Staff with my name sign in the arrival hall. Through immigration in no time. Waited until our luggage reached the driver. Felt safe 😊"</p><div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">張 **</span><span style="font-size:0.75rem; color:#9a9aaa;">Jan 2025</span></div></div>
+        <div class="paf-review-card" aria-hidden="true"><div style="display:flex; gap:3px; margin-bottom:14px;"><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><svg width="13" height="13" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg></div><p style="font-size:0.88rem !important; color:#3a4a5a !important; line-height:1.7 !important; font-style:italic;">"So glad we used this — we had a tight connection at Phu Quoc and would have missed it. Easy, professional, highly recommend."</p><div style="margin-top:16px; padding-top:14px; border-top:1px solid #F0EBE0; display:flex; justify-content:space-between; align-items:center;"><span style="font-size:0.82rem; font-weight:600; color:#0B1F3A;">Chung ****</span><span style="font-size:0.75rem; color:#9a9aaa;">Apr 2026</span></div></div>
+
+      </div><!-- /marquee track -->
+    </div><!-- /marquee wrapper -->
+
+  </div><!-- /Part A -->
+
+  <!-- ════ PART B: PHOTO GALLERY — CAROUSEL ════ -->
+  <div style="background:#0B1F3A; padding:70px 24px;">
+    <div style="max-width:1200px; margin:0 auto;">
+
+      <div style="text-align:center; margin-bottom:40px;">
+        <span style="display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">Our Guests</span>
+        <h2 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:clamp(1.8rem,3.5vw,2.8rem) !important; font-weight:700 !important; color:#F9F7F3 !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important;">Happy Travelers at Phu Quoc Airport</h2>
+        <div style="width:44px; height:3px; background:#C9A84C; margin:16px auto 0;"></div>
+      </div>
+
+      <div style="position:relative;">
+
+        <button id="paf-prev" type="button" onclick="pafCarouselMove(-1)" aria-label="Previous photos" aria-controls="paf-carousel-track" style="position:absolute; left:-20px; top:50%; transform:translateY(-50%); z-index:10; width:48px; height:48px; background:#C9A84C; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.3); transition:background 0.2s;" onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+        </button>
+
+        <div style="overflow:hidden; border-radius:8px;">
+          <div id="paf-carousel-track" style="display:flex; gap:12px; transition:transform 0.4s cubic-bezier(0.25,0.46,0.45,0.94); will-change:transform;">
+            <!-- ⚠️ Thay ảnh bằng URL ảnh thật khách tại sảnh đến PQC -->
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-1.jpg" alt="Fast Track guests at Phu Quoc Airport arrival hall" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-2.jpg" alt="Fast Track arrival at Phu Quoc Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-3.jpg" alt="Priority immigration lane Phu Quoc Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-4.jpg" alt="Happy travelers Fast Track Phu Quoc" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-5.jpg" alt="Fast Track staff with guests Phu Quoc" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-6.jpg" alt="Airport assistance Phu Quoc" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-7.jpg" alt="Fast Track departure service Phu Quoc" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-8.jpg" alt="Group Fast Track Phu Quoc Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-9.jpg" alt="Immigration fast lane Phu Quoc Airport" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-10.jpg" alt="Fast Track guests arrival Phu Quoc" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-11.jpg" alt="Airport concierge service Phu Quoc" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+            <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;"><img width="800" height="600" src="http://phuquocairportfasttrack.com/wp-content/uploads/2026/07/phu-quoc-airport-fast-track-service-customer-12.jpg" alt="Phu Quoc Airport Fast Track team" loading="lazy" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/></div>
+          </div>
+        </div>
+
+        <button id="paf-next" type="button" onclick="pafCarouselMove(1)" aria-label="Next photos" aria-controls="paf-carousel-track" style="position:absolute; right:-20px; top:50%; transform:translateY(-50%); z-index:10; width:48px; height:48px; background:#C9A84C; border:none; border-radius:50%; display:flex; align-items:center; justify-content:center; cursor:pointer; box-shadow:0 4px 16px rgba(0,0,0,0.3); transition:background 0.2s;" onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+        </button>
+
+      </div>
+
+      <div id="paf-dots" style="display:flex; justify-content:center; gap:8px; margin-top:24px;"></div>
+
+      <div style="text-align:center; margin-top:40px;">
+        <a href="#services" style="display:inline-flex; align-items:center; gap:8px; padding:15px 36px; background:#C9A84C; color:#0B1F3A; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; text-decoration:none; border-radius:3px;" onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+          Join Our Happy Travelers — Book Now
+        </a>
+      </div>
+
+    </div>
+  </div><!-- /Part B -->
+
+</section><!-- /reviews -->
+
+<script>
+(function() {
+  var track    = document.getElementById('paf-carousel-track');
+  var dotsWrap = document.getElementById('paf-dots');
+  var total    = 12;
+  var current  = 0;
+  var visible, pages;
+
+  function getVisible() { return window.innerWidth <= 640 ? 2 : 4; }
+
+  function updateItemWidths() {
+    visible = getVisible();
+    pages   = Math.ceil(total / visible);
+    var gap  = 12;
+    var items = track.children;
+    var pct  = 'calc(' + (100 / visible) + '% - ' + (gap * (visible - 1) / visible) + 'px)';
+    for (var i = 0; i < items.length; i++) { items[i].style.flex = '0 0 ' + pct; }
+  }
+
+  function buildDots() {
+    dotsWrap.innerHTML = '';
+    for (var i = 0; i < pages; i++) {
+      var d = document.createElement('div');
+      d.style.cssText = 'width:8px;height:8px;border-radius:50%;background:' + (i===0 ? '#C9A84C' : 'rgba(201,168,76,0.3)') + ';cursor:pointer;transition:background 0.2s;';
+      d.onclick = (function(idx){ return function(){ pafGoTo(idx); }; })(i);
+      dotsWrap.appendChild(d);
+    }
+  }
+
+  function updateDots() {
+    var dots = dotsWrap.children;
+    for (var i = 0; i < dots.length; i++) {
+      dots[i].style.background = i === current ? '#C9A84C' : 'rgba(201,168,76,0.3)';
+    }
+  }
+
+  function pafGoTo(idx) {
+    if (idx < 0) idx = pages - 1;
+    if (idx >= pages) idx = 0;
+    current = idx;
+    var items = track.children;
+    if (!items.length) return;
+    var itemW = items[0].getBoundingClientRect().width;
+    var gap   = 12;
+    track.style.transform = 'translateX(-' + (current * visible * (itemW + gap)) + 'px)';
+    updateDots();
+  }
+
+  function init() { updateItemWidths(); buildDots(); pafGoTo(0); }
+
+  window.pafCarouselMove = function(dir) { pafGoTo(current + dir); };
+  window.addEventListener('resize', function() { init(); });
+  init();
+})();
+</script>
+[/ux_html]
+[ux_html label="FAQs"]
+
+<!-- ============================================================
+     SECTION 6: FAQ
+     Phu Quoc Airport Fast Track — phuquocairportfasttrack.com/
+     PAF-specific: visa-free 30 days ALL nationalities · PAI mandatory 1/6/2026 ·
+     NO add-ons · Departure base = priority exit lane ·
+     night Arrival 22:00–06:00 / Departure 00:00–08:00 · payment PayPal/card
+     ============================================================ -->
+
+
+<style>
+#faqs, #faqs * { box-sizing: border-box !important; }
+#faqs h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(1.8rem, 3.5vw, 2.8rem) !important;
+  font-weight: 700 !important; line-height: 1.15 !important;
+  color: #0B1F3A !important;
+  margin: 0 !important; padding: 0 !important;
+  border: none !important; background: none !important; text-shadow: none !important;
+}
+#faqs p, #faqs span, #faqs li {
+  font-family: 'DM Sans', sans-serif !important;
+  margin-bottom: 0 !important; padding: 0 !important;
+}
+#faqs ul { list-style: none !important; padding: 0 !important; margin: 0 !important; }
+#faqs .paf-faq-item { border-bottom: 1px solid #E8E4DE !important; }
+#faqs .paf-faq-item:first-child { border-top: 1px solid #E8E4DE !important; }
+#faqs .paf-faq-btn {
+  width: 100% !important; display: flex !important; align-items: center !important;
+  justify-content: space-between !important; gap: 16px !important;
+  padding: 22px 0 !important; background: none !important; border: none !important;
+  cursor: pointer !important; text-align: left !important;
+}
+#faqs .paf-faq-btn:hover .paf-faq-q { color: #C9A84C !important; }
+/* A3: .paf-faq-q giờ là <h3>. Reset toàn bộ style mặc định Flatsome
+   để hiển thị y hệt <span> cũ — không đổi 1 pixel. */
+#faqs h3.paf-faq-q {
+  font-family: 'DM Sans', sans-serif !important;
+  font-size: 1rem !important;
+  font-weight: 600 !important;
+  color: #0B1F3A !important;
+  line-height: 1.4 !important;
+  transition: color 0.2s !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: none !important;
+  text-shadow: none !important;
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  display: block !important;
+  width: auto !important;
+  max-width: none !important;
+}
+#faqs h3.paf-faq-q::before,
+#faqs h3.paf-faq-q::after { content: none !important; display: none !important; }
+#faqs .paf-faq-icon {
+  width: 28px !important; height: 28px !important; background: #F5EDD8 !important;
+  border-radius: 50% !important; display: flex !important; align-items: center !important;
+  justify-content: center !important; flex-shrink: 0 !important;
+  transition: background 0.2s, transform 0.3s !important;
+}
+#faqs .paf-faq-item.open .paf-faq-icon { background: #C9A84C !important; transform: rotate(45deg) !important; }
+#faqs .paf-faq-item.open .paf-faq-icon svg { stroke: #0B1F3A !important; }
+#faqs .paf-faq-body { max-height: 0 !important; overflow: hidden !important; transition: max-height 0.35s ease, padding 0.35s ease !important; }
+#faqs .paf-faq-item.open .paf-faq-body { max-height: 700px !important; padding-bottom: 20px !important; }
+#faqs .paf-faq-body p { font-size: 0.92rem !important; color: #5A5A72 !important; line-height: 1.78 !important; }
+#faqs .paf-faq-body ul { margin-top: 10px !important; display: flex !important; flex-direction: column !important; gap: 8px !important; }
+#faqs .paf-faq-body li { display: flex !important; gap: 10px !important; font-size: 0.92rem !important; color: #5A5A72 !important; line-height: 1.6 !important; }
+#faqs .paf-price { font-size: inherit !important; font-family: inherit !important; font-weight: inherit !important; color: inherit !important; }
+@media (max-width: 860px) { #faqs .paf-faq-grid { grid-template-columns: 1fr !important; } }
+</style>
+
+<section id="faqs" aria-labelledby="paf-h2-faq" itemscope itemtype="https://schema.org/FAQPage" style="background:#F9F7F3; padding:80px 24px; font-family:'DM Sans',sans-serif;">
+  <div style="max-width:1100px; margin:0 auto;">
+
+    <div style="text-align:center; margin-bottom:56px;">
+      <span style="display:block; font-size:0.72rem; font-weight:600; letter-spacing:0.18em; text-transform:uppercase; color:#C9A84C; margin-bottom:14px;">FAQ</span>
+      <h2 id="paf-h2-faq">Frequently Asked Questions</h2>
+      <div style="width:44px; height:3px; background:#C9A84C; margin:16px auto 20px;"></div>
+      <p style="font-size:1rem !important; color:#5A5A72 !important; line-height:1.75 !important; max-width:520px; margin:0 auto !important;">
+        Everything you need to know before booking your Fast Track at Phu Quoc Airport. Still have questions? <a href="https://wa.me/84368938081" style="color:#C9A84C; font-weight:600; text-decoration:none;">Chat with us on WhatsApp.</a>
+      </p>
+    </div>
+
+    <div style="display:grid; grid-template-columns:1fr 1fr; gap:0 60px;" class="paf-faq-grid">
+
+      <!-- LEFT column -->
+      <div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a1">
+            <h3 class="paf-faq-q" itemprop="name">Phu Quoc is visa-free — do I still need Fast Track?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text"><!--m:faq1-->
+            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style="color:#0B1F3A; font-weight:600;">30-day visa exemption to every nationality</strong> — but you still have to line up at immigration to get that exemption stamped, and officers may check your onward or return ticket. When several charter flights land within the same hour at the single terminal, that line builds fast. Fast Track walks you through the priority lane so you clear immigration in 10–20 minutes instead of queueing with everyone else.</p>
+            <!--/m:faq1--></div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a2">
+            <h3 class="paf-faq-q" itemprop="name">What documents do I need for Fast Track?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>For Phu Quoc, most travelers simply need a valid passport — the island grants a <strong style="color:#0B1F3A; font-weight:600;">30-day visa exemption to all nationalities</strong> when arriving by air. It also helps to have proof of onward or return travel, as officers may ask. If you are staying beyond 30 days or continuing to the mainland, you may still hold one of the following:</p>
+            <ul>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>E-Visa (applied online in advance)</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Visa on Arrival approval letter</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Temporary Residence Card</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>APEC Business Travel Card</li>
+            </ul>
+            <p style="margin-top:10px !important;">Note: Fast Track is for <strong style="color:#0B1F3A; font-weight:600;">foreign passport holders only</strong>. Vietnamese passport holders use the autogate system.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a3">
+            <h3 class="paf-faq-q" itemprop="name">What is PAI, and do I need to register before I fly?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a3" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>Yes. Since <strong style="color:#0B1F3A; font-weight:600;">1 June 2026</strong>, all foreign arrivals at Phu Quoc must complete a Pre-Arrival Information (PAI) registration online before landing. You submit it at <strong style="color:#0B1F3A; font-weight:600;">prearrival.immigration.gov.vn</strong> within the 72-hour window before your flight, and you'll receive a QR code to show on arrival.</p>
+            <p style="margin-top:10px !important;">If you haven't completed it, our assistant helps you sort the PAI on the spot so it doesn't hold you up at the counter. Just mention your booking and we'll guide you through it.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a4">
+            <h3 class="paf-faq-q" itemprop="name">What's the difference between Fast Track Arrival and Departure?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([paf_price service="fast_track_arrival"]/person) — our assistant meets you in the arrival hall on landing, guides you through the priority immigration lane, helps with your PAI and visa-exemption paperwork, and gets you through in 10–20 minutes.</p>
+            <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Departure</strong> ([paf_price service="fast_track_departure"]/person) — we meet you at the departures entrance and guide you through the priority exit immigration lane, so you skip the passport-control queue on your way home.</p>
+            <p style="margin-top:10px !important;">Many guests book <strong style="color:#0B1F3A; font-weight:600;">both</strong> to start and end their island trip completely hassle-free.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a5">
+            <h3 class="paf-faq-q" itemprop="name">Are government fees included in the price?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a5" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>No. Our service fee covers personal assistance only. Any official government fees (for example, Visa on Arrival stamping if you use one) are paid separately and directly to the authorities on the day of service. Most visa-exempt travelers pay nothing extra. We'll always tell you any applicable fees in advance. Note there's no ATM inside the immigration area, so bring USD or VND if you expect a fee.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /LEFT -->
+
+      <!-- RIGHT column -->
+      <div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a6">
+            <h3 class="paf-faq-q" itemprop="name">Where exactly will the staff meet me at Phu Quoc Airport?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a6" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>For <strong style="color:#0B1F3A; font-weight:600;">arrivals</strong>, our assistant waits inside the arrival hall holding a sign with your name — right before immigration control — and then guides you through the priority lane. Phu Quoc has a single terminal, so there's no confusion about which building to head for.</p>
+            <p style="margin-top:10px !important;">For <strong style="color:#0B1F3A; font-weight:600;">departures</strong>, we meet you at the departures entrance. We send the exact meeting point after confirmation.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a7">
+            <h3 class="paf-faq-q" itemprop="name">Is there a surcharge for late-night or early-morning flights?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for night flights. The windows differ slightly between services:</p>
+            <ul>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg><strong style="color:#0B1F3A; font-weight:600;">Arrivals:</strong>&nbsp;between 10:00 PM and 6:00 AM</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg><strong style="color:#0B1F3A; font-weight:600;">Departures:</strong>&nbsp;between 12:00 AM and 8:00 AM</li>
+            </ul>
+            <p style="margin-top:10px !important;">Many Korean, Chinese and Central Asian charters to Phu Quoc land in these hours. Our service is available 24/7 regardless of flight time.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a8">
+            <h3 class="paf-faq-q" itemprop="name">What if my flight is delayed or arrives early?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a8" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>No problem at all. We monitor your flight in real time and adjust accordingly. Our assistant will be there whether your flight lands early, on time, or late.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a9">
+            <h3 class="paf-faq-q" itemprop="name">Can I book for a group or family? How is children's pricing handled?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a9" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>Yes — the service works for solo travelers, couples, families and larger groups. Just tell us the number of passengers when booking. For children:</p>
+            <ul>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Infants <strong style="color:#0B1F3A; font-weight:600;">under 2</strong> travel free of charge</li>
+              <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg>Passengers <strong style="color:#0B1F3A; font-weight:600;">aged 2 and over</strong> pay the full price</li>
+            </ul>
+            <p style="margin-top:10px !important;">Families with young children especially benefit — no standing in a long queue with kids after a long flight before your island holiday begins.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a10">
+            <h3 class="paf-faq-q" itemprop="name">When and how do I pay for the service?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a10" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>We confirm your booking first — no advance payment required. Payment is made online via <strong style="color:#0B1F3A; font-weight:600;">PayPal or credit card</strong> (no PayPal account needed). We send a secure payment link after confirmation. We don't accept cash payment.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="paf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+          <button class="paf-faq-btn" type="button" onclick="pafFaqToggle(this)" aria-expanded="false" aria-controls="paf-faq-a11">
+            <h3 class="paf-faq-q" itemprop="name">How do I book, and can I book both arrival and departure?</h3>
+            <span class="paf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+          </button>
+          <div class="paf-faq-body" id="paf-faq-a11" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+            <div itemprop="text">
+            <p>Book directly through the website checkout, or via WhatsApp or email — just send your flight number, date, number of passengers and chosen service. We confirm within <strong style="color:#0B1F3A; font-weight:600;">10 minutes</strong>, day or night.</p>
+            <p style="margin-top:10px !important;">Many guests book <strong style="color:#0B1F3A; font-weight:600;">both</strong> arrival and departure for complete peace of mind — start and end your Phu Quoc trip hassle-free. Just share both flight details when booking.</p>
+            </div>
+          </div>
+        </div>
+
+      </div><!-- /RIGHT -->
+
+    </div><!-- /grid -->
+
+  </div>
+</section><!-- /faqs -->
+
+<script>
+function pafFaqToggle(btn) {
+  var item = btn.parentElement;
+  var isOpen = item.classList.contains('open');
+
+  document.querySelectorAll('#faqs .paf-faq-item').forEach(function (el) {
+    el.classList.remove('open');
+    var b = el.querySelector('.paf-faq-btn');
+    if (b) { b.setAttribute('aria-expanded', 'false'); }
+  });
+
+  if (!isOpen) {
+    item.classList.add('open');
+    btn.setAttribute('aria-expanded', 'true');
+  }
+}
+</script>
+[/ux_html]
+[ux_html label="Footer"]
+
+<!-- ============================================================
+     SECTION 7: FINAL CTA + FOOTER
+     Phu Quoc Airport Fast Track — phuquocairportfasttrack.com/
+     2 services · NO add-ons · 2 contact channels: WhatsApp + Email
+     Product IDs: Arrival=311, Departure=313
+     ============================================================ -->
+
+
+<style>
+#paf-s7, #paf-s7 * { box-sizing: border-box !important; }
+#paf-s7 h2, #paf-s7 h3 {
+  font-weight: 700 !important; line-height: 1.15 !important;
+  margin-top: 0 !important; padding: 0 !important;
+  border: none !important; background: none !important; text-shadow: none !important;
+}
+#paf-s7 h2 {
+  font-family: 'Cormorant Garamond', Georgia, serif !important;
+  font-size: clamp(2rem, 4vw, 3.2rem) !important;
+  color: #fff !important;
+}
+#paf-s7 p, #paf-s7 span { font-family: 'DM Sans', sans-serif !important; margin-bottom: 0 !important; padding: 0 !important; }
+#paf-s7 a { text-decoration: none !important; }
+#paf-footer, #paf-footer * { box-sizing: border-box !important; }
+#paf-footer a { text-decoration: none !important; }
+#paf-footer p { margin-bottom: 0 !important; padding: 0 !important; }
+#paf-footer .paf-price {
+  font-size: 0.78rem !important; font-family: 'DM Sans', sans-serif !important;
+  font-weight: 600 !important; color: #C9A84C !important;
+  line-height: inherit !important; display: inline !important;
+}
+@media (max-width: 860px) {
+  #paf-s7 .paf-cta-btns { flex-direction: column !important; align-items: center !important; }
+  #paf-footer .paf-contact-row { grid-template-columns: 1fr 1fr !important; gap: 32px !important; }
+}
+@media (max-width: 480px) {
+  #paf-footer .paf-contact-row { grid-template-columns: 1fr !important; }
+  #paf-footer .paf-bottom-bar { flex-direction: column !important; text-align: center !important; }
+}
+</style>
+
+<div id="paf-s7" style="font-family:'DM Sans',sans-serif;">
+
+  <!-- ════ PART A: FINAL CTA ════ -->
+  <div style="background:#0B1F3A; padding:90px 24px; position:relative; overflow:hidden;">
+    <div style="position:absolute; top:0; bottom:0; left:6%; width:1px; background:linear-gradient(to bottom, transparent, rgba(201,168,76,0.25) 20%, rgba(201,168,76,0.25) 80%, transparent);"></div>
+    <div style="position:absolute; top:0; bottom:0; right:6%; width:1px; background:linear-gradient(to bottom, transparent, rgba(201,168,76,0.25) 20%, rgba(201,168,76,0.25) 80%, transparent);"></div>
+
+    <div style="max-width:780px; margin:0 auto; text-align:center; position:relative; z-index:1;">
+      <span style="display:inline-block; font-size:0.72rem; font-weight:600; letter-spacing:0.2em; text-transform:uppercase; color:#C9A84C; margin-bottom:20px;">Vietnam's Only Visa-Free Airport · Gateway to the Islands</span>
+      <h2>Don't Wait in Line.<br><em style="font-style:italic; color:#C9A84C;">Your Island Escape Starts Here.</em></h2>
+      <div style="width:44px; height:3px; background:#C9A84C; margin:22px auto 24px;"></div>
+      <p style="font-size:1.05rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.8 !important; max-width:580px; margin:0 auto 40px !important;">
+        <!--m:footer-para-->Phu Quoc is visa-free for every nationality — but you still queue to have that exemption stamped, and when the charter flights land together, that line can stretch past an hour. With Fast Track you're through in 10–20 minutes, and on your way to Long Beach or Sunset Town while everyone else is still waiting. Book now and we confirm within 10 minutes.<!--/m:footer-para-->
+      </p>
+      <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;" class="paf-cta-btns">
+        <a href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Fast%20Track%20service%20at%20Phu%20Quoc%20Airport."
+           target="_blank" rel="noopener"
+           style="display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:#C9A84C; color:#0B1F3A; font-size:0.85rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; border-radius:3px; border:2px solid #C9A84C;"
+           onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A'" onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C'">
+          <svg viewBox="0 0 24 24" width="18" height="18" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Book via WhatsApp
+        </a>
+        <a href="#services"
+           style="display:inline-flex; align-items:center; gap:10px; padding:16px 36px; background:transparent; color:#fff; font-size:0.85rem; font-weight:600; letter-spacing:0.1em; text-transform:uppercase; border-radius:3px; border:2px solid rgba(255,255,255,0.45);"
+           onmouseover="this.style.borderColor='#fff';this.style.background='rgba(255,255,255,0.08)'" onmouseout="this.style.borderColor='rgba(255,255,255,0.45)';this.style.background='transparent'">
+          View Services &amp; Pricing
+        </a>
+      </div>
+      <div style="display:flex; flex-wrap:wrap; justify-content:center; gap:24px;">
+        <div style="display:flex; align-items:center; gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg><span style="font-size:0.82rem !important; color:rgba(255,255,255,0.65) !important;">Licensed Direct Provider</span></div>
+        <div style="display:flex; align-items:center; gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="#C9A84C"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg><span style="font-size:0.82rem !important; color:rgba(255,255,255,0.65) !important;">Vietnam's Only Visa-Free Airport</span></div>
+        <div style="display:flex; align-items:center; gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg><span style="font-size:0.82rem !important; color:rgba(255,255,255,0.65) !important;">Available 24/7 · All flights</span></div>
+        <div style="display:flex; align-items:center; gap:7px;"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"/></svg><span style="font-size:0.82rem !important; color:rgba(255,255,255,0.65) !important;">Confirmed in 10 minutes</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ════ PART B: FOOTER ════ -->
+  <div id="paf-footer">
+    <div style="background:#071528; padding:48px 24px; border-top:1px solid rgba(201,168,76,0.2);">
+      <div style="max-width:1100px; margin:0 auto;">
+
+        <div style="display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:40px; align-items:start;" class="paf-contact-row">
+
+          <!-- COL 1: Brand -->
+          <div>
+            <a href="https://phuquocairportfasttrack.com/" style="display:flex; align-items:center; gap:12px; text-decoration:none; margin-bottom:12px;">
+              <svg width="40" height="40" viewBox="-4 -4 80 80" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+                <polygon points="36,2 70,36 36,70 2,36" fill="none" stroke="#C9A84C" stroke-width="2"/>
+                <polygon points="36,14 58,36 36,58 14,36" fill="#0B1F3A"/>
+                <polygon points="36,14 58,36 36,58 14,36" fill="#C9A84C" opacity="0.12"/>
+                <rect x="22" y="33" width="28" height="8" rx="4" fill="#C9A84C"/>
+                <polygon points="26,33 26,41 10,48 10,43" fill="#C9A84C"/>
+                <polygon points="46,33 46,41 62,48 62,43" fill="#C9A84C"/>
+                <polygon points="22,33 22,41 14,20" fill="#C9A84C"/>
+                <polygon points="50,34 50,38 60,36" fill="#F9F7F3"/>
+                <circle cx="36" cy="2" r="3" fill="#C9A84C"/>
+                <circle cx="70" cy="36" r="3" fill="#C9A84C"/>
+                <circle cx="36" cy="70" r="3" fill="#C9A84C"/>
+                <circle cx="2" cy="36" r="3" fill="#C9A84C"/>
+              </svg>
+              <div style="line-height:1.2;">
+                <div style="font-family:'Cormorant Garamond',Georgia,serif; font-size:1.15rem; font-weight:700; color:#fff; letter-spacing:0.5px;">Phu Quoc Airport</div>
+                <div style="font-family:'DM Sans',sans-serif; font-size:0.6rem; font-weight:500; color:#C9A84C; letter-spacing:3px; text-transform:uppercase;">Fast Track Service</div>
+              </div>
+            </a>
+            <p style="font-size:0.82rem !important; color:rgba(255,255,255,0.45) !important; line-height:1.7 !important; font-family:'DM Sans',sans-serif;">Premium airport Fast Track at Phu Quoc International Airport (PQC) — gateway to Long Beach, Sunset Town, the Hon Thom cable car, VinWonders and the island's finest resorts.</p>
+          </div>
+
+          <!-- COL 2: Our Services -->
+          <div>
+            <p style="font-size:0.68rem !important; font-weight:700 !important; letter-spacing:0.14em; text-transform:uppercase; color:#C9A84C; margin-bottom:16px !important; font-family:'DM Sans',sans-serif;">Our Services</p>
+            <div style="display:flex; flex-direction:column; gap:8px;">
+              <a href="https://phuquocairportfasttrack.com/checkout/?add-to-cart=311"
+                 style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); border-radius:3px; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500; color:rgba(255,255,255,0.75);"
+                 onmouseover="this.style.background='rgba(201,168,76,0.15)';this.style.color='#C9A84C';this.style.borderColor='rgba(201,168,76,0.5)'"
+                 onmouseout="this.style.background='rgba(201,168,76,0.08)';this.style.color='rgba(255,255,255,0.75)';this.style.borderColor='rgba(201,168,76,0.2)'">
+                <span>Fast Track Arrival</span><span>[paf_price service="fast_track_arrival"]</span>
+              </a>
+              <a href="https://phuquocairportfasttrack.com/checkout/?add-to-cart=313"
+                 style="display:flex; align-items:center; justify-content:space-between; padding:8px 12px; background:rgba(201,168,76,0.08); border:1px solid rgba(201,168,76,0.2); border-radius:3px; font-family:'DM Sans',sans-serif; font-size:0.82rem; font-weight:500; color:rgba(255,255,255,0.75);"
+                 onmouseover="this.style.background='rgba(201,168,76,0.15)';this.style.color='#C9A84C';this.style.borderColor='rgba(201,168,76,0.5)'"
+                 onmouseout="this.style.background='rgba(201,168,76,0.08)';this.style.color='rgba(255,255,255,0.75)';this.style.borderColor='rgba(201,168,76,0.2)'">
+                <span>Fast Track Departure</span><span>[paf_price service="fast_track_departure"]</span>
+              </a>
+              <p style="font-size:0.72rem !important; color:rgba(255,255,255,0.4) !important; line-height:1.6 !important; margin-top:4px !important; font-family:'DM Sans',sans-serif;">Visa-free 30 days, all nationalities · No charge for infants under 2</p>
+            </div>
+          </div>
+
+          <!-- COL 3: Contact -->
+          <div>
+            <p style="font-size:0.68rem !important; font-weight:700 !important; letter-spacing:0.14em; text-transform:uppercase; color:#C9A84C; margin-bottom:16px !important; font-family:'DM Sans',sans-serif;">Contact</p>
+
+            <div style="margin-bottom:14px;">
+              <p style="font-size:0.68rem !important; font-weight:600 !important; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:5px !important; font-family:'DM Sans',sans-serif;">WhatsApp</p>
+              <a href="https://wa.me/84368938081" target="_blank" rel="noopener"
+                 style="display:flex; align-items:center; gap:8px; color:#F9F7F3; font-size:0.88rem; font-weight:500; font-family:'DM Sans',sans-serif;"
+                 onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#F9F7F3'">
+                <svg viewBox="0 0 24 24" width="14" height="14" fill="#25D366" style="flex-shrink:0;"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+                +84 368 938 081
+              </a>
+            </div>
+
+            <div>
+              <p style="font-size:0.68rem !important; font-weight:600 !important; letter-spacing:0.08em; text-transform:uppercase; color:rgba(255,255,255,0.4); margin-bottom:5px !important; font-family:'DM Sans',sans-serif;">Email</p>
+              <a href="mailto:support@phuquocairportfasttrack.com"
+                 style="display:flex; align-items:center; gap:8px; color:#F9F7F3; font-size:0.88rem; font-weight:500; font-family:'DM Sans',sans-serif;"
+                 onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='#F9F7F3'">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                support<wbr>@phuquocairportfasttrack.com
+              </a>
+            </div>
+          </div>
+
+          <!-- COL 4: Policies -->
+          <div>
+            <p style="font-size:0.68rem !important; font-weight:700 !important; letter-spacing:0.14em; text-transform:uppercase; color:#C9A84C; margin-bottom:16px !important; font-family:'DM Sans',sans-serif;">Policies</p>
+            <div style="display:flex; flex-direction:column; gap:10px;">
+              <a href="https://phuquocairportfasttrack.com/privacy-policy/"
+                 style="font-family:'DM Sans',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.6);"
+                 onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Privacy Policy</a>
+              <a href="https://phuquocairportfasttrack.com/terms-conditions/"
+                 style="font-family:'DM Sans',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.6);"
+                 onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Terms &amp; Conditions</a>
+              <a href="https://phuquocairportfasttrack.com/payment-policy/"
+                 style="font-family:'DM Sans',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.6);"
+                 onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Payment Policy</a>
+              <a href="https://phuquocairportfasttrack.com/cancellation-refund-policy/"
+                 style="font-family:'DM Sans',sans-serif; font-size:0.88rem; color:rgba(255,255,255,0.6);"
+                 onmouseover="this.style.color='#C9A84C'" onmouseout="this.style.color='rgba(255,255,255,0.6)'">Cancellation &amp; Refund</a>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Bottom bar -->
+        <div class="paf-bottom-bar" style="margin-top:40px; padding-top:24px; border-top:1px solid rgba(255,255,255,0.08); display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:12px;">
+          <p style="font-size:0.78rem !important; color:rgba(255,255,255,0.3) !important; font-family:'DM Sans',sans-serif;">
+            © <span id="paf-year"></span> Phu Quoc Airport Fast Track · Phu Quoc International Airport (PQC) · Phu Quoc, Vietnam
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div><!-- /paf-s7 -->
+
+<script>
+  document.getElementById('paf-year').textContent = new Date().getFullYear();
+</script>
+[/ux_html]
+[ux_html label="Smooth Scroll"]
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('a[href^="#"]').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      var id = this.getAttribute('href');
+      if (id === '#') { return; }
+      var target = document.querySelector(id);
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+    });
+  });
+});
+</script>
+[/ux_html]
+[ux_html label="Whatsapp Float"]
+
+<!-- ============================================================
+     FLOATING CONTACT BUTTON — Phu Quoc Airport Fast Track
+     WhatsApp only · Ẩn nút scroll-to-top Flatsome
+     Paste vào: WPCode (Insert Headers & Footers) → Footer
+     ============================================================ -->
+
+
+<style>
+  #top-link { display: none !important; }
+</style>
+
+<div id="paf-float-group" style="
+  position: fixed !important; bottom: 24px !important; right: 0 !important;
+  z-index: 9995 !important; display: flex !important; flex-direction: column !important;
+  align-items: flex-end !important; gap: 10px !important;
+">
+
+  <div style="position:relative; display:flex; align-items:center;">
+    <div id="paf-wa-tip" style="
+      position: absolute !important; right: 62px !important; top: 50% !important;
+      transform: translateY(-50%) translateX(-6px) !important;
+      background: #ffffff !important; border-radius: 8px !important; padding: 8px 12px !important;
+      box-shadow: 0 4px 16px rgba(11,31,58,0.15) !important; border-left: 3px solid #25D366 !important;
+      white-space: nowrap !important; opacity: 0 !important;
+      transition: opacity 0.2s ease, transform 0.2s ease !important; pointer-events: none !important;
+    ">
+      <div style="font-family:'DM Sans',sans-serif !important;font-size:12px !important;font-weight:600 !important;color:#0B1F3A !important;margin:0 !important;padding:0 !important;background:none !important;">Chat on WhatsApp</div>
+      <div style="font-family:'DM Sans',sans-serif !important;font-size:11px !important;font-weight:400 !important;color:#6B7280 !important;margin:0 !important;padding:0 !important;background:none !important;">Reply in under 10 min</div>
+      <div style="position:absolute;right:-6px;top:50%;transform:translateY(-50%);width:0;height:0;border-top:6px solid transparent;border-bottom:6px solid transparent;border-left:6px solid #fff;filter:drop-shadow(2px 0 2px rgba(11,31,58,0.06));"></div>
+    </div>
+
+    <a href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Fast%20Track%20service%20at%20Phu%20Quoc%20Airport."
+       target="_blank" rel="noopener noreferrer"
+       aria-label="Chat on WhatsApp"
+       style="
+         display: flex !important; align-items: center !important; justify-content: center !important;
+         width: 52px !important; height: 52px !important; background: #25D366 !important;
+         border-radius: 26px 0 0 26px !important; text-decoration: none !important;
+         box-shadow: -2px 2px 12px rgba(37,211,102,0.35) !important;
+         transition: box-shadow 0.2s ease !important; border: none !important;
+         padding: 0 !important; margin: 0 !important; cursor: pointer !important; position: relative !important;
+       "
+       onmouseover="this.style.setProperty('box-shadow','-4px 4px 20px rgba(37,211,102,0.5)','important');document.getElementById('paf-wa-tip').style.setProperty('opacity','1','important');document.getElementById('paf-wa-tip').style.setProperty('transform','translateY(-50%) translateX(0)','important');"
+       onmouseout="this.style.setProperty('box-shadow','-2px 2px 12px rgba(37,211,102,0.35)','important');document.getElementById('paf-wa-tip').style.setProperty('opacity','0','important');document.getElementById('paf-wa-tip').style.setProperty('transform','translateY(-50%) translateX(-6px)','important');"
+    >
+      <svg viewBox="0 0 24 24" style="width:26px;height:26px;fill:#fff;display:block;flex-shrink:0;" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/>
+      </svg>
+      <span style="position:absolute !important;inset:-3px !important;border-radius:50% !important;border:2px solid rgba(37,211,102,0.45) !important;animation:paf-wa-pulse 2.4s ease-out infinite !important;pointer-events:none !important;"></span>
+    </a>
+  </div>
+
+</div>
+
+<style>
+@keyframes paf-wa-pulse {
+  0%   { transform: scale(1);   opacity: 0.6; }
+  70%  { transform: scale(1.4); opacity: 0;   }
+  100% { transform: scale(1.4); opacity: 0;   }
+}
+</style>
+
+<script>
+(function() {
+  function pafAdjustFloat() {
+    var floatGroup = document.getElementById('paf-float-group');
+    var bookBar = document.getElementById('paf-mobile-cta');
+    if (!floatGroup || !bookBar || window.innerWidth > 768) return;
+    floatGroup.style.setProperty('bottom', (bookBar.offsetHeight + 8) + 'px', 'important');
+  }
+  window.addEventListener('load', pafAdjustFloat);
+  window.addEventListener('resize', pafAdjustFloat);
+})();
+</script>
+[/ux_html]
+[ux_html label="Mobile Book Now"]
+
+<!-- ============================================================
+     MOBILE STICKY BOOK NOW BUTTON — Phu Quoc Airport Fast Track
+     Paste vào: WPCode → Footer · Chỉ hiển thị mobile (≤768px)
+     ============================================================ -->
+
+<style>
+#paf-mobile-cta { display: none !important; }
+@media (max-width: 768px) {
+  #paf-mobile-cta {
+    display: block !important; position: fixed !important;
+    bottom: 0 !important; left: 0 !important; right: 0 !important;
+    z-index: 9990 !important; background: #071528 !important;
+    border-top: 1px solid rgba(201,168,76,0.2) !important;
+    padding: 12px 16px !important; box-sizing: border-box !important;
+  }
+}
+</style>
+
+<div id="paf-mobile-cta">
+  <a href="#services"
+     style="width:100%; padding:15px 20px; background:#C9A84C; color:#0B1F3A; border-radius:8px; font-family:'DM Sans',sans-serif; font-size:0.92rem; font-weight:700; letter-spacing:0.06em; text-transform:uppercase; cursor:pointer; display:flex; align-items:center; justify-content:center; gap:10px; text-decoration:none; box-sizing:border-box;">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#0B1F3A" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 2L11 13"/><path d="M22 2L15 22 11 13 2 9l20-7z"/></svg>
+    Book Fast Track
+  </a>
+</div>
+
+<script>
+(function() {
+  function pafAdjustFloat() {
+    var fg  = document.getElementById('paf-float-group');
+    var bar = document.getElementById('paf-mobile-cta');
+    if (!fg || !bar || window.innerWidth > 768) return;
+    fg.style.setProperty('bottom', (bar.offsetHeight + 8) + 'px', 'important');
+  }
+  window.addEventListener('load', pafAdjustFloat);
+  window.addEventListener('resize', pafAdjustFloat);
+  pafAdjustFloat();
+
+  var btn = document.querySelector('#paf-mobile-cta a');
+  if (btn) {
+    btn.addEventListener('click', function(e) {
+      var target = document.getElementById('services');
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+    });
+  }
+})();
+</script>
+[/ux_html]
+
+<!-- /wp:flatsome/uxbuilder -->
+[ux_html label="Booking Picker"]
+
+<!-- ============================================================
+     PAF HOMEPAGE - element "Booking Picker"
+     Mot panel dung chung cho moi nut vang "Book" tren trang.
+     Bat ky nut nao co class paf-pick-btn deu mo panel nay.
+     Element doc lap: them/bot nut o cho khac khong phai sua gi trong day.
+     ============================================================ -->
+<style>
+.paf-pick-btn { -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; box-shadow: none !important; text-shadow: none !important; min-height: 0 !important; height: auto !important; cursor: pointer !important; }
+.paf-pick-chev { flex-shrink: 0 !important; transition: transform 0.25s ease !important; }
+.paf-pick-btn[aria-expanded="true"] .paf-pick-chev { transform: rotate(180deg) !important; }
+
+#paf-pick-tpl { display: none !important; }
+
+#paf-pick-panel { display: none !important; position: fixed !important; z-index: 100050 !important; width: 340px !important; max-width: calc(100vw - 24px) !important; padding: 12px !important; background: #071528 !important; border: 1px solid rgba(201,168,76,0.28) !important; border-radius: 10px !important; box-shadow: 0 18px 44px rgba(0,0,0,0.38) !important; font-family: 'DM Sans', sans-serif !important; }
+#paf-pick-panel.is-open { display: block !important; }
+#paf-pick-panel, #paf-pick-panel * { box-sizing: border-box !important; }
+#paf-pick-panel a { display: flex !important; align-items: center !important; justify-content: space-between !important; padding: 12px 14px !important; background: rgba(201,168,76,0.08) !important; border: 1px solid rgba(201,168,76,0.3) !important; border-radius: 8px !important; text-decoration: none !important; box-shadow: none !important; }
+#paf-pick-panel a + a { margin-top: 10px !important; }
+#paf-pick-panel a:hover { background: rgba(201,168,76,0.16) !important; border-color: rgba(201,168,76,0.55) !important; }
+#paf-pick-panel svg { display: block !important; flex-shrink: 0 !important; }
+#paf-pick-panel .paf-pick-t { display: block !important; font-size: 0.82rem !important; font-weight: 600 !important; color: #F9F7F3 !important; line-height: 1.2 !important; }
+#paf-pick-panel .paf-pick-s { display: block !important; font-size: 0.72rem !important; color: rgba(255,255,255,0.45) !important; margin-top: 2px !important; line-height: 1.3 !important; }
+#paf-pick-panel .paf-pick-p { font-size: 0.88rem !important; font-weight: 700 !important; color: #C9A84C !important; white-space: nowrap !important; }
+</style>
+
+<div id="paf-pick-tpl"><a href="https://phuquocairportfasttrack.com/checkout/?add-to-cart=311"><span style="display:flex !important; align-items:center !important; gap:10px !important;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="2" x2="12" y2="15"></line><polyline points="7 10 12 15 17 10"></polyline><line x1="4" y1="21" x2="20" y2="21"></line></svg><span><span class="paf-pick-t">Fast Track Arrival</span><span class="paf-pick-s">Priority immigration lane &middot; PQC</span></span></span><span style="display:flex !important; align-items:center !important; gap:6px !important; flex-shrink:0 !important;"><span class="paf-pick-p">[paf_price service="fast_track_arrival"]</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a><a href="https://phuquocairportfasttrack.com/checkout/?add-to-cart=313"><span style="display:flex !important; align-items:center !important; gap:10px !important;"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="12" y1="22" x2="12" y2="9"></line><polyline points="7 14 12 9 17 14"></polyline><line x1="4" y1="3" x2="20" y2="3"></line></svg><span><span class="paf-pick-t">Fast Track Departure</span><span class="paf-pick-s">Priority exit immigration lane</span></span></span><span style="display:flex !important; align-items:center !important; gap:6px !important; flex-shrink:0 !important;"><span class="paf-pick-p">[paf_price service="fast_track_departure"]</span><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><polyline points="9 18 15 12 9 6"></polyline></svg></span></a></div>
+
+<script>
+(function () {
+  var panel = null;
+  var current = null;
+
+  function build() {
+    var tpl = document.getElementById('paf-pick-tpl');
+    if (!tpl) { return null; }
+    var p = document.createElement('div');
+    p.id = 'paf-pick-panel';
+    p.innerHTML = tpl.innerHTML;
+    document.body.appendChild(p);
+    return p;
+  }
+
+  function place(btn) {
+    var r = btn.getBoundingClientRect();
+    var pw = panel.offsetWidth;
+    var ph = panel.offsetHeight;
+    var left = r.left;
+    if (left + pw > window.innerWidth - 12) { left = window.innerWidth - pw - 12; }
+    if (left < 12) { left = 12; }
+    var top = r.bottom + 10;
+    if (top + ph > window.innerHeight - 12 && r.top - ph - 10 > 12) { top = r.top - ph - 10; }
+    panel.style.setProperty('left', Math.round(left) + 'px', 'important');
+    panel.style.setProperty('top', Math.round(top) + 'px', 'important');
+  }
+
+  function closePicker() {
+    if (!current) { return; }
+    current.setAttribute('aria-expanded', 'false');
+    current = null;
+    if (panel) { panel.className = ''; }
+  }
+
+  function openPicker(btn) {
+    if (!panel) { panel = build(); }
+    if (!panel) { return; }
+    panel.className = 'is-open';
+    current = btn;
+    btn.setAttribute('aria-expanded', 'true');
+    place(btn);
+  }
+
+  document.addEventListener('click', function (e) {
+    var btn = (e.target && e.target.closest) ? e.target.closest('.paf-pick-btn') : null;
+    if (btn) {
+      e.preventDefault();
+      var wasOpen = (current === btn);
+      closePicker();
+      if (!wasOpen) { openPicker(btn); }
+      return;
+    }
+    if (current && panel && !panel.contains(e.target)) { closePicker(); }
+  }, false);
+
+  document.addEventListener('keydown', function (e) {
+    if (e.keyCode === 27) { closePicker(); }
+  });
+
+  window.addEventListener('scroll', function () {
+    if (!current) { return; }
+    var r = current.getBoundingClientRect();
+    if (r.bottom < 0 || r.top > window.innerHeight) { closePicker(); } else { place(current); }
+  }, true);
+
+  window.addEventListener('resize', function () { if (current) { closePicker(); } });
+})();
+</script>
+[/ux_html]
