@@ -1,0 +1,22 @@
+{
+  "_site": "HAF",
+  "_airport": "HAN",
+  "_month": "2026-10",
+  "_frozen": [
+    "save-figure",
+    "compare-row1"
+  ],
+  "_frozen_why": "save-figure la o 'Save | 1 - 3 hours' (thoi gian TIET KIEM, khong phai do dai hang cho). compare-row1 chua '1-3 hours'. Luat 5: quy trinh thang khong dung vao con so.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "save-note",
+    "intro",
+    "faq-night",
+    "footer-para"
+  ],
+  "_base": "haf/home/base.txt",
+  "_note_het_cho": "HAF co it cho nhat trong 5 site: moi vung deu ngan (peak-body chi 145 ky tu). faq-night chi la mot cau 56 ky tu, khong du cho mot menh de thang. Thang nay chi doi 3 vung.",
+  "hero-bullet": "Priority immigration lane — past the 1–3 hour midday queue",
+  "peak-eyebrow": "October peak wait",
+  "peak-body": "Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in under 10 minutes."
+}

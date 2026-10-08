@@ -97,56 +97,32 @@ PROFILE = {
                    r'class="sgn-pick-btn"': 2, r'class="sgn-pick-chev"': 2,
                    r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
+    # HAF -- DOI HAN 08/10/2026. Trang chu quay ve ban GOC 11 element (bo he tinh
+    # thoi gian cho), cong element "Booking Picker" => 12 element. Khong con vung
+    # dat:zone nao; cap nhat hang thang di qua cac vung <!--m:id--> (tools/text_zones.py).
+    #
+    # HAF KHAC BON SITE KIA ba cho, dung sua cho "giong":
+    #   1. The so la hang "Save | 1 - 3 hours" -- THOI GIAN TIET KIEM, khong phai
+    #      do dai hang cho. Vung ten la save-figure / save-note, KHONG phai
+    #      queue-figure / queue-note.
+    #   2. BA shortcode gia khac nhau: fast_track, connection, vip_departure
+    #      (bon site kia chi co fast_track_arrival + fast_track_departure).
+    #   3. Element 10 va 11 ten khac: "Whatsapp & Mess" va "Book Now Button"
+    #      (giong SAF, khac PAF/DAF/CAF).
     "HAF": {
-        # BON cho HAF khac bon site kia -- doi mot trong bon la trang hong:
-        #   1. ten element giong SAF: "Whatsapp & Mess" / "Book Now Button".
-        #   2. tien to DON: CSS va shortcode deu dung `haf`. Khac SAF (sgn- + saf_).
-        #      Port tu SAF phai doi saf_price TRUOC roi moi doi sgn-.
-        #   3. TEN DICH VU khac moi site kia: fast_track / vip_departure / connection,
-        #      khong phai fast_track_arrival / fast_track_departure.
-        #   4. Picker: HAF co BA nut haf-pick-btn (hero + wait-times + Booking Picker),
-        #      bang voi bon site kia. Comment cu ghi "tong 2, khong phai 3" -- SAI, va
-        #      count ngay duoi luon la 3. Trang live thang 10/2026 tung chi co 2 vi nut
-        #      hero bi tra ve <a href="#services">; cong nay bat duoc, da khoi phuc.
-        "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
-                   'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
+        "labels": ['Nav Bar', 'Hero Banner', 'What Is Fast Track?', 'Services', 'Booking',
+                   'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
                    'Book Now Button', 'Booking Picker'],
-        "zones": ['wait-hero', 'wait-section', 'wait-faq',
-                  # hai vung nho boc cum con so trong van xuoi tinh o cot trai hero
-                  'wait-hours-lede', 'wait-hours-bullet'],
-
-        # The hero HAF giu MAU GOC cua trang: Save / From / 24-7, khong phai bang
-        # so sanh nhu bon site kia (chot 05/10/2026).
-        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong
-        "hero_title": 'Why Choose HAN Fast Track?',
-        "musts": [
-                  # Dong phu hang SAVE: BA dong, chot 06/10/2026. HAN la site CUOI
-                  # chuyen sang ban nay -- nay ca 5 site dung chung mot cach viet.
-                  'Peak immigration queue: ',
-                  'With Fast Track: under&nbsp;',
-                  'Estimate &middot; Updated ',
-                  'Why Choose HAN Fast Track?','add-to-cart=311', 'add-to-cart=313',
+        "zones": [],
+        "musts": ['add-to-cart=311', 'add-to-cart=313',
                   '[haf_price service="fast_track"]',
-                  '[haf_price service="vip_departure"]',
                   '[haf_price service="connection"]',
-                  'id="wait-times"', 'id="haf-pick-tpl"', '#wait-times .haf-wt-num',
-                  '#wait-times .haf-wt-ft', '#wait-times .haf-wt-btn', '.haf-pick-btn',
-                  '#haf-pick-panel', 'id="haf-carousel-track"', 'class="haf-marquee-track"',
-                  # LUAT 7: nut vang hero la <button>, media query phai phu ca button.
-                  # Mat dong nay = nut lech trai tren dien thoai, khong ai bao.
-                  '.haf-cta-row button',
-                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
-                  # 06/10/2026). Nam NGOAI vung dat:zone -> mat no la LOI AM: chu
-                  # khong doi, chi vo dong tren dien thoai.
-                  'grid-template-columns: 40px 1fr !important',
-                  '.haf-hero-row > span:nth-child(3)'],
-
-        # Bang review HAF: 32 the = 16 goc + 16 ban sao aria-hidden. So LE hoac hai nua
-        # khac nhau se lam bang giat moi vong (animation chay translateX(-50%)).
-        "counts": {r'<img ': 17, r'schema\.org/Question': 12,
-                   r'class="haf-review-card': 32, r'class="haf-pick-btn': 3,
-                   r'class="haf-hero-row"': 3},
+                  '[haf_price service="vip_departure"]',
+                  'id="haf-pick-tpl"', '.haf-pick-btn', '#haf-pick-panel'],
+        "counts": {r'<img ': 17, r'schema\.org/Question': 11,
+                   r'class="haf-review-card"': 16,
+                   r'class="haf-pick-btn"': 2, r'class="haf-pick-chev"': 2,
+                   r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
 }
 
