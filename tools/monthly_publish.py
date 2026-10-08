@@ -122,7 +122,7 @@ PROFILE = {
         "counts": {r'<img ': 17, r'schema\.org/Question': 11,
                    r'class="haf-review-card"': 16,
                    r'class="haf-pick-btn"': 2, r'class="haf-pick-chev"': 2,
-                   r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
+                   r'<!--m:[a-z0-9-]+-->': 12, r'<!--/m:[a-z0-9-]+-->': 12},
     },
 }
 

@@ -708,7 +708,7 @@ function hafCloseMenu() {
               <h3 style="margin:0 !important;">Save 1–3 Hours</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->This is the real queue at Noi Bai during peak flights. Our priority lane bypasses every one of these people — you're through in under 10 minutes.<!--/m:peak-body-->
+              <!--m:peak-body-->This is the real queue at Noi Bai during peak flights. Our priority lane bypasses every one of these people — you're through in about 15 minutes.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -832,7 +832,7 @@ function hafCloseMenu() {
           <div style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Clear immigration in under <strong style="color:#0B1F3A; font-weight:600;">10 minutes</strong> via the priority immigration lane</p>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Clear immigration in about <strong style="color:#0B1F3A; font-weight:600;">15 minutes</strong> via the priority immigration lane</p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -2021,7 +2021,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule.</p>
+            <p><!--m:faq-delay-->No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule.<!--/m:faq-delay--></p>
             </div>
           </div>
         </div>
@@ -2069,7 +2069,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a11" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><strong style="color:#0B1F3A; font-weight:600;">Not Fast Track Arrival — you need Fast Track Connection.</strong> Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in.</p>
+            <p><strong style="color:#0B1F3A; font-weight:600;">Not Fast Track Arrival — you need Fast Track Connection.</strong> <!--m:faq-connection-->Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in.<!--/m:faq-connection--></p>
             <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Connection ([haf_price service="connection"])</strong> covers all of it — priority immigration at T2, clear directions across to T1, and our Terminal 1 agent waiting there to take you through priority check-in and security to your gate. <a href="https://hanoiairportfasttrack.com/hanoi-airport-connecting-flight-service/" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the Connection Service →</a></p>
             </div>
           </div>

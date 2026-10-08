@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[3c940290c04bfffc981200566fdfc60524d897ce189aafbee7942a6110ef50f1]]></content_sha256>
+  <content_sha256><![CDATA[844e42cf347fac0165991ca1ed3a1889423e8427210b7ea607d449d1cbad195c]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -349,7 +349,7 @@ function hafCloseMenu() {
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <!--m:hero-bullet-->Priority immigration lane — past the 1–3 hour midday queue<!--/m:hero-bullet-->
+          <!--m:hero-bullet-->Priority immigration lane — avoid the 1–3 hour queue<!--/m:hero-bullet-->
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0" aria-hidden="true"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -715,7 +715,7 @@ function hafCloseMenu() {
               <h3 style="margin:0 !important;">Save 1–3 Hours</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in under 10 minutes.<!--/m:peak-body-->
+              <!--m:peak-body-->Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in about 15 minutes.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -839,7 +839,7 @@ function hafCloseMenu() {
           <div style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Clear immigration in under <strong style="color:#0B1F3A; font-weight:600;">10 minutes</strong> via the priority immigration lane</p>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Clear immigration in about <strong style="color:#0B1F3A; font-weight:600;">15 minutes</strong> via the priority immigration lane</p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -1986,7 +1986,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for flights during night hours — <strong style="color:#0B1F3A; font-weight:600;">arrivals between 11:00 PM and 5:00 AM</strong>, and <strong style="color:#0B1F3A; font-weight:600;">departures between 12:00 AM and 7:00 AM</strong>. <!--m:faq-night-->Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
+            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for flights during night hours — <strong style="color:#0B1F3A; font-weight:600;">arrivals between 11:00 PM and 5:00 AM</strong>, and <strong style="color:#0B1F3A; font-weight:600;">departures between 12:00 AM and 7:00 AM</strong>. <!--m:faq-night-->Thirteen international flights land at Noi Bai inside that window on a typical October day, most of them from mainland China and Korea. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
             </div>
           </div>
         </div>
@@ -2028,7 +2028,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule.</p>
+            <p><!--m:faq-delay-->No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule. One thing to check this month: the winter flight schedule starts on 25 October and many arrival times move with it, so confirm your time with the airline if you booked earlier.<!--/m:faq-delay--></p>
             </div>
           </div>
         </div>
@@ -2076,7 +2076,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a11" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><strong style="color:#0B1F3A; font-weight:600;">Not Fast Track Arrival — you need Fast Track Connection.</strong> Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in.</p>
+            <p><strong style="color:#0B1F3A; font-weight:600;">Not Fast Track Arrival — you need Fast Track Connection.</strong> <!--m:faq-connection-->Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in. The tightest window is midday — 27 international flights land at Noi Bai between 12:00 and 15:00, so a connection booked in those hours leaves the least margin.<!--/m:faq-connection--></p>
             <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Connection ([haf_price service="connection"])</strong> covers all of it — priority immigration at T2, clear directions across to T1, and our Terminal 1 agent waiting there to take you through priority check-in and security to your gate. <a href="https://hanoiairportfasttrack.com/hanoi-airport-connecting-flight-service/" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the Connection Service →</a></p>
             </div>
           </div>

@@ -2,21 +2,18 @@
   "_site": "HAF",
   "_airport": "HAN",
   "_month": "2026-10",
-  "_frozen": [
-    "save-figure",
-    "compare-row1"
-  ],
-  "_frozen_why": "save-figure la o 'Save | 1 - 3 hours' (thoi gian TIET KIEM, khong phai do dai hang cho). compare-row1 chua '1-3 hours'. Luat 5: quy trinh thang khong dung vao con so.",
-  "_untouched_this_month": [
-    "hero-lead",
-    "save-note",
-    "intro",
-    "faq-night",
-    "footer-para"
-  ],
-  "_base": "haf/home/base.txt",
-  "_note_het_cho": "HAF co it cho nhat trong 5 site: moi vung deu ngan (peak-body chi 145 ky tu). faq-night chi la mot cau 56 ky tu, khong du cho mot menh de thang. Thang nay chi doi 3 vung.",
-  "hero-bullet": "Priority immigration lane — past the 1–3 hour midday queue",
+  "_frozen": ["save-figure", "compare-row1", "hero-bullet"],
+  "_frozen_why": "save-figure la o 'Save | 1 - 3 hours' (thoi gian TIET KIEM). compare-row1 chua '1-3 hours'. hero-bullet: chu site chot 08/10/2026 giu NGUYEN VAN ban goc.",
+  "_untouched_this_month": ["hero-lead", "save-note", "intro", "footer-para"],
+  "_base": "haf/home/base.txt (nen v2: cam ket dich vu 15 phut + 2 vung FAQ moi)",
+
   "peak-eyebrow": "October peak wait",
-  "peak-body": "Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in under 10 minutes."
+
+  "peak-body": "Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in about 15 minutes.",
+
+  "faq-night": "Thirteen international flights land at Noi Bai inside that window on a typical October day, most of them from mainland China and Korea. Our service is available 24/7 regardless of flight time.",
+
+  "faq-delay": "No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule. One thing to check this month: the winter flight schedule starts on 25 October and many arrival times move with it, so confirm your time with the airline if you booked earlier.",
+
+  "faq-connection": "Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in. The tightest window is midday — 27 international flights land at Noi Bai between 12:00 and 15:00, so a connection booked in those hours leaves the least margin."
 }
