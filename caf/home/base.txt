@@ -169,7 +169,7 @@
         <div style="display:flex !important; align-items:baseline !important; gap:12px !important; padding:10px 0 !important">
           <span style="flex:0 0 74px !important; font-family:'DM Sans',sans-serif !important; font-size:0.64rem !important; font-weight:600 !important; letter-spacing:0.08em !important; text-transform:uppercase !important; color:#5A5A72 !important; line-height:1.4 !important">Queue</span>
           <span style="flex:1 !important; min-width:0 !important">
-            <span style="display:block !important; font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.6rem !important; font-weight:700 !important; color:#B23A48 !important; line-height:1 !important"><!--m:queue-figure-->30 – 90 min<!--/m:queue-figure--></span>
+            <span style="display:block !important; font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.6rem !important; font-weight:700 !important; color:#B23A48 !important; line-height:1 !important"><!--m:queue-figure-->60 – 90 min<!--/m:queue-figure--></span>
             <span style="display:block !important; font-family:'DM Sans',sans-serif !important; font-size:0.75rem !important; line-height:1.5 !important; color:#5A5A72 !important; margin-top:3px !important"><!--m:queue-note-->Peak hours — charter flights landing together<!--/m:queue-note--></span>
           </span>
         </div>
@@ -280,7 +280,7 @@
               </div>
               <h3 style="font-family:'Cormorant Garamond',Georgia,serif !important; font-size:1.4rem !important; font-weight:700 !important; line-height:1.15 !important; color:#0B1F3A !important; margin:0 !important; padding:0 !important; border:none !important; background:none !important">When the Charters Land</h3>
             </div>
-            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important"><!--m:peak-body-->Cam Ranh is a small terminal serving big aircraft. When two Russian wide-bodies arrive within the hour, or Korean and Chinese flights stack up on a summer evening, the T2 hall fills within minutes — 30 to 50 minutes on a normal busy day, 60 to 90 during Tet, the dry-season peak or the winter charter season.<!--/m:peak-body--></p>
+            <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; margin:0 !important; padding:0 !important; flex:1 !important"><!--m:peak-body-->Cam Ranh is a small terminal serving big aircraft. When two Russian wide-bodies arrive within the hour, or Korean and Chinese flights stack up on a summer evening, the T2 hall fills within minutes — 60 to 90 minutes, and longer during Tet, the dry-season peak or the winter charter season.<!--/m:peak-body--></p>
           </div>
         </div>
 
@@ -348,7 +348,7 @@
           <div style="display:flex !important; flex-direction:column !important; gap:16px !important">
             <div style="display:flex !important; align-items:flex-start !important; gap:12px !important">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B23A48" stroke-width="2" stroke-linecap="round" style="flex-shrink:0 !important; margin-top:2px !important"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important; margin:0 !important; padding:0 !important"><!--m:compare-row1-->Join the whole aircraft in one hall — 30 to 50 minutes on a busy day, 60 to 90 during Tet, summer or the winter charter season<!--/m:compare-row1--></p>
+              <p style="font-family:'DM Sans',sans-serif !important; font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important; margin:0 !important; padding:0 !important"><!--m:compare-row1-->Join the whole aircraft in one hall — 60 to 90 minutes, and longer during Tet, summer or the winter charter season<!--/m:compare-row1--></p>
             </div>
             <div style="display:flex !important; align-items:flex-start !important; gap:12px !important">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#B23A48" stroke-width="2" stroke-linecap="round" style="flex-shrink:0 !important; margin-top:2px !important"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
