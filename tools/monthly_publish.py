@@ -28,39 +28,26 @@ PROFILE = {
                    # 10 vung text theo thang -- mat mot cai la thang sau khong ghi duoc
                    r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
+    # DAF -- DOI HAN 08/10/2026. Trang chu quay ve ban GOC 11 element (bo he tinh
+    # thoi gian cho), cong element "Booking Picker" => 12 element. Khong con vung
+    # dat:zone nao; cap nhat hang thang di qua cac vung <!--m:id--> (tools/text_zones.py).
+    # Van tay cu cua he cu nam trong git history, commit f5fcb5d tro ve truoc.
     "DAF": {
-        "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
-                   'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
+        "labels": ['Nav Bar', 'Hero Banner', 'What Is Fast Track?', 'Services', 'Booking',
+                   'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp Float',
                    'Mobile Book Now', 'Booking Picker'],
-        "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-
-        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
-        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - dong phu hang SAVE phai noi CA HAI dau cua phep tru, moi dau mot dong;
-        #     hai chu "estimated" va "reach" khong duoc mat (xem skill tung site)
-        "hero_title": 'Why Choose DAD Fast Track?',
-        "musts": [
-                  'Peak immigration queue: ',
-                  'With Fast Track: under&nbsp;',
-                  # Dong 3 cua dong phu hang SAVE. DAF tung thieu must nay trong khi
-                  # PAF/CAF/SAF deu co -- mot nac ho so voi ba site kia.
-                  'Estimate &middot; Updated ','add-to-cart=311', 'add-to-cart=313',
+        "zones": [],
+        "musts": ['add-to-cart=311', 'add-to-cart=313',
                   '[daf_price service="fast_track_arrival"]',
                   '[daf_price service="fast_track_departure"]',
-                  'id="wait-times"', 'id="daf-pick-tpl"', '#wait-times .daf-wt-num',
-                  '#wait-times .daf-wt-ft', '#wait-times .daf-wt-btn', '.daf-pick-btn',
-                  '#daf-pick-panel',
-                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d, chot
-                  # 06/10/2026). Nam NGOAI vung dat:zone -> quy trinh hang thang khong
-                  # cham vao, nen mat no la LOI AM: chu khong doi, chi vo dong tren
-                  # dien thoai. patch_static.py cua site cung kiem; de ca o day cho
-                  # cong chung nam site dong deu mot muc.
-                  'grid-template-columns: 40px 1fr !important',
-                  '.daf-hero-row > span:nth-child(3)'],
-
-        "counts": {r'<img ': 16, r'schema\.org/Question': 11,
-                   r'class="daf-review-card"': 16, r'class="daf-pick-btn': 3,
-                   r'class="daf-hero-row"': 3},
+                  'id="daf-pick-tpl"', '.daf-pick-btn',
+                  # media query phai nham CA <button>, khong chi <a> -- neu khong thi
+                  # nut hero lech trai o <=600px. Loi am, desktop khong lo ra.
+                  '.daf-cta-row button'],
+        "counts": {r'<img ': 16, r'schema\.org/Question': 10,
+                   r'class="daf-review-card"': 16, r'class="daf-pick-btn"': 2,
+                   r'class="daf-pick-chev"': 2,
+                   r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
     "CAF": {
         "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',

@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[5eb7939722ca10511b37f38d7d193bc8a805b72349a4aa769dcdb90bb4920354]]></content_sha256>
+  <content_sha256><![CDATA[d1e28f2ea10f935edceb54c5409a583d85df25446b8a9ada4fef13944a3ba2e8]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -311,13 +311,13 @@
         max-width: 500px;
         margin: 0 0 24px 0;
         padding: 0;
-      ">Da Nang International Airport is usually quick — but when the late-evening Korean bank lands, or during Tet, summer and the fireworks festival, immigration can back up for well over an hour. Our Fast Track service gets you through in 10–15 minutes, every time.</p>
+      "><!--m:hero-lead-->Da Nang International Airport is usually quick — but when several Korean and Chinese flights land together, or during Tet, summer and the fireworks festival, immigration can stretch from 45 minutes to two hours. Our Fast Track service gets you through in 15–20 minutes, every time.<!--/m:hero-lead--></p>
 
       <!-- Feature list — DAD pain points -->
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          Beat the queue when Korean flight banks land — through in 10–15 min
+          <!--m:hero-bullet-->Beat the queue when the late-night Korean bank lands — through in 15–20 min<!--/m:hero-bullet-->
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -340,7 +340,6 @@
           align-items: center;
           gap: 8px;
           padding: 15px 32px;
-          margin: 0;
           background: #C9A84C;
           color: #0B1F3A;
           font-family: 'DM Sans', sans-serif;
@@ -352,9 +351,7 @@
           border-radius: 3px;
           border: 2px solid #C9A84C;
           box-sizing: border-box;
-          line-height: 1;
-          cursor: pointer;
-        " onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A';this.style.transform='translateY(-2px)'"
+          line-height: 1; margin:0" onmouseover="this.style.background='#E2C07A';this.style.borderColor='#E2C07A';this.style.transform='translateY(-2px)'"
            onmouseout="this.style.background='#C9A84C';this.style.borderColor='#C9A84C';this.style.transform='translateY(0)'">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
           Book Fast Track Now
@@ -397,7 +394,7 @@
       box-sizing: border-box;
     ">
 
-      <!-- Card header + monthly figures - vung tu cap nhat, khong sua tay -->
+      <!-- Card header -->
       <div style="
         display: flex;
         align-items: center;
@@ -411,38 +408,36 @@
         border-bottom: 1px solid #E8E4DE;
         padding-bottom: 14px;
       ">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M17.8 19.2L16 11l3.5-3.5C21 6 21 4 19.5 2.5c-1.5-1.5-3.5-1.5-5 0L11 6 2.8 4.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 1 1 1-1v2l1 1 1-1v-1l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.3-.3.5-.7.4-1.2z"/></svg>
-        Why Choose DAD Fast Track?
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        DAD Immigration — The Real Numbers
       </div>
 
-<!--dat:zone:wait-hero-->
-
+      <!-- Stats — DAD-specific, honest -->
       <div style="display: flex; flex-direction: column; gap: 0;">
 
-        <div class="daf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Save</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">1&ndash;1.5 hours</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; line-height:1.45; color:#5A5A72; margin-top:3px;">Peak immigration queue: 68&ndash;79&nbsp;min<br>With Fast Track: under&nbsp;15&nbsp;min<br><span style="font-size:0.72rem;">Estimate &middot; Updated 5 Oct 2026</span></span>
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1;"><!--m:queue-figure-->45 – 120 min<!--/m:queue-figure--></span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;"><!--m:queue-note-->Peak — the Korean bank, 23:15 to midnight<!--/m:queue-note--></span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
 
-        <div class="daf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
+          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Fast Track</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#1a7a42; line-height:1;">15 – 20 min</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Through immigration with our service</span>
+        </div>
+
+        <div style="height:1px; background:#E8E4DE;"></div>
+
+        <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">From</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">[daf_price service="fast_track_arrival"]</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person &middot; Confirmed in 10 minutes</span>
-        </div>
-
-        <div style="height:1px; background:#E8E4DE;"></div>
-
-        <div class="daf-hero-row" style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
-          <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">24/7</span>
-          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1; font-variant-numeric:lining-nums; font-feature-settings:'lnum' 1;">Support</span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">WhatsApp &amp; Email</span>
+          <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#0B1F3A; line-height:1;">[daf_price service="fast_track_arrival"]</span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;">Per person · Confirmed in 10 minutes</span>
         </div>
 
       </div>
-<!--/dat:zone:wait-hero-->
 
       <!-- Service mini tiles -->
       <div style="display: flex; gap: 8px;">
@@ -468,10 +463,7 @@
         display: flex;
         align-items: center;
         justify-content: center;
-        gap: 8px;
-        width: 100%;
         padding: 15px 24px;
-        margin: 0;
         background: #C9A84C;
         color: #0B1F3A;
         font-family: 'DM Sans', sans-serif;
@@ -483,12 +475,10 @@
         border-radius: 3px;
         border: 2px solid #C9A84C;
         box-sizing: border-box;
-        line-height: 1;
-        cursor: pointer;
-      " onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
+        line-height: 1; margin:0" onmouseover="this.style.background='#E2C07A'" onmouseout="this.style.background='#C9A84C'">
         Book Now — Response in 10 min
-        <svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
-      </button>
+          <svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg>
+        </button>
 
       <!-- Contact line -->
       <p style="text-align:center; font-family:'DM Sans',sans-serif; font-size:0.78rem; color:#5A5A72; margin:0; padding:0;">
@@ -592,174 +582,7 @@
     justify-content: center !important;
   }
 }
-
-/* Thu hoi khoang trang hai ben the hero tren man hep (chot 06/10/2026).
-   Cot nhan 50px + gap 12px an mat 62px be ngang -- tren iPhone SE dung chung do
-   la dong dau cua dong phu hang SAVE vo hai dong. Hai nac:
-     <=420px  thu cot nhan con 40px, gap 8px   -> giu bo cuc hai cot, the THAP hon
-     <=345px  gop mot cot, nhan len tren       -> cuu not lop may 320px
-   Khoi nay nam NGOAI vung dat:zone -- quy trinh hang thang khong cham vao.
-   Mat no la "loi am": chu khong doi, chi vo dong tren dien thoai. patch_static.py kiem. */
-@media (max-width: 420px) {
-  .daf-hero-row {
-    grid-template-columns: 40px 1fr !important;
-    column-gap: 8px !important;
-  }
-}
-@media (max-width: 345px) {
-  .daf-hero-row {
-    grid-template-columns: 1fr !important;
-  }
-  .daf-hero-row > span {
-    grid-column: 1 !important;
-  }
-  .daf-hero-row > span:nth-child(1) {
-    grid-row: 1 !important;
-    align-self: start !important;
-  }
-  .daf-hero-row > span:nth-child(2) { grid-row: 2 !important; }
-  .daf-hero-row > span:nth-child(3) { grid-row: 3 !important; }
-}
 </style>
-[/ux_html]
-
-[ux_html label="Wait Times"]
-<!-- ============================================================
-     DAF HOMEPAGE — element "Wait Times"
-     Vùng giữa hai dấu dat:zone do quy trình hằng tháng tự thay — KHÔNG sửa tay.
-     Font đã nạp ở Nav Bar — KHÔNG thêm <link> font ở đây.
-     ============================================================ -->
-<style>
-#wait-times, #wait-times * { box-sizing: border-box !important; }
-#wait-times h2 { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: clamp(1.8rem, 3.4vw, 2.6rem) !important; font-weight: 700 !important; line-height: 1.15 !important; color: #0B1F3A !important; margin: 0 !important; padding: 0 !important; border: none !important; background: none !important; text-shadow: none !important; text-transform: none !important; letter-spacing: -0.01em !important; }
-#wait-times h3 { font-family: 'DM Sans', sans-serif !important; font-size: 1rem !important; font-weight: 600 !important; line-height: 1.4 !important; color: #0B1F3A !important; margin: 0 0 8px 0 !important; padding: 0 !important; border: none !important; background: none !important; text-transform: none !important; letter-spacing: normal !important; }
-#wait-times p, #wait-times span, #wait-times strong, #wait-times a, #wait-times div { font-family: 'DM Sans', sans-serif !important; }
-#wait-times p { margin: 0 !important; padding: 0 !important; }
-#wait-times a { text-decoration: none !important; }
-#wait-times .daf-wt-head { text-align: center !important; max-width: 760px !important; margin: 0 auto 36px !important; }
-#wait-times .daf-wt-eyebrow { display: block !important; font-size: 0.72rem !important; font-weight: 600 !important; letter-spacing: 0.14em !important; text-transform: uppercase !important; color: #8B6914 !important; margin-bottom: 14px !important; }
-#wait-times .daf-wt-lead { font-size: 1rem !important; line-height: 1.75 !important; color: #2a3a50 !important; }
-#wait-times .daf-wt-lead strong { color: #8B1A1A !important; font-weight: 700 !important; }
-#wait-times .daf-wt-table { max-width: 900px !important; margin: 0 auto !important; border: 1px solid #E8E4DE !important; border-radius: 12px !important; overflow: hidden !important; background: #fff !important; }
-#wait-times .daf-wt-row { display: grid !important; grid-template-columns: 1.3fr 2fr 1fr !important; gap: 18px !important; align-items: center !important; padding: 16px 24px !important; border-top: 1px solid #F0EBE0 !important; }
-#wait-times .daf-wt-header { background: #0B1F3A !important; border-top: none !important; padding: 12px 24px !important; }
-#wait-times .daf-wt-header div { font-size: 0.7rem !important; font-weight: 700 !important; letter-spacing: 0.1em !important; text-transform: uppercase !important; color: #E2C07A !important; }
-#wait-times .daf-wt-busy { background: #FFF8F8 !important; }
-#wait-times .daf-wt-band strong { display: block !important; font-size: 1.05rem !important; font-weight: 700 !important; color: #0B1F3A !important; }
-#wait-times .daf-wt-flights { display: block !important; font-size: 0.76rem !important; color: #5A5A72 !important; margin-top: 2px !important; }
-#wait-times .daf-wt-num { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
-#wait-times .daf-wt-sub { font-size: 0.76rem !important; color: #5A5A72 !important; margin-left: 10px !important; }
-#wait-times .daf-wt-track { display: block !important; height: 8px !important; background: #EFE9DD !important; border-radius: 4px !important; margin-top: 10px !important; overflow: hidden !important; max-width: 320px !important; }
-#wait-times .daf-wt-fill { display: block !important; height: 8px !important; border-radius: 4px !important; }
-#wait-times .daf-wt-cell { font-size: 0.95rem !important; color: #2a3a50 !important; }
-#wait-times .daf-wt-ft { font-family: 'Cormorant Garamond', Georgia, serif !important; font-size: 1.6rem !important; font-weight: 700 !important; line-height: 1 !important; color: #1a7a42 !important; font-variant-numeric: lining-nums !important; font-feature-settings: 'lnum' 1 !important; }
-#wait-times .daf-wt-cards { display: grid !important; grid-template-columns: repeat(2, 1fr) !important; gap: 16px !important; max-width: 900px !important; margin: 24px auto 0 !important; }
-#wait-times .daf-wt-card { background: #F9F7F3 !important; border: 1px solid #E8E4DE !important; border-radius: 10px !important; padding: 20px 22px !important; }
-#wait-times .daf-wt-card-gold { border-left: 4px solid #C9A84C !important; }
-#wait-times .daf-wt-card p { font-size: 0.88rem !important; line-height: 1.65 !important; color: #2a3a50 !important; }
-#wait-times .daf-wt-method { max-width: 900px !important; margin: 22px auto 0 !important; font-size: 0.78rem !important; line-height: 1.7 !important; color: #5A5A72 !important; }
-#wait-times .daf-wt-method strong { color: #0B1F3A !important; font-weight: 600 !important; }
-#wait-times .daf-wt-cta { display: flex !important; flex-wrap: wrap !important; align-items: center !important; justify-content: center !important; gap: 12px 24px !important; margin-top: 28px !important; }
-#wait-times .daf-wt-btn { display: inline-flex !important; align-items: center !important; gap: 8px !important; padding: 18px 46px !important; background: #C9A84C !important; background-image: none !important; color: #0B1F3A !important; font-family: 'DM Sans', sans-serif !important; font-size: 0.86rem !important; font-weight: 700 !important; letter-spacing: 0.08em !important; text-transform: uppercase !important; border: none !important; border-radius: 3px !important; margin: 0 !important; height: auto !important; min-height: 0 !important; line-height: 1.2 !important; cursor: pointer !important; box-shadow: none !important; text-shadow: none !important; -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; }
-#wait-times .daf-wt-btn:hover, #wait-times .daf-wt-btn:focus, #wait-times .daf-wt-btn:active { background: #E2C07A !important; color: #0B1F3A !important; }
-#wait-times .daf-pick-chev { transition: transform 0.25s ease !important; }
-#wait-times .daf-pick-btn[aria-expanded="true"] .daf-pick-chev { transform: rotate(180deg) !important; }
-#wait-times a:focus-visible { outline: 2px solid #0B1F3A !important; outline-offset: 3px !important; }
-@media (max-width: 820px) {
-  #wait-times .daf-wt-header { display: none !important; }
-  #wait-times .daf-wt-row { grid-template-columns: 1fr 1fr !important; gap: 10px 14px !important; padding: 16px !important; }
-  #wait-times .daf-wt-band { grid-column: 1 / -1 !important; }
-  #wait-times .daf-wt-cell::before { content: attr(data-label) !important; display: block !important; font-family: 'DM Sans', sans-serif !important; font-variant-numeric: normal !important; font-size: 0.72rem !important; font-weight: 700 !important; letter-spacing: 0.06em !important; text-transform: uppercase !important; color: #5A5A72 !important; margin-bottom: 3px !important; }
-  #wait-times .daf-wt-cards { grid-template-columns: 1fr !important; }
-  #wait-times .daf-wt-lead { text-align: left !important; }
-}
-</style>
-
-<section id="wait-times" aria-labelledby="daf-h2-wait" style="background:#FFFFFF; padding:72px 24px;">
-  <div style="max-width:1100px; margin:0 auto;">
-<!--dat:zone:wait-section-->
-    <div class="daf-wt-head">
-      <span class="daf-wt-eyebrow">Immigration wait times &middot; October 2026 &middot; updated 5 October 2026</span>
-      <h2 id="daf-h2-wait">How Long Is the Immigration Queue at Da Nang Airport in October 2026?</h2>
-      <div aria-hidden="true" style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
-      <p class="daf-wt-lead">In October 2026, based on flight schedules and queue times reported at the airport in 2025&ndash;2026, passengers landing during the busiest hours at Da Nang International Airport (DAD) could spend <strong>68&ndash;79 minutes</strong> completing immigration procedures. With Fast Track, this time is under 15 minutes at any hour.</p>
-    </div>
-
-    <div class="daf-wt-table" role="table" aria-label="Estimated time from landing to leaving immigration at Da Nang Airport by arrival time, October 2026">
-      <div class="daf-wt-row daf-wt-header" role="row">
-        <div role="columnheader">Landing time</div>
-        <div role="columnheader">Standard queue &mdash; last passengers</div>
-        <div role="columnheader">With Fast Track</div>
-      </div>
-        <div class="daf-wt-row daf-wt-light" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>00:00&ndash;06:00</strong><span class="daf-wt-flights">2 international arrivals &middot; Moderate</span></div>
-          <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#A8541A !important;">52&ndash;62 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:78% !important; background:#A8541A !important;"></span></span>
-          </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
-        </div>
-        <div class="daf-wt-row daf-wt-light" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>06:00&ndash;10:00</strong><span class="daf-wt-flights">9 international arrivals &middot; Moderate</span></div>
-          <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#A8541A !important;">49&ndash;60 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:76% !important; background:#A8541A !important;"></span></span>
-          </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
-        </div>
-        <div class="daf-wt-row daf-wt-busy" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>10:00&ndash;13:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Busy</span></div>
-          <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#C9281C !important;">50&ndash;77 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:97% !important; background:#C9281C !important;"></span></span>
-          </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
-        </div>
-        <div class="daf-wt-row daf-wt-light" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>13:00&ndash;16:00</strong><span class="daf-wt-flights">10 international arrivals &middot; Moderate</span></div>
-          <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#A8541A !important;">44&ndash;66 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:84% !important; background:#A8541A !important;"></span></span>
-          </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
-        </div>
-        <div class="daf-wt-row daf-wt-light" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>16:00&ndash;20:00</strong><span class="daf-wt-flights">6 international arrivals &middot; Lighter</span></div>
-          <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#8B6914 !important;">40&ndash;45 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:57% !important; background:#8B6914 !important;"></span></span>
-          </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">~10 min</div>
-        </div>
-        <div class="daf-wt-row daf-wt-busy" role="row">
-          <div class="daf-wt-band" role="rowheader"><strong>20:00&ndash;24:00</strong><span class="daf-wt-flights">13 international arrivals &middot; Busy</span></div>
-          <div class="daf-wt-queue" role="cell" data-label="Standard queue">
-            <span class="daf-wt-num" style="color:#C9281C !important;">68&ndash;79 min</span>
-            <span class="daf-wt-track" aria-hidden="true"><span class="daf-wt-fill" style="width:100% !important; background:#C9281C !important;"></span></span>
-          </div>
-          <div class="daf-wt-cell daf-wt-ft" role="cell" data-label="With Fast Track">10&ndash;15 min</div>
-        </div>
-    </div>
-
-    <div class="daf-wt-cards">
-      <div class="daf-wt-card daf-wt-card-gold">
-        <h3>When Fast Track matters most</h3>
-        <p>Flights landing 10:00&ndash;13:00 and 20:00&ndash;24:00, when arrivals from Seoul, Busan, Kuala Lumpur and Bangkok land minutes apart. Land 16:00&ndash;20:00 &mdash; the line is shorter, though rarely short.</p>
-      </div>
-      <div class="daf-wt-card">
-        <h3>October 2026 notes</h3>
-        <p>October is Da Nang's wettest month, and from 25 October the winter schedule starts — the late-evening Korean bank from Seoul, Busan, Daegu and Cheongju grows again. Seven of those flights now land between 23:00 and 01:10.</p>
-      </div>
-    </div>
-
-    <p class="daf-wt-method"><strong>How we estimate:</strong> a minute-by-minute queue model over the 53 international arrivals on a typical October weekday, counting deplaning and the walk to the hall, and checked against the waits travellers report.</p>
-
-    <div class="daf-wt-cta">
-      <button type="button" class="daf-pick-btn daf-wt-btn" aria-expanded="false" aria-haspopup="true">Book Fast Track<svg class="daf-pick-chev" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><polyline points="6 9 12 15 18 9"></polyline></svg></button>
-    </div>
-<!--/dat:zone:wait-section-->
-  </div>
-</section><!-- /wait-times -->
 [/ux_html]
 [ux_html label="What Is Fast Track?"]
 
@@ -816,7 +639,7 @@
         <h2 id="daf-h2-what">What Is Airport Fast Track?</h2>
         <div style="width:44px; height:3px; background:#C9A84C; margin:14px auto 20px;"></div>
         <p style="font-size:1rem !important; color:#5A5A72 !important; max-width:640px; margin:0 auto !important; line-height:1.75 !important;">
-          Da Nang International Airport (DAD) is Central Vietnam's gateway to Hoi An, Ba Na Hills and the coast — its Terminal 2 earned a Skytrax 5-Star rating in 2024 and 2025. On a quiet day you'll clear immigration in minutes. But when Korean and Chinese flights land together, queues build fast. Fast Track is a licensed airport assistance service that keeps you to 10–15 minutes, whatever the crowd.
+          <!--m:intro-->Da Nang International Airport (DAD) is Central Vietnam's gateway to Hoi An, Ba Na Hills and the coast — its Terminal 2 earned a Skytrax 5-Star rating in 2024 and 2025. On a quiet day you'll clear immigration in minutes. But when Korean and Chinese flights land together, queues build fast. Fast Track is a licensed airport assistance service that keeps you to 15–20 minutes, whatever the crowd.<!--/m:intro-->
         </p>
       </div>
 
@@ -831,7 +654,7 @@
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
-              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;">Peak hours — DAD T2</span>
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->October peak — DAD T2<!--/m:peak-eyebrow--></span>
             </div>
           </div>
           <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
@@ -842,7 +665,7 @@
               <h3 style="margin:0 !important;">When the Banks Land</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              When two or three Korean or Chinese flights touch down within the same hour, the Terminal 2 immigration hall fills quickly — 45 to 90 minutes, and longer during Tet, the summer rush or the fireworks festival. A long line before your holiday has even started.
+              <!--m:peak-body-->Korea is Da Nang's biggest source market, and October gives it two long weekends — 3–5 and 9–11 October. The winter flight schedule starts on the 25th. When two or three flights touch down within the same hour, the Terminal 2 immigration hall fills quickly — 45 to 90 minutes.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -871,7 +694,7 @@
           </div>
         </div>
 
-        <!-- Card 3: Through in 10-15 Minutes -->
+        <!-- Card 3: Through in 15-20 Minutes -->
         <div style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #E8E4DE; display:flex; flex-direction:column;">
           <div style="position:relative; height:220px; overflow:hidden;">
             <img width="800" height="600" loading="lazy" decoding="async" src="http://danangairportfasttrack.com/wp-content/uploads/2026/06/Airport_staff_guiding_travelers.jpeg"
@@ -887,7 +710,7 @@
               <div style="width:36px; height:36px; background:#F5EDD8; border-radius:8px; display:flex; align-items:center; justify-content:center; flex-shrink:0;">
                 <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
               </div>
-              <h3 style="margin:0 !important;">Through in 10–15 Minutes</h3>
+              <h3 style="margin:0 !important;">Through in 15–20 Minutes</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
               We guide you through the priority immigration lane, handle the paperwork, and escort you straight to the exit. While the regular line is still halfway through the hall, you're already on the road to Hoi An or your beach resort.
@@ -930,7 +753,7 @@
           <div style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
-              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Join the crowd when Korean and Chinese flights land together — 45 to 90 minutes, and longer during Tet, summer or the fireworks festival</p>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;"><!--m:compare-row1-->Join the crowd when Korean and Chinese flights land together — 45 to 90 minutes, and longer during Tet, summer or the fireworks festival<!--/m:compare-row1--></p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#c0392b" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><circle cx="12" cy="12" r="10"/><line x1="15" y1="9" x2="9" y2="15"/><line x1="9" y1="9" x2="15" y2="15"/></svg>
@@ -969,7 +792,7 @@
           <div style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Walk straight to the priority lane — clear immigration in <strong style="color:#0B1F3A; font-weight:600;">10–15 minutes</strong>, however many flights just landed</p>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Walk straight to the priority lane — clear immigration in <strong style="color:#0B1F3A; font-weight:600;">15–20 minutes</strong>, however many flights just landed</p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
@@ -1053,7 +876,7 @@
           </div>
           <div style="font-family:'DM Sans',sans-serif; font-size:0.68rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:#C9A84C; margin-bottom:8px;">Step 04</div>
           <h4 style="margin-bottom:10px !important;">Straight Through</h4>
-          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, all paperwork handled, out in 10–15 minutes — and on your way to Hoi An while the queue is still building.</p>
+          <p style="font-size:0.85rem !important; color:#5A5A72 !important; line-height:1.65 !important;">Priority lane, all paperwork handled, out in 15–20 minutes — and on your way to Hoi An while the queue is still building.</p>
         </div>
 
       </div><!-- /steps -->
@@ -1161,7 +984,7 @@
         </div>
         <h3 style="font-size:1.7rem !important; color:#F9F7F3 !important; margin-bottom:6px !important;">Fast Track Arrival</h3>
         <p style="font-size:0.85rem !important; color:rgba(255,255,255,0.6) !important; line-height:1.6 !important; margin-bottom:20px !important;">
-          Skip the immigration queue at Da Nang Airport — through in 10–15 minutes with a dedicated assistant, even when the Korean flight banks land.
+          Skip the immigration queue at Da Nang Airport — through in 15–20 minutes with a dedicated assistant, even when the Korean flight banks land.
         </p>
         <!-- Price -->
         <div style="display:flex; align-items:baseline; gap:5px; margin-bottom:6px;">
@@ -1804,21 +1627,6 @@
           </div>
         </div>
 
-        <!--dat:zone:wait-faq-->
-        <div class="daf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-          <button class="daf-faq-btn" type="button" onclick="dafFaqToggle(this)" aria-expanded="false" aria-controls="daf-faq-a12">
-            <h3 class="daf-faq-q" itemprop="name">How long is the immigration queue at Da Nang Airport in October 2026?</h3>
-            <span class="daf-faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
-          </button>
-          <div class="daf-faq-body" id="daf-faq-a12" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-            <div itemprop="text">
-            <p>In October 2026, based on flight schedules and queue times reported at the airport in 2025&ndash;2026, passengers landing during the busiest hours at Da Nang Airport could spend <strong style="color:#0B1F3A; font-weight:600;">68&ndash;79 minutes</strong> completing immigration procedures, and 40&ndash;45 minutes at quieter hours.</p>
-            <p style="margin-top:10px !important;">With Fast Track, this time is under 15 minutes at any hour. <a href="#wait-times" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the estimate for your landing time</a> (updated 5 October 2026).</p>
-            </div>
-          </div>
-        </div>
-<!--/dat:zone:wait-faq-->
-
         <div class="daf-faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
           <button class="daf-faq-btn" type="button" onclick="dafFaqToggle(this)" aria-expanded="false" aria-controls="daf-faq-a2">
             <h3 class="daf-faq-q" itemprop="name">What's the difference between Fast Track Arrival and Departure?</h3>
@@ -1826,7 +1634,7 @@
           </button>
           <div class="daf-faq-body" id="daf-faq-a2" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([daf_price service="fast_track_arrival"]/person) — our assistant meets you at Terminal 2 on landing, guides you through the priority immigration lane and handles the paperwork. You clear immigration in 10–15 minutes. Baggage Assistance (+$15/person) and VIP Lane (+$20/person) are available as optional add-ons.</p>
+            <p><strong style="color:#0B1F3A; font-weight:600;">Fast Track Arrival</strong> ([daf_price service="fast_track_arrival"]/person) — our assistant meets you at Terminal 2 on landing, guides you through the priority immigration lane and handles the paperwork. You clear immigration in 15–20 minutes. Baggage Assistance (+$15/person) and VIP Lane (+$20/person) are available as optional add-ons.</p>
             <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Departure</strong> ([daf_price service="fast_track_departure"]/person) — we meet you at the Terminal 2 departure entrance and guide you through the priority exit immigration lane, so you skip the passport-control queue. Priority Security Screening (+$15/person) or Priority Security + Check-in (+$35/person) can be added.</p>
             </div>
           </div>
@@ -1856,7 +1664,7 @@
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg><strong style="color:#0B1F3A; font-weight:600;">Arrivals:</strong>&nbsp;between 10:00 PM and 6:00 AM</li>
               <li><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" style="flex-shrink:0; margin-top:3px;"><polyline points="20 6 9 17 4 12"/></svg><strong style="color:#0B1F3A; font-weight:600;">Departures:</strong>&nbsp;between 12:00 AM and 8:00 AM</li>
             </ul>
-            <p style="margin-top:10px !important;">Many Korean and Chinese flights at Da Nang fall in these hours. Our service is available 24/7 regardless of flight time.</p>
+            <p style="margin-top:10px !important;"><!--m:faq-night-->Most Korean arrivals fall in these hours — seven land 23:15 to midnight. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
             </div>
           </div>
         </div>
@@ -2034,7 +1842,7 @@ function dafFaqToggle(btn) {
       <h2>Don't Wait in Line.<br><em style="font-style:italic; color:#C9A84C;">Your Escape Starts Here.</em></h2>
       <div style="width:44px; height:3px; background:#C9A84C; margin:22px auto 24px;"></div>
       <p style="font-size:1.05rem !important; color:rgba(255,255,255,0.72) !important; line-height:1.8 !important; max-width:580px; margin:0 auto 40px !important;">
-        Skytrax 5-Star Terminal 2 — but when the Korean flight banks land, immigration can stretch past an hour. With Fast Track you're through in 10–15 minutes, and on your way to Hoi An or the beach while everyone else is still in line. Book now and we confirm within 10 minutes.
+        <!--m:footer-para-->Skytrax 5-Star Terminal 2 — but when the Korean flight banks land, immigration can stretch past an hour. With Fast Track you're through in 15–20 minutes, and on your way to Hoi An or the beach while everyone else is still in line. Book now and we confirm within 10 minutes.<!--/m:footer-para-->
       </p>
       <div style="display:flex; gap:16px; justify-content:center; flex-wrap:wrap; margin-bottom:40px;" class="daf-cta-btns">
         <a href="https://wa.me/84368938081?text=Hi%2C%20I%27d%20like%20to%20book%20a%20Fast%20Track%20service%20at%20Da%20Nang%20Airport."
@@ -2321,14 +2129,13 @@ document.addEventListener('DOMContentLoaded', function() {
 [/ux_html]
 
 <!-- /wp:flatsome/uxbuilder -->
-
 [ux_html label="Booking Picker"]
 
 <!-- ============================================================
      DAF HOMEPAGE - element "Booking Picker"
      Mot panel dung chung cho moi nut vang "Book" tren trang.
      Bat ky nut nao co class daf-pick-btn deu mo panel nay.
-     Nam ngoai moi vung dat:zone, quy trinh hang thang khong cham vao day.
+     Element doc lap: them/bot nut o cho khac khong phai sua gi trong day.
      ============================================================ -->
 <style>
 .daf-pick-btn { -webkit-appearance: none !important; -moz-appearance: none !important; appearance: none !important; box-shadow: none !important; text-shadow: none !important; min-height: 0 !important; height: auto !important; cursor: pointer !important; }

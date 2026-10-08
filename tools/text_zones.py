@@ -68,7 +68,12 @@ def cmd_apply(src, zjson, dst, allow_frozen):
     page = open(src, encoding="utf-8").read()
     data = json.load(open(zjson, encoding="utf-8"))
     frozen = set(data.pop("_frozen", []))
-    data.pop("_note", None)
+    # Moi khoa bat dau bang "_" la SIEU DU LIEU (nguon, ly do dong bang, ghi chu
+    # thang...), khong phai vung. An toan: id vung chi gom [a-z0-9-] nen khong
+    # bao gio bat dau bang "_" -> cong "vung khong co tren trang" van bat duoc
+    # loi go sai ten vung thuc.
+    for k in [k for k in data if k.startswith("_")]:
+        data.pop(k)
     have = zones(page)
     unknown = [k for k in data if k not in have]
     if unknown:
