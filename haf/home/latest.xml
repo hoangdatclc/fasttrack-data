@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[844e42cf347fac0165991ca1ed3a1889423e8427210b7ea607d449d1cbad195c]]></content_sha256>
+  <content_sha256><![CDATA[909c76ea25a149b2781eb9e31f22a1602aeb2e089f8660e7a3be6751fe35e2e5]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -715,7 +715,7 @@ function hafCloseMenu() {
               <h3 style="margin:0 !important;">Save 1–3 Hours</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in about 15 minutes.<!--/m:peak-body-->
+              <!--m:peak-body-->Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in under 10 minutes.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -839,7 +839,7 @@ function hafCloseMenu() {
           <div style="display:flex; flex-direction:column; gap:16px;">
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Clear immigration in about <strong style="color:#0B1F3A; font-weight:600;">15 minutes</strong> via the priority immigration lane</p>
+              <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.6 !important;">Clear immigration in under <strong style="color:#0B1F3A; font-weight:600;">10 minutes</strong> via the priority immigration lane</p>
             </div>
             <div style="display:flex; align-items:flex-start; gap:12px;">
               <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#1a7a42" stroke-width="2" stroke-linecap="round" style="flex-shrink:0; margin-top:2px;" aria-hidden="true"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
