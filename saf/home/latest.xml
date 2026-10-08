@@ -4,7 +4,7 @@
   <ID>15</ID>
   <post_type>page</post_type>
   <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[1b8f7643abfc2319cc07c55380d78849f351b19b7815c1540ceeb99850b5b324]]></content_sha256>
+  <content_sha256><![CDATA[eb83cd1ba721997f4f9a6bc90ca84daf5ab525366f72fba6e1ff8ce810f8fdc1]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -350,7 +350,7 @@
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <!--m:hero-bullet-->Skip the 60–120 min immigration queue at the 10pm peak — under 20<!--/m:hero-bullet-->
+          <!--m:hero-bullet-->Skip the 60–120 min immigration queue — through in under 20<!--/m:hero-bullet-->
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -458,7 +458,7 @@
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1;"><!--m:queue-figure-->60 – 120 min<!--/m:queue-figure--></span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;"><!--m:queue-note-->Typical wait — dawn long-haul bank<!--/m:queue-note--></span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;"><!--m:queue-note-->Typical wait — peak hours at SGN<!--/m:queue-note--></span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
