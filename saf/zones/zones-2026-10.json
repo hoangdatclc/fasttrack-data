@@ -1,0 +1,21 @@
+{
+  "_site": "SAF",
+  "_airport": "SGN",
+  "_month": "2026-10",
+  "_frozen": [
+    "queue-figure",
+    "compare-row1"
+  ],
+  "_frozen_why": "Vung chua con so hang cho da cong bo (60 - 120 min). SAF da DONG BO SAN: hero-lead, hero-bullet, queue-figure, peak-body, compare-row1 va footer-para deu noi 60-120 / 'up to two hours' / 'up to 120 minutes'. Khong can sua nen. Luat 5: quy trinh thang khong dung vao con so.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "intro",
+    "footer-para"
+  ],
+  "_base": "saf/home/base.txt",
+  "hero-bullet": "Skip the 60–120 min immigration queue at the 10pm peak — under 20",
+  "queue-note": "Typical wait — dawn long-haul bank",
+  "peak-eyebrow": "October peak — SGN T2",
+  "peak-body": "China's Golden Week, 1–7 October, feeds the airport from twelve mainland cities; the winter schedule brings back Chiang Mai on 25 October and adds Cebu the next day. The immigration hall runs 60 to 120 minutes, before your trip even begins.",
+  "faq-night": "This is relevant for many flights at Tan Son Nhat — a second bank from China and Northeast Asia lands between midnight and 02:00, inside the surcharge window. Our service is available 24/7 regardless of flight time."
+}

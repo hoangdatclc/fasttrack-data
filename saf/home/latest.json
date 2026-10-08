@@ -4,71 +4,7 @@
   "page_id": 15,
   "host": "hochiminhairportfasttrack.com",
   "edit_url": "https://hochiminhairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "6e071ddc709e3161cd165492ec1703e650988f3dffd9d2ae73a07ceff9c6d612",
-  "content_bytes": 211240,
-  "generated": "2026-10-06",
-  "baseline": {
-    "month": "2026-10",
-    "bands": [
-      {
-        "band": "00:00-06:00",
-        "flights": 22,
-        "pax": 2845,
-        "standard": [
-          52,
-          71
-        ]
-      },
-      {
-        "band": "06:00-10:00",
-        "flights": 18,
-        "pax": 2291,
-        "standard": [
-          51,
-          57
-        ]
-      },
-      {
-        "band": "10:00-13:00",
-        "flights": 19,
-        "pax": 2452,
-        "standard": [
-          57,
-          60
-        ]
-      },
-      {
-        "band": "13:00-16:00",
-        "flights": 27,
-        "pax": 3625,
-        "standard": [
-          76,
-          84
-        ]
-      },
-      {
-        "band": "16:00-20:00",
-        "flights": 30,
-        "pax": 4080,
-        "standard": [
-          111,
-          133
-        ]
-      },
-      {
-        "band": "20:00-24:00",
-        "flights": 29,
-        "pax": 3663,
-        "standard": [
-          95,
-          133
-        ]
-      }
-    ],
-    "levers": {
-      "month_uplift": 1.0,
-      "surge": 4,
-      "counters_day": 28
-    }
-  }
+  "content_sha256": "1b8f7643abfc2319cc07c55380d78849f351b19b7815c1540ceeb99850b5b324",
+  "content_bytes": 195640,
+  "generated": "2026-10-08"
 }

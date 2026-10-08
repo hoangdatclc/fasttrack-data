@@ -74,61 +74,28 @@ PROFILE = {
                    r'class="caf-pick-btn"': 2, r'class="caf-pick-chev"': 2,
                    r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
+    # SAF -- DOI HAN 08/10/2026. Trang chu quay ve ban GOC 11 element (bo he tinh
+    # thoi gian cho), cong element "Booking Picker" => 12 element. Khong con vung
+    # dat:zone nao; cap nhat hang thang di qua cac vung <!--m:id--> (tools/text_zones.py).
+    #
+    # SAF KHAC BA SITE KIA hai cho, dung sua cho "giong":
+    #   1. Picker dung tien to "sgn-", KHONG phai "saf-". Gia van la [saf_price ...].
+    #      Review card cung la .sgn-review-card.
+    #   2. Element 10 va 11 ten khac: "Whatsapp & Mess" va "Book Now Button"
+    #      (PAF/DAF/CAF la "Whatsapp Float" / "Mobile Book Now").
     "SAF": {
-        # BA cho SAF khac ba site kia -- doi mot trong ba la trang hong:
-        #   1. ten element: "Whatsapp & Mess" / "Book Now Button" (khong phai
-        #      "Whatsapp Float" / "Mobile Book Now").
-        #   2. tien to: CSS dung sgn-, shortcode dung saf_. Lam sed 's/caf-/saf-/'
-        #      se sinh ra saf-pick-btn -> khong khop CSS -> picker chet im.
-        #   3. SAF co BA dich vu: them connection. Hai site kia chi hai.
-        "labels": ['Nav Bar', 'Hero Banner', 'Wait Times', 'What Is Fast Track?', 'Services',
-                   'Booking', 'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
+        "labels": ['Nav Bar', 'Hero Banner', 'What Is Fast Track?', 'Services', 'Booking',
+                   'Reviews', 'FAQs', 'Footer', 'Smooth Scroll', 'Whatsapp & Mess',
                    'Book Now Button', 'Booking Picker'],
-        "zones": ['wait-hero', 'wait-section', 'wait-faq'],
-
-        # The hero: BA HANG LA BA LY DO -- Save / From / 24-7 (chot 05/10/2026, ca 5 site).
-        #   - tieu de la phan TINH, nam NGOAI vung wait-hero, khong mang ten thang
-        #   - dong phu hang SAVE: BA dong, chot 06/10/2026, giong PAF/DAF/CAF
-        #     (xem luat 1b trong skill me). SAF chuyen sang ban nay 06/10/2026;
-        #     ban cu ("...is estimated to reach...") vo 4 dong tren dien thoai.
-        "hero_title": 'Why Choose SGN Fast Track?',
-        # SAF la site DUY NHAT co tieu de nam TRONG vung (cau truc hero goc, giu 06/10/2026)
-        "hero_title_in_zone": True,
-        "musts": [
-                  # SAF GIU CAU TRUC HERO GOC (Queue / Fast Track / From) -- chu site
-                  # chot 06/10/2026, KHONG doi sang form Save/From/24-7 cua bon site kia:
-                  # SGN manh nhat ve SEO/AEO, doi form la nhan rui ro thu hang khong can.
-                  '>Queue</span>', '>Fast Track</span>', '>From</span>', '>Under 20 min<',
-                  'Why Choose SGN Fast Track?',
-                  # Dong phu hang QUEUE ("at peak" o CUOI) va hang FAST TRACK --
-                  # ca hai chu site duyet 06/10/2026, xem saf/run-2026-10/patch_static.py.
-                  'Estimated standard immigration queue at peak ',
-                  'Priority lane, escorted by our staff',
-                  'add-to-cart=311', 'add-to-cart=313',
+        "zones": [],
+        "musts": ['add-to-cart=311', 'add-to-cart=313',
                   '[saf_price service="fast_track_arrival"]',
                   '[saf_price service="fast_track_departure"]',
-                  '[saf_price service="connection"]',
-                  'id="wait-times"', 'id="sgn-pick-tpl"', '#wait-times .sgn-wt-num',
-                  '#wait-times .sgn-wt-ft', '#wait-times .sgn-wt-btn', '.sgn-pick-btn',
-                  '#sgn-pick-panel', 'id="sgn-carousel-track"',
-                  # Fast Track o SAF co BA bac: Lighter ~10 · Moderate ~15 · Busy.
-                  # SAF cong bo tran 20 phut, khac quy uoc 15 cua bon site kia.
-                  # Hero: "in under&nbsp;20&nbsp;minutes." -- bang: "15&ndash;20 min"
-                  # (cot bang hep, tren dien thoai mot cau day se xuong hai dong).
-                  # Mat mot trong hai nghia la renderer da bi be ve quy uoc 15.
-                  # Thang nao cung co khung Busy nen ca hai chuoi luon phai co mat;
-                  # mat chung = hieu chuan da troi. Bat bien day du nam o saf/run_qc.py.
-                  # 'in under&nbsp;20&nbsp;minutes.' DA BO 06/10/2026 cung voi ban cu
-                  # cua dong phu. Tran 20 gio nam o 'With Fast Track: under 20 min'
-                  # (phia tren) va o 'under 20 minutes' trong doan dan + FAQ.
-                  'under 20 minutes', '15&ndash;20 min', '~10 min',
-                  # CSS tinh thu cot nhan the hero tren man hep (luat 1d). Nam NGOAI
-                  # vung zone -> mat no la loi am, chu khong doi, chi vo dong tren
-                  # dien thoai. KHONG ap cho SAF: SAF giu cau truc hero goc nen khong co
-                  # hai nac media query nay (kiem = 0, xem patch_static.py cua SAF).
-                  ],
-        "counts": {r'<img ': 15, r'schema\.org/Question': 12,
-                   r'class="sgn-review-card"': 16, r'class="sgn-pick-btn': 3},
+                  'id="sgn-pick-tpl"', '.sgn-pick-btn', '#sgn-pick-panel'],
+        "counts": {r'<img ': 15, r'schema\.org/Question': 11,
+                   r'class="sgn-review-card"': 16,
+                   r'class="sgn-pick-btn"': 2, r'class="sgn-pick-chev"': 2,
+                   r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
     },
     "HAF": {
         # BON cho HAF khac bon site kia -- doi mot trong bon la trang hong:
