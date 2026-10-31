@@ -1,0 +1,27 @@
+{
+  "_site": "DAF",
+  "_airport": "DAD",
+  "_month": "2026-11",
+  "_frozen": [
+    "queue-figure",
+    "compare-row1",
+    "queue-note"
+  ],
+  "_frozen_why": "Vung chua con so hang cho da cong bo (60 - 90 min) va dong phu duoi no. Chu site chot 08/10/2026: queue-note giu NGUYEN VAN ban goc, khong doi theo thang.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "intro",
+    "footer-para"
+  ],
+  "hero-bullet": "No Korean public holiday in November — skip the queue in 15–20 min",
+  "peak-eyebrow": "November peak — DAD T2",
+  "peak-body": "Korea's college entrance exam on 19 November halts every takeoff and landing in the country from 13:10 to 13:35, and Thai Airways returns to Da Nang with two daily Bangkok flights from 1 December. Two or three landings in one hour fill the Terminal 2 immigration hall — 60 to 90 minutes.",
+  "faq-night": "November averages 20 rainy days in Da Nang, and delays push arrivals later. Our service is available 24/7 regardless of flight time.",
+  "_base": "daf/home/base.txt -- nen da dong bo moi con so hang cho ve 60-90 phut (chu site chot 08/10/2026).",
+  "_sources": {
+    "csat": "CSAT 2027 (suneung) ngay 19/11/2026; cam cat/ha canh 13:10-13:35 KST cho phan nghe tieng Anh 25 phut. Korea JoongAng Daily (Yonhap) 20/10/2026; VnExpress International 23-24/10/2026. 551.864 thi sinh, 1.312 diem thi.",
+    "korea_holidays": "Han Quoc KHONG co ngay nghi le nao trong thang 11/2026. Le gan nhat: 3/10 + bu 5/10, 9/10; ke tiep 25/12. publicholidays.co.kr (dan nguon law.go.kr).",
+    "thai_airways": "TG noi lai BKK-DAD tu 01/12/2026, 2 chuyen/ngay moi chieu, A320 (TG558/594 di, TG559/595 ve). AeroRoutes 20/07/2026 (lich da khai bao); TRAICY 18/10/2026 trung khop gio; danangfantasticity.com 28/07/2026 lech 1 tieng o TG594/595 -> KHONG dua gio len trang. Tuyen cu, lan cuoi khai thac den 3/2003.",
+    "rain": "Thang 11 nam trong giai doan mua nhat cua Da Nang. So ngay mua trung binh thang 11: 20,3 (Wikipedia, nguon Vien KHCN Xay dung) va 24 (Weather-Atlas) -> lay san duoi 20 ngay. Hai nguon lech nhau ve luong mua mm (Oct 628 vs Nov 448 o Wikipedia; Oct 235 vs Nov 275 o Weather-Atlas) nen KHONG xep hang thang mua nhat."
+  }
+}

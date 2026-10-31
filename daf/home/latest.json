@@ -1,10 +1,10 @@
 {
   "site": "DAF",
-  "month": "2026-10",
+  "month": "2026-11",
   "page_id": 15,
   "host": "danangairportfasttrack.com",
   "edit_url": "https://danangairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "fc6328b4c869069f2765c068d16419e475fe096b5028a346785307861d4e0dfc",
-  "content_bytes": 182922,
-  "generated": "2026-10-08"
+  "content_sha256": "54f1b5826bf12337c2c05c31fb6cc11c1275e90cd5ce674f7ee15d8cd106aa40",
+  "content_bytes": 182920,
+  "generated": "2026-11-01"
 }
