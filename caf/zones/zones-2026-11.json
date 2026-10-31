@@ -1,0 +1,27 @@
+{
+  "_site": "CAF",
+  "_airport": "CXR",
+  "_month": "2026-11",
+  "_frozen": [
+    "queue-figure",
+    "compare-row1"
+  ],
+  "_frozen_why": "Vung chua con so hang cho da cong bo (60 - 90 min). Chu site chot 08/10/2026: dong bo toan trang ve 60-90 phut va DONG BANG -- khong dong vao qua cac lan sua thang.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "intro",
+    "footer-para"
+  ],
+  "_base": "caf/home/base.txt -- nen da dong bo moi con so hang cho ve 60-90 phut (chu site chot 08/10/2026).",
+  "_note_hero_bullet": "Giu NGUYEN text dang live tu thang 10 (winter-charter). Mua charter dong chay Nov-Mar nen cau nay dung hon trong thang 11 so voi thang 10. Khong doi chu de tranh churn khong mang du kien (luat 3).",
+  "_facts": {
+    "peak-body": "Nghi quyet 325/NQ-CP ngay 12/10/2026 -- mien thi thuc cho cong dan TQ ho chieu pho thong di du lich theo doan, DIEU KIEN: bay thang tu TQ dai luc den CHKQT Cam Ranh, nhap va xuat qua cung mot cua khau. Hieu luc 12/10/2026 - 31/12/2027. Xac minh boi 3 nguon doc lap (Thanh Nien 13/10, VTV 13/10, VOV).",
+    "faq-night": "Khanh Hoa thang 10/2026: hon 685.000 luot khach quoc te, tang 46,53% (VietnamPlus 27/10/2026). So cap tinh, KHONG phai so khach qua cua khau CXR -- cau tren trang viet 'visitors to Khanh Hoa', khong quy cho san bay.",
+    "queue-note": "Hai lan song trong ngay (Nga/CIS rang sang, Han gan nua dem) -- du kien cau truc tu caf-flights-2026-10.json, khong phai du kien moi cua thang 11. 42 ky tu khong du cho mot du kien co moc."
+  },
+  "hero-bullet": "Priority immigration lane — past the 60–90 minute winter-charter queue",
+  "queue-note": "Peak — dawn charters, near-midnight jets",
+  "peak-eyebrow": "November peak — CXR T2",
+  "peak-body": "Cam Ranh is a small terminal serving big aircraft, and since 12 October Chinese group tours have been visa-free here — but only flying direct from mainland China into Cam Ranh, in and out through the same airport. Add the winter charters and the T2 hall fills — 60 to 90 minutes at peak.",
+  "faq-night": "Russian charters and Korean services put much of Cam Ranh's traffic in these hours — Khanh Hoa took 685,000 international visitors in October alone. We operate 24/7 regardless of flight time."
+}
