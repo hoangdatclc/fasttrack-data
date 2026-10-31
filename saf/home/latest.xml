@@ -3,8 +3,8 @@
  <item>
   <ID>15</ID>
   <post_type>page</post_type>
-  <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[eb83cd1ba721997f4f9a6bc90ca84daf5ab525366f72fba6e1ff8ce810f8fdc1]]></content_sha256>
+  <wait_month><![CDATA[2026-11]]></wait_month>
+  <content_sha256><![CDATA[4c904608c3d47d4a1b9ce70da574b1f13add82b765f7b623fd6ec6114d7a0955]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -694,7 +694,7 @@
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
-              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->October peak — SGN T2<!--/m:peak-eyebrow--></span>
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->November peak — SGN T2<!--/m:peak-eyebrow--></span>
             </div>
           </div>
           <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
@@ -705,7 +705,7 @@
               <h3 style="margin:0 !important;">The Queue Is Real</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->China's Golden Week, 1–7 October, feeds the airport from twelve mainland cities; the winter schedule brings back Chiang Mai on 25 October and adds Cebu the next day. The immigration hall runs 60 to 120 minutes, before your trip even begins.<!--/m:peak-body-->
+              <!--m:peak-body-->Deepavali falls on Sunday 8 November and Monday the 9th is a public holiday in Singapore and Malaysia — a three-day weekend for two of this airport's biggest markets. The immigration hall runs 60 to 120 minutes.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -1921,7 +1921,7 @@
           </button>
           <div class="sgn-faq-body" id="sgn-faq-a4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for flights during night hours — <strong style="color:#0B1F3A; font-weight:600;">arrivals between 11:00 PM and 6:00 AM</strong>, and <strong style="color:#0B1F3A; font-weight:600;">departures between 12:00 AM and 8:00 AM</strong>. <!--m:faq-night-->This is relevant for many flights at Tan Son Nhat — a second bank from China and Northeast Asia lands between midnight and 02:00, inside the surcharge window. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
+            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for flights during night hours — <strong style="color:#0B1F3A; font-weight:600;">arrivals between 11:00 PM and 6:00 AM</strong>, and <strong style="color:#0B1F3A; font-weight:600;">departures between 12:00 AM and 8:00 AM</strong>. <!--m:faq-night-->This is relevant for many flights at Tan Son Nhat — Vietjet's new Cebu service, launching 10 November, lands in Saigon at 04:55, inside the surcharge window. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
             </div>
           </div>
         </div>
