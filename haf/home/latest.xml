@@ -3,8 +3,8 @@
  <item>
   <ID>15</ID>
   <post_type>page</post_type>
-  <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[909c76ea25a149b2781eb9e31f22a1602aeb2e089f8660e7a3be6751fe35e2e5]]></content_sha256>
+  <wait_month><![CDATA[2026-11]]></wait_month>
+  <content_sha256><![CDATA[5e94ccb645c833cf422f47f668d7b814bc7b57c4a9a6096e97b5809fb9adacf7]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -704,7 +704,7 @@ function hafCloseMenu() {
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
             <div aria-hidden="true" style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
-              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->October peak wait<!--/m:peak-eyebrow--></span>
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->November peak wait<!--/m:peak-eyebrow--></span>
             </div>
           </div>
           <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
@@ -715,7 +715,7 @@ function hafCloseMenu() {
               <h3 style="margin:0 !important;">Save 1–3 Hours</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->Golden Week, 1–7 October, hits Noi Bai's biggest market — 33 flights a day from mainland China. Our priority lane bypasses the queue — through in under 10 minutes.<!--/m:peak-body-->
+              <!--m:peak-body-->Japan has a three-day weekend on 21–23 November for Labour Thanksgiving Day. Our priority lane bypasses the queue — you're through in under 10 minutes.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -1986,7 +1986,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a4" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for flights during night hours — <strong style="color:#0B1F3A; font-weight:600;">arrivals between 11:00 PM and 5:00 AM</strong>, and <strong style="color:#0B1F3A; font-weight:600;">departures between 12:00 AM and 7:00 AM</strong>. <!--m:faq-night-->Thirteen international flights land at Noi Bai inside that window on a typical October day, most of them from mainland China and Korea. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
+            <p>Yes, a <strong style="color:#0B1F3A; font-weight:600;">$10 surcharge per person</strong> applies for flights during night hours — <strong style="color:#0B1F3A; font-weight:600;">arrivals between 11:00 PM and 5:00 AM</strong>, and <strong style="color:#0B1F3A; font-weight:600;">departures between 12:00 AM and 7:00 AM</strong>. <!--m:faq-night-->IndiGo's new daily Mumbai service, added with the winter schedule, is timetabled into Terminal 2 at 10:00 and back out at 19:05 — outside both of those windows. Our service is available 24/7 regardless of flight time.<!--/m:faq-night--></p>
             </div>
           </div>
         </div>
@@ -2028,7 +2028,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a7" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><!--m:faq-delay-->No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule. One thing to check this month: the winter flight schedule starts on 25 October and many arrival times move with it, so confirm your time with the airline if you booked earlier.<!--/m:faq-delay--></p>
+            <p><!--m:faq-delay-->No problem at all. We monitor your flight in real time and adjust accordingly. Our staff will be there whether your flight lands early, on time, or late — just as one of our guests experienced when their flight arrived 1.5 hours ahead of schedule. Diwali falls on Sunday 8 November this year, so flights from India are at their fullest in the days around it — we work from your actual landing time, not the timetable.<!--/m:faq-delay--></p>
             </div>
           </div>
         </div>
@@ -2076,7 +2076,7 @@ function hafCloseMenu() {
           </button>
           <div class="haf-faq-body" id="haf-faq-a11" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text">
-            <p><strong style="color:#0B1F3A; font-weight:600;">Not Fast Track Arrival — you need Fast Track Connection.</strong> <!--m:faq-connection-->Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in. The tightest window is midday — 27 international flights land at Noi Bai between 12:00 and 15:00, so a connection booked in those hours leaves the least margin.<!--/m:faq-connection--></p>
+            <p><strong style="color:#0B1F3A; font-weight:600;">Not Fast Track Arrival — you need Fast Track Connection.</strong> <!--m:faq-connection-->Fast Track Arrival ends once you are through immigration at Terminal 2; it does not cover the domestic terminal. If your international flight lands at T2 and your domestic flight leaves from Terminal 1, the connection is a separate journey: immigration, a terminal change and a second check-in. Cebu Pacific resumes Hanoi–Clark on 20 November (Wed, Fri, Sun) — an international departure from Terminal 2, not a domestic connection.<!--/m:faq-connection--></p>
             <p style="margin-top:10px !important;"><strong style="color:#0B1F3A; font-weight:600;">Fast Track Connection ([haf_price service="connection"])</strong> covers all of it — priority immigration at T2, clear directions across to T1, and our Terminal 1 agent waiting there to take you through priority check-in and security to your gate. <a href="https://hanoiairportfasttrack.com/hanoi-airport-connecting-flight-service/" style="color:#C9A84C; font-weight:600; text-decoration:none;">See the Connection Service →</a></p>
             </div>
           </div>
