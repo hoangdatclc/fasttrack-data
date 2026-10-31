@@ -1,0 +1,21 @@
+{
+  "_site": "PAF",
+  "_airport": "PQC",
+  "_month": "2026-11",
+  "_frozen": [
+    "queue-figure",
+    "compare-row1"
+  ],
+  "_frozen_why": "Vung chua con so hang cho da cong bo (60 - 90 min). Chu site chot 08/10/2026: giu nguyen moi con so dang co tren trang, khong dong vao, khong gan nguon.",
+  "_untouched_this_month": [
+    "hero-lead",
+    "intro",
+    "footer-para"
+  ],
+  "_base": "paf/home/base.txt",
+  "hero-bullet": "Beat the queue when dry-season charters bank at the one terminal — through in 10–20 min",
+  "queue-note": "Peak — charters bank, new runway, still one terminal",
+  "peak-eyebrow": "November peak — PQC",
+  "peak-body": "Visa-free doesn't mean skipping the line. You still queue to have your exemption stamped and onward ticket checked. Phu Quoc's second runway opened on 29 October and the original closes for a six-month extension, so charters and scheduled flights share one runway — into the same single terminal, 60 to 90 minutes at peak.",
+  "faq1": "\n            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style=\"color:#0B1F3A; font-weight:600;\">30-day visa exemption to every nationality</strong> — but you still have to line up at immigration to get that exemption stamped, and officers may check your onward or return ticket. When several charter flights land within the same hour at the single terminal, that line builds fast. Fast Track walks you through the priority lane so you clear immigration in 10–20 minutes instead of queueing with everyone else. Its new terminal is due May 2027 — until then, one hall clears every arrival.</p>\n            "
+}

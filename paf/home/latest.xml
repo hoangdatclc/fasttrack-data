@@ -3,8 +3,8 @@
  <item>
   <ID>15</ID>
   <post_type>page</post_type>
-  <wait_month><![CDATA[2026-10]]></wait_month>
-  <content_sha256><![CDATA[eedf4555f38c3be8c6b64701fc94affa4726abf373967019b74352dada579584]]></content_sha256>
+  <wait_month><![CDATA[2026-11]]></wait_month>
+  <content_sha256><![CDATA[7a60dcf3e1fdf68099e6d2967ee69a43b46c005fa94d70d5299186f2075b4b24]]></content_sha256>
   <post_content><![CDATA[<!-- wp:flatsome/uxbuilder -->
 [ux_html label="Nav Bar"]
 
@@ -316,7 +316,7 @@
       <ul style="list-style: none; padding: 0; margin: 0 0 32px 0; display: flex; flex-direction: column; gap: 10px;">
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
-          <!--m:hero-bullet-->Beat the queue when winter-schedule charters bank from 25 October — through in 10–20 min<!--/m:hero-bullet-->
+          <!--m:hero-bullet-->Beat the queue when dry-season charters bank at the one terminal — through in 10–20 min<!--/m:hero-bullet-->
         </li>
         <li style="display: flex; align-items: center; gap: 10px; font-family: 'DM Sans', sans-serif; font-size: 0.92rem; color: rgba(255,255,255,0.86);">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#C9A84C" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" style="flex-shrink:0"><polyline points="20 6 9 17 4 12"></polyline></svg>
@@ -417,7 +417,7 @@
         <div style="display: grid; grid-template-columns: 50px 1fr; column-gap: 12px; padding: 11px 0;">
           <span style="grid-row:1; grid-column:1; font-family:'DM Sans',sans-serif; font-size:0.65rem; font-weight:600; letter-spacing:0.08em; text-transform:uppercase; color:#5A5A72; align-self:end;">Queue</span>
           <span style="grid-row:1; grid-column:2; font-family:'Cormorant Garamond',Georgia,serif; font-size:1.6rem; font-weight:700; color:#C9281C; line-height:1;"><!--m:queue-figure-->60 – 90 min<!--/m:queue-figure--></span>
-          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;"><!--m:queue-note-->Peak — winter-schedule charters at the single terminal<!--/m:queue-note--></span>
+          <span style="grid-row:2; grid-column:2; font-family:'DM Sans',sans-serif; font-size:0.75rem; color:#5A5A72; margin-top:2px;"><!--m:queue-note-->Peak — charters bank, new runway, still one terminal<!--/m:queue-note--></span>
         </div>
 
         <div style="height:1px; background:#E8E4DE;"></div>
@@ -651,7 +651,7 @@
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
             <div style="position:absolute; top:0; left:0; right:0; height:4px; background:#C9A84C;"></div>
             <div style="position:absolute; bottom:14px; left:14px; background:rgba(11,31,58,0.85); padding:6px 14px; border-radius:4px; backdrop-filter:blur(4px);">
-              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->October peak — PQC<!--/m:peak-eyebrow--></span>
+              <span style="font-family:'DM Sans',sans-serif !important; font-size:0.72rem !important; font-weight:600 !important; color:#ffffff; letter-spacing:0.1em; text-transform:uppercase;"><!--m:peak-eyebrow-->November peak — PQC<!--/m:peak-eyebrow--></span>
             </div>
           </div>
           <div style="padding:28px 28px 32px; flex:1; display:flex; flex-direction:column;">
@@ -662,7 +662,7 @@
               <h3 style="margin:0 !important;">When the Charters Land</h3>
             </div>
             <p style="font-size:0.9rem !important; color:#5A5A72 !important; line-height:1.72 !important; flex:1;">
-              <!--m:peak-body-->Visa-free doesn't mean skipping the line. You still queue to have your exemption stamped and onward ticket checked. The winter schedule starts 25 October, with Aeroflot's Moscow route from the 15th and Shenzhen from the 27th, so charters bank more often at the single terminal — 60 to 90 minutes at peak.<!--/m:peak-body-->
+              <!--m:peak-body-->Visa-free doesn't mean skipping the line. You still queue to have your exemption stamped and onward ticket checked. Phu Quoc's second runway opened on 29 October and the original closes for a six-month extension, so charters and scheduled flights share one runway — into the same single terminal, 60 to 90 minutes at peak.<!--/m:peak-body-->
             </p>
           </div>
         </div>
@@ -1564,7 +1564,7 @@
           </button>
           <div class="paf-faq-body" id="paf-faq-a1" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
             <div itemprop="text"><!--m:faq1-->
-            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style="color:#0B1F3A; font-weight:600;">30-day visa exemption to every nationality</strong> — but you still have to line up at immigration to get that exemption stamped, and officers may check your onward or return ticket. When several charter flights land within the same hour at the single terminal, that line builds fast. Fast Track walks you through the priority lane so you clear immigration in 10–20 minutes instead of queueing with everyone else. October is when Phu Quoc switches to its winter flight schedule — it starts on 25 October, with new Moscow, Shenzhen and Bishkek services opening the same month.</p>
+            <p>Visa-free doesn't mean queue-free. Phu Quoc grants a <strong style="color:#0B1F3A; font-weight:600;">30-day visa exemption to every nationality</strong> — but you still have to line up at immigration to get that exemption stamped, and officers may check your onward or return ticket. When several charter flights land within the same hour at the single terminal, that line builds fast. Fast Track walks you through the priority lane so you clear immigration in 10–20 minutes instead of queueing with everyone else. Its new terminal is due May 2027 — until then, one hall clears every arrival.</p>
             <!--/m:faq1--></div>
           </div>
         </div>

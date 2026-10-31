@@ -1,10 +1,10 @@
 {
   "site": "PAF",
-  "month": "2026-10",
+  "month": "2026-11",
   "page_id": 15,
   "host": "phuquocairportfasttrack.com",
   "edit_url": "https://phuquocairportfasttrack.com/wp-admin/post.php?post=15&action=edit",
-  "content_sha256": "eedf4555f38c3be8c6b64701fc94affa4726abf373967019b74352dada579584",
-  "content_bytes": 179533,
-  "generated": "2026-10-08"
+  "content_sha256": "7a60dcf3e1fdf68099e6d2967ee69a43b46c005fa94d70d5299186f2075b4b24",
+  "content_bytes": 179465,
+  "generated": "2026-10-31"
 }
