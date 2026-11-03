@@ -99,10 +99,6 @@
 
 <section aria-labelledby="caf-hero-title" style="position:relative !important; width:100% !important; max-width:100% !important; min-height:100vh !important; display:flex !important; flex-direction:column !important; justify-content:center !important; overflow:hidden !important; padding:104px clamp(16px,4vw,24px) 84px !important; font-family:'DM Sans',sans-serif !important; box-sizing:border-box !important">
 
-  <div style="position:absolute !important; inset:0 !important; z-index:0 !important; overflow:hidden !important">
-    <img src="HERO_IMAGE_URL" alt="" aria-hidden="true" fetchpriority="high" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; object-position:center 40% !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important; border-radius:0 !important" />
-  </div>
-
   <div aria-hidden="true" style="position:absolute !important; inset:0 !important; background:linear-gradient(105deg, rgba(11,31,58,0.96) 0%, rgba(11,31,58,0.86) 55%, rgba(11,31,58,0.66) 100%) !important; z-index:1 !important"></div>
   <div aria-hidden="true" style="position:absolute !important; top:0 !important; bottom:0 !important; left:5% !important; width:1px !important; background:linear-gradient(to bottom, transparent, rgba(201,168,76,0.35) 20%, rgba(201,168,76,0.35) 80%, transparent) !important; z-index:2 !important"></div>
   <div aria-hidden="true" style="position:absolute !important; top:0 !important; bottom:0 !important; right:5% !important; width:1px !important; background:linear-gradient(to bottom, transparent, rgba(201,168,76,0.35) 20%, rgba(201,168,76,0.35) 80%, transparent) !important; z-index:2 !important"></div>
@@ -1102,7 +1098,7 @@ function cafFaqToggle(btn) {
   var isOpen = body.style.maxHeight && body.style.maxHeight !== '0px';
   var all = document.querySelectorAll('#faqs .caf-faq');
   for (var i = 0; i < all.length; i++) {
-    var b = all[i].querySelector('button');
+    var b = all.item(i).querySelector('button');
     var d = b.nextElementSibling;
     var ic = b.lastElementChild;
     d.style.setProperty('max-height', '0px', 'important');

@@ -69,7 +69,11 @@ PROFILE = {
                   'id="caf-pick-tpl"', '.caf-pick-btn', 'id="caf-marquee"'],
         # Bang review CAF KHONG dung class .caf-review-card nhu PAF/DAF: the la div tran,
         # ban sao do JS clone khi chay. Nen dem bang chuoi 5 sao -- moi the dung mot lan.
-        "counts": {r'<img ': 16, r'class="caf-faq"': 12,
+        # 03/11/2026: 16 -> 15 anh. Chu site go khoi anh nen hero (src con la
+        # placeholder "HERO_IMAGE_URL", chua bao gio dien anh that) khi sua tay
+        # cuoi thang 10. Day la SUA NEN co chu dich, da fold vao caf/home/base.txt
+        # -- khong phai noi cong cho qua.
+        "counts": {r'<img ': 15, r'class="caf-faq"': 12,
                    r'\u2605\u2605\u2605\u2605\u2605': 11,
                    r'class="caf-pick-btn"': 2, r'class="caf-pick-chev"': 2,
                    r'<!--m:[a-z0-9-]+-->': 10, r'<!--/m:[a-z0-9-]+-->': 10},
