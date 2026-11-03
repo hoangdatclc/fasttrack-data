@@ -254,7 +254,7 @@ function hafCloseMenu() {
        Hiển thị y hệt nhờ object-fit:cover + object-position:center 40%.
        ✅ Đã self-host lên Media Library (không còn phụ thuộc Unsplash). -->
   <div style="position:absolute; inset:0; z-index:0; overflow:hidden;">
-    <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/07/hanoi-airport-fast-track-hero-banner.jpg"
+    <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/hanoi-airport-fast-track-hero.webp"
          alt=""
          aria-hidden="true"
          fetchpriority="high"
@@ -691,7 +691,7 @@ function hafCloseMenu() {
         <!-- Card 1 -->
         <div style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #E8E4DE; display:flex; flex-direction:column;">
           <div style="position:relative; height:220px; overflow:hidden;">
-            <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/1.-Save-1-3-hours.jpg"
+            <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/1-save-1-3-hours.webp"
                  alt="Crowded immigration queue at Noi Bai Airport Terminal 2 during peak arrival hours"
                  width="800" height="600" loading="lazy" decoding="async"
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
@@ -716,7 +716,7 @@ function hafCloseMenu() {
         <!-- Card 2 -->
         <div style="background:#0B1F3A; border-radius:16px; overflow:hidden; border:1px solid #0B1F3A; display:flex; flex-direction:column;">
           <div style="position:relative; height:220px; overflow:hidden;">
-            <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/2.-Greeted-by-Name.jpg"
+            <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/2-greeted-by-name.webp"
                  alt="Fast Track staff holding a personalised welcome name sign at Noi Bai Airport arrival hall"
                  width="800" height="600" loading="lazy" decoding="async"
                  style="width:100% !important; height:100% !important; object-fit:cover !important; object-position:center top !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
@@ -741,7 +741,7 @@ function hafCloseMenu() {
         <!-- Card 3 -->
         <div style="background:#fff; border-radius:16px; overflow:hidden; border:1px solid #E8E4DE; display:flex; flex-direction:column;">
           <div style="position:relative; height:220px; overflow:hidden;">
-            <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/3.-All-Formalities-Handled-3.jpg"
+            <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/3-priority-immigration-lane.webp"
                  alt="Fast Track staff escorting guests through the priority immigration lane at Noi Bai Airport"
                  width="800" height="600" loading="lazy" decoding="async"
                  style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; padding:0 !important; border:none !important;" />
@@ -1641,40 +1641,40 @@ function hafCloseMenu() {
             will-change:transform;
           ">
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-4.jpg" alt="Fast Track guests being assisted at Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-4.webp" alt="Fast Track guests being assisted at Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/06/customer-6-2.jpg" alt="VIP arrival assistance at Hanoi Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-6-2.webp" alt="VIP arrival assistance at Hanoi Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-11.jpg" alt="Traveller in the priority immigration lane at Noi Bai" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-11.webp" alt="Traveller in the priority immigration lane at Noi Bai" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/06/customer-5-2.jpg" alt="Happy travellers after using Fast Track at Noi Bai" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-5-2.webp" alt="Happy travellers after using Fast Track at Noi Bai" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-2-2.jpg" alt="Fast Track staff with guests at Noi Bai Terminal 2" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-2-2.webp" alt="Fast Track staff with guests at Noi Bai Terminal 2" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-12.jpg" alt="Airport assistance service in Hanoi" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-12.webp" alt="Airport assistance service in Hanoi" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-10.jpg" alt="Fast Track departure service at Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-10.webp" alt="Fast Track departure service at Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-7.jpg" alt="Group Fast Track booking at Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-7.webp" alt="Group Fast Track booking at Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-9.jpg" alt="Immigration fast lane at Hanoi Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-9.webp" alt="Immigration fast lane at Hanoi Noi Bai Airport" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-8.jpg" alt="Fast Track guests on arrival in Hanoi" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-8.webp" alt="Fast Track guests on arrival in Hanoi" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-3.jpg" alt="Airport concierge service at Noi Bai" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-3.webp" alt="Airport concierge service at Noi Bai" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
             <div style="flex:0 0 calc(25% - 9px); border-radius:8px; overflow:hidden; aspect-ratio:3/4; background:#162d52;">
-              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/05/customer-1.jpg" alt="Noi Bai Fast Track team with guests" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
+              <img src="https://hanoiairportfasttrack.com/wp-content/uploads/2026/10/customer-1.webp" alt="Noi Bai Fast Track team with guests" width="600" height="800" loading="lazy" decoding="async" style="width:100% !important; height:100% !important; object-fit:cover !important; display:block !important; margin:0 !important; border:none !important;"/>
             </div>
           </div>
         </div>
